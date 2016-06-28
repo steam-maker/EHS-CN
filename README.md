@@ -6,3 +6,4 @@ The Early History of Smalltalk (Chinese translation)
 
 - [Abstract](00)
 - [Introduction](01)
+- [I. 1960-66—Early OOP and other formative ideas of the sixties](02)
