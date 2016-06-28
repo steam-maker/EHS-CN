@@ -2,4 +2,4 @@
 
 The Early History of Smalltalk (Chinese translation)
 
-[Original](https://github.com/worrydream/EarlyHistoryOfSmalltalk)
+[Original](https://github.com/steam-maker/EarlyHistoryOfSmalltalk)
