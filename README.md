@@ -30,11 +30,11 @@ The Early History of Smalltalk (Chinese translation)
   ![2](pictures/2.png)
   
 ## 格式
-* 用Markdown句法编辑格式（教程会另附）
+* 用Markdown句法编辑格式（见Wiki页）
 
 ## 编辑媒介
 * 简单：GitHub
-* 高效：Git（命令行教程另附）
+* 高效：Git（见Wiki页）
 
 ## 预期结果
 * 据说。。完成以后会发给作者本人( ╯▽╰)
