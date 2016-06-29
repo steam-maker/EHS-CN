@@ -38,4 +38,4 @@ The Early History of Smalltalk (Chinese translation)
 
 ## 预期结果
 * 据说。。完成以后会发给作者本人( ╯▽╰)
-* 并不可知。因为，[BBN](https://wikipedia.org/wiki/BBN_Technologies)在成为[发明互联网](https://www.amazon.com/Where-Wizards-Stay-Up-Late/dp/0684832674#productDescription_secondary_view_div_1467215006001)的BBN之前，他们也不知道未来自己会这么牛（⊙ ω ⊙ ）
+* 并不可知。因为，[BBN](https://en.wikipedia.org/wiki/BBN_Technologies)在成为[发明互联网](https://www.amazon.com/Where-Wizards-Stay-Up-Late/dp/0684832674#productDescription_secondary_view_div_1467215006001)的BBN之前，他们也不知道未来自己会这么牛（⊙ ω ⊙ ）
