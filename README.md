@@ -23,11 +23,11 @@ The Early History of Smalltalk (Chinese translation)
 * 上面的章节
 * 文件夹内如图所示：
   
-  ![1](1.png)
+  ![1](pictures/1.png)
 
 * 几个页面间的切换
 
-  ![2](2.png)
+  ![2](pictures/2.png)
   
 ## 格式
 * 用Markdown句法编辑格式（教程会另附）
