@@ -30,7 +30,7 @@ The Early History of Smalltalk (Chinese translation)
   ![2](pictures/2.png)
   
 ## 格式
-* 用Markdown句法编辑格式（见Wiki页）
+* 用Markdown句法编辑格式（见[Wiki页](https://github.com/steam-maker/EHS-CN/wiki)）
 
 ## 编辑媒介
 * 简单：GitHub
