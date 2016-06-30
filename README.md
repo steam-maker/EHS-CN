@@ -40,5 +40,5 @@
 * 高效：Git（见Wiki页）
 
 ## 预期结果
-* 据说。。完成以后会发给作者本人( ╯▽╰)
+* 据说。。完成以后会发给[作者本人](https://en.wikipedia.org/wiki/Alan_Kay)( ╯▽╰)
 * 并不可知。因为，[BBN](https://en.wikipedia.org/wiki/BBN_Technologies)在成为[发明互联网](https://monoskop.org/images/e/ee/Hafner_Katie_Lyon_Matthew_Where_Wizards_Stay_Up_Late_The_Origins_Of_The_Internet.pdf)的BBN之前，他们也不知道未来自己会这么牛（⊙ ω ⊙ ）
