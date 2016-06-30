@@ -1,6 +1,8 @@
 # EHS-CN
 
-The Early History of Smalltalk (Chinese translation)
+## The Early History of Smalltalk (Collaborative Chinese Translation)
+
+## Smalltalk的早期歷史（中文聯合翻譯）
 
 [Original](https://github.com/steam-maker/EarlyHistoryOfSmalltalk)
 
