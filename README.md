@@ -4,7 +4,7 @@
 
 ## Smalltalk的早期歷史（中文聯合翻譯）
 
-[Original](https://github.com/steam-maker/EarlyHistoryOfSmalltalk)
+[Original | 原文](https://github.com/steam-maker/EarlyHistoryOfSmalltalk)
 
 - [Abstract](00)
 - [Introduction](01)
