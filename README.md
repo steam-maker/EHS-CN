@@ -20,6 +20,7 @@
 * 每个人都可以做审译，通过pull request来对译文进行修改
 * 值得商讨的问题可以专门开一个Issue进行讨论，解决后我们会把该Issue关闭
 * 希望所有人先对[全文](http://worrydream.com/EarlyHistoryOfSmalltalk)有个整体的把握
+* [报名和进度报告](https://github.com/steam-maker/EHS-CN/issues/18)
 
 ## 基本布局
 * 上面的章节
