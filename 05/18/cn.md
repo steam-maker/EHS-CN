@@ -12,14 +12,12 @@
 
 该类盒实例创建并发送消息，最终用一个简单的多线程动画。让孩子们猜一个盒子可能的图像，他们猜测的结果与实际显示令人惊讶的相近：
 
-<head>
-  <body>
+```
 to box | x y size tilt
 (○draw   »    (@place x y turn tilt. square size.
 ○undraw  »    (@ white. SELF draw. @black)
 ○turn    »    (SELF undraw. 'tilt <- tilt + :. SELF draw)
 ○grow    »    (SELF undraw. 'size <- size + :. SELF draw)
 ISNEW    »    (SELF undraw. 'size <- size + :. SELF draw)
-  </body>
-</head>
+```
 
