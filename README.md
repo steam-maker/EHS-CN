@@ -42,3 +42,20 @@
 ## 预期结果
 * 据说。。完成以后会发给[作者本人](https://en.wikipedia.org/wiki/Alan_Kay)( ╯▽╰)
 * 并不可知。因为，[BBN](https://en.wikipedia.org/wiki/BBN_Technologies)在成为[发明互联网](https://monoskop.org/images/e/ee/Hafner_Katie_Lyon_Matthew_Where_Wizards_Stay_Up_Late_The_Origins_Of_The_Internet.pdf)的BBN之前，他们也不知道未来自己会这么牛（⊙ ω ⊙ ）
+
+## 翻译方法：
+* 先做到“信”，摸清楚作者的**意图**和**逻辑**（作者的point of view）
+* 翻译计算机类术语时保留英文，译文在后面加括号呈现，如：
+  
+  > class （类）
+
+* 原文中尚不明确要通过上下文以及其它资料推断的概念可以先用加粗在译文中标出，并用括号标注对应的单词，然后写在discussion文件里，如`02/01/cn.md`（这是我们在合作中很重要的一环，因为**每个人的观点**都很重要）：
+
+ > 新**观点**（idea）在**内外**（within and without）方面都经历了许多阶段才被接受。
+ 
+ > discussion文件中**写清楚你的问题和可能的推断**：这个idea具体指什么？within and without又指什么？
+ 
+ > 可能的推断：within指这个idea本身，without指外界对这个idea的认可 （该判断基于下文内容）
+ 
+ * 完成一段翻译后如果可能的话，请尝试用一个**第一次看到这篇文字的普通读者的角度**来读译文，这样可以帮助您在第一环节发现一些不自然的地方，保证语言的通顺流畅
+ 
