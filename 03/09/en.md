@@ -5,3 +5,4 @@ while i <= 1 to 30 by 2 ^ j <= 2 to k by 3 do j<-j * i;
 ```
 
 where the ... to ... by ... was a kind of coroutine object. Many of these ideas were reimplemented in a stronger style in Smalltalk later on.
+
