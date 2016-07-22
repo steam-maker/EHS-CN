@@ -2,6 +2,8 @@
 
 ## The Early History of Smalltalk (Collaborative Chinese Translation)
 
+[进展 | progress](progress.md)
+
 ## Smalltalk的早期歷史（中文聯合翻譯）
 
 [Original | 原文](https://github.com/steam-maker/EarlyHistoryOfSmalltalk)
