@@ -5,3 +5,4 @@ Smalltalk的设计——和存在——源于一种深刻见解：**对任何事
 它创造对象的方式很柏拉图，其中的一些对象是些理想化的概念——想法（ideas）——从中可以衍生出其他表现（manifestation）。
 
 **这些想法是（“想法-想法（Idea-Idea）”的）自我表现，而“想法-想法”则是一种“表现-想法（Manifestation-Idea）”——这也是其自身的一种属性**（That the Ideas are themselves manifestations (of the Idea-Idea) and that the Idea-Idea is a-kind-of Manifestation-Idea—which is a-kind-of itself, so that the system is completely self-describing），因此，这一系统完全是自描述的——柏拉图会把它当成一个相当实用的玩笑来欣赏[【柏拉图（Plato）】](http://baike.baidu.com/subview/996/11214863.htm)。
+

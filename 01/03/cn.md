@@ -1,1 +1,2 @@
 编程语言有好几种分类：[命令式（imperative）](http://baike.baidu.com/view/12112865.htm)、应用式（applicative）、基于逻辑（logic-based）、[面向问题（problem-oriented）](http://baike.baidu.com/view/1775690.htm)。但它们不是“黏着式（agglutination of features）”，就是“结晶式（crystallization of style）”。前者有[ COBOL](http://baike.baidu.com/view/90933.htm)、PL/1、[Ada](http://baike.baidu.com/subview/163225/9550548.htm#viewPageContent)等，而[LISP](http://baike.baidu.com/subview/293795/6732872.htm)、[APL](http://baike.baidu.com/item/APL/17767419#viewPageContent)和Smalltalk则属于后者。无独有偶，集体都提倡使用黏着语，而个人则强调结晶语。
+

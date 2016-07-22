@@ -1,29 +1,36 @@
 ## 摘要
 
 大多数想法都有源可溯。六十年代，尤其是在ARPA社区，由于互动分时计算器、图形屏幕以及点控设备的发明，“人机共存”这一理念开始进入人们的视野。**为了模仿炼油厂和半智能行为之类的复杂系统**（simulate complex systems such as oil refineries and semi-intelligent behavior），人们发明了高级计算机语言。随着人们不再简单地把六十年代的工作看成是**“新瓶装旧酒”**（better old thing），对个人电脑、重叠操作窗口界面（overlapping window interfaces）和面向对象设计（object-oriented design）的看法也会不可避免地发生改变。这带来了方方面面的发展：实行大型机计算、实现终端用户自行调用功能、让数据结构更加抽象。为了取代过去让计算/美元/产量呈指数增长的目的，我们需要把六十年代看成是“一瓶新酒”，同时进一步探索什么可能成为真正“新的东西”。例如，人们可能在不连接公共主机的情况下操作[Dynabook掌上电脑](http://baike.baidu.com/link?url=vEmk8r_cNg1vHEhdY-0B7PXxBX6Qa0brLPg7nPJojGZ6CCqrRLMAu2Kr1_dOM4D95iiZOHzuNyCxUktP51oIAK)；而上百万个潜在用户的存在则意味着用户界面可能会变成如**[蒙台梭利](http://baike.baidu.com/link?url=xye4sDiepagjrQsB50tjIcTv2jOIHaSaNnRqCyoEEuHOaFXkgZc29OTxFd8EZpI_NK8YAeRK1ZxzPZHGfoO3kuobOuD2Ethb_7ihn_-CuVLMh_6KSVER9OrxD3it-bdI0U6LUGOEF9ZPgEAp5ZO5mK)**和**[布鲁纳](http://baike.baidu.com/link?url=ryJJZjvXbPim8VoWFtZrisrqdTwcujOYtbk7YNsQAfFijBE8_xKjFdRoUGFfr-OWadAf8YMCUXx9geKjVKYMCa#2)**所构想的学习环境；针对扩大范围、减小复杂度和提高终端用户使用能力的需要，**我们要找到一个更加安全、且更为人普遍接受的方式来取代过去的数据和控制结构——即仅仅通过消息的交互就能模拟出任何用户想要的行动**（would require that data and control structures be done away with in favor of a more biological scheme of protected universal cells interacting only through messages that could mimic any desired behavior）。
+
 ## Abstract
 
 Most ideas come from previous ideas. The sixties, particularly in the ARPA community, gave rise to a host of notions about "human-computer symbiosis" through interactive time-shared computers, graphics screens and pointing devices. Advanced computer languages were invented to simulate complex systems such as oil refineries and semi-intelligent behavior. The soon-to-follow paradigm shift of modern personal computing, overlapping window interfaces, and object-oriented design came from seeing the work of the sixties as something more than a "better old thing." This is, more than a better way: to do mainframe computing; for end-users to invoke functionality; to make data structures more abstract. Instead the promise of exponential growth in computing/$/volume demanded that the sixties be regarded as "almost a new thing" and to find out what the actual "new things" might be. For example, one would compute with a handheld "Dynabook" in a way that would not be possible on a shared mainframe; millions of potential users meant that the user interface would have to become a learning environment along the lines of Montessori and Bruner; and needs for large scope, reduction in complexity, and end-user literacy would require that data and control structures be done away with in favor of a more biological scheme of protected universal cells interacting only through messages that could mimic any desired behavior.
 
 早期的Smalltalk语言首当其冲，把从硬件、语言和用户界面设计这些方面由来已久的观点变为现实。从某种程度上看来，它是新计算范型的榜样，因为那时，我们确实尝试着对大家深信不疑的结构做出质的调整——本着与发明印刷媒体相同的精神，我们发明了新型的库恩范式——也正是因为如此，我们占领了这个领域的制高点，这让我们几乎成为了发明这些新形式的推手。
+
 Early Smalltalk was the first complete realization of these new points of view as parented by its many predecessors in hardware, language and user interface design. It became the exemplar of the new computing, in part, because we were actually trying for a qualitative shift in belief structures—a new Kuhnian paradigm in the same spirit as the invention of the printing press—and thus took highly extreme positions which almost forced these new styles to be invented.
 
 
 ## 介绍
+
 我在三万五千尺的高空撰写这篇介绍。我膝上的写作工具是台五磅重的笔记本电脑——1992年出品的Interim Dynabook——到该年的年底，这款笔记本的售价低于700美元。它的屏幕扁平且干净，拥有很高的分辨率、位图显示。该款笔记本还拥有重叠视窗、图标、定位装置、相当大的内存和计算能力，它最好的软件是面向对象设计的。它有内置的先进网络体系，也可使用无线网。这一系统是我目前在给孩子们使用的主要系统之一，由Smalltalk语言运行。一方面，（从分量上来看）这不仅仅是个Dynabook笔记本电脑，而另一方面，（质量上看来），这离理想还有相当大的距离。总而言之，它几乎凝聚了六十年代末的所有想法。
+
 ## Introduction
 
 I'm writing this introduction in an airplane at 35,000 feet. On my lap is a five pound notebook computer—1992's "Interim Dynabook"—by the end of the year it sold for under $700. It has a flat, crisp, high-resolution bitmap screen, overlapping windows, icons, a pointing device, considerable storage and computing capacity, and its best software is object-oriented. It has advanced networking built-in and there are already options for wireless networking. Smalltalk runs on this system, and is one of the main systems I use for my current work with children. In some ways this is more than a Dynabook (quantitatively), and some ways not quite there yet (qualitatively). All in all, pretty much what was in mind during the late sixties.
 
 Smalltalk是[美国国防部高级研究计划署（ARPA）](http://baike.baidu.com/view/68809.htm)，以及之后[施乐帕克研究中心（Xerox PARC）](http://baike.baidu.com/view/616837.htm)所研究的项目之一，我把它叫做个人计算（Personal Computing）。由于参与每个环节的人数不胜枚举，我们很难准确地把某个想法的诞生归功于个人。于是，正如**鲍勃·巴顿（Bob Barton）**热衷于引用的歌德名言，我们应当“用分享发现的兴奋取代论功行赏的徒然”。
+
 Smalltalk was part of this larger pursuit of ARPA, and later of Xerox PARC, that I called personal computing. There were so many people involved in each stage from the research communities that the accurate allocation of credit for ideas is intractably difficult. Instead, as Bob Barton liked to quote Goethe, we should "share in the excitement of discovery without vain attempts to claim priority."
 
 
 这里，我会告诉您这些影响大多来自哪里、在新的个人计算的迷人领域中，它们又是如何进行转变的。行走在发明Smalltalk的道路上，好点子与态度同等重要。这一时期，许多我所敬佩的人们——如[伊凡·苏泽兰（Ivan Sutherland）](http://baike.baidu.com/view/734359.htm)、[马文·明斯基（Marvin Minsky）](http://baike.baidu.com/view/406805.htm)、[西蒙·派珀特（Seymour Papert）](http://baike.baidu.com/view/4370843.htm)、[戈登·摩尔（Gordon Moore）](http://baike.baidu.com/view/59874.htm)、鲍勃·巴顿（Bob Barton）、戴夫·埃文斯（Dave Evans）、[巴特勒·拉姆泼逊（Butler Lampson）](http://baike.baidu.com/view/2009279.htm)、[杰罗姆·布鲁纳（Jerome Bruner）](http://baike.baidu.com/view/250170.htm)等——他们都极为严谨，尽管他们的发明在一定的标准下都很完美，但他们深知自己离跨过专业领域的[绝对阈限（absolute threshold）](http://baike.baidu.com/view/660654.htm)还有很长一段距离。狭隘的人只把目光放在接受万人膜拜的结果上，真正伟大的人却只致力于寻找攻克难题的捷径。牛顿说他站在巨人的肩膀上可以看得更远，而这些所谓的“计算机科学家”往往只把眼光放在互踩脚趾的掐架上。但即便是站在了巨人的肩膀上，很多人还是目光短浅——比起埋头审视这个圈内的东西，我们更该把目光放在圈外更遥远的地方——当然，如果你带着对审美和批评及其敏感的有色眼镜，那你也是看不远的。
+
 I will try to show where most of the influences came from and how they were transformed in the magnetic field formed by the new personal computing metaphor. It was the attitudes as well as the great ideas of the pioneers that helped Smalltalk get invented. Many of the people I admired most at this time—such as Ivan Sutherland, Marvin Minsky, Seymour Papert, Gordon Moore, Bob Barton, Dave Evans, Butler Lampson, Jerome Bruner, and others—seemed to have a splendid sense that their creations, though wonderful by relative standards, were not near to the absolute thresholds that had to be crossed. Small minds try to form religions, the great ones just want better routes up the mountain. Where Newton said he saw further by standing on the shoulders of giants, computer scientists all too often stand on each other's toes. Myopia is still a problem where there are giants' shoulders to stand on—"outsight" is better than insight—but it can be minimized by using glasses whose lenses are highly sensitive to esthetics and criticism.
 
 
 编程语言有好几种分类：[命令式（imperative）](http://baike.baidu.com/view/12112865.htm)、应用式（applicative）、基于逻辑（logic-based）、[面向问题（problem-oriented）](http://baike.baidu.com/view/1775690.htm)。但它们不是“黏着式（agglutination of features）”，就是“结晶式（crystallization of style）”。前者有[ COBOL](http://baike.baidu.com/view/90933.htm)、PL/1、[Ada](http://baike.baidu.com/subview/163225/9550548.htm#viewPageContent)等，而[LISP](http://baike.baidu.com/subview/293795/6732872.htm)、[APL](http://baike.baidu.com/item/APL/17767419#viewPageContent)和Smalltalk则属于后者。无独有偶，集体都提倡使用黏着语，而个人则强调结晶语。
+
 Programming languages can be categorized in a number of ways: imperative, applicative, logic-based, problem-oriented, etc. 
 But they all seem to be either an "agglutination of features" or a "crystallization of style." 
 COBOL, PL/1, Ada, etc., belong to the first kind; LISP, APL— and Smalltalk—are the second kind. 
@@ -36,13 +43,16 @@ Smalltalk的设计——和存在——源于一种深刻见解：**对任何事
 它创造对象的方式很柏拉图，其中的一些对象是些理想化的概念——想法（ideas）——从中可以衍生出其他表现（manifestation）。
 
 **这些想法是（“想法-想法（Idea-Idea）”的）自我表现，而“想法-想法”则是一种“表现-想法（Manifestation-Idea）”——这也是其自身的一种属性**（That the Ideas are themselves manifestations (of the Idea-Idea) and that the Idea-Idea is a-kind-of Manifestation-Idea—which is a-kind-of itself, so that the system is completely self-describing），因此，这一系统完全是自描述的——柏拉图会把它当成一个相当实用的玩笑来欣赏[【柏拉图（Plato）】](http://baike.baidu.com/subview/996/11214863.htm)。
+
 Smalltalk's design—and existence—is due to the insight that everything we can describe can be represented by the recursive composition of a single kind of behavioral building block that hides its combination of state and process inside itself and can be dealt with only through the exchange of messages. Philosophically, Smalltalk's objects have much in common with the monads of Leibniz and the notions of 20th century physics and biology. Its way of making objects is quite Platonic in that some of them act as idealizations of concepts—Ideas—from which manifestations can be created. That the Ideas are themselves manifestations (of the Idea-Idea) and that the Idea-Idea is a-kind-of Manifestation-Idea—which is a-kind-of itself, so that the system is completely self-describing— would have been appreciated by Plato as an extremely practical joke [Plato].
 
 
 在计算机术语中，Smalltalk是基于计算机本身概念的一种递归（recursion）(见[讨论](discussion.md))。它并没有把“计算机中的事物”分割成一个个弱化了的部分——如数据结构（ data structures）、流程（procedures）和函数（functions），它们都是编程语言中不可或缺的部分——在计算机整个运行过程中，每个Smalltalk的对象都是递归的。因此，语义上来看，这就像一个非常迅速的网络连接着成千上万的计算机。由于我们主要关心的是电脑行为是否恰当，或者如何具体解决结果意外关闭或返回太慢的问题，于是到了要解决具体呈现的问题时，我们会无限期地拖延。
+
 In computer terms, Smalltalk is a recursion on the notion of computer itself. Instead of dividing "computer stuff" into things each less strong than the whole—like data structures, procedures, and functions which are the usual paraphernalia of programming languages—each Smalltalk object is a recursion on the entire possibilities of the computer. Thus its semantics are a bit like having thousands and thousands of computers all hooked together by a very fast network. Questions of concrete representation can thus be postponed almost indefinitely because we are mainly concerned that the computers behave appropriately, and are interested in particular strategies only if the results are off or come back too slowly.
 
 尽管Smalltalk有着高贵的血统，它仍是个新兴范式——无论是专业程序员用其来解决一些大问题，还是新手做一些小项目——我都把它称为面向对象的范式。在模拟那些尤其复杂的动力系统以及用户关系时，这种面向对象的设计都让效率有了质的提升。
+
 Though it has noble ancestors indeed, Smalltalk's contribution is a new design paradigm—which I called object-oriented—for attacking large problems of the professional programmer, and making small ones possible for the novice user. Object-oriented design is a successful attempt to qualitatively improve the efficiency of modeling the ever more complex dynamic systems and user relationships made possible by the silicon explosion.
 
 
@@ -51,6 +61,7 @@ Though it has noble ancestors indeed, Smalltalk's contribution is a new design p
 > “记忆与想象乃属同源。”——[托马斯·霍布斯（Thomas Hobbes）](http://baike.baidu.com/view/881849.htm)
 
 在这篇历史中，我将依照哈明和霍布斯的指引。先前，由于我一直将个人感情——而非编程系统的设计——看作是个人电脑拓展人类认知范围的核心，于是对我来说，描述Smalltalk是困难的——当然，我们现在也还没进行到那步。尽管发明Smalltalk是我起的头，但这一成果永远属于实现其在实际中的运用及推广的人们，这些人中尤其值得提到的是丹·英戈尔斯（Dan Ingalls）和阿黛勒·戈德堡（Adele Goldberg）。每个LRG的成员们都为这个项目进行了深入的探讨、花费了巨大的心血，我多希望能有足够的空间把每个人的功绩娓娓道来。但我想，把丹封为Smalltalk研发中的核心人物是众望所归。编程的本质是种实践艺术，通过编程，我们能创造新的事物，而这些新事物又推动我们去**实际使用它们**（implementation）。事实上，许多小众的计算机语言仍在使用的原因不是它们具备多少优点，而是有一、两种机器仍在使用它们、它们拥有**引导程序**（bootstrap）的能力等等。然而，丹不仅仅是个伟大的**实践者**（implementer），无论是发明语言本身还是Smalltalk在实际运用中与用户的互动方面，他都越来越像个设计者了。
+
 > "We would know what they thought when they did it."
 > — Richard Hamming
 
@@ -61,6 +72,7 @@ In this history I will try to be true to Hamming's request as moderated by Hobbe
 
 
 这里，我想把重心着重放在Smalltalk-72的发明及其向现代版的Smalltalk-76的转型上面。大多数的观点都来源于此，并且那些早期的[面向对象编程（OOP）](http://baike.baidu.com/view/63596.htm)鲜有踪迹可循。
+
 Here, I will try to center focus on the events leading up to Smalltalk-72 and its transition to its modern form as Smalltalk-76. Most of the ideas occurred here, and many of the earliest stages of OOP are poorly documented in references almost impossible to find.
 
 
