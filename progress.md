@@ -76,8 +76,12 @@ In this history I will try to be true to Hamming's request as moderated by Hobbe
 Here, I will try to center focus on the events leading up to Smalltalk-72 and its transition to its modern form as Smalltalk-76. Most of the ideas occurred here, and many of the earliest stages of OOP are poorly documented in references almost impossible to find.
 
 
+这段历史太漫长了，但是那一大串仅仅带来了负面影响或完全没有任何好处的人名和系统着实令我讶异。很抱歉，我无法用更多的笔墨来介绍Bob Balzer、Bob Barton、 Danny Bobrow、Steve Carr、 Wes Clark、 Barbara Deutsch,、 Peter Deutsch、Bill Duvall、 Bob Flegal、 Laura Gould、 Bruce Horn、 Butler Lampson、 Dave Liddle、 William Newman、 Bill Paxton、 Trygve Reenskaug、Dave Robson、Doug Ross、 Paul Rovner、 Bob Sproull、 Dan Swinehart、 Bert Sutherland、 Bob Taylor、Warren Teitelman、 Bonnie Tennenbaum、 Chuck Thacker、 和 John Warnock。更抱歉的是，我没有花些笔墨在那些我个人不喜却在反馈中带来一些相当有用的想法和观点的系统上。换句话说就是，不要太较真地相信“历史”，把它们当成是演员散场已久的“动作回放”。
+
 This history is too long, but I was amazed at how many people and systems that had an influence appear only as shadows or not at all. I am sorry not to be able to say more about Bob Balzer, Bob Barton, Danny Bobrow, Steve Carr, Wes Clark, Barbara Deutsch, Peter Deutsch, Bill Duvall, Bob Flegal, Laura Gould, Bruce Horn, Butler Lampson, Dave Liddle, William Newman, Bill Paxton, Trygve Reenskaug, Dave Robson, Doug Ross, Paul Rovner, Bob Sproull, Dan Swinehart, Bert Sutherland, Bob Taylor, Warren Teitelman, Bonnie Tennenbaum, Chuck Thacker, and John Warnock. Worse, I have omitted to mention many systems whose design I detested, but that generated considerable useful ideas and attitudes in reaction. In other words "histories" should not be believed very seriously but considered as "FEEBLE GESTURES OFF" done long after the actors have departed the stage.
 
+
+谢谢那些试读者不厌其烦地为草稿提出自己的看法。尤其感谢Mike Mahoney的无私帮助，我仔细考虑了他的建议，这让整篇文章更上一层楼——也要感谢我的故交Jean Sammet，他一直“恐吓”我快点完成——我不敢想象我的拖延会带来什么后果。同时也要感谢Sherri McLoughlin 和 Kim Rose，他们在整合所有的材料方面给予了巨大帮助。
 
 Thanks to the numerous reviewers for enduring the many drafts they had to comment on. Special thanks to Mike Mahoney for helping so gently that I heeded his suggestions and so well that they greatly improved this essay—and to Jean Sammet, an old old friend, who quite literally frightened me into finishing it—I did not want to find out what would happen if I were late. Sherri McLoughlin and Kim Rose were of great help in getting all the materials together.
 
