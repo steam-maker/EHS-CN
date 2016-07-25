@@ -86,11 +86,56 @@ This history is too long, but I was amazed at how many people and systems that h
 Thanks to the numerous reviewers for enduring the many drafts they had to comment on. Special thanks to Mike Mahoney for helping so gently that I heeded his suggestions and so well that they greatly improved this essay—and to Jean Sammet, an old old friend, who quite literally frightened me into finishing it—I did not want to find out what would happen if I were late. Sherri McLoughlin and Kim Rose were of great help in getting all the materials together.
 
 
+尽管有诸多动机导致面向对象程序的发明，其中有两个是核心的。大范围上的动机就是为需要隐藏细节的复杂系统想出一个更好的模块方案；而小范围上的则是找到一个更灵活的任务版本，然后尝试着一并解决。与大多数新观点的产生一样，这源于一些单独的适应与开始。
 Though OOP came from many motivations, two were central. The large scale one was to find a better module scheme for complex systems involving hiding of details, and the small scale one was to find a more flexible version of assignment, and then to try to eliminate it altogether. As with most new ideas, it originally happened in isolated fits and starts.
 
 
-新观点在内外方面都经历了许多阶段才被接受。在内部，思想序列变动从几次“几乎不可见”模式，到注意到但未感知它“广阔”的多样性，接着在多个领域被使用，然后经历大转变，模式变成了新思考方式的核心，最终转变为与它原始分离相同的僵化宗教。在外部，正如Schopenhauer指出，新的观点被视作疯子的作品，几年后被认为是显而易见的，最终原谴责者会声称发明了它。
-New ideas go through stages of acceptance, both from within and without. From within, the sequence moves from "barely seeing" a pattern several times, then noting it but not perceiving its "cosmic" significance, then using it operationally in several areas, then comes a "grand rotation" in which the pattern becomes the center of a new way of thinking, and finally, it turns into the same kind of inflexible religion that it originally broke away from. From without, as Schopenhauer noted, the new idea is first denounced as the work of the insane, in a few years it is considered obvious and mundane, and finally the original denouncers will claim to have invented it.
+新观点在内外方面都经历了许多阶段才被接受。
+在内部，
+思想序列变动从几次“几乎不可见”模式，
+到注意到但未感知它“广阔”的多样性，
+接着在多个领域被使用，
+然后经历大转变，
+模式变成了新思考方式的核心，
+最终转变为与它原始分离相同的僵化宗教。
+在外部，
+正如Schopenhauer指出，
+新的观点被视作疯子的作品，
+几年后被认为是显而易见的，
+最终原谴责者会声称发明了它。
+
+无论在内部还是外部，
+新想法都要经历几番接受的过程。
+在内部，
+这种序列几次都产生于某个“难于看见的”模式；
+然后人们注意到了它，
+却无法理解它“包罗万象的”要义；
+于是他们把其应用在一些领域的操作中，
+随之而来的是一场“大循环”，
+这一模式会在其中成为新的思考方式的核心；
+最终，
+它会变成顽固的信仰——与曾经从中分离出来的那个信仰异曲同工。
+在外部，
+诚如[叔本华（Schopenhauer）](http://baike.baidu.com/view/440746.htm)所言，
+新观点总是被当成疯言疯语抨击，
+但若干年后人们就会觉得它显而易见且理所当然，
+最终，
+那些曾经的抨击者会声称他们是这个观点的发明者。
+
+
+New ideas go through stages of acceptance, both from within and without. 
+From within, 
+the sequence moves from "barely seeing" a pattern several times, 
+then noting it but not perceiving its "cosmic" significance, 
+then using it operationally in several areas, 
+then comes a "grand rotation" in which the pattern becomes the center of a new way of thinking, 
+and finally, 
+it turns into the same kind of inflexible religion that it originally broke away from. 
+From without, 
+as Schopenhauer noted, 
+the new idea is first denounced as the work of the insane, 
+in a few years it is considered obvious and mundane, 
+and finally the original denouncers will claim to have invented it.
 
 
 True to the stages, I "barely saw" the idea several times ca. 1961 while a programmer in the Air  b220 file format Force. The first was on the Burroughs 220 in the form of a style for transporting files from one Air Training Command installation to another. There were no standard operating systems or file formats back then, so some (to this day unknown) designer decided to finesse the problem by taking each file and dividing it into three parts. The third part was all of the actual data records of arbitrary size and format. The second part contained the B220 procedures that knew how to get at records and fields to copy and update the third part. And the first part was an array or relative pointers into entry points of the procedures in the second part (the initial pointers were in a standard order representing standard meanings). Needless to say, this was a great idea, and was used in many subsequent systems until the enforced use of COBOL drove it out of existence.
