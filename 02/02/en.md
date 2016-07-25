@@ -1,7 +1,16 @@
-True to the stages, I "barely saw" the idea several times ca. 1961 while a programmer in the Air  b220 file format Force. The first was on the Burroughs 220 in the form of a style for transporting files from one Air Training Command installation to another. There were no standard operating systems or file formats back then, so some (to this day unknown) designer decided to finesse the problem by taking each file and dividing it into three parts. The third part was all of the actual data records of arbitrary size and format. The second part contained the B220 procedures that knew how to get at records and fields to copy and update the third part. And the first part was an array or relative pointers into entry points of the procedures in the second part (the initial pointers were in a standard order representing standard meanings). Needless to say, this was a great idea, and was used in many subsequent systems until the enforced use of COBOL drove it out of existence.
+True to the stages, I "barely saw" the idea several times ca. 1961 while a programmer in the Air  b220 file format Force. 
+The first was on the Burroughs 220 in the form of a style for transporting files from one Air Training Command installation to another.
+There were no standard operating systems or file formats back then, so some (to this day unknown) designer decided to finesse the problem by taking each file and dividing it into three parts. 
+The third part was all of the actual data records of arbitrary size and format. 
+The second part contained the B220 procedures that knew how to get at records and fields to copy and update the third part. 
+And the first part was an array or relative pointers into entry points of the procedures in the second part (the initial pointers were in a standard order representing standard meanings). 
+Needless to say, this was a great idea, and was used in many subsequent systems until the enforced use of COBOL drove it out of existence.
 
 ![b220](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/b220.png)
 
-The second barely-seeing of the idea came just a little later when ATC decided to replace the 220 with a B5000. I didn't have the perspective to really appreciate it at the time, but I did take note of its segmented storage system, its efficiency of HLL compilation and byte-coded execution, its automatic mechanisms for subroutine calling and multiprocess switching, its pure code for sharing, its protection mechanisms, etc. And, I saw that the access to its Program Reference Table corresponded to the 220 file system scheme of providing a procedural interface to a module. However, my big hit from this machine at this time was not the OOP idea, but some insights into HLL translation and evaluation. [Barton, 1961] [Burroughs, 1961]
+The second barely-seeing of the idea came just a little later when ATC decided to replace the 220 with a B5000. 
+I didn't have the perspective to really appreciate it at the time, but I did take note of its segmented storage system, its efficiency of HLL compilation and byte-coded execution, its automatic mechanisms for subroutine calling and multiprocess switching, its pure code for sharing, its protection mechanisms, etc. 
+And, I saw that the access to its Program Reference Table corresponded to the 220 file system scheme of providing a procedural interface to a module. 
+However, my big hit from this machine at this time was not the OOP idea, but some insights into HLL translation and evaluation. [Barton, 1961] [Burroughs, 1961]
 
 
