@@ -61,3 +61,10 @@
  
 * 完成一段翻译后如果可能的话，请尝试用一个**第一次看到这篇文字的普通读者的角度**来读译文，这样可以帮助您在第一环节发现一些不自然的地方，保证语言的通顺流畅
  
+## 相关资料
+* Alan Kay：
+  * [1](https://en.m.wikipedia.org/wiki/Alan_Kay)
+  * [2](http://www.well.com/user/hlr/texts/Alan%20Kay)
+  * [3](http://amturing.acm.org/award_winners/kay_3972189.cfm)
+  
+
