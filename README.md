@@ -2,7 +2,7 @@
 
 ## The Early History of Smalltalk (Collaborative Chinese Translation)
 
-[进展 | progress](progress.md)
+[进展 | progress](progress/README.md)
 
 ## Smalltalk的早期歷史（中文聯合翻譯）
 
