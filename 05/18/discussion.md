@@ -2,6 +2,8 @@
 > After getting kids to guess what a box might be like—they could come surprisingly close—they would be shown:
 
  "class box"不知道该怎么翻译，结合图示，感觉这里是指程序操控的“方框”，就像 turtle一样。 
+
+>> "class box"是分类的意思，可以想象成是一个个”模版”。“instance”是”实例”的意思。就像模具出来的零件。
    
 > What was so wonderful about this idea were the myriad of children's projects that could spring off the humble boxes.  
 
