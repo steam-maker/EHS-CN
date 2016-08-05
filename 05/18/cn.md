@@ -21,4 +21,5 @@ to box | x y size tilt
 ○grow    »    (SELF undraw. 'size <- size + :. SELF draw)
 ISNEW    »    (SELF undraw. 'size <- size + :. SELF draw)
 ```
-
+  
+多么美妙的方法，无数的儿童项目可以从简陋的盒子中喷薄而出。
