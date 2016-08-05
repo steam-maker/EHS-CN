@@ -8,3 +8,6 @@
 > What was so wonderful about this idea were the myriad of children's projects that could spring off the humble boxes.  
 
 “this idea”字典翻译多为“想法”、“主意”；但是感觉中文里“想法”“主意”都侧重没有进入实施的设想。而这里经过实践，发现非常的美妙，似乎用“方法”更好一些。
+
+Adele Goldberg 的1977年报告: 
+[Methods For Teaching The Programmming Language Smalltalk](SSL-77-2_Teaching_Smalltalk.pdf)
