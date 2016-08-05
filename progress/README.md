@@ -178,6 +178,18 @@ After the Air Force, I worked my way through the rest of college by programming 
 
 ![mooreslaw](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/mooreslaw.png)
 
+## Sketchpad和Simula
+
+经历了几番波折，1966年的秋天，“懵懂无知”的我怀着激动的心情来到犹他大学攻读硕士学位。我所说的“懵懂无知”是指，我从未听过ARPA和它的项目，也不曾知晓犹他大学的主要目标是解决3D图案中的“隐藏线（hidden lines）”问题，直到我走进戴夫·埃文的办公室想要谋得一官半职。
+戴夫的桌上堆着一英尺高的棕皮文件，他抽出了其中一本递给我：“拿去读一读。”
+
+这份文件每个新来的人人手一本，它的题目叫《Sketchpad：一个人机图像交流系统》（Sketchpad: A man-machine graphical communication system）【苏泽兰 1963】。
+这个机器的功能非常引人注目，并且我所认识的计算机用户对此一无所知。
+这里有三个很好领悟的想法：这是一个现代交互式计算机制图方面的发明；那些“原图（master drawing）”最终都能够变成“实物（instance drawing）”；控制与动力都由“约束（constraints）”提供，它们以图形的方式存在，**这样就能被操作者应用在塑造相互关联的零部件中去**（that could be applied to the masters to shape an inter-related parts）。
+**它的数据结构令人费解——唯一稍微有些熟悉的部分就是在程序中植入了指示器，并且用一种叫[“倒排索引（reverse index）”](http://baike.baidu.com/view/676861.htm)来运行程序**（the only vaguely familiar construct was the embedding of pointers to procedures and using a process called reverse indexing to jump through them to routines），就如同220的文件系统一般【罗斯 1961】。
+它拥有第一个剪切和缩放窗口——缩略图在虚拟的纸张上实际面积能达到大约1/3平方英里。
+
+![sketchpad](sketchpad.png)
 ### Sketchpad and Simula
 
 Through a series of flukes, I wound up in graduate school at the University of Utah in the Fall of 1966, "knowing nothing." That is to say, I had never heard of ARPA or its projects, or that Utah's main goal in this community was to solve the "hidden line" problem in 3D graphics, until I actually walked into Dave Evans' office looking for a job and a desk. On Dave's desk was a foot-high stack of brown covered documents, one of which he handed to me: "Take this and read it."
@@ -186,6 +198,22 @@ Every newcomer got one. The title was "Sketchpad: A man-machine graphical commun
 
 ![sketchpad](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/sketchpad.png)
 
+兜兜转转，我终于找到了我的办公桌。
+上面除了一堆磁带和清单，还有一则说明：“这是用于1108的[Algol](http://baike.baidu.com/view/459702.htm)程序，但是电脑无法运行，请解决这一问题。”
+新来的研究生总的能得到最新的繁琐工作。
+
+这份文件读起来令人费解。
+据我推测，这原是[凯斯西储大学](http://baike.baidu.com/view/1123736.htm)为1107研发的Algol程序——但后来它被改成了一个新的语言，叫Simula;
+整个文件读起来像从挪威语直译过来的一样，实际上就是如此。
+这里面一些像“activity（活动）”和“process（过程）”这类词的用法似乎不符合正常使用英语的习惯。
+
+最后，我和另一个研究生展开了这个份程序清单，它沿着大厅铺开，足足有80英尺长，我们就趴在上面研究，有了什么结果就向对方喊话。
+最奇怪的地方在于它的储存分配程序部分（storage allocator），并没有按照Algol一贯的堆栈规则。
+几天后，我们理出了些头绪。
+Simula的分配结构和Sketchpad上的“实体（instances）”很像。
+上面的“描述（discriptions）”有着“服务器（masters）”的功能，它们可以创造各自独立的“实体（instances）”。
+在Sketchpad里面叫“服务器（masters）”和“实体（instances）”，在Simula里分别叫做“活动（activities）”和“过程（processes）”。
+另外，Simula是种可以控制Sketchpad之类事物的程序性语言，因此它比起“约束（constraints）”更具灵活性（从语言的考究方面来看）。【尼高 1966；尼高 1983】
 Head whirling, I found my desk. On it was a pile of tapes and listings, and a note: "This is the Algol for the 1108. It doesn't work. Please make it work." The latest graduate student gets the latest dirty task.
 
 The documentation was incomprehensible. Supposedly, this was the Case-Western Reserve 1107 Algol—but it had been doctored to make a language called Simula; the documentation read like Norwegian transliterated into English, which in fact it was. There were uses of words like activity and process that didn't seem to coincide with normal English usage.
@@ -589,10 +617,11 @@ I believe that the much smaller size of a good OOP system comes not just by bein
 当时我认为，由于个人电脑的计算机语言是交互式工具，这种新的编程能力的计算机语言，应该是由孩子创造的交互式工具。只是程序龟图形不是。
 
 ![turtle](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/turtle.png)
+图示11.42 Adele在约旦中学滔滔不绝的讲
 
 然后，Adele想出了一个绝妙的把Smalltalk作为一个面向对象语言的教学方法：“Joe Book.”。我相信这部分是受到了Minsky的想法的影响，你全面的教授教编程语言应该基于严谨程序的工作实例。
 
-该类盒实例创建并发送消息，最终用一个简单的多线程动画。让孩子们猜一个盒子可能的图像，他们猜测的结果与实际显示令人惊讶的相近：
+创建几个方框（class box），并向其发送消息，最后形成一个简单的多线程动画。让孩子们猜方框最终可能的样子，他们猜测的结果与实际显示令人惊讶的相近：
 
 ```
 to box | x y size tilt
@@ -602,7 +631,8 @@ to box | x y size tilt
 ○grow    »    (SELF undraw. 'size <- size + :. SELF draw)
 ISNEW    »    (SELF undraw. 'size <- size + :. SELF draw)
 ```
-
+  
+多么美妙的方法，无数的儿童项目能够从简陋的盒子中喷薄而出。而且伴生出最早的一些工具，这时我们真的异常兴奋。
 ### Smalltalk and Children
 
 Now that I have summarized the "adult" activities (we were actually only semiadults) in Smalltalk up to 1976, let me return to the summer of '73, when we were ready to start experiments with children. None of us knew anything about working with children, but we knew that Adele Goldberg and Steve Weyer who were then with Pat Suppes at Stanford had done quite a bit and we were able to entice them to join us.
