@@ -7,6 +7,7 @@
 当时我认为，由于个人电脑的计算机语言是交互式工具，这种新的编程能力的计算机语言，应该是由孩子创造的交互式工具。只是程序龟图形不是。
 
 ![turtle](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/turtle.png)
+图示11.42 Adele在约旦中学滔滔不绝的讲
 
 然后，Adele想出了一个绝妙的把Smalltalk作为一个面向对象语言的教学方法：“Joe Book.”。我相信这部分是受到了Minsky的想法的影响，你全面的教授教编程语言应该基于严谨程序的工作实例。
 
