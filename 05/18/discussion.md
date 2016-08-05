@@ -3,5 +3,5 @@
 
  "class box"不知道该怎么翻译，结合图示，感觉这里是指程序操控的“方框”，就像 turtle一样。 
    
-> What was so wonderful about this idea were the myriad of children's projects that could spring off the humble boxes.
+> What was so wonderful about this idea were the myriad of children's projects that could spring off the humble boxes.  
 “this idea”字典翻译多为“想法”、“主意”；但是感觉中文里“想法”“主意”都侧重没有进入实施的设想。而这里经过实践，发现非常的美妙，似乎用“方法”更好一些。
