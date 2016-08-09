@@ -220,8 +220,21 @@ The documentation was incomprehensible. Supposedly, this was the Case-Western Re
 
 Finally, another graduate student and I unrolled the program listing 80 feet down the hall and crawled over it yelling discoveries to each other. The weirdest part was the storage allocator, which did not obey a stack discipline as was usual for Algol. A few days later, that provided the clue. What Simula was allocating were structures very much like the instances of Sketchpad. There were descriptions that acted like masters and they could create instances, each of which was an independent entity. What Sketchpad called masters and instances, Simula called activities and processes. Moreover, Simula was a procedural language for controlling Sketchpad-like objects, thus having considerably more flexibility than constraints (though at some cost in elegance) [Nygaard, 1966, Nygaard, 1983].
 
+这是个大发现，也因此改变了我。
+我认为，这个发现之所以带来这样的影响，是因为在此之前我已经在足够多的不同案例下足够多次见证了这一想法，并且最后一次是在如此综合的术语中，以至于它给予了我灵光一现的顿悟。
+我主修的数学主要是抽象代数，里面的运算很少能在一般应用中用进一些结构中去。
+而我主修的生物则注重细胞的新陈代谢以及大范围的形态发育，在其中有简单机制控制复杂过程的概念，也有在所有所需的构件中能够区分出其中一种的概念。
+220的文件系统、B5000、Sketchpad，以及最终的Simula，尽管它们的目的各有不同，却分享着同一个想法。
+鲍勃·巴顿（Bob Barton）是B5000的主要设计者，他也是犹他大学的一位教授，在其早年的谈话里他曾这么说过：“递归设计的主要原则是让部分与整体迸发出相同的能量。”
+一开始我以为整体是指整个电脑，也疑惑着为什么每个人都想把它分解成更弱小的数据结构和程序。随着分时操作的出现，我想，为何不把它们分解成一台台小型电脑？但是不要成打的出现。
+还有就是，何不让这上千台小型电脑分别模拟一种有用的结构?
 This was the big hit, and I've not been the same since. I think the reason the hit had such impact was that I had seen the idea enough times in enough different forms that the final recognition was in such general terms to have the quality of an epiphany. My math major had centered on abstract algebras with their few operations generally applying to many structures. My biology major had focused on both cell metabolism and larger scale morphogenesis with its notions of simple mechanisms controlling complex processes and one kind of building block able to differentiate into all needed building blocks. The 220 file system, the B5000, Sketchpad, and finally Simula, all used the same idea for different purposes. Bob Barton, the main designer of the B5000 and a professor at Utah had said in one of his talks a few days earlier: "The basic principal of recursive design is to make the parts have the same power as the whole." For the first time I thought of the whole as the entire computer and wondered why anyone would want to divide it up into weaker things called data structures and procedures. Why not divide it up into little computers, as time sharing was starting to? But not in dozens. Why not thousands of them, each simulating a useful structure?
 
+我想起的莱布尼茨的单子(monad)、柏拉图"连结之处见本质(dividing nature at its joints)"的箴言，以及其它关于"复杂(complexity)"的见解。
+诚然，哲学提供观点(opinions)，工程学诉诸行动(deeds)，科学夹在中间的某处，成为维系它们的媒介。
+可以毫不夸张地说，自那时起，我大部分的想法都来自Simula--但这些想法不是用来改进它的。
+吸引我兴趣的是一个承诺，一个会有一条通向结构计算(structure computations)的全新道路的承诺。
+当道路显现，我们会花上好几年时间去理解如何使用这些洞见，并发明一些有效的机制来将它们一一实现。
 I recalled the monads of Leibniz, the "dividing nature at its joints" discourse of Plato, and other attempts to parse complexity. Of course, philosophy is about opinion and engineering is about deeds, with science the happy medium somewhere in between. It is not too much of an exaggeration to say that most of my ideas from then on took their roots from Simula—but not as an attempt to improve it. It was the promise of an entirely new way to structure computations that took my fancy. As it turned out, it would take quite a few years to understand how to use the insights and to devise efficient mechanisms to execute them.
 
 Dave Evans was not a great believer in graduate school as an institution. As with many of the ARPA "contractors" he wanted his students to be doing "real things"; they should move through graduate school as quickly as possible; and their theses should advance the state of the art. Dave would often get consulting jobs for his students, and in early 1967, he introduced me to Ed Cheadle, a friendly hardware genius at a local aerospace company who was working on a "little machine." It was not the first personal computer—that was the LINC of Wes Clark—but Ed wanted it for noncomputer professionals, in particular, he wanted to program it in a higher level language, like BASIC. I said; "What about JOSS? It's nicer." He said: "Sure, whatever you think," and that was the start of a very pleasant collaboration we called the FLEX machine. As we got deeper into the design, we realized that we wanted to dynamically simulate and extend, neither of which JOSS (or any existing language that I knew of) was particularly good at. The machine was too small for Simula, so that was out. The beauty of JOSS was the extreme attention of its design to the end-user—in this respect, it has not been surpassed [Joss 1964, Joss 1978]. JOSS was too slow for serious computing (but cf. Lampson 65), did not have real procedures, variable scope, and so forth. A language that looked a little like JOSS but had considerably more potential power was Wirth's EULER [Wirth 1966]. This was a generalization of Algol along lines first set forth by van Wijngaarden [van Wijngaarden 1963] in which types were discarded, different features consolidated, procedures were made into first class objects, and so forth. Actually kind of LISPlike, but without the deeper insights of LISP.
@@ -610,7 +623,7 @@ I believe that the much smaller size of a good OOP system comes not just by bein
 
 ###Smalltalk和儿童
 
-现在，Smalltalk发展到1976年，我已经总结了“成人”的活动（实际上只是半成人），让我回到73年，当我们和孩子准备开始实验的那个夏天。我们没有人知道如何与孩子们一起工作，但是我们知道Adele Goldberg和Steve Weyer与Pat Suppes一起在斯坦福已经做了相当多的工作，而且我们能够吸引他们加入我们。
+现在，Smalltalk发展到1976年，我已经总结了“成人”的活动(实际上只是半成人)，让我回到73年，当我们和孩子准备开始实验的那个夏天。我们没有人知道如何与孩子们一起工作，但是我们知道Adele Goldberg和Steve Weyer与Pat Suppes一起在斯坦福已经做了相当多的工作，而且我们能够吸引他们加入我们。
 
 因为我们不知道如何教孩子们（或其他人）面向对象编程，第一个实验Adele做模仿LOGO语言海龟画图形，她得到了似乎非常相似的结果。
 也就是说，孩子们可以让海龟在屏幕上画画，但似乎很少有超越表面效果的事情发生。
@@ -621,7 +634,7 @@ I believe that the much smaller size of a good OOP system comes not just by bein
 
 然后，Adele想出了一个绝妙的把Smalltalk作为一个面向对象语言的教学方法：“Joe Book.”。我相信这部分是受到了Minsky的想法的影响，你全面的教授教编程语言应该基于严谨程序的工作实例。
 
-创建几个方框（class box），并向其发送消息，最后形成一个简单的多线程动画。让孩子们猜方框最终可能的样子，他们猜测的结果与实际显示令人惊讶的相近：
+创建几个模板(class box)的实例，并向其发送消息，最后形成一个简单的多线程动画。让孩子们猜方框最终可能的样子，他们猜测的结果与实际显示令人惊讶的相近：
 
 ```
 to box | x y size tilt
@@ -632,8 +645,11 @@ to box | x y size tilt
 ISNEW    »    (SELF undraw. 'size <- size + :. SELF draw)
 ```
   
-多么美妙的方法，无数的儿童项目能够从简陋的盒子中喷薄而出。而且伴生出最早的一些工具，这时我们真的异常兴奋。
-### Smalltalk and Children
+多么美妙的方法，无数的儿童项目能够从简陋的模板(box)中喷薄而出。而且伴生出最早的一些工具，这时我们真的异常兴奋。例如，Marion Goldeen(12岁)的绘画系统就是一套完整的工具。几年后，Susan Hamet(12岁)的面向对象系统(带有MacDraw一样的设计功能)也一样。还有另外2个，Bruce Horn's (15岁)乐谱捕捉系统和Steve Putz(15岁)的电路设计系统。现在回想起来，这些可以称为“早期成功综合症”(early success syndrome)在计算机科学领域的另一个例子。成功是真实的，但他们并不像我们想象的那样普遍。他们不会像我们所希望的那样强烈地延伸到未来。从 帕洛阿尔托的学校选择的孩子们(几乎平均背景)，我们取得更加兴奋的成功越发的困难。在某种程度上，我们看到的是“黑客现象”，对于任何给定的工作，总有特定的5%的人天生沉浸其中，而80%左右的人，虽然最终会掌握，但是根本找不出一点天赋。  
+  
+我们有这样的一种朦胧的感觉，但我们一直保持相对的成功。我们肯定可以看到，学习系统的结构不是一个主要问题。孩子们拿着Adele的JOE book涌向[ALTOS](https://en.wikipedia.org/wiki/Altos_Computer_Systems)就能够自学到大部分内容。似乎更多地是的设计的问题。  
+  
+74年春季，我教PARC的20位非程序员Smalltalk时，就开始意识到。他们掌握最初的材料要比孩子们快，但是就在看起来成功唾手可得时，他们开始崩溃的问题没有看我比他们刚刚做得很好的( they started to crash on problems that didn't look to me to be much harder than the ones they had just been doing well on.)。其中有一个项目由一个成人学员的提出来，这是做一个小的数据库系统，可以像一个卡片或名片夹。他们甚至不能接近编程。我很惊讶，因为我“知道”，这样的一个项目为最终用户运行的，远低于传说的“两页”。那天晚上，我写出来，第二天，我向所有人展示如何做到这一点。然而，他们没有一个能够自己做到。后来，我坐在自己的房间里琢磨我谈话的要点。最后，我数出在这个小程序中不不明显的想法达到17个。而且其中一些很像建筑设计中的拱的概念：如果你不已经知道他们，则很难发现。  ### Smalltalk and Children
 
 Now that I have summarized the "adult" activities (we were actually only semiadults) in Smalltalk up to 1976, let me return to the summer of '73, when we were ready to start experiments with children. None of us knew anything about working with children, but we knew that Adele Goldberg and Steve Weyer who were then with Pat Suppes at Stanford had done quite a bit and we were able to entice them to join us.
 
