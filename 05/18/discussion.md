@@ -1,4 +1,4 @@
-> Several instances of the class box are created and sent messages, culminating with a simple multiprocess animation.
+﻿> Several instances of the class box are created and sent messages, culminating with a simple multiprocess animation.
 > After getting kids to guess what a box might be like—they could come surprisingly close—they would be shown:
 
  "class box"不知道该怎么翻译，结合图示，感觉这里是指程序操控的“方框”，就像 turtle一样。 
@@ -11,3 +11,11 @@
 
 Adele Goldberg 的1977年报告: 
 [Methods For Teaching The Programmming Language Smalltalk](SSL-77-2_Teaching_Smalltalk.pdf)
+
+Seymour Papert 的论文：
+[You Can't Think About Thinking Without Thinking About Thinking About Something](papert-thinkingaboutthinking.pdf)
+
+> Expert knowledge often remains rooted in the environments in which it was first learned—and most metaphorical extensions result in misleading analogies.   
+  不清楚most metaphorical extensions result in misleading analogies. 意思？？
+
+
