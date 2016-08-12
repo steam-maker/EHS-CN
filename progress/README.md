@@ -649,7 +649,31 @@ ISNEW    »    (SELF undraw. 'size <- size + :. SELF draw)
   
 我们有这样的一种朦胧的感觉，但我们一直保持相对的成功。我们肯定可以看到，学习系统的结构不是一个主要问题。孩子们拿着Adele的JOE book涌向[ALTOS](https://en.wikipedia.org/wiki/Altos_Computer_Systems)就能够自学到大部分内容。似乎更多地是的设计的问题。  
   
-74年春季，我教PARC的20位非程序员Smalltalk时，就开始意识到。他们掌握最初的材料要比孩子们快，但是就在看起来成功唾手可得时，他们开始崩溃的问题没有看我比他们刚刚做得很好的( they started to crash on problems that didn't look to me to be much harder than the ones they had just been doing well on.)。其中有一个项目由一个成人学员的提出来，这是做一个小的数据库系统，可以像一个卡片或名片夹。他们甚至不能接近编程。我很惊讶，因为我“知道”，这样的一个项目为最终用户运行的，远低于传说的“两页”。那天晚上，我写出来，第二天，我向所有人展示如何做到这一点。然而，他们没有一个能够自己做到。后来，我坐在自己的房间里琢磨我谈话的要点。最后，我数出在这个小程序中不不明显的想法达到17个。而且其中一些很像建筑设计中的拱的概念：如果你不已经知道他们，则很难发现。  ### Smalltalk and Children
+74年春季，我教PARC的20位非程序员Smalltalk时，就开始意识到。他们掌握最初的材料要比孩子们快，但是就在看起来成功唾手可得时，他们开始崩溃的问题没有看我比他们刚刚做得很好的( they started to crash on problems that didn't look to me to be much harder than the ones they had just been doing well on.)。其中有一个项目由一个成人学员的提出来，这是做一个小的数据库系统，可以像一个卡片或名片夹。他们甚至不能接近编程。我很惊讶，因为我“知道”，这样的一个项目为最终用户运行的，远低于传说的“两页”。那天晚上，我写出来，第二天，我向所有人展示如何做到这一点。然而，他们没有一个能够自己做到。后来，我坐在自己的房间里琢磨我谈话的要点。最后，我数出在这个小程序中不明显的想法达到17个。而且其中一些很像建筑设计中的拱的概念：如果你不已经知道他们，则很难发现。  
+  
+联系到识字就非常清晰了，只学会读和写是不够的，还需要表达想法的文学。语言是用来阅读和写的，但在某些时候，组织想法开始主宰单纯的语言能力。而且，语言对获得强大的思想具有非常大的帮助，过往的阅历有助于更好获得更强大的思想[Papert 70s]。所以，我们决定我们应该教设计。Adele阿黛尔想出了堪称神来之笔办法来解决设计教学问题。她明确指出，
+在关于程序的模糊想法与能够运行在Smalltalk上的非常详细的编写和调试的程序之间，需要一个中介。她称之为“中介形式设计模板”(intermediary forms design templates)。  
+  
+使这些孩子可以看一个他们想模拟的情况，并分解成类和消息，而不必担心一个方法将如何工作。然后，该方法规划可以写成非正式地用英语，这些记录在后来书写实际代码时成为注释和指南。这是一个了不起的想法，它工作得很好。  
+  
+但还不能令我们满足。正如Adele喜欢指出的，如果只有部分孩子成功很难声称为成功，特别是在孩子和老师都被要求付出巨大努力来换取成功时。真正的教育不得不在更少理想化和更加稳健环境中进行。尽管如此，部分成功与没有成功本质上是不同的。我们想要更多，并开始推动继承思想作为一种方式让新手建立那些仅能由专家设计的框架。我们有充分的理由相信这可以工作，因为我们已经被Lisa van Stone对SHAZAM(相对专业的成人做的5、6页Smalltalk的动画工具)做出重大改进的能力印象深刻。不幸的是，继承——尽管令人难以置信的强大的技术——让新手(甚至专业人员)去应对，已经证明是十分困难的。   
+  
+在这一点上，让我从今天的有利位置做一个回顾。我现在非常确信，我们设计的模板方法毕竟是一个很好方法。我们只是没有足够的向纵深应用。我的意思是，来自于众多试图教初学者编程实践，产生了大量的积累[Soloway 1989]。他们都有类似的故事，看起来几乎没有运用各种编程语言提供的功能，新手都具有特殊的思维方式，做的每一项都是好程序认为困难的。甚至比当时(和今天)更好的界面，但很可能实际比我们希望它的更像写作。也就说，对于“80%”，真的必须要经过多年持续不断的学习，才能建立设计所需要的结构和前瞻的解决方案。41     
+  
+问题不是让孩子们做他们喜欢做的事情，即使他们不知道他们在做什么。这与研究早期语言学习有很好的相关性，当做了很多训练不管是否涉及内容。只要做似乎就有帮助。困难的是要确定提出什么想法和如何深入，都应渗透在给定的儿童发育水平。尽管几个世纪的经验，这种混乱仍然存在于阅读写作自然语言和数学。这是教孩子编程的主要障碍。何时，以何种顺序和深度，如何教授充满活力的创意？   
+
+我们甚至应该教编程吗？我在过去的30年里见过数以百计的程序员，可以看到编程没有明显的影响提升他们的思考能力，或对人类知识有所启发。如果有的话，正好相反。专家知识往往仍然植根于环境中，第一次学会--和大部分隐喻拓展导致令人误导的类比(Expert knowledge often remains rooted in the environments in which it was first learned—and most metaphorical extensions result in misleading analogies)。艺术家、科学家、哲学家在他们的专业之外表现出异常的迟钝(犯罪嫌疑人也一样)。我们首要警惕的塞壬之歌(siren's song)是承诺有趣的追求和有趣的想法之间的存在联系。音乐不在钢琴里，并没有发现或感觉到它是有可能从朱利亚德音乐学院(Juilliard)毕业的。  
+  
+我也遇到一些人，他们通过计算提供重要的关于人类知识新的隐喻以及延伸。但是，为了发生启迪，除了计算之外，还需要一些别的东西。  
+
+工具提供了一个路径，一个背景下，几乎是一个发展启迪的借口，但没有任何工具包含它或可以排除它。切萨雷·帕韦斯(Cesare Pavese)说：要了解世界，就必须构建它。换句话说，我们不仅仅是要有，而是要知道。但是能够发生的，大部分并没有获知正在发生。  
+
+![circuit](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/circuit.png)
+
+   
+
+
+  ### Smalltalk and Children
 
 Now that I have summarized the "adult" activities (we were actually only semiadults) in Smalltalk up to 1976, let me return to the summer of '73, when we were ready to start experiments with children. None of us knew anything about working with children, but we knew that Adele Goldberg and Steve Weyer who were then with Pat Suppes at Stanford had done quite a bit and we were able to entice them to join us.
 
