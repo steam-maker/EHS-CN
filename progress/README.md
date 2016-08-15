@@ -670,10 +670,24 @@ ISNEW    »    (SELF undraw. 'size <- size + :. SELF draw)
 
 ![circuit](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/circuit.png)
 
-   
+换个角度来看，当知识被第一次掌握时，是处于最不有趣状态。陈述--无论是否标记、典故或物理方式控制--妨碍（几乎是接管目标）和必须费力地和痛苦地解释。从这里有几个有用的路径，其中两个是重要的和交织在一起的。   
+
+首先是流畅性(fluency)，在某种程度上是构建消失申述的解释心理结构的过程(which in part is the process of building mental structures that disappear the interpretation of the representations.)。一个句子的字母和单词是饱含意义，而不是标记，网球拍或键盘变成一个人的身体的延伸，等等。如果进行进一步最终成为一种专家--但没有在其他领域的深层知识，试图
+归纳通常是太脆弱和病态的。       
+
+第二条路径倾向于把知识作为一个隐喻，而不是可以阐述其他领域。但是，如果没有流畅性，这是更可能的先验知识将占主导地位，从这方面的隐喻将是模糊的和误导性的。  
+  
+"诀窍"，我认为这正是人文教育应该做的，当与其他流畅(fluent)深层知识建立联系时所达到的流畅度与深度。我们的社会已经降低了它的目标，到目前为止，乐于“分数的增加”而没有敢于质询是否有重要的入口被错过。能够阅读药瓶上的警告或写一个暑假见闻，不是素养，我们的社会不是这样认为的。例如，素养，就是能够流利地阅读，并且遵循50页潘恩常识，能够(快乐)流利地写出批判或捍卫它的文章。另一种第二十世纪的素养，是能够听到一种新的致命的传染性疾病的绝症，并立即知道，灾难性呈指数发展，并及早采取行动是优先级最高。另一种素养，将公民到其个人电脑前，在那里他们可以流利地和无痛苦建立疾病的系统仿真，作为对进一步信息的参照。  
+
+在人文科学的层面，我们期望连接每个(fluencies)之间会形成真正强大隐喻，为考虑根据别人的想法。   
+ 
+究其原因，因此，许多人都希望孩子们理解计算深刻而且流畅，正如文学，数学，科学，音乐，美术那样，相对于其他知识和其他辩证的思维方式提升我们理解世界的能力，它承载特殊的思维方式。
 
 
-  ### Smalltalk and Children
+我们当时不知道，我很抱歉地说，15年以后，这些关键问题仍然没有真正有用的答案。但也有一些迹象。即使是非常年幼的儿童能够理解和使用交互的转换工具。第一个是他们的手！他们可以轻松的将这些经验扩展到计算机对象，并使他们发生变化。他们可以经常想象一个提议(proposed)的变化会做什么，而不会对结果感到惊讶。两三岁孩子能使用Smalltalk风格的界面和操作面向对象的图形。三年级的学生可以(在几天内)学习超过50个功能，其中大部分是一个新的系统，包括它的用户界面的转换工具。他们可以回答任何问题，只要答案涉及这些工具的应用。但是对于他们来说，回答任何需要2个或多个转换的问题，都是非常困难。然而他们应用序列转换并没有问题，如探索"下一步"。如果构想和实现哪怕是适度的目标少量的改变，他们几乎完全缺乏导航能力。      
+  
+看来，我们需要学习或教授的内容，现在被打包成零零星星的类似于像跳棋一样的战略游戏。模糊的感觉“三人行”(threesome)指向一个人的目标，能够为一些需要实现的精细的工作做准备。这项艺术适合大部分人，但大多数时候，这需要多年逐步掌握。   
+### Smalltalk and Children
 
 Now that I have summarized the "adult" activities (we were actually only semiadults) in Smalltalk up to 1976, let me return to the summer of '73, when we were ready to start experiments with children. None of us knew anything about working with children, but we knew that Adele Goldberg and Steve Weyer who were then with Pat Suppes at Stanford had done quite a bit and we were able to entice them to join us.
 
