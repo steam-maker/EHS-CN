@@ -4,4 +4,4 @@ NSL有个有趣的特性，就是它用户界面可以定制参量，并且终�
 换句话说就是，**这些语法把用户局限在系统的状态（state）里，这个状态需要用户避免同时完成其他新的交互**（these grammars forced the user to be in a system state which required getting out of before any new kind of interaction could be done）。
 因此，为了做另一件事情，用户必须通过等级菜单（hierarchical menus）或“屏幕（screen）”返回初始状态（master state）。
 这里面似乎需要不同的状态，这些状态当中会有一个转移箭头（transition arrow）负责各个状态的切换——但在正式的语法理论中，这个概念并不有效。
-也就是说，我们似乎需要一个更“令人愉悦的（flatter）”界面——但是这个界面会更有趣、更丰富，也总够有用吗？
+也就是说，我们似乎需要一个更“令人愉悦的（flatter）”界面——但是这个界面会更有趣、更丰富，也足够有用吗？
