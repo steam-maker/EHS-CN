@@ -237,24 +237,79 @@ This was the big hit, and I've not been the same since. I think the reason the h
 当道路显现，我们会花上好几年时间去理解如何使用这些洞见，并发明一些有效的机制来将它们一一实现。
 I recalled the monads of Leibniz, the "dividing nature at its joints" discourse of Plato, and other attempts to parse complexity. Of course, philosophy is about opinion and engineering is about deeds, with science the happy medium somewhere in between. It is not too much of an exaggeration to say that most of my ideas from then on took their roots from Simula—but not as an attempt to improve it. It was the promise of an entirely new way to structure computations that took my fancy. As it turned out, it would take quite a few years to understand how to use the insights and to devise efficient mechanisms to execute them.
 
+戴夫·埃文斯并不觉得研究生院应当作为一个研究机构而存在。
+和许多ARPA的**“承包人（contractors）”**，一样，他希望自己的学生能做些“真正的东西”；
+研究生应当尽快完成他们的学业；
+并且他们的论文应当超越当前的发展。
+戴夫经常给他的学生一些咨询类的工作，1967年年初，他把我介绍给了艾德· 奇德尔，对方是个友善的硬件天才，在一家当地的航空航天公司任职，那时他正在捣鼓一台“小机器”。
+那台机器并不是第一台个人电脑——第一台个人电脑是韦斯·克拉克的LINC——但是戴夫希望这台电脑能够为非计算机专业的人所用，具体说来就是，他希望能用像BASIC这样的高阶语言来为这台电脑编程。
+我提议道：“用JOSS怎么样？”
+他说：“好啊，随你怎么来。”，这就是我们愉快合作的开始，我们把那台机器叫做FLEX。
+随着设计的深入，我们意识到我们需要的是一种可以自如地模拟以及延展的语言，JOSS（或者其它任何我所知的语言）并不精于此道。
+而用Simula的话，机器又太小了，所以我们把Simula也淘汰了。
+JOSS的美丽之处在于，对于终端用户来说，它的设计足够博人眼球——并且在该领域无出其右【Joss 1960，Joss 1978】。
+但用在精确计算方面（除了cf. Lampson 65），JOSS运行得太慢了，它也缺少真正的程序、变量作用域等等。
+和JOSS类似但显然潜能更大的是沃斯的EULER【沃斯 1966】。
+它是对Algol的概括，首先由韦恩哈登提出【凡·韦恩哈登 1963】。为此，他做了一系列的改造，摒了范式、统一了特性、并把程序作为第一对象等等。
+实际上，这个语言有点像LISP，但没有LISP那么深刻的内涵。
+
+![LINC](LINC.png)
+
 Dave Evans was not a great believer in graduate school as an institution. As with many of the ARPA "contractors" he wanted his students to be doing "real things"; they should move through graduate school as quickly as possible; and their theses should advance the state of the art. Dave would often get consulting jobs for his students, and in early 1967, he introduced me to Ed Cheadle, a friendly hardware genius at a local aerospace company who was working on a "little machine." It was not the first personal computer—that was the LINC of Wes Clark—but Ed wanted it for noncomputer professionals, in particular, he wanted to program it in a higher level language, like BASIC. I said; "What about JOSS? It's nicer." He said: "Sure, whatever you think," and that was the start of a very pleasant collaboration we called the FLEX machine. As we got deeper into the design, we realized that we wanted to dynamically simulate and extend, neither of which JOSS (or any existing language that I knew of) was particularly good at. The machine was too small for Simula, so that was out. The beauty of JOSS was the extreme attention of its design to the end-user—in this respect, it has not been surpassed [Joss 1964, Joss 1978]. JOSS was too slow for serious computing (but cf. Lampson 65), did not have real procedures, variable scope, and so forth. A language that looked a little like JOSS but had considerably more potential power was Wirth's EULER [Wirth 1966]. This was a generalization of Algol along lines first set forth by van Wijngaarden [van Wijngaarden 1963] in which types were discarded, different features consolidated, procedures were made into first class objects, and so forth. Actually kind of LISPlike, but without the deeper insights of LISP.
 
 ![linc](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/linc.png)
 
-But EULER was enough of "an almost new thing" to suggest that the same techniques be applied to simplify Simula. The EULER compiler was a part of its formal definition and made a simple conversion into B5000-like byte-codes. This was appealing because it suggested that Ed's little machine could run byte-codes emulated in the longish slow microcode that was then possible. The EULER compiler however, was tortuously rendered in an "extended precedence" grammar that actually required concessions in the language syntax (e.g. "," could only be used in one role because the precedence scheme had no state space). I initially adopted a bottom-up Floyd-Evans parser (adapted from Jerry Feldman's original compiler-compiler [Feldman 1977]) and later went to various top-down schemes, several of them related to Shorre's META II [Shorre 1963] that eventually put the translater in the name space of the language.
+但EULER可以算得上是“几乎全新的事物”，它说明了这种技术可以用于简化Simula。
+EULER的编译器是它形式定义的一部分，它能简单地将一种语言转化为与B5000类似的字节码（byte-code）。
+这很引人注目，**因为这说明了艾德的小型机器能够在又长又慢的[微码（microcode）](http://baike.baidu.com/view/4883022.htm)中运行仿真的字节码**（Ed's little machine could run byte-codes emulated in the longish slow microcode that was then possible）。
+但是EULER的编译器的使用却不合事宜，它被用在了一个“扩充优先（extended precedence）”的文法中，而实际上使用这种文法需要对语言句法进行让步（例如，“，”只能代表一种意思，因为这个优先级里没有[状态空间<state space>](http://baike.baidu.com/view/3821785.htm)）。
+我最初采用了倒置的弗洛伊德-伊万斯解析（Floyd-Evans parser）（该解析改编自杰瑞·费尔德曼最初的编译器-编译器思想【费尔德曼 1977】），后来我又从各种严密的组合中寻求帮助，其中一些与Schorre的META II息息相关【Schorre 1963】，他最终在META II的[命名空间（name space）](http://baike.baidu.com/view/94233.htm?fromtitle=%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4&fromid=2887476&type=syn)里放置了翻译机（translater）。
+But EULER was enough of "an almost new thing" to suggest that the same techniques be applied to simplify Simula. The EULER compiler was a part of its formal definition and made a simple conversion into B5000-like byte-codes. This was appealing because it suggested that Ed's little machine could run byte-codes emulated in the longish slow microcode that was then possible. The EULER compiler however, was tortuously rendered in an "extended precedence" grammar that actually required concessions in the language syntax (e.g. "," could only be used in one role because the precedence scheme had no state space). I initially adopted a bottom-up Floyd-Evans parser (adapted from Jerry Feldman's original compiler-compiler [Feldman 1977]) and later went to various top-down schemes, several of them related to Schorre's META II [Schorre 1963] that eventually put the translater in the name space of the language.
 
+现在被叫做FLEX的语言，在语义上应当多参考一些Simula，而非Algol或EULER。
+但具体通过什么方式还不明了。
+同样不明朗的还有用户如何与这个系统互动。
+艾德甚至在他的第一台机器上安装了显示屏（为了绘制图形等），LINC也有“字符电脑终端（glass teletype）”，但是搭建一个类似Sketchpad的系统似乎远远超过了我们的能力范围，我们的预算最大只能供我们打出16k大小的16位字符。
 The semantics of what was now called the FLEX language needed to be influenced more by Simula than by Algol or EULER. But it was not completely clear how. Nor was it clear how the users should interact with the system. Ed had a display (for graphing, etc.) even on his first machine, and the LINC had a "glass teletype," but a Sketchpad-like system seemed far beyond the scope that we could accomplish with the maximum of 16k 16-bit words that our cost budget allowed.
 
+### [道格·恩格尔巴特（Doug Engelbart）](http://baike.baidu.com/view/686586.htm)与NLS
+1967年初，当我们还在苦思冥想着FLEX机器的时候，道格·恩格尔巴特访问了犹他大学。
+像是圣经中类似的先知，他毫无疑问地可以被称之为FLEX机器的奠基人之一，而那时我开始把FLEX叫做“个人电脑”。
+他随身携带着16mm长的投影仪，上面可以进行远程遥控，这样他就能通过随时随地开始和结束任务来展示发生的事情（对此人们还不是很习惯，目光也不能跟随着光标移动）。
+他对ARPA之梦的见解是，**oNLine Systems （NLS）将会是交互式的交通工具承载着“人类放大的智慧（augmentation of human intellect）”从“概念空间里的思维向量（thought vectors in concept space）”中穿梭而过**（ the destiny of oNLine Systems (NLS) was the "augmentation of human intellect" via an interactive vehicle navigating through "thought vectors in concept space."）。
+他的系统所能做的——甚至是从今天的标准来看——都令人叹为观止。
+不仅仅是超文本（hypertext），还有制图（graphics）、多窗口工作（multiple panes）、高效导航（efficient navigation）以及命令输入、交互式合作任务（command input, interactive collaborative work）等，
+这是个完完全全的观念世界，有着完整的世界观。
+这一观念带来的影响则是，它会为那些“迫切地想被放大”的人们提供一个引入注目的隐喻，这个隐喻会告诉他们交互式计算应当是什么样子，于是，我立刻将很多想法应用在了FLEX身上。
+
+![NLS](NLS.png)
 ### Doug Engelbart and NLS
 
 This was in early 1967, and while we were pondering the FLEX machine, Utah was visited by Doug Engelbart. A prophet of Biblical dimensions, he was very much one of the fathers of what on the FLEX machine I had started to call "personal computing." He actually traveled with his own 16mm projector with a remote control for starting and stopping it to show what was going on (people were not used to seeing and following cursors back then). His notion on the ARPA dream was that the destiny of oNLine Systems (NLS) was the "augmentation of human intellect" via an interactive vehicle navigating through "thought vectors in concept space." What his system could do then—even by today's standards—was incredible. Not just hypertext, but graphics, multiple panes, efficient navigation and command input, interactive collaborative work, etc. An entire conceptual world and world view [Engelbart 68]. The impact of this vision was to produce in the minds of those who were "eager to be augmented" a compelling metaphor of what interactive computing should be like, and I immediately adopted many of the ideas for the FLEX machine.
 
 ![nls](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/nls.png)
 
+当我沉浸于ARPA人机共存的概念，也见证了艾德“小型机器”的存在，戈登·摩尔的“定律”再次回到了我的脑海里，这一次，它带来了极大的影响。
+这是我第一次产生了把房间般大小的TX-2或者10 MIP 6000放置于桌上的想法。
+而可能带来的结果几乎让我胆怯；
+我们所知的计算无法幸免于难——这个词的真实含义发生了变化——这种感觉就跟人类第一次读完哥白尼（Copernicus）一样，他们从上到下打量着这方陌生的天地，满脸茫然。
 In the midst of the ARPA context of human-computer symbiosis and in the presence of Ed's "little machine", Gordon Moore's "Law" again came to mind, this time with great impact. For the first time I made the leap of putting the room-sized interactive TX-2 or even a 10 MIP 6600 on a desk. I was almost frightened by the implications; computing as we knew it couldn't survive—the actual meaning of the word changed—it must have been the same kind of disorientation people had after reading Copernicus and first looked up from a different Earth to a different Heaven.
 
+与最多会有上千台大型主机的预测不同，这世上理当存在数百万台个人机器以及与之旗鼓相当的个人机器用户，他们将独立于统一的管理之外——但现实是，1992年的今天，据估计，全世界只有4000台IBM主机——并且，接受了培训、知道如何使用它们的用户仅寥寥千人。
+这些应用和培训本该来自哪里？
+为什么在数百万的潜在用户当中，我们只指望应用程序员开发其中的某一个需求？
+也许，我们真正需要的是一个可以延展的系统，并且工具的选择权掌握在终端用户手中（甚至，有些用户可以直接建造工具）。
+而早在分时操作取得初步成功的时候，ARPA就想到了这一层。
+后来因为提出了人机共存这个意义更深远的隐喻，社区避免了错把目光放在完成子目标上面，相反，所有人都专注于啜饮玩味“放大（augmentation）”这只圣杯里的奥义。
 Instead of at most a few thousand institutional mainframes in the world—even today in 1992 it is estimated that there are only 4000 IBM mainframes in the entire world—and at most a few thousand users trained for each application, there would be millions of personal machines and users, mostly outside of direct institutional control. Where would the applications and training come from? Why should we expect an applications programmer to anticipate the specific needs of a particular one of the millions of potential users? An extensional system seemed to be called for in which the end-users would do most of the tailoring (and even some of the direct construction) of their tools. ARPA had already figured this out in the context of their early successes in time-sharing. Their larger metaphor of human-computer symbiosis helped the community avoid making a religion of their subgoals and kept them focused on the abstract holy grail of "augmentation."
 
+NSL有个有趣的特性，就是它用户界面可以定制参量，并且终端用户可以使用TreeMeta编译器-编译器中的“交互语法（grammar of interaction）”来编辑界面。
+这与威廉·纽曼（William Newman）早期的“Reaction Handler”定制界面有些相似，**终端用户或者开发者使用平板和触控笔、通过特定的程序，创建一种形象且有规律的表达语法**（construct through tablet and stylus an iconic regular expression grammar with action procedures at the states）（NSL允许用户根据其自由语境规则<context free rule>进行嵌入）。
+这在很多方面都很引人注目，尤其是威廉的**组合（scheme）**，但在我看来，这里面还是有个大bug。
+换句话说就是，**这些语法把用户局限在系统的状态（state）里，这个状态需要用户避免同时完成其他新的交互**（these grammars forced the user to be in a system state which required getting out of before any new kind of interaction could be done）。
+因此，为了做另一件事情，用户必须通过等级菜单（hierarchical menus）或“屏幕（screen）”返回初始状态（master state）。
+这里面似乎需要不同的状态，这些状态当中会有一个转移箭头（transition arrow）负责各个状态的切换——但在正式的语法理论中，这个概念并不有效。
+也就是说，我们似乎需要一个“层次更少的（flatter）”界面——但是这个界面会更有趣、更丰富，也足够有用吗？
 One of the interesting features of NLS was that its user interface was parametric and could be supplied by the end user in the form of a "grammar of interaction" given in their compiler-compiler TreeMeta. This was similar to William Newman's early "Reaction Handler" [Newman 66] work in specifying interfaces by having the end-user or developer construct through tablet and stylus an iconic regular expression grammar with action procedures at the states (NLS allowed embeddings via its context free rules). This was attractive in many ways, particularly William's scheme, but to me there was a monstrous bug in this approach. Namely, these grammars forced the user to be in a system state which required getting out of before any new kind of interaction could be done. In hierarchical menus or "screens" one would have to backtrack to a master state in order to go somewhere else. What seemed to be required were states in which there was a transition arrow to every other state—not a fruitful concept in formal grammar theory. In other words, a much "flatter" interface seemed called for—but could such a thing be made interesting and rich enough to be useful?
 
 Again, the scope of the FLEX machine was too small for a miniNLS, and we were forced to find alternate designs that would incorporate some of the power of the new ideas, and in some cases to improve them. I decided that Sketchpad's notion of a general window that viewed a larger virtual world was a better idea than restricted horizontal panes and with Ed came up with a clipping algorithm very similar to that under development at the same time by Sutherland and his students at Harvard for the 3D "virtual reality" helmet project [Sutherland 1968].
