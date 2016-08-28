@@ -1,4 +1,4 @@
-作为B5000一般化的描述符（descriptors），对象引用（object reference）被用于FLEX。
+作为B5000描述符（descriptors）的一般化，对象引用（object reference）被用于FLEX。
 与一些提供参考号（referencing number）、阵列（array）和程序（procedure）的版式不同，FLEX的描述符包含两个指示器（pointer）：
 第一个指向目标的“主干（master）”，第二个则指向对象实例（object instance）（后来我们意识到，为了节省空间，我们应当把主干指示器放置在实例中）。
 为了完成一般任务，我们需要采用不同的方法。
