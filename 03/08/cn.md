@@ -1,6 +1,6 @@
 作为B5000描述符（descriptors）的一般化，对象引用（object reference）被用于FLEX。
 与一些提供参考号（referencing number）、阵列（array）和程序（procedure）的版式不同，FLEX的描述符包含两个指示器（pointer）：
-第一个指向目标的“主干（master）”，第二个则指向对象实例（object instance）（后来我们意识到，为了节省空间，我们应当把主干指示器放置在实例中）。
+第一个指向对象的“主干（master）”，第二个则指向对象实例（object instance）（后来我们意识到，为了节省空间，我们应当把主干指示器放置在实例中）。
 为了完成一般任务，我们需要采用不同的方法。
 B5000使用的是[左值（l-values）与右值（r-values）](http://baike.baidu.com/view/9489098.htm)，它们可以在一些情况下使用，但无法胜任更复杂的对象。
 **例如，`a[55]:=0`，如果`a`是[稀疏数组（sparse array）](http://www.tuicool.com/articles/AfYnEf)，即便它的元素默认值为0，这个数组中也将产生一个值，因为`:=`是一个[算子（operator）](http://baike.baidu.com/view/53313.htm)，并且在任何人意识到右值是默认值前，`a[55]`就已经进入左值，不管`a`到底是一个数组还是数组中的前置程序。**（ For example:a[55] := 0, if a was a sparse array whose default element was 0 would still generate an element in the array because := is an "operator" and a[55] is dereferenced into an l-value before anyone gets to see that the r-value is the default element, regardless of whether a is an array or a procedure fronting for an array）
