@@ -345,6 +345,7 @@ Object references were handled on the FLEX machine as a generalization of B5000 
 
 其中，“... to ... by ...”这样的结构是一种协程对象。
 后来，在加强版的Smalltalk中重新运用了不少这样的观点。
+
 As in Simula, a coroutining control structure [Conway, 1963] was used as a way to suspend and resume objects. Persistent objects like files and documents were treated as suspended processes and were organized according to their Algol-like static variable scopes. These were shown on the screen and could be opened by pointing at them. Coroutining was also used as a control structure for looping. A single operator while was used to test the generators which returned false when unable to furnish a new value. Booleans were used to link multiple generators. So a "for-type" loop would be written as:
 
 ```
