@@ -11,3 +11,4 @@ B5000使用的是[左值（l-values）与右值（r-values）](http://baike.baid
 [卡尔纳普（Carnap）](http://baike.baidu.com/view/111023.htm)有本关于逻辑的书，它通过解释：**同范围内的“内涵（intensional）”定义可被看成更传统的外延（extensional）技术，并且更直观也更方便**（ "intensional" definitions covered the same territory as the more traditional extensional technique and were often more intuitive and convenient），来辅助阐释这一概念。
 
 ![FLEX](FLEX.png)
+

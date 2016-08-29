@@ -14,3 +14,4 @@ Simula的分配结构和Sketchpad上的“实体（instances）”很像。
 上面的“描述（discriptions）”有着“服务器（masters）”的功能，它们可以创造各自独立的“实体（instances）”。
 在Sketchpad里面叫“服务器（masters）”和“实体（instances）”，在Simula里分别叫做“活动（activities）”和“过程（processes）”。
 另外，Simula是种可以控制Sketchpad之类事物的程序性语言，因此它比起“约束（constraints）”更具灵活性（从语言的考究方面来看）。【尼高 1966；尼高 1983】
+

@@ -87,6 +87,7 @@ Thanks to the numerous reviewers for enduring the many drafts they had to commen
 
 
 尽管有诸多动机导致面向对象程序的发明，其中有两个是核心的。大范围上的动机就是为需要隐藏细节的复杂系统想出一个更好的模块方案；而小范围上的则是找到一个更灵活的任务版本，然后尝试着一并解决。与大多数新观点的产生一样，它的产生独立且断断续续。
+
 Though OOP came from many motivations, two were central. The large scale one was to find a better module scheme for complex systems involving hiding of details, and the small scale one was to find a more flexible version of assignment, and then to try to eliminate it altogether. As with most new ideas, it originally happened in isolated fits and starts.
 
 
@@ -152,6 +153,7 @@ and finally the original denouncers will claim to have invented it.
 我当时并不真正的欣赏它，但我确实注意到它分段式的储存系统、[HLL](http://baike.baidu.com/view/1190296.htm)编译以及字节码执行（byte-coded execution）带来的效率、为子程序调用（subroutine calling）和多进程转换（multiprocess switching）的自动调整结构、可分享的干净代码、保护机制等。
 同时，**我也看见其使用的程序参照表（Program Reference Table）就相当于220文件系统方案为组件提供的一个过程接口（procedural interface）**(I saw that the access to its Program Reference Table corresponded to the 220 file system scheme of providing a procedural interface to a modul)**。
 但是，当时我在这个机器身上的重大发现不是它面向对象的想法，而是其中对HLL翻译与评估的一些洞见。【Barton, 1961】【Burroughs, 1961】
+
 True to the stages, I "barely saw" the idea several times ca. 1961 while a programmer in the Air  b220 file format Force. 
 The first was on the Burroughs 220 in the form of a style for transporting files from one Air Training Command installation to another.
 There were no standard operating systems or file formats back then, so some (to this day unknown) designer decided to finesse the problem by taking each file and dividing it into three parts. 
@@ -174,6 +176,7 @@ However, my big hit from this machine at this time was not the OOP idea, but som
 1965年的这个时候，当我站在房间般大小、依靠氟利昂降温的10 MIP 6600旁时，摩尔惊骇世俗的预测对我来说遥远而缥缈。
 
 ![Moore](Moore.png)
+
 After the Air Force, I worked my way through the rest of college by programming mostly retrieval systems for large collections of weather data for the National Center for Atmospheric Research. I got interested in simulation in general—particularly of one machine by another—but aside from doing a one-dimensional version of a bit-field block transfer (bitblt) on a CDC 6600 to simulate word sizes of various machines, most of my attention was distracted by school, or I should say the theatre at school. While in Chippewa Falls helping to debug the 6600, I read an article by Gordon Moore which predicted that integrated silicon on chips was going to exponentially improve in density and cost over many years [Moore 65]. At the time in 1965, standing next to the room-sized freon-cooled 10 MIP 6600, his astounding predictions had little projection into my horizons.
 
 ![mooreslaw](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/mooreslaw.png)
@@ -190,6 +193,7 @@ After the Air Force, I worked my way through the rest of college by programming 
 它拥有第一个剪切和缩放窗口——缩略图在虚拟的纸张上实际面积能达到大约1/3平方英里。
 
 ![sketchpad](sketchpad.png)
+
 ### Sketchpad and Simula
 
 Through a series of flukes, I wound up in graduate school at the University of Utah in the Fall of 1966, "knowing nothing." That is to say, I had never heard of ARPA or its projects, or that Utah's main goal in this community was to solve the "hidden line" problem in 3D graphics, until I actually walked into Dave Evans' office looking for a job and a desk. On Dave's desk was a foot-high stack of brown covered documents, one of which he handed to me: "Take this and read it."
@@ -214,6 +218,7 @@ Simula的分配结构和Sketchpad上的“实体（instances）”很像。
 上面的“描述（discriptions）”有着“服务器（masters）”的功能，它们可以创造各自独立的“实体（instances）”。
 在Sketchpad里面叫“服务器（masters）”和“实体（instances）”，在Simula里分别叫做“活动（activities）”和“过程（processes）”。
 另外，Simula是种可以控制Sketchpad之类事物的程序性语言，因此它比起“约束（constraints）”更具灵活性（从语言的考究方面来看）。【尼高 1966；尼高 1983】
+
 Head whirling, I found my desk. On it was a pile of tapes and listings, and a note: "This is the Algol for the 1108. It doesn't work. Please make it work." The latest graduate student gets the latest dirty task.
 
 The documentation was incomprehensible. Supposedly, this was the Case-Western Reserve 1107 Algol—but it had been doctored to make a language called Simula; the documentation read like Norwegian transliterated into English, which in fact it was. There were uses of words like activity and process that didn't seem to coincide with normal English usage.
@@ -228,6 +233,7 @@ Finally, another graduate student and I unrolled the program listing 80 feet dow
 鲍勃·巴顿（Bob Barton）是B5000的主要设计者，他也是犹他大学的一位教授，在其早年的谈话里他曾这么说过：“递归设计的主要原则是让部分与整体迸发出相同的能量。”
 一开始我以为整体是指整个电脑，也疑惑着为什么每个人都想把它分解成更弱小的数据结构和程序。随着分时操作的出现，我想，为何不把它们分解成一台台小型电脑？但是不要成打的出现。
 还有就是，何不让这上千台小型电脑分别模拟一种有用的结构?
+
 This was the big hit, and I've not been the same since. I think the reason the hit had such impact was that I had seen the idea enough times in enough different forms that the final recognition was in such general terms to have the quality of an epiphany. My math major had centered on abstract algebras with their few operations generally applying to many structures. My biology major had focused on both cell metabolism and larger scale morphogenesis with its notions of simple mechanisms controlling complex processes and one kind of building block able to differentiate into all needed building blocks. The 220 file system, the B5000, Sketchpad, and finally Simula, all used the same idea for different purposes. Bob Barton, the main designer of the B5000 and a professor at Utah had said in one of his talks a few days earlier: "The basic principal of recursive design is to make the parts have the same power as the whole." For the first time I thought of the whole as the entire computer and wondered why anyone would want to divide it up into weaker things called data structures and procedures. Why not divide it up into little computers, as time sharing was starting to? But not in dozens. Why not thousands of them, each simulating a useful structure?
 
 我想起的莱布尼茨的单子(monad)、柏拉图"连结之处见本质(dividing nature at its joints)"的箴言，以及其它关于"复杂(complexity)"的见解。
@@ -235,6 +241,7 @@ This was the big hit, and I've not been the same since. I think the reason the h
 可以毫不夸张地说，自那时起，我大部分的想法都来自Simula--但这些想法不是用来改进它的。
 吸引我兴趣的是一个承诺，一个会有一条通向结构计算(structure computations)的全新道路的承诺。
 当道路显现，我们会花上好几年时间去理解如何使用这些洞见，并发明一些有效的机制来将它们一一实现。
+
 I recalled the monads of Leibniz, the "dividing nature at its joints" discourse of Plato, and other attempts to parse complexity. Of course, philosophy is about opinion and engineering is about deeds, with science the happy medium somewhere in between. It is not too much of an exaggeration to say that most of my ideas from then on took their roots from Simula—but not as an attempt to improve it. It was the promise of an entirely new way to structure computations that took my fancy. As it turned out, it would take quite a few years to understand how to use the insights and to devise efficient mechanisms to execute them.
 
 戴夫·埃文斯并不觉得研究生院应当作为一个研究机构而存在。
@@ -264,12 +271,14 @@ EULER的编译器是它形式定义的一部分，它能简单地将一种语言
 这很引人注目，**因为这说明了艾德的小型机器能够在又长又慢的[微码（microcode）](http://baike.baidu.com/view/4883022.htm)中运行仿真的字节码**（Ed's little machine could run byte-codes emulated in the longish slow microcode that was then possible）。
 但是EULER的编译器的使用却不合事宜，它被用在了一个“扩充优先（extended precedence）”的文法中，而实际上使用这种文法需要对语言句法进行让步（例如，“，”只能代表一种意思，因为这个优先级里没有[状态空间<state space>](http://baike.baidu.com/view/3821785.htm)）。
 我最初采用了倒置的弗洛伊德-伊万斯解析（Floyd-Evans parser）（该解析改编自杰瑞·费尔德曼最初的编译器-编译器思想【费尔德曼 1977】），后来我又从各种严密的组合中寻求帮助，其中一些与Schorre的META II息息相关【Schorre 1963】，他最终在META II的[命名空间（name space）](http://baike.baidu.com/view/94233.htm?fromtitle=%E5%91%BD%E5%90%8D%E7%A9%BA%E9%97%B4&fromid=2887476&type=syn)里放置了翻译机（translater）。
+
 But EULER was enough of "an almost new thing" to suggest that the same techniques be applied to simplify Simula. The EULER compiler was a part of its formal definition and made a simple conversion into B5000-like byte-codes. This was appealing because it suggested that Ed's little machine could run byte-codes emulated in the longish slow microcode that was then possible. The EULER compiler however, was tortuously rendered in an "extended precedence" grammar that actually required concessions in the language syntax (e.g. "," could only be used in one role because the precedence scheme had no state space). I initially adopted a bottom-up Floyd-Evans parser (adapted from Jerry Feldman's original compiler-compiler [Feldman 1977]) and later went to various top-down schemes, several of them related to Schorre's META II [Schorre 1963] that eventually put the translater in the name space of the language.
 
 现在被叫做FLEX的语言，在语义上应当多参考一些Simula，而非Algol或EULER。
 但具体通过什么方式还不明了。
 同样不明朗的还有用户如何与这个系统互动。
 艾德甚至在他的第一台机器上安装了显示屏（为了绘制图形等），LINC也有“字符电脑终端（glass teletype）”，但是搭建一个类似Sketchpad的系统似乎远远超过了我们的能力范围，我们的预算最大只能供我们打出16k大小的16位字符。
+
 The semantics of what was now called the FLEX language needed to be influenced more by Simula than by Algol or EULER. But it was not completely clear how. Nor was it clear how the users should interact with the system. Ed had a display (for graphing, etc.) even on his first machine, and the LINC had a "glass teletype," but a Sketchpad-like system seemed far beyond the scope that we could accomplish with the maximum of 16k 16-bit words that our cost budget allowed.
 
 ### [道格·恩格尔巴特（Doug Engelbart）](http://baike.baidu.com/view/686586.htm)与NLS
@@ -283,6 +292,7 @@ The semantics of what was now called the FLEX language needed to be influenced m
 这一观念带来的影响则是，它会为那些“迫切地想被放大”的人们提供一个引入注目的隐喻，这个隐喻会告诉他们交互式计算应当是什么样子，于是，我立刻将很多想法应用在了FLEX身上。
 
 ![NLS](NLS.png)
+
 ### Doug Engelbart and NLS
 
 This was in early 1967, and while we were pondering the FLEX machine, Utah was visited by Doug Engelbart. A prophet of Biblical dimensions, he was very much one of the fathers of what on the FLEX machine I had started to call "personal computing." He actually traveled with his own 16mm projector with a remote control for starting and stopping it to show what was going on (people were not used to seeing and following cursors back then). His notion on the ARPA dream was that the destiny of oNLine Systems (NLS) was the "augmentation of human intellect" via an interactive vehicle navigating through "thought vectors in concept space." What his system could do then—even by today's standards—was incredible. Not just hypertext, but graphics, multiple panes, efficient navigation and command input, interactive collaborative work, etc. An entire conceptual world and world view [Engelbart 68]. The impact of this vision was to produce in the minds of those who were "eager to be augmented" a compelling metaphor of what interactive computing should be like, and I immediately adopted many of the ideas for the FLEX machine.
@@ -293,6 +303,7 @@ This was in early 1967, and while we were pondering the FLEX machine, Utah was v
 这是我第一次产生了把房间般大小的TX-2或者10 MIP 6000放置于桌上的想法。
 而可能带来的结果几乎让我胆怯；
 我们所知的计算无法幸免于难——这个词的真实含义发生了变化——这种感觉就跟人类第一次读完哥白尼（Copernicus）一样，他们从上到下打量着这方陌生的天地，满脸茫然。
+
 In the midst of the ARPA context of human-computer symbiosis and in the presence of Ed's "little machine", Gordon Moore's "Law" again came to mind, this time with great impact. For the first time I made the leap of putting the room-sized interactive TX-2 or even a 10 MIP 6600 on a desk. I was almost frightened by the implications; computing as we knew it couldn't survive—the actual meaning of the word changed—it must have been the same kind of disorientation people had after reading Copernicus and first looked up from a different Earth to a different Heaven.
 
 与最多会有上千台大型主机的预测不同，这世上理当存在数百万台个人机器以及与之旗鼓相当的个人机器用户，他们将独立于统一的管理之外——但现实是，1992年的今天，据估计，全世界只有4000台IBM主机——并且，接受了培训、知道如何使用它们的用户仅寥寥千人。
@@ -301,6 +312,7 @@ In the midst of the ARPA context of human-computer symbiosis and in the presence
 也许，我们真正需要的是一个可以延展的系统，并且工具的选择权掌握在终端用户手中（甚至，有些用户可以直接建造工具）。
 而早在分时操作取得初步成功的时候，ARPA就想到了这一层。
 后来因为提出了人机共存这个意义更深远的隐喻，社区避免了错把目光放在完成子目标上面，相反，所有人都专注于啜饮玩味“放大（augmentation）”这只圣杯里的奥义。
+
 Instead of at most a few thousand institutional mainframes in the world—even today in 1992 it is estimated that there are only 4000 IBM mainframes in the entire world—and at most a few thousand users trained for each application, there would be millions of personal machines and users, mostly outside of direct institutional control. Where would the applications and training come from? Why should we expect an applications programmer to anticipate the specific needs of a particular one of the millions of potential users? An extensional system seemed to be called for in which the end-users would do most of the tailoring (and even some of the direct construction) of their tools. ARPA had already figured this out in the context of their early successes in time-sharing. Their larger metaphor of human-computer symbiosis helped the community avoid making a religion of their subgoals and kept them focused on the abstract holy grail of "augmentation."
 
 NSL有个有趣的特性，就是它用户界面可以定制参量，并且终端用户可以使用TreeMeta编译器-编译器中的“交互语法（grammar of interaction）”来编辑界面。
@@ -310,10 +322,12 @@ NSL有个有趣的特性，就是它用户界面可以定制参量，并且终�
 因此，为了做另一件事情，用户必须通过等级菜单（hierarchical menus）或“屏幕（screen）”返回初始状态（master state）。
 这里面似乎需要不同的状态，这些状态当中会有一个转移箭头（transition arrow）负责各个状态的切换——但在正式的语法理论中，这个概念并不有效。
 也就是说，我们似乎需要一个“层次更少的（flatter）”界面——但是这个界面会更有趣、更丰富，也足够有用吗？
+
 One of the interesting features of NLS was that its user interface was parametric and could be supplied by the end user in the form of a "grammar of interaction" given in their compiler-compiler TreeMeta. This was similar to William Newman's early "Reaction Handler" [Newman 66] work in specifying interfaces by having the end-user or developer construct through tablet and stylus an iconic regular expression grammar with action procedures at the states (NLS allowed embeddings via its context free rules). This was attractive in many ways, particularly William's scheme, but to me there was a monstrous bug in this approach. Namely, these grammars forced the user to be in a system state which required getting out of before any new kind of interaction could be done. In hierarchical menus or "screens" one would have to backtrack to a master state in order to go somewhere else. What seemed to be required were states in which there was a transition arrow to every other state—not a fruitful concept in formal grammar theory. In other words, a much "flatter" interface seemed called for—but could such a thing be made interesting and rich enough to be useful?
 
 我们还遇到了一个问题，就是迷你版的NSL对FlEX机器来说还是太大了，因此，我们不得不寻找其他设计，这个设计不仅仅要涵盖一些新的想法，在某些地方也要对他们进行改进。
 我认为，和有限的窗格（restricted horizontal panes）相比，Sketchpad的主窗口（general window）更具优势，它拥有更开阔的虚拟空间视野，并且辅以艾德提出的**分割算法**（clipping algorithm），这和苏泽兰和其哈佛学生的3D“虚拟现实（virtual reality）”头盔项目有异曲同工之妙。
+
 Again, the scope of the FLEX machine was too small for a miniNLS, and we were forced to find alternate designs that would incorporate some of the power of the new ideas, and in some cases to improve them. I decided that Sketchpad's notion of a general window that viewed a larger virtual world was a better idea than restricted horizontal panes and with Ed came up with a clipping algorithm very similar to that under development at the same time by Sutherland and his students at Harvard for the 3D "virtual reality" helmet project [Sutherland 1968].
 
 作为B5000描述符（descriptors）的一般化，对象引用（object reference）被用于FLEX。
@@ -329,6 +343,7 @@ B5000使用的是[左值（l-values）与右值（r-values）](http://baike.baid
 [卡尔纳普（Carnap）](http://baike.baidu.com/view/111023.htm)有本关于逻辑的书，它通过解释：**同范围内的“内涵（intensional）”定义可被看成更传统的外延（extensional）技术，并且更直观也更方便**（ "intensional" definitions covered the same territory as the more traditional extensional technique and were often more intuitive and convenient），来辅助阐释这一概念。
 
 ![FLEX](FLEX.png)
+
 Object references were handled on the FLEX machine as a generalization of B5000 descriptors. Instead of a few formats for referencing numbers, arrays, and procedures, a FLEX descriptor contained two pointers: the first to the "master" of the object, and the second to the object instances (later we realized that we should put the master pointer in the instance to save space). A different method was taken for handling generalized assignment. The B5000 used l-values and r-values [Strachey*] which worked for some cases but couldn't handle more complex objects. For example: a[55] := 0, if a was a sparse array whose default element was 0 would still generate an element in the array because := is an "operator" and a[55] is dereferenced into an l-value before anyone gets to see that the r-value is the default element, regardless of whether a is an array or a procedure fronting for an array. What is needed is something like: a(55, ':=', 0), which can look at all relevant operands before any store is made. In other words, := is not an operator, but a kind of index that can select a behavior from a complex object. It took me a remarkably long time to see this, partly I think because one has to invert the traditional notion of operators and functions, etc., to see that objects need to privately own all of their behaviors: that objects are a kind of mapping whose values are its behaviors. A book on logic by Carnap [Ca *] helped by showing that "intensional" definitions covered the same territory as the more traditional extensional technique and were often more intuitive and convenient.
 
 ![flex](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/flex.png)
@@ -704,7 +719,7 @@ Perhaps the most important principle—again derived from operating system archi
 
 I believe that the much smaller size of a good OOP system comes not just by being gently forced to come up with a more thought out design. I think it also has to do with the "bang per line of code" you can get with OOP. The object carries with it a lot of significance and intention, its methods suggest the strongest kinds of goals it can carry out, its superclasses can add up to much more code-functionality being invoked than most procedures-on-data-structures. Assignment statements—even abstract ones—express very low-level goals, and more of them will be needed to get anything done. Generally, we don't want the programmer to be messing around with state, whether simulated or not. The ability to instantiate an object has a considerable effect on code size as well. Another way to think of all this is: though the late-binding of automatic storage allocations doesn't do anything a programmer can't do, its presence leads both to simpler and more powerful code. OOP is a late binding strategy for many things and all of them together hold off fragility and size explosion much longer than the older methodologies. In other words, human programmers aren't Turing machines—and the less their programming systems require Turing machine techniques the better.
 
-###Smalltalk和儿童
+### Smalltalk和儿童
 
 现在，Smalltalk发展到1976年，我已经总结了“成人”的活动(实际上只是半成人)，让我回到73年，当我们和孩子准备开始实验的那个夏天。我们没有人知道如何与孩子们一起工作，但是我们知道Adele Goldberg和Steve Weyer与Pat Suppes一起在斯坦福已经做了相当多的工作，而且我们能够吸引他们加入我们。
 
@@ -770,6 +785,7 @@ ISNEW    »    (SELF undraw. 'size <- size + :. SELF draw)
 我们当时不知道，我很抱歉地说，15年以后，这些关键问题仍然没有真正有用的答案。但也有一些迹象。即使是非常年幼的儿童能够理解和使用交互的转换工具。第一个是他们的手！他们可以轻松的将这些经验扩展到计算机对象，并使他们发生变化。他们可以经常想象一个提议(proposed)的变化会做什么，而不会对结果感到惊讶。两三岁孩子能使用Smalltalk风格的界面和操作面向对象的图形。三年级的学生可以(在几天内)学习超过50个功能，其中大部分是一个新的系统，包括它的用户界面的转换工具。他们可以回答任何问题，只要答案涉及这些工具的应用。但是对于他们来说，回答任何需要2个或多个转换的问题，都是非常困难。然而他们应用序列转换并没有问题，如探索"下一步"。如果构想和实现哪怕是适度的目标少量的改变，他们几乎完全缺乏导航能力。      
   
 看来，我们需要学习或教授的内容，现在被打包成零零星星的类似于像跳棋一样的战略游戏。模糊的感觉“三人行”(threesome)指向一个人的目标，能够为一些需要实现的精细的工作做准备。这项艺术适合大部分人，但大多数时候，这需要多年逐步掌握。   
+
 ### Smalltalk and Children
 
 Now that I have summarized the "adult" activities (we were actually only semiadults) in Smalltalk up to 1976, let me return to the summer of '73, when we were ready to start experiments with children. None of us knew anything about working with children, but we knew that Adele Goldberg and Steve Weyer who were then with Pat Suppes at Stanford had done quite a bit and we were able to entice them to join us.
