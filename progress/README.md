@@ -333,6 +333,18 @@ Object references were handled on the FLEX machine as a generalization of B5000 
 
 ![flex](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/flex.png)
 
+在Simula中，有一种[协程](http://baike.baidu.com/view/2665148.htm)控制结构（ coroutining control structure）【康韦 1963】用于悬挂和重新开始对象。
+像文件夹和文档这样的永久对象，应当被当做悬挂进程（suspended process）处理，同时也应当按照与Algol类似的[静态变量（static variable）](http://baike.baidu.com/view/675642.htm)作用域进行存储。
+这些文件夹和文档会显示在屏幕上，当指针指向它们时，便可被打开。
+协程也可被当做控制结构用于循环（looping）中。
+当发生器（generator）出现错误，无法提供新的价值时，我们会用一个算子来对其进行测试。
+[布尔运算（Boolean）](http://baike.baidu.com/view/638530.htm)则用于连接各个发生器。
+因此，一个[for为当型的循环语句（"for-type" loop）](http://baike.baidu.com/view/961969.htm)应当如下：
+
+`while i <= 1 to 30 by 2 ^ j <= 2 to k by 3 do j<-j * i;`
+
+其中，“... to ... by ...”这样的结构是一种协程对象。
+后来，在加强版的Smalltalk中重新运用了不少这样的观点。
 As in Simula, a coroutining control structure [Conway, 1963] was used as a way to suspend and resume objects. Persistent objects like files and documents were treated as suspended processes and were organized according to their Algol-like static variable scopes. These were shown on the screen and could be opened by pointing at them. Coroutining was also used as a control structure for looping. A single operator while was used to test the generators which returned false when unable to furnish a new value. Booleans were used to link multiple generators. So a "for-type" loop would be written as:
 
 ```
