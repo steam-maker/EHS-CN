@@ -5,7 +5,7 @@ FLEX中另一个有趣的控制结构叫做“when”，它是一种事件驱动
 其实它有些大材小用，因为困难总是发生在事件驱动系统中。
 换言之就是，控制只有when结构的语境会很繁琐，when结构应当很灵敏。
 一部分的布尔表达式会用于检验语境。
-我觉得在这些语境中，不管怎样，程序的结构应当能够设置和取消[事件驱动（event driver）](http://baike.baidu.com/view/536048.htm#1)
+我觉得在这些语境中，不管怎样，程序的结构应当能够设置和取消[事件驱动（event driver）](http://baike.baidu.com/view/536048.htm#1)。
 这一点FLEX系统还无法做到，并且实现它还亟待一个更好的[体系结构（architecture）](http://baike.baidu.com/view/1188494.htm)。
 
 ![when](when.png)
