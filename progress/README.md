@@ -385,7 +385,22 @@ Another control structure of interest in FLEX was a kind of event-driven "soft i
 
 ![flexstatement](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/flexstatement.png)
 
+仍有相当一部分最初关于FLEX的想法应用在这个机器里，它们以原型对象（proto-object）的形式存在，且大小也合适运行。
+当我在写第一个编辑器的时候，发生了一件不同寻常的事情：
+那年，犹他大学的研究生受邀参加ARPA在犹他州阿尔塔举办的契约人会议。
+会议结束三天前，接替伊万·苏泽兰担任ARPA信息处理（ARPA-IPTO）负责人的[鲍勃·泰勒（Bob Tylor）](http://baike.baidu.com/item/%E9%B2%8D%E5%8B%83%C2%B7%E6%B3%B0%E5%8B%92/17521768#viewPageContent)向我们这些研究生征询了意见（大家围成一圈，坐在二十来个契约人外面）。
+于是约翰·沃诺克（John Warnock）举起了手，他提议道，既然这些研究生迟早要进入ARPA、成为同事（既然我们已经开始上手这些工作了），不如ARPA每年都邀请研究生参加这种契约人的会议。
+泰勒觉得这个主意棒极了，遂将其纳入了明年夏天的会议议程。
+
 Still, quite a few of the original FLEX ideas in their proto-object form did turn out to be small enough to be feasible on the machine. I was writing the first compiler when something unusual happened: the Utah graduate students got invited to the ARPA contractors meeting held that year at Alta, Utah. Towards the end of the three days, Bob Taylor, who had succeeded Ivan Sutherland as head of ARPA-IPTO, asked the graduate students (sitting in a ring around the outside of the 20 or so contractors) if they had any comments. John Warnock raised his hand and pointed out that since the ARPA grad students would all soon be colleagues (and since we did all the real work anyway), ARPA should have a contractors-type meeting each year for the grad students. Taylor thought this was a great idea and set it up for the next summer.
+
+后来，那年春天，在帕克城（Park City）又举行了一场举足轻重的会议。
+会议的主要内容关于教育，而这也是我第一次听到[马文·明斯基（Marvin Minsky）](http://baike.baidu.com/view/406805.htm)的演讲。
+他三番五次地抨击了传统的教育方法，也是因为他，我第一次接触到[皮亚杰（Piaget）](http://baike.baidu.com/view/447847.htm?fromtitle=%E7%9A%AE%E4%BA%9A%E6%9D%B0&fromid=343170&type=search)和[派珀特（Papert）](http://baike.baidu.com/view/4370843.htm)的思想。
+马文演讲的主要内容是关于我们对复杂情况的看法，以及为什么在学校学习这些技术是相当糟糕的主意。
+他甚至都不用在演讲中提及“电脑+孩子”这样的观点。
+因为，很明显，我们应当在20世纪[认知心理学（cognitive psychology）](http://baike.baidu.com/item/%E8%AE%A4%E7%9F%A5%E5%BF%83%E7%90%86%E5%AD%A6/4291)的观点和了解那些卓越思想家们的思考方式的基础上，重新思考教育与学习。
+计算作为一个新的表征系统（representation system），暗含解决复杂情况、尤其是系统中复杂情况的新理念，当然这个理念也很有用。
 
 Another ski-lodge meeting happened in Park City later that spring. The general topic was education and it was the first time I heard Marvin Minsky speak. He put forth a terrific diatribe against traditional education methods, and from him I heard the ideas of Piaget and Papert for the first time. Marvin's talk was about how we think about complex situations and why schools are really bad places to learn these skills. He didn't have to make any claims about computers+kids to make his point. It was clear that education and learning had to be rethought in the light of 20th century cognitive psychology and how good thinkers really think. Computing enters as a new representation system with new and useful metaphors for dealing with complexity, especially of systems [Minsky 70].
 

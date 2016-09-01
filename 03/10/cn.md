@@ -9,3 +9,4 @@ FLEX中另一个有趣的控制结构叫做“when”，它是一种事件驱动
 这一点FLEX系统还无法做到，并且实现它还亟待一个更好的[体系结构（architecture）](http://baike.baidu.com/view/1188494.htm)。
 
 ![when](when.png)
+
