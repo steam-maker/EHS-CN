@@ -25,5 +25,7 @@
 本文件。请在下面加上这个模块有关的**客观**信息，比如引用的维基百科资料等等以及和其他模块的关系等等。
 **主观信息**请放在[discussion.md](discussion.md)里面。
 
-Brief introduction in English: Marvin Minsky delivered a speech, from which he presented 2 main ideas that respectively refered to  complexity and education.
-段落大意：该段简述了马文·明斯基的演讲，内容包括计算机解决复杂任务以及计算机与教育的关系。
+---
+* Brief introduction in English: Marvin Minsky delivered a speech, from which he presented 2 main ideas that respectively refered to  complexity and education.
+
+* 段落大意：该段简述了马文·明斯基的演讲，内容包括计算机解决复杂任务以及计算机与教育的关系。
