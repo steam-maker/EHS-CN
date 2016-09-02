@@ -8,4 +8,4 @@
 根据戈登·摩尔（Gordon Moore）的“定律”，时间大约会在七十年代末或者八十年代初。
 这得等到猴年马月才能实现——不过，鉴于它的时长，我们似乎也不用太担心它。
 
-![PalsmaPanel](PalamaPanel.png)
+![PlasmaPanel](PlasmaPanel.png)
