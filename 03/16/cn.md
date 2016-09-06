@@ -1,4 +1,4 @@
-我已经完成了第一代FLEX的语法驱动，但是用于确定某行程序意思的更普遍的方法是一种发表的代码。
+我已经完成了第一代FLEX的语法驱动，但是其中通用的语法定义是转化为程序自己翻译的。
 这就将系统的编译器-延展器（compiler-extensor）与终端用户分离开来了。
 对此，艾恩斯的解决办法是，系统中的每个程序都能够自行定义它们的语法，同时做到表达自然且有用。
 我把这些想法应用在了第二代的FLEX机器上，同时我开始尝试着用[解释器（interpreter）](http://baike.baidu.com/view/592974.htm)来取代语法定向[编译器（syntax directed compiler）](http://baike.baidu.com/view/487018.htm)。
@@ -7,5 +7,5 @@
 换成画面的话就是，在几台相互独立的计算机中，其中一台向其他几台发送请求，在执行任何命令之前，负责接收的计算机应当先接受并理解这些请求。
 用今天的话来说就是，每个对象都是提供服务的服务者（server），它们的部署与判断完全依仗它们对与服务接受者（servee）关系的见解。
 正如莱布尼茨所说：“**无中生有，仅一原理即可**（To get everything out of nothing, you only need to find one principle）。”
-我还没能从中想出什么有助于FLEX的想法，但它真的助我形成了脱离我论文【凯 69】的好点子，这个点子就像伊凡·苏泽兰说的那样：“**会有三个人签下它**（anything you can get three people to sign）。”
+我还没能从中想出什么有助于FLEX的想法，但它真的助我形成了脱离我论文【凯 69】的好点子，这个点子就像伊凡·苏泽兰说的那样：“**会有三个人在你的博士论文上签字的**（anything you can get three people to sign）。”
 
