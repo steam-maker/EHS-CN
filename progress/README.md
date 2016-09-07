@@ -415,6 +415,7 @@ Another ski-lodge meeting happened in Park City later that spring. The general t
 这得等到猴年马月才能实现——不过，鉴于它的时长，我们似乎也不用太担心它。
 
 ![PlasmaPanel](PlasmaPanel.png)
+
 For the summer 1968 ARPA grad students meeting at Allerton House in Illinois, I boiled all the mechanisms in the FLEX machine down into one 2'x3' chart. This included all the "object structures", the compiler, the byte-code interpreter, i/o handlers, and a simple display editor for text and graphics. The grad students were a distinguished group that did indeed become colleagues in subsequent years. My FLEX machine talk was a success, but the big whammy for me came during a tour to U of Illinois where I saw a 1" square lump of glass and neon gas in which individual spots would light up on command—it was the first flat-panel display. I spent the rest of the conference calculating just when the silicon of the FLEX machine could be put on the back of the display. According to Gordon Moore's "Law", the answer seemed to be sometime in the late seventies or early eighties. A long time off—it seemed too long to worry much about it then.
 
 ![plasma](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/plasma.png)
@@ -450,15 +451,55 @@ Now the collision of the FLEX machine, the flat-screen display, GRAIL, Barton's 
 
 ![dynabookmodel](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/dynabookmodel.png)
 
+1969年初召开了一场关于可扩展语言（Extensible Languages）的会议，与会者几乎囊括了所有这一领域中赫赫有名的人物。
+讨论的场面壮观且严肃——这是场宗教战争，关乎那些还未被实现的想法。
+计算机科学领域的重要人物[艾伦·佩利（Alan Perlis）](http://baike.baidu.com/view/406785.htm)用颇具代表性的语句描绘了当时的情况：
+
+> 距我上一次看见这些熟悉的脸孔为了这些想法争论不休的场面以及很久远了。同其他的发现一样，在编程语言上有所突破，这感情就如同坠入爱河一般。得意洋洋过后是兴高采烈、是感到自己举世无双，最后却是游移不定（迫切地想概括一切）【ACM 69】。
+
+但所有的这一切都是纸上谈兵——还没有人真正做成什么。
+在这些提议中，跟那些不切实际的相比，内德·艾恩斯提出的IMP系统更加简洁，这个系统已经运作好几年了。
+IMP系统的基本思想就是你可以在合乎语法的情况下用任何语句引导程序（procedure heading），并且可以根据语言当前的扩展情况界定语义（semantic definition）【艾恩斯 1970】。
+
 Early next year (1969) there was a conference on Extensible Languages in which almost every famous name in the field attended. The debate was great and weighty—it was a religious war of unimplemented poorly thought out ideas. As Alan Perlis, one of the great men in Computer Science, put it with characteristic wit:
 
 > It has been such a long time since I have seen so many familiar faces shouting among so many familiar ideas. Discovery of something new in programming languages, like any discovery, has somewhat the same sequence of emotions as falling in love. A sharp elation followed by euphoria, a feeling of uniqueness, and ultimately the wandering eye (the urge to generalize) [ACM 69].
 
 But it was all talk—no one had done anything yet. In the midst of all this, Ned Irons got up and presented IMP, a system that had already been working for several years that was more elegant than most of the nonworking proposals. The basic idea of IMP was that you could use any phrase in the grammar as a procedure heading and write a semantic definition in terms of the language as extended so far [Irons 1970].
 
+我已经完成了第一代FLEX的语法驱动，但是其中通用的语法定义是转化为程序自己翻译的。
+这就将系统的编译器-延展器（compiler-extensor）与终端用户分离开来了。
+对此，艾恩斯的解决办法是，系统中的每个程序都能够自行定义它们的语法，同时做到表达自然且有用。
+我把这些想法应用在了第二代的FLEX机器上，同时我开始尝试着用[解释器（interpreter）](http://baike.baidu.com/view/592974.htm)来取代语法定向[编译器（syntax directed compiler）](http://baike.baidu.com/view/487018.htm)。
+在这过程中，我意识到，想要建立一个以对象为基准的系统，可能每个对象都得被当作语法定向解释器，分别负责它们接收的消息。
+它可以在一瞬间把面向对象的语义与一个完全的可扩展计算机语言相结合。
+换成画面的话就是，在几台相互独立的计算机中，其中一台向其他几台发送请求，在执行任何命令之前，负责接收的计算机应当先接受并理解这些请求。
+用今天的话来说就是，每个对象都是提供服务的服务者（server），它们的部署与判断完全依仗它们对与服务接受者（servee）关系的见解。
+正如莱布尼茨所说：“**无中生有，仅一原理即可**（To get everything out of nothing, you only need to find one principle）。”
+我还没能从中想出什么有助于FLEX的想法，但它真的助我形成了脱离我论文【凯 69】的好点子，这个点子就像伊凡·苏泽兰说的那样：“**会有三个人在你的博士论文上签字的**（anything you can get three people to sign）。”
+
 I had already made the first version of the FLEX machine syntax driven, but where the meaning of a phrase was defined in the more usual way as the kind of code that was emitted. This separated the compiler-extensor part of the system from the end-user. In Irons' approach, every procedure in the system defined its own syntax in a natural and useful manner. I incorporated these ideas into the second versions of the FLEX machine and started to experiment with the idea of a direct interpreter rather than a syntax directed compiler. Somewhere in all of this, I realized that the bridge to an object-based system could be in terms of each object as a syntax directed interpreter of messages sent to it. In one fell swoop this would unify object-oriented semantics with the ideal of a completely extensible language. The mental image was one of separate computers sending requests to other computers that had to be accepted and understood by the receivers before anything could happen. In today's terms every object would be a server offering services whose deployment and discretion depended entirely on the server's notion of relationship with the servee. As Liebniz said: "To get everything out of nothing, you only need to find one principle." This was not well thought out enough to do the FLEX machine any good, but formed a good point of departure for my thesis [Kay 69], which as Ivan Sutherland liked to say was "anything you can get three people to sign."
 
+三个人签完字以后（其中一个是伊凡），我去做了斯坦福的[人工智能（AI）](http://baike.baidu.com/item/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/9180?fromtitle=AI&fromid=25417&type=syn)项目，但跟AI比起来，我花了更多的时间在KiddyKomputer笔记本上。
+然而，仍有两个AI设计让我很感兴趣。
+一是卡尔·休伊特（Carl Hewitt）的PLANNER，这是一个[可编程逻辑](http://baike.baidu.com/view/10018762.htm)系统（progarammable logic system），它形成了[维诺格拉德（Winograd）SHRDLU](http://blog.sina.com.cn/s/blog_72d083c70102dqkf.html)的演绎基础【萨斯曼 69，凯 69】。
+后来，在结合了FLEX和PLANNER的[模式匹配（pattern matching）](http://baike.baidu.com/view/772065.htm)体系的基础上，我设计了几种语言。
+而第二个有趣的设计则是帕特里克·温斯顿（Patrick Winston）的概念形成系统（concept formation system），这个体系是为了建立[语义网络（semantic network）](http://baike.baidu.com/view/157370.htm)以及将它们与形式类比（form analogies）和学习步骤（learning processes）相比较【温斯顿 70】。
+从某种程度上来说，它是“面向对象的”。
+其中，一个很棒的想法就是，**每个网上（net）的弧度（arc）充当AOV Triples属性，它们应当被模拟成网**（the arcs of each net which served as attributes in AOV triples should themselves be modeled as nets）。
+因此，举例来说，如果第一个命令弧度叫做`LEFT-OF`，我们可以问它一个如“你的反义是什么？”这样更高级的问题，然后它的网会回答：`RIGHT-OF`。
+这个观点后来形成了明斯基框架系统的基础【明斯基 75】。
+我倒希望几年后的我能多关注一下这个想法。
+
 After three people signed it (Ivan was one of them), I went to the Stanford AI project and spent much more time thinking about notebook KiddyKomputers than AI. But there were two AI designs that were very intriguing. The first was Carl Hewitt's PLANNER, a programmable logic system that formed the deductive basis of Winograd's SHRDLU [Sussman 69, Hewitt 69] I designed several languages based on a combination of the pattern matching schemes of FLEX and PLANNER [Kay 70]. The second design was Pat Winston's concept formation system, a scheme for building semantic networks and comparing them to form analogies and learning processes [Winston 70]. It was kind of "object-oriented". One of its many good ideas was that the arcs of each net which served as attributes in AOV triples should themselves be modeled as nets. Thus, for example a first order arc called LEFT-OF could be asked a higher order question such as "What is your converse?" and its net could answer: RIGHT-OF. This point of view later formed the basis for Minsky's frame systems [Minsky 75]. A few years later I wished I had paid more attention to this idea.
+
+那年秋天，我听到了[巴特勒·拉姆泼逊（Butler Lampson）](http://baike.baidu.com/view/2009279.htm)一场精彩的谈话，内容是关于CAL-TSS，它是个基于用户能力的操作系统（capability-based operating system）([參考資料](discussion.md))，看上去十分具备“面向对象”的特性【拉姆泼逊 69】。
+不可伪造的指针（ala B5000）由限制对象内部操作权限的位屏蔽（bit-mask）延伸。
+这与我“对象即为服务者（objects as server）”的比喻不谋而合。
+这个系统中异常情况处理（exception handling）的方法也很得宜，它提醒了我错误常常在模式匹配系统中解决。
+这个系统唯一的问题就是——但CAL的设计者们从未把它看成是问题——只有几个对象（通常是那些占用内存大、运行慢的）。
+而运行速度快、内存小的则不是对象。
+我们需要改正这一点。
 
 That fall, I heard a wonderful talk by Butler Lampson about CAL-TSS, a capability-based operating system that seemed very "object-oriented" [Lampson 69]. Unforgeable pointers (ala B5000) were extended by bit-masks that restricted access to the object's internal operations. This confirmed my "objects as server" metaphor. There was also a very nice approach to exception handling which reminded me of the way failure was often handled in pattern matching systems. The only problem— which the CAL designers did not see as a problem at all—was that only certain (usually large and slow) things were "objects". Fast things and small things, etc., weren't. This needed to be fixed.
 
