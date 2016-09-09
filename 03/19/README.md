@@ -25,3 +25,9 @@
 本文件。请在下面加上这个模块有关的**客观**信息，比如引用的维基百科资料等等以及和其他模块的关系等等。
 **主观信息**请放在[discussion.md](discussion.md)里面。
 
+
+---
+
+* Brief Introduction in English: I got my biggest hit by turely understanding LISP, which had flaws in its logical foundations. Then, I came out another question that was helpful in inventing my Smalltalk.
+* 段落大意：当我真正理解了LISP的时候我遭受了极大的打击，它的逻辑基础有着不少缺陷。后来我又产生了另一个问题，尽管不好回答，却对我发明Smalltalk有着很大帮助。
+
