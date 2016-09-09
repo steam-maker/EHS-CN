@@ -11,3 +11,4 @@
 对此，我永远也无法给出一个完美的答案，但在发明Smalltalk的时候，这个问题给予了我极大的帮助，因为它让我想到了这样一句话：“**做好最难且意义最深远的部分，相对简单的问题随后便可迎刃而解**（take the hardest and most profound thing you need to do, make it great, and then build every easier thing out of it）”。
 这是LISP的承诺，也是lampda的诱惑——我们所需的是一个更好的“最难且意义最深远的部分”。
 对象应当是所谓的这个部分。
+
