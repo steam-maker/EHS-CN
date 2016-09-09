@@ -1,5 +1,5 @@
 1969年末，我在斯坦福人工智能实验室（SAIL）时遭受了极大的打击，这份打击来源于真正理解[LISP](http://baike.baidu.com/item/LISP/22083)。
-诚然，每个学生都知道car、cdr和cons，但犹他大学的落后之处在于没人能真正洞悉(eval)[http://baike.baidu.com/item/eval/9327484]和apply的奥秘。
+诚然，每个学生都知道car、cdr和cons，但犹他大学的落后之处在于没人能真正洞悉[eval(http://baike.baidu.com/item/eval/9327484)和apply的奥秘。
 我简直不敢相信LISP的美丽与动人【麦卡锡 1960】。
 我之所以这么说是因为LISP不仅仅有一帮盲目的追随者，更严重的是，它的逻辑基础存在不少缺陷。
 我想表达的是，纯正的语言理当基于功能，但它最重要的部分——如[Lambda表达式（lambda expression）](http://baike.baidu.com/view/3048187.htm)、引用（quotes）和[条件数（cond）](http://baike.baidu.com/view/1014731.htm)——他们完全不是功能，而是一些特殊形式（special form）。
