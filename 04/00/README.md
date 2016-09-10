@@ -28,5 +28,5 @@
 
 ---
 
-* Brief introduction in English: The Mansfield Amendment seemed to offer a promising alternative. When Bob Tylor visited Palo Alto, he suggested me to follow my instincts.I then applied Bob Barton's idea to the FLEX and decided to learn more from Wes Clark's LINC.
+* Brief introduction in English: The Mansfield Amendment seemed to offer a promising alternative. When Bob Taylor visited Palo Alto, he suggested me to follow my instincts.I then applied Bob Barton's idea to the FLEX and decided to learn more from Wes Clark's LINC.
 * 段落大意：曼斯菲尔德修正案带来了新的机遇，鲍勃·泰勒访问帕罗奥图时曾与我彻夜长谈，他建议我跟随自己的内心。后来我把鲍勃·巴顿的观念运用在了FLEX上，并打算重新在韦斯·克拉克的LINC身上找灵感。
