@@ -25,3 +25,8 @@
 本文件。请在下面加上这个模块有关的**客观**信息，比如引用的维基百科资料等等以及和其他模块的关系等等。
 **主观信息**请放在[discussion.md](discussion.md)里面。
 
+
+---
+
+* Brief introduction in English: The introduction of the people who participated in PARC for various reasons in 1971.
+* 段落大意：介绍了由于各种原因加入帕克研究中心的成员。
