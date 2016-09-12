@@ -519,13 +519,44 @@ That fall, I heard a wonderful talk by Butler Lampson about CAL-TSS, a capabilit
 
 The biggest hit for me while at SAIL in late '69 was to really understand LISP. Of course, every student knew about car, cdr, and cons, but Utah was impoverished in that no one there used LISP and hence, no one had penetrated the mysteries of eval and apply. I could hardly believe how beautiful and wonderful the idea of LISP was [McCarthy 1960]. I say it this way because LISP had not only been around enough to get some honest barnacles, but worse, there were deep flaws in its logical foundations. By this, I mean that the pure language was supposed to be based on functions, but its most important components—such as lambda expressions, quotes, and conds—were not functions at all, and instead were called special forms. Landin and others had been able to get quotes and conds in terms of lambda by tricks that were variously clever and useful, but the flaw remained in the jewel. In the practical language things were better. There were not just EXPRs (which evaluated their arguments), but FEXPRs (which did not). My next question was, why on earth call it a functional language? Why not just base everything on FEXPRs and force evaluation on the receiving side when needed? I could never get a good answer, but the question was very helpful when it came time to invent Smalltalk, because this started a line of thought that said "take the hardest and most profound thing you need to do, make it great, and then build every easier thing out of it". That was the promise of LISP and the lure of lambda—needed was a better "hardest and most profound" thing. Objects should be it.
 
+1970年1月，在首席科学家杰克·戈德曼（Jack Goldman）的敦促下，[施乐公司（Xerox）](http://baike.baidu.com/view/1175780.htm)打算在加利福尼亚州的[帕罗奥图（Palo Alto）](http://www.beimeigoufang.com/newsd/newsdetail_19986.html)建立起一系列的研究中心。
+同年9月，华盛顿大学（韦斯·克拉克[ARPA](http://baike.baidu.com/view/68809.htm)的项目就设立在这）的前任校长乔治·佩克，聘请[鲍勃·泰勒（Bob Taylor）](http://baike.baidu.com/item/%E9%B2%8D%E5%8B%83%C2%B7%E6%B3%B0%E5%8B%92/17521768#viewPageContent)（那时他已经离开了ARPA办公室，同时正享受犹他大学的休假）负责建立“计算机科学实验室（Computer Science Laboratory）”。
+鲍勃访问了帕罗奥图，并就此与我彻夜长谈。
+那时，[曼斯菲尔德修正案（Mansfield Amendment）](http://m.zol.com.cn/article/4933054.html)限制了ARPA直接应用于军事研究的投资，这个新的机会也许会带来不一样的转机。
+但是要直接为公司工作吗？
+鲍勃希望我做顾问，我问他是什么样的顾问。
+他说：随你的心意而定。
+于是我开始研发KiddiKomp的新版本，我会制作足够数量的KiddiKomp来进行实验，最终设计出笔记本的用户界面。
+鲍勃·巴顿经常把这句话挂在嘴边：“**好的想法常常不是万能钥匙**（good ideas don't often scale）。”
+当我把这句话实现在FLEX机器上的时候，他说得完全应验了。
+B5000不会按比例缩小成一个小型机器。
+能够缩小的只有字节码（byte-code），尽管它们需要进行修正。
+我打算重新研究韦斯·克拉克的LINC，并且这会我已经准备好了要领悟更多。
+
+![KiddiKomp](KiddiKomp.png)
+
 In July 1970, Xerox, at the urging of its chief scientist Jack Goldman, decided to set up a long range research center in Palo Alto, California. In September, George Pake, the former chancellor at Washington University where Wes Clark's ARPA project was sited, hired Bob Taylor (who had left the ARPA office and was taking a sabbatical year at Utah) to start a "Computer Science Laboratory." Bob visited Palo Alto and we stayed up all night talking about it. The Mansfield Amendment was threatening to blindly muzzle the most enlightened ARPA funding in favor of directly military research, and this new opportunity looked like a promising alternative. But work for a company? He wanted me to consult and I asked for a direction. He said: follow your instincts. I immediately started working up a new version of the KiddiKomp that could be made in enough quantity to do experiments leading to the user interface design for the eventual notebook. Bob Barton liked to say that "good ideas don't often scale." He was certainly right when applied to the FLEX machine. The B5000 just didn't directly scale down into a tiny machine. Only the byte-codes did, and even these needed modification. I decided to take another look at Wes Clark's LINC, and was ready to appreciate it much more this time [Clark 1965].
 
 ![kiddikomp](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/kiddikomp.png)
 
+我仍旧偏爱面向模式（pattern-oriented）的解决方案以及OOP，于是我设计出了一种叫做“Simulation LOGO”的语言，它又简称为SLOGO（我有预感，第一个版本会运行得不错，但是会很慢）。
+我会把它嵌入一个索尼的单枪三束彩色显像管（trinitron）中，通过粗糙的[位映射（bit-map）](http://baike.baidu.com/view/10257407.htm)显示，FLEX机器的橡胶片（rubber tablet）作为[定点设备（pointing device）](http://baike.baidu.com/view/3645603.htm)
+
 I still liked pattern-directed approaches and OOP so I came up with a language design called "Simulation LOGO" or SLOGO for short (I had a feeling the first versions might run nice and slow). This was to be built into a SONY "tummy trinitron" and would use a coarse bit-map display and the FLEX machine rubber tablet as a pointing device.
 
+另一个我无意中发现的优美系统叫PDP-1 LISP，由彼得·多伊奇（Peter Deutsch）（15岁时）设计【多伊奇 1966】。
+它只用了2K大小（18位字）的代码，却在4K大小的机器中运行良好（它有自己的操作系统和界面）。
+如果这个系统使用的是字节码，它似乎能运行得更好，于是，通过一个能适应各个系统的[体系结构（architecture）](http://baike.baidu.com/view/1188494.htm)运行、插入进更大的[只读内存（ROM）](http://baike.baidu.com/item/ROM/12424911)中去都将成为可能。
+我从西蒙（Seymour）那里得到的见解之一就是，你不用大费周章地为孩子们把电脑设计成一个“用于思考的对象（object for thought）”，但是你所做的一切必须能够良好地运行且能深入地进行应用。
+
 Another beautiful system that I had come across was Peter Deutsch's PDP-1 LISP (implemented when he was only 15) [Deutsch 1966]. It used only 2K (18-bit words) of code and could run quite well in a 4K machine (it was its own operating system and interface). It seemed that even more could be done if the system were byte-coded, run by an architecture that was hospitable to dynamic systems, and stuck into the ever larger ROMs that were becoming available. One of the basic insights I had gotten from Seymour was that you didn't have to do a lot to make a computer an "object for thought" for children, but what you did had to be done well and be able to apply deeply.
+
+1971年的新年刚过，鲍勃·泰勒就组建了一个阵容庞大的团队，其中吸引了很大一部分伯克利计算机公司（Berkeley Computer Corp ）的成员，当时那个公司正处境艰难。
+这个团队里的成员包括[巴特勒·拉姆泼逊（Butler Lampson）](http://baike.baidu.com/view/2009279.htm)、恰克·萨克（Chuck Thacker）、彼得·多伊奇（Peter Deutsch）、吉姆·米契尔（Jim Mitchell）、迪克·舒普（Dick Shoup）、威利·苏·海于格兰（Willie Sue Haugeland）和艾德·菲亚拉（Ed Fiala）。
+吉姆·米契尔催促团队从CM挖来艾德·马克奎特（Ed McCreight），很快就实现了。
+因为一意孤行地想要研发激光打印机（这和当地的宗教信仰相悖），[盖瑞·斯塔克伟泽（Gary Starkweather）](http://blog.sina.com.cn/s/blog_7756218e0101g8ef.html)被逐出施乐罗彻斯特研究所（Xerox Rochester Labs），因此他早就到这个团队里报到了。
+很快，[道格·恩格尔巴特（Doug Englebart）](http://baike.baidu.com/view/686586.htm)手下的人也纷纷加入——一部分原因是由于他们希望把NLS系统当做分布式网络系统重新投入使用，道格也希望继续[分时系统（time-sharing）](http://baike.baidu.com/view/880784.htm)的研究。
+这些人包括比尔·英格利希（Bill English）（鼠标的联合发明者）、杰夫·鲁里夫森（Jeff Rulifson）和比尔·帕克斯顿（Bill Paxton）。
 
 Right after New Years 1971, Bob Taylor scored an enormous coup by attracting most of the struggling Berkeley Computer Corp to PARC. This group included Butler Lampson, Chuck Thacker, Peter Deutsch, Jim Mitchell, Dick Shoup, Willie Sue Haugeland, and Ed Fiala. Jim Mitchell urged the group to hire Ed McCreight from CM and he arrived soon after. Gary Starkweather was there already, having been thrown out of the Xerox Rochester Labs for wanting to build a laser printer (which was against the local religion). Not long after, many of Doug Englebart's people joined up—part of the reason was that they want to reimplement NLS as a distributed network system, and Doug wanted to stay with time-sharing. The group included Bill English (the co-inventor of the mouse), Jeff Rulifson, and Bill Paxton.
 
