@@ -5,3 +5,4 @@
 但事实是，我们最终取得了引人注目的成绩。
 MAXC实际上是DPD-10的微码仿真版，它第一次用集成芯片内存（integrated chip memories ）（一千比特!）代替[磁芯存储器（core memory）](http://baike.baidu.com/view/2790431.htm)。
 针对发明更多的基础系统的愿望，关键的地方在于先让这些新技术应用在各个家庭中。
+
