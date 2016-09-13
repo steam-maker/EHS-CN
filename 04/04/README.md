@@ -25,3 +25,7 @@
 本文件。请在下面加上这个模块有关的**客观**信息，比如引用的维基百科资料等等以及和其他模块的关系等等。
 **主观信息**请放在[discussion.md](discussion.md)里面。
 
+---
+
+* Brief introduction in English: When the new lab decided to have a PDP-10, our group got into trouble. In a meeting we had come out the idea of building our own PDP-10 in a year and finally did it.
+* 段落大意：新的实验室需要引进一台PDP-10时我们遇到了麻烦。在一场会议上，我们最终得出的解决办法是在一年内制造出我们自己的PDP-10，最终我们还是成功了。
