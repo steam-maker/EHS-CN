@@ -29,4 +29,4 @@
 ---
 
 * Brief introduction in English: An incident made by Allen Newell let me feel the importance of point of view.
-* 段落大意：艾伦·纽厄尔的小插曲让我感到了观点（point of view）的重要性。
+* 段落大意：艾伦·纽厄尔的小插曲让我感到了视角（point of view）的重要性。
