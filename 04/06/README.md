@@ -28,4 +28,4 @@
 ---
 
 * Brief introduction in English: There was another conflict among us: Don Pendery, the head of "planner" was fond of the trend, but we held the view that we made the future.
-* 段落大意：我们面临的另一个分歧是，我们的规划主管唐·潘德瑞喜欢追逐潮流，相反地，我们则认为未来可由我们自己创造。
+* 段落大意：我们面临的另一个分歧是，我们的规划主管唐·潘德瑞喜欢预测未来的趋势，相反地，我们则认为未来可由我们自己创造。
