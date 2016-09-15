@@ -25,3 +25,7 @@
 本文件。请在下面加上这个模块有关的**客观**信息，比如引用的维基百科资料等等以及和其他模块的关系等等。
 **主观信息**请放在[discussion.md](discussion.md)里面。
 
+---
+
+* Brief introduction in English: There was another conflict among us: Don Pendery, the head of "planner" was fond of the trend, but we held the view that we made the future.
+* 段落大意：我们面临的另一个分歧是，我们的规划主管唐·潘德瑞喜欢追逐潮流，相反地，我们则认为未来可由我们自己创造。
