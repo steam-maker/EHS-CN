@@ -570,6 +570,32 @@ MAXC实际上是DPD-10的微码仿真版，它第一次用集成芯片内存（i
 
 Almost immediately we got into trouble with Xerox when the group decided that the new lab needed a PDP-10 for continuity with the ARPA community. Xerox (which had bought SDS essentially sight unseen a few years before) was horrified at the idea of their main competitor's computer being used in the lab. They balked. The newly formed PARC group had a meeting in which it was decided that it would take about three years to do a good operating system for the XDS SIGMA-7 but that we could build "our own PDP-10" in a year. My reaction was "Holy cow!" In fact, they pulled it off with considerable panache. MAXC was actually a microcoded emulation of the PDP-10 that used for the first time the new integrated chip memories (1K bits!) instead of core memory. Having practical in house experience with both of these new technologies was critical for the more radical systems to come.
 
+有一个小的插曲揭示了LISP的美妙之处，这发生在[艾伦·纽厄尔（Allen Newell）](http://baike.baidu.com/view/1633914.htm)访问PARC期间，那时他提出了分层思考（hierarchical thinking）的理论，我们请他证明。
+为此，我们让他在[计算机协议（protocol）](http://baike.baidu.com/subview/36190/12517929.htm#viewPageContent)已经明确的情况下解决一个程序上的问题。
+这个问题是：在提供了一系列项（item）的情况下，创造一个列表，里面区分所有的奇数项（odd indexed item）和偶数项（even indexed item）。
+在纽厄尔的内部编程语言中，对指针的精确操控这一点和[IPL-V](http://baike.baidu.com/view/1199340.htm)相类似，并且在解决这个问题的过程中他遇到了麻烦。
+而我则花了2秒：
+
+```javascript
+oddsEvens(x) = append(odds(x), evens(x))
+```
+
+我用的是兰丁（Landin）LISP语言的句法——这是解决办法的第一部分。
+若干秒后我又写下了：
+
+```javascript
+where odds(x) = if null(x) ∨ null(tl(x)) then x
+                   else hd(x) & odds(ttl(x))
+     evens(x) = if null(x) ∨ null(tl(x)) then nil
+                   else odds(tl(x))
+```
+
+这种用陈述形式表达解决办法以及把它们转化成程序的特性是这类语言迷人的地方之一。
+看着一个比我聪明很多的人用他自己的办法（他的办法里有bug），花了30多分钟还未能完全解决问题，这着实令我印象深刻。
+于是我再次深切地体会到：“视角（point of view）值80点的智商”。
+我并没有很聪明，但是我的内部思考工具（internal thinking tool）拓展了我的能力。
+这个插曲以及其它事情相互作用使得一点变得至关重要，那就是任何孩子使用的工具都必须具备极好的思维模式（thinking pattern），同时它的内置理当美丽且有内涵。
+
 One little incident of LISP beauty happened when Allen Newell visited PARC with his theory of hierarchical thinking and was challenged to prove it. He was given a programming problem to solve while the protocol was collected. The problem was: given a list of items, produce a list consisting of all of the odd indexed items followed by all of the even indexed items. Newell's internal programming language resembled IPL-V in which pointers are manipulated explicitly, and he got into quite a struggle to do the program. In 2 seconds I wrote down:
 
 ```
@@ -586,6 +612,14 @@ where odds(x) = if null(x) ∨ null(tl(x)) then x
 ```
 
 This characteristic of writing down many solutions in declarative form and have them also be the programs is part of the appeal and beauty of this kind of language. Watching a famous guy much smarter than I struggle for more than 30 minutes to not quite solve the problem his way (there was a bug) made quite an impression. It brought home to me once again that "point of view is worth 80 IQ points." I wasn't smarter but I had a much better internal thinking tool to amplify my abilities. This incident and others like it made paramount that any tool for children should have great thinking patterns and deep beauty "built-in."
+
+这时，在对Xerox的管理方面，我们又产生了冲突，跟规划主管唐·潘德瑞（Don Pendery）的冲突尤甚。
+他其实完全不明白我们在说些什么，并且他感兴趣的是“发展趋势（trend）”、“未来会是什么样”以及Xerox如何继续“屹立不倒”。
+我对此很反感，因此我对他说：“听着，对未来最好的预测就是我们创造它。不要太担心别人会做什么，在这个时代，只要我们对未来的展望足够清晰，我们就很可能实现它！”
+他仍旧未被我说服，但这使得我们写出了著名的“潘德瑞的PARC规划目标（Pendery Papers for PARC Planning Purposes）”，这是一本文集，收录的文章涉及未来的放放面面。
+其中，我建议我们未来的笔记本应当是“显示传感器（display transducer）”那样，而吉姆·米契尔（Jim Mitchell）的题目则是“在迷你计算机上运行NLS（NLS on a Minicomputer）。”
+
+![DisplayTransducer](DisplayTransducer.png)
 
 Right around this time we were involved in another conflict with Xerox management, in particular with Don Pendery the head "planner". He really didn't understand what we were talking about and instead was interested in "trends" and "what was the future going to be like" and how could Xerox "defend against it." I got so upset I said to him, "Look. The best way to predict the future is to invent it. Don't worry about what all those other people might do, this is the century in which almost any clear vision can be made!" He remained unconvinced, and that led to the famous "Pendery Papers for PARC Planning Purposes," a collection of essays on various aspects of the future. Mine proposed a version of the notebook as a "Display Transducer", and Jim Mitchell's was entitled "NLS on a Minicomputer."
 

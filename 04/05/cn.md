@@ -23,3 +23,4 @@ where odds(x) = if null(x) ∨ null(tl(x)) then x
 于是我再次深切地体会到：“视角（point of view）值80点的智商”。
 我并没有很聪明，但是我的内部思考工具（internal thinking tool）拓展了我的能力。
 这个插曲以及其它事情相互作用使得一点变得至关重要，那就是任何孩子使用的工具都必须具备极好的思维模式（thinking pattern），同时它的内置理当美丽且有内涵。
+

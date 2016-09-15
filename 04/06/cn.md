@@ -5,3 +5,4 @@
 其中，我建议我们未来的笔记本应当是“显示传感器（display transducer）”那样，而吉姆·米契尔（Jim Mitchell）的题目则是“在迷你计算机上运行NLS（NLS on a Minicomputer）。”
 
 ![DisplayTransducer](DisplayTransducer.png)
+
