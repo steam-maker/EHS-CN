@@ -625,6 +625,26 @@ Right around this time we were involved in another conflict with Xerox managemen
 
 ![penderypaperdisplay](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/penderypaperdisplay.png)
 
+看我一直孤军奋战，也毫无章法，比尔·英格利希（Bill English）做了我的领路人，并帮助我组建团队。
+他给我的建议之一是我应当有个预算。
+而我恐怕真的问了他：“预算是什么？”
+这让我想起了犹他大学的日子，就是曼斯菲尔德修正案出台前的岁月，戴夫·埃文斯（Dave Evans）在他动身去ARPA前对我说：“我们几乎弹尽粮绝了，要开始多争取一些投资。”
+我想他说得不错。
+整个系列的过程就是：
+别人给你投资、
+你把那笔钱花在寻找下一步该做什么上面、
+钱花完了、
+他们就继续给你钱，
+凡此种种，不一而足。
+PARC从未按照这种牧歌式的标准行事，但是第一个五年里，我们还是离这个标准越来越近了。
+我需要组建一个团队，是因为我意识到自己并不具备通过单打独斗完完全全完成一个想法的品质。
+我把这个团队称为学习性研究小组（Learning Research Group，简称LRG），尽量模糊我们要做的事情。
+关于小组的成员，我所选的人都是在听到笔记本想法时眼前一亮的人们。
+我不喜欢开会：因为我从来都不觉得头脑风暴可以代替冷静持久的思考。
+当有人问我该做什么，而我也没有一个确切的想法时，我就指着这台笔记本的模型对他说：“改进它。”
+LRG小组的成员彼此之间关系紧密——就如丹·英戈尔斯（Dan Ingalls）后来所说的那样：“......整个小团队，连休息时间里彼此间都洋溢着爱与活力。”
+许许多多个白天我们都是在PARC之外度过的，我们一起打网球、骑车、喝酒、吃中餐，期间也时不时地讨论Dynabook，以及它扩大人类视野的潜能和给予踟蹰不前的人类文明所急需的新道路的可能性（60年代的余兴未尽时，这个目标在加州很普遍）。
+
 Bill English took me under his wing and helped me start my group as I had always been a lone wolf and had no idea how to do it. One of his suggestions was that I should make a budget. I'm afraid that I really did ask Bill, "What's a budget?" I remembered at Utah, in pre-Mansfield Amendment days, Dave Evans saying to me as he went off on a trip to ARPA, "We're almost out of money. Got to go get some more." That seemed about right to me. They give you some money. You spend it to find out what to do next. You run out. They give you some more. And so on. PARC never quite made it to that idyllic standard, but for the first half decade it came close. I needed a group because I had finally realized that I did not have all of the temperaments required to completely finish an idea. I called it the Learning Research Group (LRG) to be as vague as possible about our charter. I only hired people that got stars in their eyes when they heard about the notebook computer idea. I didn't like meetings: didn't believe brainstorming could substitute for cool sustained thought. When anyone asked me what to do, and I didn't have a strong idea, I would point at the notebook model and say, "Advance that." LRG members developed a very close relationship with each other—as Dan Ingalls was to say later: "... the rest has enfolded through the love and energy of the whole Learning Research Group." A lot of daytime was spent outside of PARC, playing tennis, bikeriding, drinking beer, eating chinese food, and constantly talking about the Dynabook and its potential to amplify human reach and bring new ways of thinking to a faltering civilization that desperately needed it (that kind of goal was common in California in the aftermath of the sixties).
 
 In the summer of '71 I refined the KiddiKomp idea into a tighter design called miniCOM. It used a bit-slice approach like the NOVA 1200, had a bit-map display, a pointing device, a choice of "secondary" (really tertiary) storages, and a language I now called "Smalltalk"—as in "programming should be a matter of ..." and "children should program in ...". The name was also a reaction against the "IndoEuropean god theory" where systems were named Zeus, Odin, and Thor, and hardly did anything. I figured that "Smalltalk" was so innocuous a label that if it ever did anything nice people would be pleasantly surprised.
