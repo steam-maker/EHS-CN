@@ -1,0 +1,1523 @@
+Sentence #1 (27 tokens):
+看我一直孤军奋战，也毫无章法，比尔·英格利希（Bill English）做了我的领路人，并帮助我组建团队。
+[Text=看 CharacterOffsetBegin=0 CharacterOffsetEnd=1 PartOfSpeech=VV Lemma=看 NamedEntityTag=O]
+[Text=我 CharacterOffsetBegin=1 CharacterOffsetEnd=2 PartOfSpeech=PN Lemma=我 NamedEntityTag=O]
+[Text=一直 CharacterOffsetBegin=2 CharacterOffsetEnd=4 PartOfSpeech=AD Lemma=一直 NamedEntityTag=O]
+[Text=孤军奋战 CharacterOffsetBegin=4 CharacterOffsetEnd=8 PartOfSpeech=VV Lemma=孤军奋战 NamedEntityTag=O]
+[Text=， CharacterOffsetBegin=8 CharacterOffsetEnd=9 PartOfSpeech=PU Lemma=， NamedEntityTag=O]
+[Text=也 CharacterOffsetBegin=9 CharacterOffsetEnd=10 PartOfSpeech=AD Lemma=也 NamedEntityTag=O]
+[Text=毫 CharacterOffsetBegin=10 CharacterOffsetEnd=11 PartOfSpeech=AD Lemma=毫 NamedEntityTag=O]
+[Text=无 CharacterOffsetBegin=11 CharacterOffsetEnd=12 PartOfSpeech=VE Lemma=无 NamedEntityTag=O]
+[Text=章法 CharacterOffsetBegin=12 CharacterOffsetEnd=14 PartOfSpeech=NN Lemma=章法 NamedEntityTag=O]
+[Text=， CharacterOffsetBegin=14 CharacterOffsetEnd=15 PartOfSpeech=PU Lemma=， NamedEntityTag=O]
+[Text=比尔·英格利希 CharacterOffsetBegin=15 CharacterOffsetEnd=22 PartOfSpeech=NR Lemma=比尔·英格利希 NamedEntityTag=O]
+[Text=（ CharacterOffsetBegin=22 CharacterOffsetEnd=23 PartOfSpeech=PU Lemma=（ NamedEntityTag=O]
+[Text=Bill CharacterOffsetBegin=23 CharacterOffsetEnd=27 PartOfSpeech=NR Lemma=bill NamedEntityTag=O]
+[Text=English CharacterOffsetBegin=28 CharacterOffsetEnd=35 PartOfSpeech=NR Lemma=english NamedEntityTag=O]
+[Text=） CharacterOffsetBegin=35 CharacterOffsetEnd=36 PartOfSpeech=PU Lemma=） NamedEntityTag=O]
+[Text=做 CharacterOffsetBegin=36 CharacterOffsetEnd=37 PartOfSpeech=VV Lemma=做 NamedEntityTag=O]
+[Text=了 CharacterOffsetBegin=37 CharacterOffsetEnd=38 PartOfSpeech=AS Lemma=了 NamedEntityTag=O]
+[Text=我 CharacterOffsetBegin=38 CharacterOffsetEnd=39 PartOfSpeech=PN Lemma=我 NamedEntityTag=O]
+[Text=的 CharacterOffsetBegin=39 CharacterOffsetEnd=40 PartOfSpeech=DEG Lemma=的 NamedEntityTag=O]
+[Text=领路人 CharacterOffsetBegin=40 CharacterOffsetEnd=43 PartOfSpeech=NN Lemma=领路人 NamedEntityTag=O]
+[Text=， CharacterOffsetBegin=43 CharacterOffsetEnd=44 PartOfSpeech=PU Lemma=， NamedEntityTag=O]
+[Text=并 CharacterOffsetBegin=44 CharacterOffsetEnd=45 PartOfSpeech=CC Lemma=并 NamedEntityTag=O]
+[Text=帮助 CharacterOffsetBegin=45 CharacterOffsetEnd=47 PartOfSpeech=VV Lemma=帮助 NamedEntityTag=O]
+[Text=我 CharacterOffsetBegin=47 CharacterOffsetEnd=48 PartOfSpeech=PN Lemma=我 NamedEntityTag=O]
+[Text=组建 CharacterOffsetBegin=48 CharacterOffsetEnd=50 PartOfSpeech=VV Lemma=组建 NamedEntityTag=O]
+[Text=团队 CharacterOffsetBegin=50 CharacterOffsetEnd=52 PartOfSpeech=NN Lemma=团队 NamedEntityTag=O]
+[Text=。 CharacterOffsetBegin=52 CharacterOffsetEnd=53 PartOfSpeech=PU Lemma=。 NamedEntityTag=O]
+(ROOT
+  (IP
+    (IP
+      (VP (VV 看)
+        (IP
+          (NP (PN 我))
+          (VP
+            (VP
+              (ADVP (AD 一直))
+              (VP (VV 孤军奋战)))
+            (PU ，)
+            (VP
+              (ADVP (AD 也))
+              (ADVP (AD 毫))
+              (VP (VE 无)
+                (NP (NN 章法))))))))
+    (PU ，)
+    (NP (NR 比尔·英格利希)
+      (PRN (PU （)
+        (NP (NR Bill) (NR English))
+        (PU ）)))
+    (VP
+      (VP (VV 做) (AS 了)
+        (NP
+          (DNP
+            (NP (PN 我))
+            (DEG 的))
+          (NP (NN 领路人))))
+      (PU ，)
+      (CC 并)
+      (VP (VV 帮助)
+        (IP
+          (NP (PN 我))
+          (VP (VV 组建)
+            (NP (NN 团队))))))
+    (PU 。)))
+
+root(ROOT-0, 做-16)
+dep(做-16, 看-1)
+nsubj(孤军奋战-4, 我-2)
+advmod(孤军奋战-4, 一直-3)
+ccomp(看-1, 孤军奋战-4)
+punct(孤军奋战-4, ，-5)
+advmod(无-8, 也-6)
+advmod(无-8, 毫-7)
+dep(孤军奋战-4, 无-8)
+dobj(无-8, 章法-9)
+punct(做-16, ，-10)
+nsubj(做-16, 比尔·英格利希-11)
+punct(English-14, （-12)
+nn(English-14, Bill-13)
+prnmod(比尔·英格利希-11, English-14)
+punct(English-14, ）-15)
+asp(做-16, 了-17)
+assmod(领路人-20, 我-18)
+case(我-18, 的-19)
+dobj(做-16, 领路人-20)
+punct(做-16, ，-21)
+cc(做-16, 并-22)
+conj(做-16, 帮助-23)
+nsubj(组建-25, 我-24)
+ccomp(帮助-23, 组建-25)
+dobj(组建-25, 团队-26)
+punct(做-16, 。-27)
+
+Sentence #2 (13 tokens):
+他给我的建议之一是我应当有个预算。
+[Text=他 CharacterOffsetBegin=54 CharacterOffsetEnd=55 PartOfSpeech=PN Lemma=他 NamedEntityTag=O]
+[Text=给 CharacterOffsetBegin=55 CharacterOffsetEnd=56 PartOfSpeech=P Lemma=给 NamedEntityTag=O]
+[Text=我 CharacterOffsetBegin=56 CharacterOffsetEnd=57 PartOfSpeech=PN Lemma=我 NamedEntityTag=O]
+[Text=的 CharacterOffsetBegin=57 CharacterOffsetEnd=58 PartOfSpeech=DEG Lemma=的 NamedEntityTag=O]
+[Text=建议 CharacterOffsetBegin=58 CharacterOffsetEnd=60 PartOfSpeech=NN Lemma=建议 NamedEntityTag=O]
+[Text=之一 CharacterOffsetBegin=60 CharacterOffsetEnd=62 PartOfSpeech=NN Lemma=之一 NamedEntityTag=O]
+[Text=是 CharacterOffsetBegin=62 CharacterOffsetEnd=63 PartOfSpeech=VC Lemma=是 NamedEntityTag=O]
+[Text=我 CharacterOffsetBegin=63 CharacterOffsetEnd=64 PartOfSpeech=PN Lemma=我 NamedEntityTag=O]
+[Text=应当 CharacterOffsetBegin=64 CharacterOffsetEnd=66 PartOfSpeech=VV Lemma=应当 NamedEntityTag=O]
+[Text=有 CharacterOffsetBegin=66 CharacterOffsetEnd=67 PartOfSpeech=VE Lemma=有 NamedEntityTag=O]
+[Text=个 CharacterOffsetBegin=67 CharacterOffsetEnd=68 PartOfSpeech=M Lemma=个 NamedEntityTag=O]
+[Text=预算 CharacterOffsetBegin=68 CharacterOffsetEnd=70 PartOfSpeech=NN Lemma=预算 NamedEntityTag=O]
+[Text=。 CharacterOffsetBegin=70 CharacterOffsetEnd=71 PartOfSpeech=PU Lemma=。 NamedEntityTag=O]
+(ROOT
+  (IP
+    (NP (PN 他))
+    (VP
+      (PP (P 给)
+        (NP
+          (DNP
+            (NP (PN 我))
+            (DEG 的))
+          (NP (NN 建议) (NN 之一))))
+      (VP (VC 是)
+        (IP
+          (NP (PN 我))
+          (VP (VV 应当)
+            (VP (VE 有)
+              (NP
+                (QP
+                  (CLP (M 个)))
+                (NP (NN 预算))))))))
+    (PU 。)))
+
+root(ROOT-0, 有-10)
+nsubj(有-10, 他-1)
+case(之一-6, 给-2)
+assmod(之一-6, 我-3)
+case(我-3, 的-4)
+nn(之一-6, 建议-5)
+prep(有-10, 之一-6)
+cop(有-10, 是-7)
+nsubj(有-10, 我-8)
+mmod(有-10, 应当-9)
+clf(预算-12, 个-11)
+dobj(有-10, 预算-12)
+punct(有-10, 。-13)
+
+Sentence #3 (14 tokens):
+而我恐怕真的问了他：“预算是什么？”
+[Text=而 CharacterOffsetBegin=72 CharacterOffsetEnd=73 PartOfSpeech=AD Lemma=而 NamedEntityTag=O]
+[Text=我 CharacterOffsetBegin=73 CharacterOffsetEnd=74 PartOfSpeech=PN Lemma=我 NamedEntityTag=O]
+[Text=恐怕 CharacterOffsetBegin=74 CharacterOffsetEnd=76 PartOfSpeech=AD Lemma=恐怕 NamedEntityTag=O]
+[Text=真的 CharacterOffsetBegin=76 CharacterOffsetEnd=78 PartOfSpeech=AD Lemma=真的 NamedEntityTag=O]
+[Text=问 CharacterOffsetBegin=78 CharacterOffsetEnd=79 PartOfSpeech=VV Lemma=问 NamedEntityTag=O]
+[Text=了 CharacterOffsetBegin=79 CharacterOffsetEnd=80 PartOfSpeech=AS Lemma=了 NamedEntityTag=O]
+[Text=他 CharacterOffsetBegin=80 CharacterOffsetEnd=81 PartOfSpeech=PN Lemma=他 NamedEntityTag=O]
+[Text=： CharacterOffsetBegin=81 CharacterOffsetEnd=82 PartOfSpeech=PU Lemma=： NamedEntityTag=O]
+[Text=“ CharacterOffsetBegin=82 CharacterOffsetEnd=83 PartOfSpeech=PU Lemma=“ NamedEntityTag=O]
+[Text=预算 CharacterOffsetBegin=83 CharacterOffsetEnd=85 PartOfSpeech=NN Lemma=预算 NamedEntityTag=O]
+[Text=是 CharacterOffsetBegin=85 CharacterOffsetEnd=86 PartOfSpeech=VC Lemma=是 NamedEntityTag=O]
+[Text=什么 CharacterOffsetBegin=86 CharacterOffsetEnd=88 PartOfSpeech=PN Lemma=什么 NamedEntityTag=O]
+[Text=？ CharacterOffsetBegin=88 CharacterOffsetEnd=89 PartOfSpeech=PU Lemma=？ NamedEntityTag=O]
+[Text=” CharacterOffsetBegin=89 CharacterOffsetEnd=90 PartOfSpeech=PU Lemma=” NamedEntityTag=O]
+(ROOT
+  (IP
+    (IP
+      (ADVP (AD 而))
+      (NP (PN 我))
+      (VP
+        (ADVP (AD 恐怕))
+        (ADVP (AD 真的))
+        (VP (VV 问) (AS 了)
+          (NP (PN 他)))))
+    (PU ：) (PU “)
+    (IP
+      (NP (NN 预算))
+      (VP (VC 是)
+        (NP (PN 什么))))
+    (PU ？) (PU ”)))
+
+root(ROOT-0, 问-5)
+advmod(问-5, 而-1)
+nsubj(问-5, 我-2)
+advmod(问-5, 恐怕-3)
+advmod(问-5, 真的-4)
+asp(问-5, 了-6)
+dobj(问-5, 他-7)
+punct(问-5, ：-8)
+punct(问-5, “-9)
+nsubj(什么-12, 预算-10)
+cop(什么-12, 是-11)
+conj(问-5, 什么-12)
+punct(问-5, ？-13)
+punct(问-5, ”-14)
+
+Sentence #4 (48 tokens):
+这让我想起了犹他大学的日子，就是曼斯菲尔德修正案出台前的岁月，戴夫·埃文斯（Dave Evans）在他动身去ARPA前对我说：“我们几乎弹尽粮绝了，要开始多争取一些投资。”
+[Text=这 CharacterOffsetBegin=91 CharacterOffsetEnd=92 PartOfSpeech=PN Lemma=这 NamedEntityTag=O]
+[Text=让 CharacterOffsetBegin=92 CharacterOffsetEnd=93 PartOfSpeech=VV Lemma=让 NamedEntityTag=O]
+[Text=我 CharacterOffsetBegin=93 CharacterOffsetEnd=94 PartOfSpeech=PN Lemma=我 NamedEntityTag=O]
+[Text=想起 CharacterOffsetBegin=94 CharacterOffsetEnd=96 PartOfSpeech=VV Lemma=想起 NamedEntityTag=O]
+[Text=了 CharacterOffsetBegin=96 CharacterOffsetEnd=97 PartOfSpeech=AS Lemma=了 NamedEntityTag=O]
+[Text=犹他 CharacterOffsetBegin=97 CharacterOffsetEnd=99 PartOfSpeech=NR Lemma=犹他 NamedEntityTag=O]
+[Text=大学 CharacterOffsetBegin=99 CharacterOffsetEnd=101 PartOfSpeech=NN Lemma=大学 NamedEntityTag=O]
+[Text=的 CharacterOffsetBegin=101 CharacterOffsetEnd=102 PartOfSpeech=DEG Lemma=的 NamedEntityTag=O]
+[Text=日子 CharacterOffsetBegin=102 CharacterOffsetEnd=104 PartOfSpeech=NN Lemma=日子 NamedEntityTag=O]
+[Text=， CharacterOffsetBegin=104 CharacterOffsetEnd=105 PartOfSpeech=PU Lemma=， NamedEntityTag=O]
+[Text=就是 CharacterOffsetBegin=105 CharacterOffsetEnd=107 PartOfSpeech=AD Lemma=就是 NamedEntityTag=O]
+[Text=曼斯菲尔德 CharacterOffsetBegin=107 CharacterOffsetEnd=112 PartOfSpeech=NR Lemma=曼斯菲尔德 NamedEntityTag=PERSON]
+[Text=修正案 CharacterOffsetBegin=112 CharacterOffsetEnd=115 PartOfSpeech=NN Lemma=修正案 NamedEntityTag=O]
+[Text=出台 CharacterOffsetBegin=115 CharacterOffsetEnd=117 PartOfSpeech=VV Lemma=出台 NamedEntityTag=O]
+[Text=前 CharacterOffsetBegin=117 CharacterOffsetEnd=118 PartOfSpeech=LC Lemma=前 NamedEntityTag=O]
+[Text=的 CharacterOffsetBegin=118 CharacterOffsetEnd=119 PartOfSpeech=DEG Lemma=的 NamedEntityTag=O]
+[Text=岁月 CharacterOffsetBegin=119 CharacterOffsetEnd=121 PartOfSpeech=NN Lemma=岁月 NamedEntityTag=O]
+[Text=， CharacterOffsetBegin=121 CharacterOffsetEnd=122 PartOfSpeech=PU Lemma=， NamedEntityTag=O]
+[Text=戴 CharacterOffsetBegin=122 CharacterOffsetEnd=123 PartOfSpeech=VV Lemma=戴 NamedEntityTag=O]
+[Text=夫·埃文斯 CharacterOffsetBegin=123 CharacterOffsetEnd=128 PartOfSpeech=NR Lemma=夫·埃文斯 NamedEntityTag=PERSON]
+[Text=（ CharacterOffsetBegin=128 CharacterOffsetEnd=129 PartOfSpeech=PU Lemma=（ NamedEntityTag=O]
+[Text=Dave CharacterOffsetBegin=129 CharacterOffsetEnd=133 PartOfSpeech=NR Lemma=dave NamedEntityTag=O]
+[Text=Evans CharacterOffsetBegin=134 CharacterOffsetEnd=139 PartOfSpeech=NN Lemma=evans NamedEntityTag=O]
+[Text=） CharacterOffsetBegin=139 CharacterOffsetEnd=140 PartOfSpeech=PU Lemma=） NamedEntityTag=O]
+[Text=在 CharacterOffsetBegin=140 CharacterOffsetEnd=141 PartOfSpeech=P Lemma=在 NamedEntityTag=O]
+[Text=他 CharacterOffsetBegin=141 CharacterOffsetEnd=142 PartOfSpeech=PN Lemma=他 NamedEntityTag=O]
+[Text=动身 CharacterOffsetBegin=142 CharacterOffsetEnd=144 PartOfSpeech=VV Lemma=动身 NamedEntityTag=O]
+[Text=去 CharacterOffsetBegin=144 CharacterOffsetEnd=145 PartOfSpeech=VV Lemma=去 NamedEntityTag=O]
+[Text=ARPA CharacterOffsetBegin=145 CharacterOffsetEnd=149 PartOfSpeech=NR Lemma=arpa NamedEntityTag=O]
+[Text=前 CharacterOffsetBegin=149 CharacterOffsetEnd=150 PartOfSpeech=LC Lemma=前 NamedEntityTag=O]
+[Text=对 CharacterOffsetBegin=150 CharacterOffsetEnd=151 PartOfSpeech=P Lemma=对 NamedEntityTag=O]
+[Text=我 CharacterOffsetBegin=151 CharacterOffsetEnd=152 PartOfSpeech=PN Lemma=我 NamedEntityTag=O]
+[Text=说 CharacterOffsetBegin=152 CharacterOffsetEnd=153 PartOfSpeech=VV Lemma=说 NamedEntityTag=O]
+[Text=： CharacterOffsetBegin=153 CharacterOffsetEnd=154 PartOfSpeech=PU Lemma=： NamedEntityTag=O]
+[Text=“ CharacterOffsetBegin=154 CharacterOffsetEnd=155 PartOfSpeech=PU Lemma=“ NamedEntityTag=O]
+[Text=我们 CharacterOffsetBegin=155 CharacterOffsetEnd=157 PartOfSpeech=PN Lemma=我们 NamedEntityTag=O]
+[Text=几乎 CharacterOffsetBegin=157 CharacterOffsetEnd=159 PartOfSpeech=AD Lemma=几乎 NamedEntityTag=O]
+[Text=弹尽粮绝 CharacterOffsetBegin=159 CharacterOffsetEnd=163 PartOfSpeech=VV Lemma=弹尽粮绝 NamedEntityTag=O]
+[Text=了 CharacterOffsetBegin=163 CharacterOffsetEnd=164 PartOfSpeech=AS Lemma=了 NamedEntityTag=O]
+[Text=， CharacterOffsetBegin=164 CharacterOffsetEnd=165 PartOfSpeech=PU Lemma=， NamedEntityTag=O]
+[Text=要 CharacterOffsetBegin=165 CharacterOffsetEnd=166 PartOfSpeech=VV Lemma=要 NamedEntityTag=O]
+[Text=开始 CharacterOffsetBegin=166 CharacterOffsetEnd=168 PartOfSpeech=VV Lemma=开始 NamedEntityTag=O]
+[Text=多 CharacterOffsetBegin=168 CharacterOffsetEnd=169 PartOfSpeech=AD Lemma=多 NamedEntityTag=O]
+[Text=争取 CharacterOffsetBegin=169 CharacterOffsetEnd=171 PartOfSpeech=VV Lemma=争取 NamedEntityTag=O]
+[Text=一些 CharacterOffsetBegin=171 CharacterOffsetEnd=173 PartOfSpeech=CD Lemma=一些 NamedEntityTag=O]
+[Text=投资 CharacterOffsetBegin=173 CharacterOffsetEnd=175 PartOfSpeech=NN Lemma=投资 NamedEntityTag=O]
+[Text=。 CharacterOffsetBegin=175 CharacterOffsetEnd=176 PartOfSpeech=PU Lemma=。 NamedEntityTag=O]
+[Text=” CharacterOffsetBegin=176 CharacterOffsetEnd=177 PartOfSpeech=PU Lemma=” NamedEntityTag=O]
+(ROOT
+  (IP
+    (IP
+      (NP (PN 这))
+      (VP (VV 让)
+        (IP
+          (NP (PN 我))
+          (VP (VV 想起) (AS 了)
+            (NP
+              (DNP
+                (NP
+                  (NP (NR 犹他))
+                  (NP (NN 大学)))
+                (DEG 的))
+              (NP (NN 日子)))))))
+    (PU ，)
+    (IP
+      (ADVP (AD 就是))
+      (NP
+        (DNP
+          (LCP
+            (IP
+              (NP
+                (NP (NR 曼斯菲尔德))
+                (NP (NN 修正案)))
+              (VP (VV 出台)))
+            (LC 前))
+          (DEG 的))
+        (NP (NN 岁月)))
+      (PU ，)
+      (VP
+        (VP (VV 戴)
+          (NP
+            (NP (NR 夫·埃文斯))
+            (PRN (PU （)
+              (NP
+                (NP (NR Dave))
+                (NP (NN Evans)))
+              (PU ）))))
+        (VP
+          (PP (P 在)
+            (LCP
+              (IP
+                (NP (PN 他))
+                (VP (VV 动身)
+                  (VP (VV 去)
+                    (NP (NR ARPA)))))
+              (LC 前)))
+          (PP (P 对)
+            (NP (PN 我)))
+          (VP (VV 说) (PU ：) (PU “)
+            (IP
+              (NP (PN 我们))
+              (VP
+                (ADVP (AD 几乎))
+                (VP (VV 弹尽粮绝) (AS 了))))))
+        (PU ，)
+        (VP (VV 要)
+          (VP (VV 开始)
+            (VP
+              (ADVP (AD 多))
+              (VP (VV 争取)
+                (NP
+                  (QP (CD 一些))
+                  (NP (NN 投资)))))))))
+    (PU 。) (PU ”)))
+
+root(ROOT-0, 让-2)
+nsubj(让-2, 这-1)
+nsubj(想起-4, 我-3)
+ccomp(让-2, 想起-4)
+asp(想起-4, 了-5)
+nn(大学-7, 犹他-6)
+assmod(日子-9, 大学-7)
+case(大学-7, 的-8)
+dobj(想起-4, 日子-9)
+punct(让-2, ，-10)
+advmod(戴-19, 就是-11)
+nn(修正案-13, 曼斯菲尔德-12)
+nsubj(出台-14, 修正案-13)
+assmod(岁月-17, 出台-14)
+case(出台-14, 前-15)
+case(出台-14, 的-16)
+nsubj(戴-19, 岁月-17)
+punct(戴-19, ，-18)
+conj(让-2, 戴-19)
+dobj(戴-19, 夫·埃文斯-20)
+punct(Evans-23, （-21)
+nn(Evans-23, Dave-22)
+prnmod(夫·埃文斯-20, Evans-23)
+punct(Evans-23, ）-24)
+case(去-28, 在-25)
+nsubj(去-28, 他-26)
+mmod(去-28, 动身-27)
+prep(说-33, 去-28)
+dobj(去-28, ARPA-29)
+case(去-28, 前-30)
+case(我-32, 对-31)
+prep(说-33, 我-32)
+conj(戴-19, 说-33)
+punct(说-33, ：-34)
+punct(说-33, “-35)
+nsubj(弹尽粮绝-38, 我们-36)
+advmod(弹尽粮绝-38, 几乎-37)
+ccomp(说-33, 弹尽粮绝-38)
+asp(弹尽粮绝-38, 了-39)
+punct(戴-19, ，-40)
+mmod(争取-44, 要-41)
+mmod(争取-44, 开始-42)
+advmod(争取-44, 多-43)
+conj(戴-19, 争取-44)
+nummod(投资-46, 一些-45)
+dobj(争取-44, 投资-46)
+punct(让-2, 。-47)
+punct(让-2, ”-48)
+
+Sentence #5 (7 tokens):
+我想他说得不错。
+[Text=我 CharacterOffsetBegin=178 CharacterOffsetEnd=179 PartOfSpeech=PN Lemma=我 NamedEntityTag=O]
+[Text=想 CharacterOffsetBegin=179 CharacterOffsetEnd=180 PartOfSpeech=VV Lemma=想 NamedEntityTag=O]
+[Text=他 CharacterOffsetBegin=180 CharacterOffsetEnd=181 PartOfSpeech=PN Lemma=他 NamedEntityTag=O]
+[Text=说 CharacterOffsetBegin=181 CharacterOffsetEnd=182 PartOfSpeech=VV Lemma=说 NamedEntityTag=O]
+[Text=得 CharacterOffsetBegin=182 CharacterOffsetEnd=183 PartOfSpeech=DER Lemma=得 NamedEntityTag=O]
+[Text=不错 CharacterOffsetBegin=183 CharacterOffsetEnd=185 PartOfSpeech=VA Lemma=不错 NamedEntityTag=O]
+[Text=。 CharacterOffsetBegin=185 CharacterOffsetEnd=186 PartOfSpeech=PU Lemma=。 NamedEntityTag=O]
+(ROOT
+  (IP
+    (NP (PN 我))
+    (VP (VV 想)
+      (IP
+        (NP (PN 他))
+        (VP (VV 说) (DER 得)
+          (IP
+            (VP (VA 不错))))))
+    (PU 。)))
+
+root(ROOT-0, 想-2)
+nsubj(想-2, 我-1)
+nsubj(说-4, 他-3)
+ccomp(想-2, 说-4)
+dep(说-4, 得-5)
+ccomp(说-4, 不错-6)
+punct(想-2, 。-7)
+
+Sentence #6 (43 tokens):
+整个系列的过程就是： 别人给你投资、 你把那笔钱花在寻找下一步该做什么上面、 钱花完了、 他们就继续给你钱， 凡此种种，不一而足。
+[Text=整个 CharacterOffsetBegin=187 CharacterOffsetEnd=189 PartOfSpeech=DT Lemma=整个 NamedEntityTag=O]
+[Text=系列 CharacterOffsetBegin=189 CharacterOffsetEnd=191 PartOfSpeech=NN Lemma=系列 NamedEntityTag=O]
+[Text=的 CharacterOffsetBegin=191 CharacterOffsetEnd=192 PartOfSpeech=DEG Lemma=的 NamedEntityTag=O]
+[Text=过程 CharacterOffsetBegin=192 CharacterOffsetEnd=194 PartOfSpeech=NN Lemma=过程 NamedEntityTag=O]
+[Text=就是 CharacterOffsetBegin=194 CharacterOffsetEnd=196 PartOfSpeech=AD Lemma=就是 NamedEntityTag=O]
+[Text=： CharacterOffsetBegin=196 CharacterOffsetEnd=197 PartOfSpeech=PU Lemma=： NamedEntityTag=O]
+[Text=别人 CharacterOffsetBegin=198 CharacterOffsetEnd=200 PartOfSpeech=NN Lemma=别人 NamedEntityTag=O]
+[Text=给 CharacterOffsetBegin=200 CharacterOffsetEnd=201 PartOfSpeech=VV Lemma=给 NamedEntityTag=O]
+[Text=你 CharacterOffsetBegin=201 CharacterOffsetEnd=202 PartOfSpeech=PN Lemma=你 NamedEntityTag=O]
+[Text=投资 CharacterOffsetBegin=202 CharacterOffsetEnd=204 PartOfSpeech=VV Lemma=投资 NamedEntityTag=O]
+[Text=、 CharacterOffsetBegin=204 CharacterOffsetEnd=205 PartOfSpeech=PU Lemma=、 NamedEntityTag=O]
+[Text=你 CharacterOffsetBegin=206 CharacterOffsetEnd=207 PartOfSpeech=PN Lemma=你 NamedEntityTag=O]
+[Text=把 CharacterOffsetBegin=207 CharacterOffsetEnd=208 PartOfSpeech=BA Lemma=把 NamedEntityTag=O]
+[Text=那 CharacterOffsetBegin=208 CharacterOffsetEnd=209 PartOfSpeech=DT Lemma=那 NamedEntityTag=O]
+[Text=笔 CharacterOffsetBegin=209 CharacterOffsetEnd=210 PartOfSpeech=M Lemma=笔 NamedEntityTag=O]
+[Text=钱 CharacterOffsetBegin=210 CharacterOffsetEnd=211 PartOfSpeech=NN Lemma=钱 NamedEntityTag=O]
+[Text=花在 CharacterOffsetBegin=211 CharacterOffsetEnd=213 PartOfSpeech=VV Lemma=花在 NamedEntityTag=O]
+[Text=寻找 CharacterOffsetBegin=213 CharacterOffsetEnd=215 PartOfSpeech=VV Lemma=寻找 NamedEntityTag=O]
+[Text=下 CharacterOffsetBegin=215 CharacterOffsetEnd=216 PartOfSpeech=DT Lemma=下 NamedEntityTag=O]
+[Text=一 CharacterOffsetBegin=216 CharacterOffsetEnd=217 PartOfSpeech=CD Lemma=一 NamedEntityTag=O]
+[Text=步 CharacterOffsetBegin=217 CharacterOffsetEnd=218 PartOfSpeech=M Lemma=步 NamedEntityTag=O]
+[Text=该 CharacterOffsetBegin=218 CharacterOffsetEnd=219 PartOfSpeech=VV Lemma=该 NamedEntityTag=O]
+[Text=做 CharacterOffsetBegin=219 CharacterOffsetEnd=220 PartOfSpeech=VV Lemma=做 NamedEntityTag=O]
+[Text=什么 CharacterOffsetBegin=220 CharacterOffsetEnd=222 PartOfSpeech=PN Lemma=什么 NamedEntityTag=O]
+[Text=上面 CharacterOffsetBegin=222 CharacterOffsetEnd=224 PartOfSpeech=NN Lemma=上面 NamedEntityTag=O]
+[Text=、 CharacterOffsetBegin=224 CharacterOffsetEnd=225 PartOfSpeech=PU Lemma=、 NamedEntityTag=O]
+[Text=钱 CharacterOffsetBegin=226 CharacterOffsetEnd=227 PartOfSpeech=NN Lemma=钱 NamedEntityTag=O]
+[Text=花完 CharacterOffsetBegin=227 CharacterOffsetEnd=229 PartOfSpeech=VV Lemma=花完 NamedEntityTag=O]
+[Text=了 CharacterOffsetBegin=229 CharacterOffsetEnd=230 PartOfSpeech=AS Lemma=了 NamedEntityTag=O]
+[Text=、 CharacterOffsetBegin=230 CharacterOffsetEnd=231 PartOfSpeech=PU Lemma=、 NamedEntityTag=O]
+[Text=他们 CharacterOffsetBegin=232 CharacterOffsetEnd=234 PartOfSpeech=PN Lemma=他们 NamedEntityTag=O]
+[Text=就 CharacterOffsetBegin=234 CharacterOffsetEnd=235 PartOfSpeech=AD Lemma=就 NamedEntityTag=O]
+[Text=继续 CharacterOffsetBegin=235 CharacterOffsetEnd=237 PartOfSpeech=VV Lemma=继续 NamedEntityTag=O]
+[Text=给 CharacterOffsetBegin=237 CharacterOffsetEnd=238 PartOfSpeech=VV Lemma=给 NamedEntityTag=O]
+[Text=你 CharacterOffsetBegin=238 CharacterOffsetEnd=239 PartOfSpeech=PN Lemma=你 NamedEntityTag=O]
+[Text=钱 CharacterOffsetBegin=239 CharacterOffsetEnd=240 PartOfSpeech=NN Lemma=钱 NamedEntityTag=O]
+[Text=， CharacterOffsetBegin=240 CharacterOffsetEnd=241 PartOfSpeech=PU Lemma=， NamedEntityTag=O]
+[Text=凡 CharacterOffsetBegin=242 CharacterOffsetEnd=243 PartOfSpeech=AD Lemma=凡 NamedEntityTag=O]
+[Text=此 CharacterOffsetBegin=243 CharacterOffsetEnd=244 PartOfSpeech=DT Lemma=此 NamedEntityTag=O]
+[Text=种种 CharacterOffsetBegin=244 CharacterOffsetEnd=246 PartOfSpeech=M Lemma=种种 NamedEntityTag=O]
+[Text=， CharacterOffsetBegin=246 CharacterOffsetEnd=247 PartOfSpeech=PU Lemma=， NamedEntityTag=O]
+[Text=不一而足 CharacterOffsetBegin=247 CharacterOffsetEnd=251 PartOfSpeech=VV Lemma=不一而足 NamedEntityTag=O]
+[Text=。 CharacterOffsetBegin=251 CharacterOffsetEnd=252 PartOfSpeech=PU Lemma=。 NamedEntityTag=O]
+(ROOT
+  (IP
+    (NP
+      (DNP
+        (NP
+          (DP (DT 整个))
+          (NP (NN 系列)))
+        (DEG 的))
+      (NP (NN 过程)))
+    (ADVP (AD 就是))
+    (PU ：)
+    (NP (NN 别人))
+    (VP (VV 给)
+      (NP
+        (NP
+          (UCP
+            (IP
+              (NP (PN 你))
+              (VP (VV 投资)))
+            (PU 、)
+            (IP
+              (NP (PN 你))
+              (VP (BA 把)
+                (IP
+                  (NP
+                    (DP (DT 那)
+                      (CLP (M 笔)))
+                    (NP (NN 钱)))
+                  (VP (VV 花在)
+                    (VP (VV 寻找)
+                      (NP
+                        (DP (DT 下)
+                          (QP (CD 一)
+                            (CLP (M 步))))
+                        (IP
+                          (VP (VV 该)
+                            (VP (VV 做)
+                              (NP (PN 什么)))))
+                        (NP (NN 上面))))))))
+            (PU 、)
+            (IP
+              (NP (NN 钱))
+              (VP (VV 花完) (AS 了)))
+            (PU 、)
+            (IP
+              (NP (PN 他们))
+              (VP
+                (ADVP (AD 就))
+                (VP (VV 继续)
+                  (VP (VV 给)
+                    (NP (PN 你)))))))
+          (NP (NN 钱)))
+        (PU ，)
+        (PRN
+          (NP
+            (ADVP (AD 凡))
+            (DFL (DT 此) (M 种种))
+            (PU ，)
+            (NP (VV 不一而足))))))
+    (PU 。)))
+
+root(ROOT-0, 给-8)
+det(系列-2, 整个-1)
+assmod(过程-4, 系列-2)
+case(系列-2, 的-3)
+nsubj(给-8, 过程-4)
+advmod(给-8, 就是-5)
+punct(给-8, ：-6)
+nsubj(给-8, 别人-7)
+nsubj(投资-10, 你-9)
+dep(钱-36, 投资-10)
+punct(投资-10, 、-11)
+nsubj(寻找-18, 你-12)
+ba(寻找-18, 把-13)
+det(钱-16, 那-14)
+clf(那-14, 笔-15)
+nsubj(寻找-18, 钱-16)
+mmod(寻找-18, 花在-17)
+conj(投资-10, 寻找-18)
+det(上面-25, 下-19)
+nummod(步-21, 一-20)
+dep(下-19, 步-21)
+mmod(做-23, 该-22)
+nfincl(上面-25, 做-23)
+dobj(做-23, 什么-24)
+dobj(寻找-18, 上面-25)
+punct(投资-10, 、-26)
+nsubj(花完-28, 钱-27)
+conj(投资-10, 花完-28)
+asp(花完-28, 了-29)
+punct(投资-10, 、-30)
+nsubj(给-34, 他们-31)
+advmod(给-34, 就-32)
+mmod(给-34, 继续-33)
+dep(投资-10, 给-34)
+dobj(给-34, 你-35)
+dobj(给-8, 钱-36)
+punct(钱-36, ，-37)
+advmod(不一而足-42, 凡-38)
+dep(种种-40, 此-39)
+dep(不一而足-42, 种种-40)
+punct(不一而足-42, ，-41)
+prnmod(钱-36, 不一而足-42)
+punct(给-8, 。-43)
+
+Sentence #7 (26 tokens):
+PARC从未按照这种牧歌式的标准行事，但是第一个五年里，我们还是离这个标准越来越近了。
+[Text=PARC CharacterOffsetBegin=253 CharacterOffsetEnd=257 PartOfSpeech=NR Lemma=parc NamedEntityTag=O]
+[Text=从未 CharacterOffsetBegin=257 CharacterOffsetEnd=259 PartOfSpeech=AD Lemma=从未 NamedEntityTag=O]
+[Text=按照 CharacterOffsetBegin=259 CharacterOffsetEnd=261 PartOfSpeech=P Lemma=按照 NamedEntityTag=O]
+[Text=这 CharacterOffsetBegin=261 CharacterOffsetEnd=262 PartOfSpeech=DT Lemma=这 NamedEntityTag=O]
+[Text=种 CharacterOffsetBegin=262 CharacterOffsetEnd=263 PartOfSpeech=M Lemma=种 NamedEntityTag=O]
+[Text=牧歌式 CharacterOffsetBegin=263 CharacterOffsetEnd=266 PartOfSpeech=JJ Lemma=牧歌式 NamedEntityTag=O]
+[Text=的 CharacterOffsetBegin=266 CharacterOffsetEnd=267 PartOfSpeech=DEG Lemma=的 NamedEntityTag=O]
+[Text=标准 CharacterOffsetBegin=267 CharacterOffsetEnd=269 PartOfSpeech=NN Lemma=标准 NamedEntityTag=O]
+[Text=行事 CharacterOffsetBegin=269 CharacterOffsetEnd=271 PartOfSpeech=VV Lemma=行事 NamedEntityTag=O]
+[Text=， CharacterOffsetBegin=271 CharacterOffsetEnd=272 PartOfSpeech=PU Lemma=， NamedEntityTag=O]
+[Text=但是 CharacterOffsetBegin=272 CharacterOffsetEnd=274 PartOfSpeech=AD Lemma=但是 NamedEntityTag=O]
+[Text=第一 CharacterOffsetBegin=274 CharacterOffsetEnd=276 PartOfSpeech=OD Lemma=第一 NamedEntityTag=MISC]
+[Text=个 CharacterOffsetBegin=276 CharacterOffsetEnd=277 PartOfSpeech=M Lemma=个 NamedEntityTag=O]
+[Text=五 CharacterOffsetBegin=277 CharacterOffsetEnd=278 PartOfSpeech=CD Lemma=五 NamedEntityTag=MISC]
+[Text=年 CharacterOffsetBegin=278 CharacterOffsetEnd=279 PartOfSpeech=M Lemma=年 NamedEntityTag=MISC]
+[Text=里 CharacterOffsetBegin=279 CharacterOffsetEnd=280 PartOfSpeech=LC Lemma=里 NamedEntityTag=O]
+[Text=， CharacterOffsetBegin=280 CharacterOffsetEnd=281 PartOfSpeech=PU Lemma=， NamedEntityTag=O]
+[Text=我们 CharacterOffsetBegin=281 CharacterOffsetEnd=283 PartOfSpeech=PN Lemma=我们 NamedEntityTag=O]
+[Text=还是 CharacterOffsetBegin=283 CharacterOffsetEnd=285 PartOfSpeech=AD Lemma=还是 NamedEntityTag=O]
+[Text=离 CharacterOffsetBegin=285 CharacterOffsetEnd=286 PartOfSpeech=P Lemma=离 NamedEntityTag=O]
+[Text=这个 CharacterOffsetBegin=286 CharacterOffsetEnd=288 PartOfSpeech=DT Lemma=这个 NamedEntityTag=O]
+[Text=标准 CharacterOffsetBegin=288 CharacterOffsetEnd=290 PartOfSpeech=NN Lemma=标准 NamedEntityTag=O]
+[Text=越来越 CharacterOffsetBegin=290 CharacterOffsetEnd=293 PartOfSpeech=AD Lemma=越来越 NamedEntityTag=O]
+[Text=近 CharacterOffsetBegin=293 CharacterOffsetEnd=294 PartOfSpeech=VA Lemma=近 NamedEntityTag=O]
+[Text=了 CharacterOffsetBegin=294 CharacterOffsetEnd=295 PartOfSpeech=SP Lemma=了 NamedEntityTag=O]
+[Text=。 CharacterOffsetBegin=295 CharacterOffsetEnd=296 PartOfSpeech=PU Lemma=。 NamedEntityTag=O]
+(ROOT
+  (IP
+    (IP
+      (NP (NR PARC))
+      (VP
+        (ADVP (AD 从未))
+        (PP (P 按照)
+          (NP
+            (DP (DT 这)
+              (CLP (M 种)))
+            (DNP
+              (ADJP (JJ 牧歌式))
+              (DEG 的))
+            (NP (NN 标准))))
+        (VP (VV 行事))))
+    (PU ，)
+    (CP
+      (IP
+        (ADVP (AD 但是))
+        (LCP
+          (QP
+            (QP (OD 第一)
+              (CLP (M 个)))
+            (QP (CD 五)
+              (CLP (M 年))))
+          (LC 里))
+        (PU ，)
+        (NP (PN 我们))
+        (VP
+          (ADVP (AD 还是))
+          (PP (P 离)
+            (NP
+              (DP (DT 这个))
+              (NP (NN 标准))))
+          (ADVP (AD 越来越))
+          (VP (VA 近))))
+      (SP 了))
+    (PU 。)))
+
+root(ROOT-0, 行事-9)
+nsubj(行事-9, PARC-1)
+advmod(行事-9, 从未-2)
+case(标准-8, 按照-3)
+det(标准-8, 这-4)
+clf(这-4, 种-5)
+assmod(标准-8, 牧歌式-6)
+case(牧歌式-6, 的-7)
+prep(行事-9, 标准-8)
+punct(行事-9, ，-10)
+advmod(近-24, 但是-11)
+ordmod(个-13, 第一-12)
+clf(年-15, 个-13)
+nummod(年-15, 五-14)
+loc(近-24, 年-15)
+case(年-15, 里-16)
+punct(近-24, ，-17)
+nsubj(近-24, 我们-18)
+advmod(近-24, 还是-19)
+case(标准-22, 离-20)
+det(标准-22, 这个-21)
+prep(近-24, 标准-22)
+advmod(近-24, 越来越-23)
+dep(行事-9, 近-24)
+dep(近-24, 了-25)
+punct(行事-9, 。-26)
+
+Sentence #8 (25 tokens):
+我需要组建一个团队，是因为我意识到自己并不具备通过单打独斗完完全全完成一个想法的品质。
+[Text=我 CharacterOffsetBegin=297 CharacterOffsetEnd=298 PartOfSpeech=PN Lemma=我 NamedEntityTag=O]
+[Text=需要 CharacterOffsetBegin=298 CharacterOffsetEnd=300 PartOfSpeech=VV Lemma=需要 NamedEntityTag=O]
+[Text=组建 CharacterOffsetBegin=300 CharacterOffsetEnd=302 PartOfSpeech=VV Lemma=组建 NamedEntityTag=O]
+[Text=一 CharacterOffsetBegin=302 CharacterOffsetEnd=303 PartOfSpeech=CD Lemma=一 NamedEntityTag=O]
+[Text=个 CharacterOffsetBegin=303 CharacterOffsetEnd=304 PartOfSpeech=M Lemma=个 NamedEntityTag=O]
+[Text=团队 CharacterOffsetBegin=304 CharacterOffsetEnd=306 PartOfSpeech=NN Lemma=团队 NamedEntityTag=O]
+[Text=， CharacterOffsetBegin=306 CharacterOffsetEnd=307 PartOfSpeech=PU Lemma=， NamedEntityTag=O]
+[Text=是 CharacterOffsetBegin=307 CharacterOffsetEnd=308 PartOfSpeech=VC Lemma=是 NamedEntityTag=O]
+[Text=因为 CharacterOffsetBegin=308 CharacterOffsetEnd=310 PartOfSpeech=P Lemma=因为 NamedEntityTag=O]
+[Text=我 CharacterOffsetBegin=310 CharacterOffsetEnd=311 PartOfSpeech=PN Lemma=我 NamedEntityTag=O]
+[Text=意识 CharacterOffsetBegin=311 CharacterOffsetEnd=313 PartOfSpeech=VV Lemma=意识 NamedEntityTag=O]
+[Text=到 CharacterOffsetBegin=313 CharacterOffsetEnd=314 PartOfSpeech=VV Lemma=到 NamedEntityTag=O]
+[Text=自己 CharacterOffsetBegin=314 CharacterOffsetEnd=316 PartOfSpeech=PN Lemma=自己 NamedEntityTag=O]
+[Text=并不 CharacterOffsetBegin=316 CharacterOffsetEnd=318 PartOfSpeech=AD Lemma=并不 NamedEntityTag=O]
+[Text=具备 CharacterOffsetBegin=318 CharacterOffsetEnd=320 PartOfSpeech=VV Lemma=具备 NamedEntityTag=O]
+[Text=通过 CharacterOffsetBegin=320 CharacterOffsetEnd=322 PartOfSpeech=P Lemma=通过 NamedEntityTag=O]
+[Text=单打独斗 CharacterOffsetBegin=322 CharacterOffsetEnd=326 PartOfSpeech=VV Lemma=单打独斗 NamedEntityTag=O]
+[Text=完完全全 CharacterOffsetBegin=326 CharacterOffsetEnd=330 PartOfSpeech=VV Lemma=完完全全 NamedEntityTag=O]
+[Text=完成 CharacterOffsetBegin=330 CharacterOffsetEnd=332 PartOfSpeech=VV Lemma=完成 NamedEntityTag=O]
+[Text=一 CharacterOffsetBegin=332 CharacterOffsetEnd=333 PartOfSpeech=CD Lemma=一 NamedEntityTag=O]
+[Text=个 CharacterOffsetBegin=333 CharacterOffsetEnd=334 PartOfSpeech=M Lemma=个 NamedEntityTag=O]
+[Text=想法 CharacterOffsetBegin=334 CharacterOffsetEnd=336 PartOfSpeech=NN Lemma=想法 NamedEntityTag=O]
+[Text=的 CharacterOffsetBegin=336 CharacterOffsetEnd=337 PartOfSpeech=DEG Lemma=的 NamedEntityTag=O]
+[Text=品质 CharacterOffsetBegin=337 CharacterOffsetEnd=339 PartOfSpeech=NN Lemma=品质 NamedEntityTag=O]
+[Text=。 CharacterOffsetBegin=339 CharacterOffsetEnd=340 PartOfSpeech=PU Lemma=。 NamedEntityTag=O]
+(ROOT
+  (IP
+    (IP
+      (NP (PN 我))
+      (VP (VV 需要)
+        (VP (VV 组建)
+          (NP
+            (QP (CD 一)
+              (CLP (M 个)))
+            (NP (NN 团队))))))
+    (PU ，)
+    (IP
+      (VP (VC 是)
+        (VP
+          (PP (P 因为)
+            (IP
+              (NP (PN 我))
+              (VP (VV 意识)
+                (VP (VV 到)
+                  (NP (PN 自己))))))
+          (ADVP (AD 并不))
+          (VP (VV 具备)
+            (NP
+              (DNP
+                (PP (P 通过)
+                  (IP
+                    (VP (VV 单打独斗)
+                      (VP (VV 完完全全)
+                        (VP (VV 完成)
+                          (NP
+                            (QP (CD 一)
+                              (CLP (M 个)))
+                            (NP (NN 想法))))))))
+                (DEG 的))
+              (NP (NN 品质)))))))
+    (PU 。)))
+
+root(ROOT-0, 组建-3)
+nsubj(组建-3, 我-1)
+mmod(组建-3, 需要-2)
+nummod(个-5, 一-4)
+clf(团队-6, 个-5)
+dobj(组建-3, 团队-6)
+punct(组建-3, ，-7)
+cop(具备-15, 是-8)
+case(到-12, 因为-9)
+nsubj(到-12, 我-10)
+mmod(到-12, 意识-11)
+prep(具备-15, 到-12)
+dobj(到-12, 自己-13)
+advmod(具备-15, 并不-14)
+conj(组建-3, 具备-15)
+case(完成-19, 通过-16)
+mmod(完成-19, 单打独斗-17)
+mmod(完成-19, 完完全全-18)
+assmod(品质-24, 完成-19)
+nummod(个-21, 一-20)
+clf(想法-22, 个-21)
+dobj(完成-19, 想法-22)
+case(完成-19, 的-23)
+dobj(具备-15, 品质-24)
+punct(组建-3, 。-25)
+
+Sentence #9 (26 tokens):
+我把这个团队称为学习性研究小组（Learning Research Group，简称LRG），尽量模糊我们要做的事情。
+[Text=我 CharacterOffsetBegin=341 CharacterOffsetEnd=342 PartOfSpeech=PN Lemma=我 NamedEntityTag=O]
+[Text=把 CharacterOffsetBegin=342 CharacterOffsetEnd=343 PartOfSpeech=BA Lemma=把 NamedEntityTag=O]
+[Text=这个 CharacterOffsetBegin=343 CharacterOffsetEnd=345 PartOfSpeech=DT Lemma=这个 NamedEntityTag=O]
+[Text=团队 CharacterOffsetBegin=345 CharacterOffsetEnd=347 PartOfSpeech=NN Lemma=团队 NamedEntityTag=O]
+[Text=称为 CharacterOffsetBegin=347 CharacterOffsetEnd=349 PartOfSpeech=VV Lemma=称为 NamedEntityTag=O]
+[Text=学 CharacterOffsetBegin=349 CharacterOffsetEnd=350 PartOfSpeech=VV Lemma=学 NamedEntityTag=O]
+[Text=习性 CharacterOffsetBegin=350 CharacterOffsetEnd=352 PartOfSpeech=NN Lemma=习性 NamedEntityTag=O]
+[Text=研究 CharacterOffsetBegin=352 CharacterOffsetEnd=354 PartOfSpeech=NN Lemma=研究 NamedEntityTag=O]
+[Text=小组 CharacterOffsetBegin=354 CharacterOffsetEnd=356 PartOfSpeech=NN Lemma=小组 NamedEntityTag=O]
+[Text=（ CharacterOffsetBegin=356 CharacterOffsetEnd=357 PartOfSpeech=PU Lemma=（ NamedEntityTag=O]
+[Text=Learning CharacterOffsetBegin=357 CharacterOffsetEnd=365 PartOfSpeech=JJ Lemma=learning NamedEntityTag=O]
+[Text=Research CharacterOffsetBegin=366 CharacterOffsetEnd=374 PartOfSpeech=NN Lemma=research NamedEntityTag=ORG]
+[Text=Group CharacterOffsetBegin=375 CharacterOffsetEnd=380 PartOfSpeech=NN Lemma=group NamedEntityTag=ORG]
+[Text=， CharacterOffsetBegin=380 CharacterOffsetEnd=381 PartOfSpeech=PU Lemma=， NamedEntityTag=O]
+[Text=简称 CharacterOffsetBegin=381 CharacterOffsetEnd=383 PartOfSpeech=VV Lemma=简称 NamedEntityTag=O]
+[Text=LRG CharacterOffsetBegin=383 CharacterOffsetEnd=386 PartOfSpeech=NR Lemma=lrg NamedEntityTag=O]
+[Text=） CharacterOffsetBegin=386 CharacterOffsetEnd=387 PartOfSpeech=PU Lemma=） NamedEntityTag=O]
+[Text=， CharacterOffsetBegin=387 CharacterOffsetEnd=388 PartOfSpeech=PU Lemma=， NamedEntityTag=O]
+[Text=尽量 CharacterOffsetBegin=388 CharacterOffsetEnd=390 PartOfSpeech=AD Lemma=尽量 NamedEntityTag=O]
+[Text=模糊 CharacterOffsetBegin=390 CharacterOffsetEnd=392 PartOfSpeech=VV Lemma=模糊 NamedEntityTag=O]
+[Text=我们 CharacterOffsetBegin=392 CharacterOffsetEnd=394 PartOfSpeech=PN Lemma=我们 NamedEntityTag=O]
+[Text=要 CharacterOffsetBegin=394 CharacterOffsetEnd=395 PartOfSpeech=VV Lemma=要 NamedEntityTag=O]
+[Text=做 CharacterOffsetBegin=395 CharacterOffsetEnd=396 PartOfSpeech=VV Lemma=做 NamedEntityTag=O]
+[Text=的 CharacterOffsetBegin=396 CharacterOffsetEnd=397 PartOfSpeech=DEC Lemma=的 NamedEntityTag=O]
+[Text=事情 CharacterOffsetBegin=397 CharacterOffsetEnd=399 PartOfSpeech=NN Lemma=事情 NamedEntityTag=O]
+[Text=。 CharacterOffsetBegin=399 CharacterOffsetEnd=400 PartOfSpeech=PU Lemma=。 NamedEntityTag=O]
+(ROOT
+  (IP
+    (NP (PN 我))
+    (VP
+      (VP (BA 把)
+        (IP
+          (NP
+            (DP (DT 这个))
+            (NP (NN 团队)))
+          (VP
+            (VRD (VV 称为) (VV 学))
+            (NP (NN 习性) (NN 研究) (NN 小组))
+            (PRN (PU （)
+              (NP
+                (ADJP (JJ Learning))
+                (NP (NN Research) (NN Group)))
+              (PU ，)
+              (VP (VV 简称)
+                (NP (NR LRG)))
+              (PU ）)))))
+      (PU ，)
+      (VP
+        (ADVP (AD 尽量))
+        (VP (VV 模糊)
+          (NP
+            (CP
+              (IP
+                (NP (PN 我们))
+                (VP (VV 要)
+                  (VP (VV 做))))
+              (DEC 的))
+            (NP (NN 事情))))))
+    (PU 。)))
+
+root(ROOT-0, 称为-5)
+nsubj(称为-5, 我-1)
+ba(称为-5, 把-2)
+det(团队-4, 这个-3)
+nsubj(称为-5, 团队-4)
+rcomp(称为-5, 学-6)
+nn(小组-9, 习性-7)
+nn(小组-9, 研究-8)
+dobj(称为-5, 小组-9)
+punct(Group-13, （-10)
+amod(Group-13, Learning-11)
+nn(Group-13, Research-12)
+dep(称为-5, Group-13)
+punct(Group-13, ，-14)
+dep(Group-13, 简称-15)
+dobj(简称-15, LRG-16)
+punct(Group-13, ）-17)
+punct(称为-5, ，-18)
+advmod(模糊-20, 尽量-19)
+dep(称为-5, 模糊-20)
+nsubj(做-23, 我们-21)
+mmod(做-23, 要-22)
+relcl(事情-25, 做-23)
+mark(做-23, 的-24)
+dobj(模糊-20, 事情-25)
+punct(称为-5, 。-26)
+
+Sentence #10 (23 tokens):
+关于小组的成员，我所选的人都是在听到笔记本想法时眼前一亮的人们。
+[Text=关于 CharacterOffsetBegin=401 CharacterOffsetEnd=403 PartOfSpeech=P Lemma=关于 NamedEntityTag=O]
+[Text=小组 CharacterOffsetBegin=403 CharacterOffsetEnd=405 PartOfSpeech=NN Lemma=小组 NamedEntityTag=O]
+[Text=的 CharacterOffsetBegin=405 CharacterOffsetEnd=406 PartOfSpeech=DEG Lemma=的 NamedEntityTag=O]
+[Text=成员 CharacterOffsetBegin=406 CharacterOffsetEnd=408 PartOfSpeech=NN Lemma=成员 NamedEntityTag=O]
+[Text=， CharacterOffsetBegin=408 CharacterOffsetEnd=409 PartOfSpeech=PU Lemma=， NamedEntityTag=O]
+[Text=我 CharacterOffsetBegin=409 CharacterOffsetEnd=410 PartOfSpeech=PN Lemma=我 NamedEntityTag=O]
+[Text=所 CharacterOffsetBegin=410 CharacterOffsetEnd=411 PartOfSpeech=MSP Lemma=所 NamedEntityTag=O]
+[Text=选 CharacterOffsetBegin=411 CharacterOffsetEnd=412 PartOfSpeech=VV Lemma=选 NamedEntityTag=O]
+[Text=的 CharacterOffsetBegin=412 CharacterOffsetEnd=413 PartOfSpeech=DEC Lemma=的 NamedEntityTag=O]
+[Text=人 CharacterOffsetBegin=413 CharacterOffsetEnd=414 PartOfSpeech=NN Lemma=人 NamedEntityTag=O]
+[Text=都 CharacterOffsetBegin=414 CharacterOffsetEnd=415 PartOfSpeech=AD Lemma=都 NamedEntityTag=O]
+[Text=是 CharacterOffsetBegin=415 CharacterOffsetEnd=416 PartOfSpeech=VC Lemma=是 NamedEntityTag=O]
+[Text=在 CharacterOffsetBegin=416 CharacterOffsetEnd=417 PartOfSpeech=P Lemma=在 NamedEntityTag=O]
+[Text=听到 CharacterOffsetBegin=417 CharacterOffsetEnd=419 PartOfSpeech=VV Lemma=听到 NamedEntityTag=O]
+[Text=笔记本 CharacterOffsetBegin=419 CharacterOffsetEnd=422 PartOfSpeech=NN Lemma=笔记本 NamedEntityTag=O]
+[Text=想法 CharacterOffsetBegin=422 CharacterOffsetEnd=424 PartOfSpeech=NN Lemma=想法 NamedEntityTag=O]
+[Text=时 CharacterOffsetBegin=424 CharacterOffsetEnd=425 PartOfSpeech=LC Lemma=时 NamedEntityTag=O]
+[Text=眼前 CharacterOffsetBegin=425 CharacterOffsetEnd=427 PartOfSpeech=NN Lemma=眼前 NamedEntityTag=O]
+[Text=一 CharacterOffsetBegin=427 CharacterOffsetEnd=428 PartOfSpeech=AD Lemma=一 NamedEntityTag=O]
+[Text=亮 CharacterOffsetBegin=428 CharacterOffsetEnd=429 PartOfSpeech=VA Lemma=亮 NamedEntityTag=O]
+[Text=的 CharacterOffsetBegin=429 CharacterOffsetEnd=430 PartOfSpeech=DEC Lemma=的 NamedEntityTag=O]
+[Text=人们 CharacterOffsetBegin=430 CharacterOffsetEnd=432 PartOfSpeech=NN Lemma=人们 NamedEntityTag=O]
+[Text=。 CharacterOffsetBegin=432 CharacterOffsetEnd=433 PartOfSpeech=PU Lemma=。 NamedEntityTag=O]
+(ROOT
+  (IP
+    (PP (P 关于)
+      (NP
+        (DNP
+          (NP (NN 小组))
+          (DEG 的))
+        (NP (NN 成员))))
+    (PU ，)
+    (NP
+      (CP
+        (IP
+          (NP (PN 我))
+          (VP (MSP 所)
+            (VP (VV 选))))
+        (DEC 的))
+      (NP (NN 人)))
+    (VP
+      (ADVP (AD 都))
+      (VP (VC 是)
+        (NP
+          (CP
+            (IP
+              (PP (P 在)
+                (LCP
+                  (IP
+                    (VP (VV 听到)
+                      (NP (NN 笔记本) (NN 想法))))
+                  (LC 时)))
+              (NP (NN 眼前))
+              (VP
+                (ADVP (AD 一))
+                (VP (VA 亮))))
+            (DEC 的))
+          (NP (NN 人们)))))
+    (PU 。)))
+
+root(ROOT-0, 人们-22)
+case(成员-4, 关于-1)
+assmod(成员-4, 小组-2)
+case(小组-2, 的-3)
+prep(人们-22, 成员-4)
+punct(人们-22, ，-5)
+nsubj(选-8, 我-6)
+prtmod(选-8, 所-7)
+relcl(人-10, 选-8)
+mark(选-8, 的-9)
+nsubj(人们-22, 人-10)
+advmod(人们-22, 都-11)
+cop(人们-22, 是-12)
+case(听到-14, 在-13)
+prep(亮-20, 听到-14)
+nn(想法-16, 笔记本-15)
+dobj(听到-14, 想法-16)
+case(听到-14, 时-17)
+nsubj(亮-20, 眼前-18)
+advmod(亮-20, 一-19)
+relcl(人们-22, 亮-20)
+mark(亮-20, 的-21)
+punct(人们-22, 。-23)
+
+Sentence #11 (20 tokens):
+我不喜欢开会：因为我从来都不觉得头脑风暴可以代替冷静持久的思考。
+[Text=我 CharacterOffsetBegin=434 CharacterOffsetEnd=435 PartOfSpeech=PN Lemma=我 NamedEntityTag=O]
+[Text=不 CharacterOffsetBegin=435 CharacterOffsetEnd=436 PartOfSpeech=AD Lemma=不 NamedEntityTag=O]
+[Text=喜欢 CharacterOffsetBegin=436 CharacterOffsetEnd=438 PartOfSpeech=VV Lemma=喜欢 NamedEntityTag=O]
+[Text=开会 CharacterOffsetBegin=438 CharacterOffsetEnd=440 PartOfSpeech=VV Lemma=开会 NamedEntityTag=O]
+[Text=： CharacterOffsetBegin=440 CharacterOffsetEnd=441 PartOfSpeech=PU Lemma=： NamedEntityTag=O]
+[Text=因为 CharacterOffsetBegin=441 CharacterOffsetEnd=443 PartOfSpeech=P Lemma=因为 NamedEntityTag=O]
+[Text=我 CharacterOffsetBegin=443 CharacterOffsetEnd=444 PartOfSpeech=PN Lemma=我 NamedEntityTag=O]
+[Text=从来 CharacterOffsetBegin=444 CharacterOffsetEnd=446 PartOfSpeech=AD Lemma=从来 NamedEntityTag=O]
+[Text=都 CharacterOffsetBegin=446 CharacterOffsetEnd=447 PartOfSpeech=AD Lemma=都 NamedEntityTag=O]
+[Text=不 CharacterOffsetBegin=447 CharacterOffsetEnd=448 PartOfSpeech=AD Lemma=不 NamedEntityTag=O]
+[Text=觉得 CharacterOffsetBegin=448 CharacterOffsetEnd=450 PartOfSpeech=VV Lemma=觉得 NamedEntityTag=O]
+[Text=头脑 CharacterOffsetBegin=450 CharacterOffsetEnd=452 PartOfSpeech=NN Lemma=头脑 NamedEntityTag=O]
+[Text=风暴 CharacterOffsetBegin=452 CharacterOffsetEnd=454 PartOfSpeech=NN Lemma=风暴 NamedEntityTag=O]
+[Text=可以 CharacterOffsetBegin=454 CharacterOffsetEnd=456 PartOfSpeech=VV Lemma=可以 NamedEntityTag=O]
+[Text=代替 CharacterOffsetBegin=456 CharacterOffsetEnd=458 PartOfSpeech=VV Lemma=代替 NamedEntityTag=O]
+[Text=冷静 CharacterOffsetBegin=458 CharacterOffsetEnd=460 PartOfSpeech=NN Lemma=冷静 NamedEntityTag=O]
+[Text=持久 CharacterOffsetBegin=460 CharacterOffsetEnd=462 PartOfSpeech=VV Lemma=持久 NamedEntityTag=O]
+[Text=的 CharacterOffsetBegin=462 CharacterOffsetEnd=463 PartOfSpeech=DEC Lemma=的 NamedEntityTag=O]
+[Text=思考 CharacterOffsetBegin=463 CharacterOffsetEnd=465 PartOfSpeech=NN Lemma=思考 NamedEntityTag=O]
+[Text=。 CharacterOffsetBegin=465 CharacterOffsetEnd=466 PartOfSpeech=PU Lemma=。 NamedEntityTag=O]
+(ROOT
+  (IP
+    (NP (PN 我))
+    (VP
+      (ADVP (AD 不))
+      (VP (VV 喜欢)
+        (IP
+          (VP (VV 开会)))))
+    (PU ：)
+    (PP (P 因为)
+      (IP
+        (NP (PN 我))
+        (VP
+          (ADVP (AD 从来))
+          (ADVP (AD 都))
+          (ADVP (AD 不))
+          (VP (VV 觉得)
+            (NP (NN 头脑) (NN 风暴))
+            (IP
+              (VP (VV 可以)
+                (VP (VV 代替)
+                  (NP
+                    (CP
+                      (IP
+                        (NP (NN 冷静))
+                        (VP (VV 持久)))
+                      (DEC 的))
+                    (NP (NN 思考))))))))))
+    (PU 。)))
+
+root(ROOT-0, 喜欢-3)
+nsubj(喜欢-3, 我-1)
+neg(喜欢-3, 不-2)
+ccomp(喜欢-3, 开会-4)
+punct(喜欢-3, ：-5)
+case(觉得-11, 因为-6)
+nsubj(觉得-11, 我-7)
+advmod(觉得-11, 从来-8)
+advmod(觉得-11, 都-9)
+neg(觉得-11, 不-10)
+prep(喜欢-3, 觉得-11)
+nn(风暴-13, 头脑-12)
+dobj(觉得-11, 风暴-13)
+mmod(代替-15, 可以-14)
+dep(觉得-11, 代替-15)
+nsubj(持久-17, 冷静-16)
+relcl(思考-19, 持久-17)
+mark(持久-17, 的-18)
+dobj(代替-15, 思考-19)
+punct(喜欢-3, 。-20)
+
+Sentence #12 (37 tokens):
+当有人问我该做什么，而我也没有一个确切的想法时，我就指着这台笔记本的模型对他说：“改进它。”
+[Text=当 CharacterOffsetBegin=467 CharacterOffsetEnd=468 PartOfSpeech=P Lemma=当 NamedEntityTag=O]
+[Text=有 CharacterOffsetBegin=468 CharacterOffsetEnd=469 PartOfSpeech=VE Lemma=有 NamedEntityTag=O]
+[Text=人 CharacterOffsetBegin=469 CharacterOffsetEnd=470 PartOfSpeech=NN Lemma=人 NamedEntityTag=O]
+[Text=问 CharacterOffsetBegin=470 CharacterOffsetEnd=471 PartOfSpeech=VV Lemma=问 NamedEntityTag=O]
+[Text=我 CharacterOffsetBegin=471 CharacterOffsetEnd=472 PartOfSpeech=PN Lemma=我 NamedEntityTag=O]
+[Text=该 CharacterOffsetBegin=472 CharacterOffsetEnd=473 PartOfSpeech=VV Lemma=该 NamedEntityTag=O]
+[Text=做 CharacterOffsetBegin=473 CharacterOffsetEnd=474 PartOfSpeech=VV Lemma=做 NamedEntityTag=O]
+[Text=什么 CharacterOffsetBegin=474 CharacterOffsetEnd=476 PartOfSpeech=PN Lemma=什么 NamedEntityTag=O]
+[Text=， CharacterOffsetBegin=476 CharacterOffsetEnd=477 PartOfSpeech=PU Lemma=， NamedEntityTag=O]
+[Text=而 CharacterOffsetBegin=477 CharacterOffsetEnd=478 PartOfSpeech=AD Lemma=而 NamedEntityTag=O]
+[Text=我 CharacterOffsetBegin=478 CharacterOffsetEnd=479 PartOfSpeech=PN Lemma=我 NamedEntityTag=O]
+[Text=也 CharacterOffsetBegin=479 CharacterOffsetEnd=480 PartOfSpeech=AD Lemma=也 NamedEntityTag=O]
+[Text=没有 CharacterOffsetBegin=480 CharacterOffsetEnd=482 PartOfSpeech=VE Lemma=没有 NamedEntityTag=O]
+[Text=一 CharacterOffsetBegin=482 CharacterOffsetEnd=483 PartOfSpeech=CD Lemma=一 NamedEntityTag=O]
+[Text=个 CharacterOffsetBegin=483 CharacterOffsetEnd=484 PartOfSpeech=M Lemma=个 NamedEntityTag=O]
+[Text=确切 CharacterOffsetBegin=484 CharacterOffsetEnd=486 PartOfSpeech=JJ Lemma=确切 NamedEntityTag=O]
+[Text=的 CharacterOffsetBegin=486 CharacterOffsetEnd=487 PartOfSpeech=DEG Lemma=的 NamedEntityTag=O]
+[Text=想法 CharacterOffsetBegin=487 CharacterOffsetEnd=489 PartOfSpeech=NN Lemma=想法 NamedEntityTag=O]
+[Text=时 CharacterOffsetBegin=489 CharacterOffsetEnd=490 PartOfSpeech=LC Lemma=时 NamedEntityTag=O]
+[Text=， CharacterOffsetBegin=490 CharacterOffsetEnd=491 PartOfSpeech=PU Lemma=， NamedEntityTag=O]
+[Text=我 CharacterOffsetBegin=491 CharacterOffsetEnd=492 PartOfSpeech=PN Lemma=我 NamedEntityTag=O]
+[Text=就 CharacterOffsetBegin=492 CharacterOffsetEnd=493 PartOfSpeech=AD Lemma=就 NamedEntityTag=O]
+[Text=指着 CharacterOffsetBegin=493 CharacterOffsetEnd=495 PartOfSpeech=VV Lemma=指着 NamedEntityTag=O]
+[Text=这 CharacterOffsetBegin=495 CharacterOffsetEnd=496 PartOfSpeech=DT Lemma=这 NamedEntityTag=O]
+[Text=台 CharacterOffsetBegin=496 CharacterOffsetEnd=497 PartOfSpeech=M Lemma=台 NamedEntityTag=O]
+[Text=笔记本 CharacterOffsetBegin=497 CharacterOffsetEnd=500 PartOfSpeech=NN Lemma=笔记本 NamedEntityTag=O]
+[Text=的 CharacterOffsetBegin=500 CharacterOffsetEnd=501 PartOfSpeech=DEG Lemma=的 NamedEntityTag=O]
+[Text=模型 CharacterOffsetBegin=501 CharacterOffsetEnd=503 PartOfSpeech=NN Lemma=模型 NamedEntityTag=O]
+[Text=对 CharacterOffsetBegin=503 CharacterOffsetEnd=504 PartOfSpeech=P Lemma=对 NamedEntityTag=O]
+[Text=他 CharacterOffsetBegin=504 CharacterOffsetEnd=505 PartOfSpeech=PN Lemma=他 NamedEntityTag=O]
+[Text=说 CharacterOffsetBegin=505 CharacterOffsetEnd=506 PartOfSpeech=VV Lemma=说 NamedEntityTag=O]
+[Text=： CharacterOffsetBegin=506 CharacterOffsetEnd=507 PartOfSpeech=PU Lemma=： NamedEntityTag=O]
+[Text=“ CharacterOffsetBegin=507 CharacterOffsetEnd=508 PartOfSpeech=PU Lemma=“ NamedEntityTag=O]
+[Text=改进 CharacterOffsetBegin=508 CharacterOffsetEnd=510 PartOfSpeech=VV Lemma=改进 NamedEntityTag=O]
+[Text=它 CharacterOffsetBegin=510 CharacterOffsetEnd=511 PartOfSpeech=PN Lemma=它 NamedEntityTag=O]
+[Text=。 CharacterOffsetBegin=511 CharacterOffsetEnd=512 PartOfSpeech=PU Lemma=。 NamedEntityTag=O]
+[Text=” CharacterOffsetBegin=512 CharacterOffsetEnd=513 PartOfSpeech=PU Lemma=” NamedEntityTag=O]
+(ROOT
+  (IP
+    (PP (P 当)
+      (LCP
+        (IP
+          (VP (VE 有)
+            (IP
+              (NP (NN 人))
+              (VP (VV 问)
+                (IP
+                  (IP
+                    (NP (PN 我))
+                    (VP (VV 该)
+                      (VP (VV 做)
+                        (NP (PN 什么)))))
+                  (PU ，)
+                  (IP
+                    (ADVP (AD 而))
+                    (NP (PN 我))
+                    (VP
+                      (ADVP (AD 也))
+                      (VP (VE 没有)
+                        (NP
+                          (QP (CD 一)
+                            (CLP (M 个)))
+                          (DNP
+                            (ADJP (JJ 确切))
+                            (DEG 的))
+                          (NP (NN 想法)))))))))))
+        (LC 时)))
+    (PU ，)
+    (NP (PN 我))
+    (VP
+      (ADVP (AD 就))
+      (VP (VV 指着)
+        (NP
+          (DNP
+            (NP
+              (DP (DT 这)
+                (CLP (M 台)))
+              (NP (NN 笔记本)))
+            (DEG 的))
+          (NP (NN 模型)))
+        (IP
+          (VP
+            (PP (P 对)
+              (NP (PN 他)))
+            (VP (VV 说) (PU ：) (PU “)
+              (IP
+                (VP (VV 改进)
+                  (NP (PN 它)))))))))
+    (PU 。) (PU ”)))
+
+root(ROOT-0, 指着-23)
+case(有-2, 当-1)
+prep(指着-23, 有-2)
+nsubj(问-4, 人-3)
+dep(有-2, 问-4)
+nsubj(做-7, 我-5)
+mmod(做-7, 该-6)
+ccomp(问-4, 做-7)
+dobj(做-7, 什么-8)
+punct(做-7, ，-9)
+advmod(没有-13, 而-10)
+nsubj(没有-13, 我-11)
+advmod(没有-13, 也-12)
+conj(做-7, 没有-13)
+nummod(个-15, 一-14)
+clf(想法-18, 个-15)
+assmod(想法-18, 确切-16)
+case(确切-16, 的-17)
+dobj(没有-13, 想法-18)
+case(有-2, 时-19)
+punct(指着-23, ，-20)
+nsubj(指着-23, 我-21)
+advmod(指着-23, 就-22)
+det(笔记本-26, 这-24)
+clf(这-24, 台-25)
+assmod(模型-28, 笔记本-26)
+case(笔记本-26, 的-27)
+dobj(指着-23, 模型-28)
+case(他-30, 对-29)
+prep(说-31, 他-30)
+dep(指着-23, 说-31)
+punct(说-31, ：-32)
+punct(说-31, “-33)
+ccomp(说-31, 改进-34)
+dobj(改进-34, 它-35)
+punct(指着-23, 。-36)
+punct(指着-23, ”-37)
+
+Sentence #13 (41 tokens):
+LRG小组的成员彼此之间关系紧密——就如丹·英戈尔斯（Dan Ingalls）后来所说的那样：“......整个小团队，连休息时间里彼此间都洋溢着爱与活力。”
+[Text=LRG CharacterOffsetBegin=514 CharacterOffsetEnd=517 PartOfSpeech=NR Lemma=lrg NamedEntityTag=O]
+[Text=小组 CharacterOffsetBegin=517 CharacterOffsetEnd=519 PartOfSpeech=NN Lemma=小组 NamedEntityTag=O]
+[Text=的 CharacterOffsetBegin=519 CharacterOffsetEnd=520 PartOfSpeech=DEG Lemma=的 NamedEntityTag=O]
+[Text=成员 CharacterOffsetBegin=520 CharacterOffsetEnd=522 PartOfSpeech=NN Lemma=成员 NamedEntityTag=O]
+[Text=彼此 CharacterOffsetBegin=522 CharacterOffsetEnd=524 PartOfSpeech=PN Lemma=彼此 NamedEntityTag=O]
+[Text=之间 CharacterOffsetBegin=524 CharacterOffsetEnd=526 PartOfSpeech=LC Lemma=之间 NamedEntityTag=O]
+[Text=关系 CharacterOffsetBegin=526 CharacterOffsetEnd=528 PartOfSpeech=NN Lemma=关系 NamedEntityTag=O]
+[Text=紧密 CharacterOffsetBegin=528 CharacterOffsetEnd=530 PartOfSpeech=AD Lemma=紧密 NamedEntityTag=O]
+[Text=—— CharacterOffsetBegin=530 CharacterOffsetEnd=532 PartOfSpeech=PU Lemma=—— NamedEntityTag=O]
+[Text=就 CharacterOffsetBegin=532 CharacterOffsetEnd=533 PartOfSpeech=AD Lemma=就 NamedEntityTag=O]
+[Text=如 CharacterOffsetBegin=533 CharacterOffsetEnd=534 PartOfSpeech=P Lemma=如 NamedEntityTag=O]
+[Text=丹·英戈尔斯 CharacterOffsetBegin=534 CharacterOffsetEnd=540 PartOfSpeech=NR Lemma=丹·英戈尔斯 NamedEntityTag=PERSON]
+[Text=（ CharacterOffsetBegin=540 CharacterOffsetEnd=541 PartOfSpeech=PU Lemma=（ NamedEntityTag=O]
+[Text=Dan CharacterOffsetBegin=541 CharacterOffsetEnd=544 PartOfSpeech=NR Lemma=dan NamedEntityTag=O]
+[Text=Ingalls CharacterOffsetBegin=545 CharacterOffsetEnd=552 PartOfSpeech=NR Lemma=ingalls NamedEntityTag=O]
+[Text=） CharacterOffsetBegin=552 CharacterOffsetEnd=553 PartOfSpeech=PU Lemma=） NamedEntityTag=O]
+[Text=后来 CharacterOffsetBegin=553 CharacterOffsetEnd=555 PartOfSpeech=AD Lemma=后来 NamedEntityTag=O]
+[Text=所 CharacterOffsetBegin=555 CharacterOffsetEnd=556 PartOfSpeech=MSP Lemma=所 NamedEntityTag=O]
+[Text=说 CharacterOffsetBegin=556 CharacterOffsetEnd=557 PartOfSpeech=VV Lemma=说 NamedEntityTag=O]
+[Text=的 CharacterOffsetBegin=557 CharacterOffsetEnd=558 PartOfSpeech=DEC Lemma=的 NamedEntityTag=O]
+[Text=那样 CharacterOffsetBegin=558 CharacterOffsetEnd=560 PartOfSpeech=AD Lemma=那样 NamedEntityTag=O]
+[Text=： CharacterOffsetBegin=560 CharacterOffsetEnd=561 PartOfSpeech=PU Lemma=： NamedEntityTag=O]
+[Text=“ CharacterOffsetBegin=561 CharacterOffsetEnd=562 PartOfSpeech=PU Lemma=“ NamedEntityTag=O]
+[Text=...... CharacterOffsetBegin=562 CharacterOffsetEnd=568 PartOfSpeech=PU Lemma=...... NamedEntityTag=O]
+[Text=整个 CharacterOffsetBegin=568 CharacterOffsetEnd=570 PartOfSpeech=DT Lemma=整个 NamedEntityTag=O]
+[Text=小 CharacterOffsetBegin=570 CharacterOffsetEnd=571 PartOfSpeech=JJ Lemma=小 NamedEntityTag=O]
+[Text=团队 CharacterOffsetBegin=571 CharacterOffsetEnd=573 PartOfSpeech=NN Lemma=团队 NamedEntityTag=O]
+[Text=， CharacterOffsetBegin=573 CharacterOffsetEnd=574 PartOfSpeech=PU Lemma=， NamedEntityTag=O]
+[Text=连 CharacterOffsetBegin=574 CharacterOffsetEnd=575 PartOfSpeech=AD Lemma=连 NamedEntityTag=O]
+[Text=休息 CharacterOffsetBegin=575 CharacterOffsetEnd=577 PartOfSpeech=VV Lemma=休息 NamedEntityTag=O]
+[Text=时间 CharacterOffsetBegin=577 CharacterOffsetEnd=579 PartOfSpeech=NN Lemma=时间 NamedEntityTag=O]
+[Text=里 CharacterOffsetBegin=579 CharacterOffsetEnd=580 PartOfSpeech=LC Lemma=里 NamedEntityTag=O]
+[Text=彼此 CharacterOffsetBegin=580 CharacterOffsetEnd=582 PartOfSpeech=PN Lemma=彼此 NamedEntityTag=O]
+[Text=间 CharacterOffsetBegin=582 CharacterOffsetEnd=583 PartOfSpeech=LC Lemma=间 NamedEntityTag=O]
+[Text=都 CharacterOffsetBegin=583 CharacterOffsetEnd=584 PartOfSpeech=AD Lemma=都 NamedEntityTag=O]
+[Text=洋溢 CharacterOffsetBegin=584 CharacterOffsetEnd=586 PartOfSpeech=VV Lemma=洋溢 NamedEntityTag=O]
+[Text=着 CharacterOffsetBegin=586 CharacterOffsetEnd=587 PartOfSpeech=AS Lemma=着 NamedEntityTag=O]
+[Text=爱与 CharacterOffsetBegin=587 CharacterOffsetEnd=589 PartOfSpeech=VV Lemma=爱与 NamedEntityTag=O]
+[Text=活力 CharacterOffsetBegin=589 CharacterOffsetEnd=591 PartOfSpeech=NN Lemma=活力 NamedEntityTag=O]
+[Text=。 CharacterOffsetBegin=591 CharacterOffsetEnd=592 PartOfSpeech=PU Lemma=。 NamedEntityTag=O]
+[Text=” CharacterOffsetBegin=592 CharacterOffsetEnd=593 PartOfSpeech=PU Lemma=” NamedEntityTag=O]
+(ROOT
+  (IP
+    (NP
+      (DNP
+        (NP
+          (NP (NR LRG))
+          (NP (NN 小组)))
+        (DEG 的))
+      (NP (NN 成员)))
+    (LCP
+      (NP (PN 彼此))
+      (LC 之间))
+    (NP (NN 关系))
+    (VP
+      (ADVP (AD 紧密))
+      (PU ——)
+      (PP
+        (ADVP (AD 就))
+        (PP (P 如)
+          (IP
+            (LCP
+              (IP
+                (NP
+                  (NP (NR 丹·英戈尔斯)
+                    (PRN (PU （)
+                      (NP (NR Dan) (NR Ingalls))
+                      (PU ）)))
+                  (CP
+                    (IP
+                      (VP
+                        (ADVP (AD 后来))
+                        (VP (MSP 所)
+                          (VP (VV 说)))))
+                    (DEC 的))
+                  (NP
+                    (ADVP (AD 那样))
+                    (PU ：)
+                    (NP
+                      (NP (PU “))
+                      (PU ......)
+                      (NP
+                        (DP (DT 整个))
+                        (ADJP (JJ 小))
+                        (NP (NN 团队))))))
+                (PU ，)
+                (VP
+                  (ADVP (AD 连))
+                  (VP (VV 休息)
+                    (NP (NN 时间)))))
+              (LC 里))
+            (VP
+              (LCP
+                (NP (PN 彼此))
+                (LC 间))
+              (ADVP (AD 都))
+              (VP (VV 洋溢) (AS 着))))))
+      (VP (VV 爱与)
+        (NP (NN 活力))))
+    (PU 。) (PU ”)))
+
+root(ROOT-0, 爱与-38)
+nn(小组-2, LRG-1)
+assmod(成员-4, 小组-2)
+case(小组-2, 的-3)
+nsubj(爱与-38, 成员-4)
+loc(爱与-38, 彼此-5)
+case(彼此-5, 之间-6)
+nsubj(爱与-38, 关系-7)
+advmod(爱与-38, 紧密-8)
+punct(爱与-38, ——-9)
+prep(爱与-38, 就-10)
+case(洋溢-36, 如-11)
+nn(团队-27, 丹·英戈尔斯-12)
+punct(Ingalls-15, （-13)
+nn(Ingalls-15, Dan-14)
+prnmod(丹·英戈尔斯-12, Ingalls-15)
+punct(Ingalls-15, ）-16)
+advmod(说-19, 后来-17)
+prtmod(说-19, 所-18)
+relcl(团队-27, 说-19)
+mark(说-19, 的-20)
+advmod(团队-27, 那样-21)
+punct(团队-27, ：-22)
+dep(团队-27, “-23)
+punct(团队-27, ......-24)
+det(团队-27, 整个-25)
+amod(团队-27, 小-26)
+nsubj(休息-30, 团队-27)
+punct(休息-30, ，-28)
+advmod(休息-30, 连-29)
+loc(洋溢-36, 休息-30)
+dobj(休息-30, 时间-31)
+case(休息-30, 里-32)
+loc(洋溢-36, 彼此-33)
+case(彼此-33, 间-34)
+advmod(洋溢-36, 都-35)
+dep(就-10, 洋溢-36)
+asp(洋溢-36, 着-37)
+dobj(爱与-38, 活力-39)
+punct(爱与-38, 。-40)
+punct(爱与-38, ”-41)
+
+Sentence #14 (65 tokens):
+许许多多个白天我们都是在PARC之外度过的，我们一起打网球、骑车、喝酒、吃中餐，期间也时不时地讨论Dynabook，以及它扩大人类视野的潜能和给予踟蹰不前的人类文明所急需的新道路的可能性（60年代的余兴未尽时，这个目标在加州很普遍）。
+[Text=许许多多 CharacterOffsetBegin=594 CharacterOffsetEnd=598 PartOfSpeech=CD Lemma=许许多多 NamedEntityTag=O]
+[Text=个 CharacterOffsetBegin=598 CharacterOffsetEnd=599 PartOfSpeech=M Lemma=个 NamedEntityTag=O]
+[Text=白天 CharacterOffsetBegin=599 CharacterOffsetEnd=601 PartOfSpeech=NN Lemma=白天 NamedEntityTag=O]
+[Text=我们 CharacterOffsetBegin=601 CharacterOffsetEnd=603 PartOfSpeech=PN Lemma=我们 NamedEntityTag=O]
+[Text=都 CharacterOffsetBegin=603 CharacterOffsetEnd=604 PartOfSpeech=AD Lemma=都 NamedEntityTag=O]
+[Text=是 CharacterOffsetBegin=604 CharacterOffsetEnd=605 PartOfSpeech=VC Lemma=是 NamedEntityTag=O]
+[Text=在 CharacterOffsetBegin=605 CharacterOffsetEnd=606 PartOfSpeech=P Lemma=在 NamedEntityTag=O]
+[Text=PARC CharacterOffsetBegin=606 CharacterOffsetEnd=610 PartOfSpeech=NR Lemma=parc NamedEntityTag=O]
+[Text=之外 CharacterOffsetBegin=610 CharacterOffsetEnd=612 PartOfSpeech=LC Lemma=之外 NamedEntityTag=O]
+[Text=度过 CharacterOffsetBegin=612 CharacterOffsetEnd=614 PartOfSpeech=VV Lemma=度过 NamedEntityTag=O]
+[Text=的 CharacterOffsetBegin=614 CharacterOffsetEnd=615 PartOfSpeech=SP Lemma=的 NamedEntityTag=O]
+[Text=， CharacterOffsetBegin=615 CharacterOffsetEnd=616 PartOfSpeech=PU Lemma=， NamedEntityTag=O]
+[Text=我们 CharacterOffsetBegin=616 CharacterOffsetEnd=618 PartOfSpeech=PN Lemma=我们 NamedEntityTag=O]
+[Text=一起 CharacterOffsetBegin=618 CharacterOffsetEnd=620 PartOfSpeech=AD Lemma=一起 NamedEntityTag=O]
+[Text=打 CharacterOffsetBegin=620 CharacterOffsetEnd=621 PartOfSpeech=VV Lemma=打 NamedEntityTag=O]
+[Text=网球 CharacterOffsetBegin=621 CharacterOffsetEnd=623 PartOfSpeech=NN Lemma=网球 NamedEntityTag=O]
+[Text=、 CharacterOffsetBegin=623 CharacterOffsetEnd=624 PartOfSpeech=PU Lemma=、 NamedEntityTag=O]
+[Text=骑车 CharacterOffsetBegin=624 CharacterOffsetEnd=626 PartOfSpeech=VV Lemma=骑车 NamedEntityTag=O]
+[Text=、 CharacterOffsetBegin=626 CharacterOffsetEnd=627 PartOfSpeech=PU Lemma=、 NamedEntityTag=O]
+[Text=喝酒 CharacterOffsetBegin=627 CharacterOffsetEnd=629 PartOfSpeech=VV Lemma=喝酒 NamedEntityTag=O]
+[Text=、 CharacterOffsetBegin=629 CharacterOffsetEnd=630 PartOfSpeech=PU Lemma=、 NamedEntityTag=O]
+[Text=吃 CharacterOffsetBegin=630 CharacterOffsetEnd=631 PartOfSpeech=VV Lemma=吃 NamedEntityTag=O]
+[Text=中餐 CharacterOffsetBegin=631 CharacterOffsetEnd=633 PartOfSpeech=NN Lemma=中餐 NamedEntityTag=O]
+[Text=， CharacterOffsetBegin=633 CharacterOffsetEnd=634 PartOfSpeech=PU Lemma=， NamedEntityTag=O]
+[Text=期间 CharacterOffsetBegin=634 CharacterOffsetEnd=636 PartOfSpeech=NN Lemma=期间 NamedEntityTag=O]
+[Text=也 CharacterOffsetBegin=636 CharacterOffsetEnd=637 PartOfSpeech=AD Lemma=也 NamedEntityTag=O]
+[Text=时不时 CharacterOffsetBegin=637 CharacterOffsetEnd=640 PartOfSpeech=AD Lemma=时不时 NamedEntityTag=O]
+[Text=地 CharacterOffsetBegin=640 CharacterOffsetEnd=641 PartOfSpeech=DEV Lemma=地 NamedEntityTag=O]
+[Text=讨论 CharacterOffsetBegin=641 CharacterOffsetEnd=643 PartOfSpeech=VV Lemma=讨论 NamedEntityTag=O]
+[Text=Dynabook CharacterOffsetBegin=643 CharacterOffsetEnd=651 PartOfSpeech=NR Lemma=dynabook NamedEntityTag=O]
+[Text=， CharacterOffsetBegin=651 CharacterOffsetEnd=652 PartOfSpeech=PU Lemma=， NamedEntityTag=O]
+[Text=以及 CharacterOffsetBegin=652 CharacterOffsetEnd=654 PartOfSpeech=CC Lemma=以及 NamedEntityTag=O]
+[Text=它 CharacterOffsetBegin=654 CharacterOffsetEnd=655 PartOfSpeech=PN Lemma=它 NamedEntityTag=O]
+[Text=扩大 CharacterOffsetBegin=655 CharacterOffsetEnd=657 PartOfSpeech=VV Lemma=扩大 NamedEntityTag=O]
+[Text=人类 CharacterOffsetBegin=657 CharacterOffsetEnd=659 PartOfSpeech=NN Lemma=人类 NamedEntityTag=O]
+[Text=视野 CharacterOffsetBegin=659 CharacterOffsetEnd=661 PartOfSpeech=NN Lemma=视野 NamedEntityTag=O]
+[Text=的 CharacterOffsetBegin=661 CharacterOffsetEnd=662 PartOfSpeech=DEG Lemma=的 NamedEntityTag=O]
+[Text=潜能 CharacterOffsetBegin=662 CharacterOffsetEnd=664 PartOfSpeech=NN Lemma=潜能 NamedEntityTag=O]
+[Text=和 CharacterOffsetBegin=664 CharacterOffsetEnd=665 PartOfSpeech=CC Lemma=和 NamedEntityTag=O]
+[Text=给予 CharacterOffsetBegin=665 CharacterOffsetEnd=667 PartOfSpeech=VV Lemma=给予 NamedEntityTag=O]
+[Text=踟蹰不前 CharacterOffsetBegin=667 CharacterOffsetEnd=671 PartOfSpeech=VV Lemma=踟蹰不前 NamedEntityTag=O]
+[Text=的 CharacterOffsetBegin=671 CharacterOffsetEnd=672 PartOfSpeech=DEC Lemma=的 NamedEntityTag=O]
+[Text=人类 CharacterOffsetBegin=672 CharacterOffsetEnd=674 PartOfSpeech=NN Lemma=人类 NamedEntityTag=O]
+[Text=文明 CharacterOffsetBegin=674 CharacterOffsetEnd=676 PartOfSpeech=NN Lemma=文明 NamedEntityTag=O]
+[Text=所 CharacterOffsetBegin=676 CharacterOffsetEnd=677 PartOfSpeech=MSP Lemma=所 NamedEntityTag=O]
+[Text=急需 CharacterOffsetBegin=677 CharacterOffsetEnd=679 PartOfSpeech=VV Lemma=急需 NamedEntityTag=O]
+[Text=的 CharacterOffsetBegin=679 CharacterOffsetEnd=680 PartOfSpeech=DEC Lemma=的 NamedEntityTag=O]
+[Text=新 CharacterOffsetBegin=680 CharacterOffsetEnd=681 PartOfSpeech=JJ Lemma=新 NamedEntityTag=O]
+[Text=道路 CharacterOffsetBegin=681 CharacterOffsetEnd=683 PartOfSpeech=NN Lemma=道路 NamedEntityTag=O]
+[Text=的 CharacterOffsetBegin=683 CharacterOffsetEnd=684 PartOfSpeech=DEC Lemma=的 NamedEntityTag=O]
+[Text=可能性 CharacterOffsetBegin=684 CharacterOffsetEnd=687 PartOfSpeech=NN Lemma=可能性 NamedEntityTag=O]
+[Text=（ CharacterOffsetBegin=687 CharacterOffsetEnd=688 PartOfSpeech=PU Lemma=（ NamedEntityTag=O]
+[Text=60年代 CharacterOffsetBegin=688 CharacterOffsetEnd=692 PartOfSpeech=NT Lemma=60年代 NamedEntityTag=MISC]
+[Text=的 CharacterOffsetBegin=692 CharacterOffsetEnd=693 PartOfSpeech=DEG Lemma=的 NamedEntityTag=O]
+[Text=余兴未尽 CharacterOffsetBegin=693 CharacterOffsetEnd=697 PartOfSpeech=VV Lemma=余兴未尽 NamedEntityTag=O]
+[Text=时 CharacterOffsetBegin=697 CharacterOffsetEnd=698 PartOfSpeech=LC Lemma=时 NamedEntityTag=O]
+[Text=， CharacterOffsetBegin=698 CharacterOffsetEnd=699 PartOfSpeech=PU Lemma=， NamedEntityTag=O]
+[Text=这个 CharacterOffsetBegin=699 CharacterOffsetEnd=701 PartOfSpeech=DT Lemma=这个 NamedEntityTag=O]
+[Text=目标 CharacterOffsetBegin=701 CharacterOffsetEnd=703 PartOfSpeech=NN Lemma=目标 NamedEntityTag=O]
+[Text=在 CharacterOffsetBegin=703 CharacterOffsetEnd=704 PartOfSpeech=P Lemma=在 NamedEntityTag=O]
+[Text=加州 CharacterOffsetBegin=704 CharacterOffsetEnd=706 PartOfSpeech=NR Lemma=加州 NamedEntityTag=GPE]
+[Text=很 CharacterOffsetBegin=706 CharacterOffsetEnd=707 PartOfSpeech=AD Lemma=很 NamedEntityTag=O]
+[Text=普遍 CharacterOffsetBegin=707 CharacterOffsetEnd=709 PartOfSpeech=VA Lemma=普遍 NamedEntityTag=O]
+[Text=） CharacterOffsetBegin=709 CharacterOffsetEnd=710 PartOfSpeech=PU Lemma=） NamedEntityTag=O]
+[Text=。 CharacterOffsetBegin=710 CharacterOffsetEnd=711 PartOfSpeech=PU Lemma=。 NamedEntityTag=O]
+(ROOT
+  (IP
+    (IP
+      (NP
+        (QP (CD 许许多多)
+          (CLP (M 个)))
+        (NP (NN 白天)))
+      (NP (PN 我们))
+      (VP
+        (ADVP (AD 都))
+        (VP (VC 是)
+          (CP
+            (IP
+              (VP
+                (PP (P 在)
+                  (LCP
+                    (NP (NR PARC))
+                    (LC 之外)))
+                (VP (VV 度过))))
+            (SP 的)))))
+    (PU ，)
+    (IP
+      (NP (PN 我们))
+      (VP
+        (ADVP (AD 一起))
+        (VP
+          (VP (VV 打)
+            (NP (NN 网球)))
+          (PU 、)
+          (VP (VV 骑车))
+          (PU 、)
+          (VP (VV 喝酒))
+          (PU 、)
+          (VP (VV 吃)
+            (NP (NN 中餐))))))
+    (PU ，)
+    (IP
+      (NP (NN 期间))
+      (VP
+        (ADVP (AD 也))
+        (DVP
+          (ADVP (AD 时不时))
+          (DEV 地))
+        (VP (VV 讨论)
+          (NP (NR Dynabook)))))
+    (PU ，)
+    (CC 以及)
+    (IP
+      (NP (PN 它))
+      (VP (VV 扩大)
+        (NP
+          (NP
+            (DNP
+              (NP (NN 人类) (NN 视野))
+              (DEG 的))
+            (NP (NN 潜能)))
+          (CC 和)
+          (NP
+            (CP
+              (IP
+                (VP (VV 给予)
+                  (NP
+                    (CP
+                      (IP
+                        (NP
+                          (CP
+                            (IP
+                              (VP (VV 踟蹰不前)))
+                            (DEC 的))
+                          (NP (NN 人类) (NN 文明)))
+                        (VP (MSP 所)
+                          (VP (VV 急需))))
+                      (DEC 的))
+                    (ADJP (JJ 新))
+                    (NP (NN 道路)))))
+              (DEC 的))
+            (NP (NN 可能性))))))
+    (PU （)
+    (IP
+      (LCP
+        (IP
+          (NP
+            (DNP
+              (NP (NT 60年代))
+              (DEG 的)))
+          (VP (VV 余兴未尽)))
+        (LC 时))
+      (PU ，)
+      (NP
+        (DP (DT 这个))
+        (NP (NN 目标)))
+      (VP
+        (PP (P 在)
+          (NP (NR 加州)))
+        (ADVP (AD 很))
+        (VP (VA 普遍))))
+    (PU ）) (PU 。)))
+
+root(ROOT-0, 是-6)
+nummod(个-2, 许许多多-1)
+clf(白天-3, 个-2)
+nsubj(是-6, 白天-3)
+nsubj(是-6, 我们-4)
+advmod(是-6, 都-5)
+case(PARC-8, 在-7)
+prep(度过-10, PARC-8)
+case(PARC-8, 之外-9)
+dep(是-6, 度过-10)
+dep(度过-10, 的-11)
+punct(是-6, ，-12)
+nsubj(打-15, 我们-13)
+advmod(打-15, 一起-14)
+conj(是-6, 打-15)
+dobj(打-15, 网球-16)
+punct(打-15, 、-17)
+conj(打-15, 骑车-18)
+punct(打-15, 、-19)
+conj(打-15, 喝酒-20)
+punct(打-15, 、-21)
+conj(打-15, 吃-22)
+dobj(吃-22, 中餐-23)
+punct(是-6, ，-24)
+nsubj(讨论-29, 期间-25)
+advmod(讨论-29, 也-26)
+dvpmod(讨论-29, 时不时-27)
+mark(时不时-27, 地-28)
+conj(是-6, 讨论-29)
+dobj(讨论-29, Dynabook-30)
+punct(是-6, ，-31)
+cc(是-6, 以及-32)
+nsubj(扩大-34, 它-33)
+conj(是-6, 扩大-34)
+nn(视野-36, 人类-35)
+assmod(潜能-38, 视野-36)
+case(视野-36, 的-37)
+conj(可能性-51, 潜能-38)
+cc(可能性-51, 和-39)
+relcl(可能性-51, 给予-40)
+relcl(文明-44, 踟蹰不前-41)
+mark(踟蹰不前-41, 的-42)
+nn(文明-44, 人类-43)
+nsubj(急需-46, 文明-44)
+prtmod(急需-46, 所-45)
+relcl(道路-49, 急需-46)
+mark(急需-46, 的-47)
+amod(道路-49, 新-48)
+dobj(给予-40, 道路-49)
+mark(给予-40, 的-50)
+dobj(扩大-34, 可能性-51)
+punct(是-6, （-52)
+nsubj(余兴未尽-55, 60年代-53)
+case(60年代-53, 的-54)
+loc(普遍-63, 余兴未尽-55)
+case(余兴未尽-55, 时-56)
+punct(普遍-63, ，-57)
+det(目标-59, 这个-58)
+nsubj(普遍-63, 目标-59)
+case(加州-61, 在-60)
+prep(普遍-63, 加州-61)
+advmod(普遍-63, 很-62)
+conj(是-6, 普遍-63)
+punct(是-6, ）-64)
+punct(是-6, 。-65)
+
+Coreference set:
+	(2,3,[3,4]) -> (1,2,[2,3]), that is: "我" -> "我"
+	(2,8,[8,9]) -> (1,2,[2,3]), that is: "我" -> "我"
+	(3,2,[2,3]) -> (1,2,[2,3]), that is: "我" -> "我"
+	(4,3,[3,4]) -> (1,2,[2,3]), that is: "我" -> "我"
+	(4,32,[32,33]) -> (1,2,[2,3]), that is: "我" -> "我"
+	(5,1,[1,2]) -> (1,2,[2,3]), that is: "我" -> "我"
+	(8,1,[1,2]) -> (1,2,[2,3]), that is: "我" -> "我"
+	(8,10,[10,11]) -> (1,2,[2,3]), that is: "我" -> "我"
+	(9,1,[1,2]) -> (1,2,[2,3]), that is: "我" -> "我"
+	(10,6,[6,7]) -> (1,2,[2,3]), that is: "我" -> "我"
+	(11,1,[1,2]) -> (1,2,[2,3]), that is: "我" -> "我"
+	(11,7,[7,8]) -> (1,2,[2,3]), that is: "我" -> "我"
+	(12,5,[5,6]) -> (1,2,[2,3]), that is: "我" -> "我"
+	(12,11,[11,12]) -> (1,2,[2,3]), that is: "我" -> "我"
+	(12,21,[21,22]) -> (1,2,[2,3]), that is: "我" -> "我"
+	(13,5,[5,6]) -> (1,2,[2,3]), that is: "彼此" -> "我"
+	(13,33,[33,34]) -> (1,2,[2,3]), that is: "彼此" -> "我"
+Coreference set:
+	(2,1,[1,2]) -> (1,9,[9,10]), that is: "他" -> "章法"
+	(3,7,[7,8]) -> (1,9,[9,10]), that is: "他" -> "章法"
+	(4,26,[26,27]) -> (1,9,[9,10]), that is: "他" -> "章法"
+Coreference set:
+	(6,27,[27,28]) -> (6,16,[14,17]), that is: "钱" -> "那 笔 钱"
+	(6,36,[36,37]) -> (6,16,[14,17]), that is: "钱" -> "那 笔 钱"
+Coreference set:
+	(12,30,[30,31]) -> (11,13,[12,14]), that is: "他" -> "头脑 风暴"
+Coreference set:
+	(12,35,[35,36]) -> (11,19,[16,20]), that is: "它" -> "冷静 持久 的 思考"
+Coreference set:
+	(3,10,[10,11]) -> (2,12,[11,13]), that is: "预算" -> "个 预算"
+	(4,1,[1,2]) -> (2,12,[11,13]), that is: "这" -> "个 预算"
+Coreference set:
+	(8,13,[13,14]) -> (7,1,[1,2]), that is: "自己" -> "PARC"
+	(14,8,[8,9]) -> (7,1,[1,2]), that is: "PARC" -> "PARC"
+Coreference set:
+	(5,3,[3,4]) -> (4,9,[6,10]), that is: "他" -> "犹他 大学 的 日子"
+Coreference set:
+	(9,4,[3,5]) -> (8,6,[4,7]), that is: "这个 团队" -> "一 个 团队"
+Coreference set:
+	(14,33,[33,34]) -> (13,2,[1,3]), that is: "它" -> "LRG 小组"
+Coreference set:
+	(10,2,[2,3]) -> (9,9,[7,10]), that is: "小组" -> "习性 研究 小组"
+Coreference set:
+	(9,16,[16,17]) -> (9,13,[11,14]), that is: "LRG" -> "Learning Research Group"
+	(13,1,[1,2]) -> (9,13,[11,14]), that is: "LRG" -> "Learning Research Group"
+Coreference set:
+	(7,18,[18,19]) -> (4,36,[36,37]), that is: "我们" -> "我们"
+	(9,21,[21,22]) -> (4,36,[36,37]), that is: "我们" -> "我们"
