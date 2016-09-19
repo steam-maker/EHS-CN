@@ -25,3 +25,7 @@
 本文件。请在下面加上这个模块有关的**客观**信息，比如引用的维基百科资料等等以及和其他模块的关系等等。
 **主观信息**请放在[discussion.md](discussion.md)里面。
 
+---
+
+* Brief introduction in English: I developped the KiddiKomp into miniCOM, in which the language used was called "Smalltalk".
+* 段落大意：我改良了Kiddikomp，于是设计出了miniCOM，其中所用的语言我把它叫做“Smalltalk”。
