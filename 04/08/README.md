@@ -28,4 +28,4 @@
 ---
 
 * Brief introduction in English: I developped the KiddiKomp into miniCOM, in which the language used was called "Smalltalk".
-* 段落大意：我改良了Kiddikomp，于是设计出了miniCOM，其中所用的语言我把它叫做“Smalltalk”。
+* 段落大意：我提炼了Kiddikomp的想法，于是设计出了miniCOM，其中所用的语言我把它叫做“Smalltalk”。
