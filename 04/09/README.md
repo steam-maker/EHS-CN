@@ -25,3 +25,8 @@
 本文件。请在下面加上这个模块有关的**客观**信息，比如引用的维基百科资料等等以及和其他模块的关系等等。
 **主观信息**请放在[discussion.md](discussion.md)里面。
 
+
+---
+
+* Brief introduction in English: The introduction and example of Smalltalk-71.
+* 段落大意：关于Smalltalk-71的介绍和举例。
