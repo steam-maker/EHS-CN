@@ -658,6 +658,41 @@ In the summer of '71 I refined the KiddiKomp idea into a tighter design called m
 
 ![minicom](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/minicom.png)
 
+这个Smalltalk语言（现在叫做Smalltalk-71）受FLEX、PLANNER、LOGO、META II以及我从中衍生出的语言影响很深。
+它是一种具有可以直接执行命令的对象属性的分析程序。
+（我认为里面那些碍手碍脚的引用约定来自META）。
+我对把程序看成是代数模式兴趣索然，但我却有个清晰的计划，关于用一种系统实现多种语言的编程。
+**这个带图标的终端可以进行简单的延伸、可以检索到作为“数据”的图标、可以用简单的办法将行为与对象相联系，它的eval虽然初级却表达清晰，这样我认为孩子们在有了几年的简单编程基础以后便可以理解它们。
+程序的存储被分类到一个鉴别网络中，而评估则是直截了当地进行模式匹配**（The patterned front-end allowed simple extension, patterns as "data" to be retrieved, a simple way to attach behaviors to objects, and a rudimentary but clear expression of its eval in terms that I thought children could understand after a few years experience with simpler programming. Program storage was sorted into a discrimination net and evaluation was straightforward pattern-matching）
+
+``` 
+Smalltalk-71程序
+
+to T 'and' :y do 'y'
+to F 'and' :y do F
+
+to 'factorial' 0 is 1
+to 'factorial' :n do 'n*factorial n-1'
+
+to 'fact' :n do 'to 'fact' n do factorial n. ^ fact n'
+
+to :e 'is-member-of' [] do F
+to :e 'is-member-of' :group
+          do'if e = firstof group then T
+                  else e is-member-of rest of group'
+
+to 'cons' :x :y is self
+to 'hd' ('cons' :a :b) do 'a'
+to 'hd' ('cons' :a :b) '<-' :c do 'a <- c'
+to 'tl' ('cons' :a :b) do 'b'
+to 'tl' ('cons' :a :b) '<-' :c do 'b <- c'
+
+to :robot 'pickup' :block
+         do 'robot clear-top-of block.
+         robot hand move-to block.
+         robot hand lift block 50.
+         to 'height-of' block do 50'
+```
 This Smalltalk language (today labeled -71) was very influenced by FLEX, PLANNER, LOGO, META II, and my own derivatives from them. It was a kind of parser with object-attachment that executed tokens directly. (I think the awkward quoting conventions come from META). I was less interested in programs as algebraic patterns than I was in a clear scheme that could handle a variety of styles of programming. The patterned front-end allowed simple extension, patterns as "data" to be retrieved, a simple way to attach behaviors to objects, and a rudimentary but clear expression of its eval in terms that I thought children could understand after a few years experience with simpler programming. Program storage was sorted into a discrimination net and evaluation was straightforward pattern-matching
 
 ```
@@ -689,8 +724,17 @@ to :robot 'pickup' :block
 		 to 'height-of' block do 50'
 ```
 
+正如我之前所言，LISP的外在美被一些华而不实的名号所玷污了，人们非得把其中一些关键的部分称为“特殊形式”，实际上它们不过是一些功能不同的普通成分。
+与实际模型相比，LISP最美的地方在于它的超异（Metastructure）。
+我花了很大一部分时间来思考，在不扰乱**核心隐喻（central metaphor）**的情况下，对象如何拥有普通计算机的特性。
+这里，我们所需要的似乎是完全控制消息传递中的要素；具体点说就是，完全控制对表达进行评估的时间和环境。
 As I mentioned previously, it was annoying that the surface beauty of LISP was marred by some of its key parts having to be introduced as "special forms" rather than as its supposed universal building block of functions. The actual beauty of LISP came more from the promise of its metastructures than its actual model. I spent a fair amount of time thinking about how objects could be characterized as universal computers without having to have any exceptions in the central metaphor. What seemed to be needed was complete control over what was passed in a message send; in particular when and in what environment did expressions get evaluated?
 
+戴夫·费舍尔（Dave Fisher）在卡耐基梅隆大学发表过一篇关于控制结构集合的论文【Fisher 70】，里面提到了一种简洁明了的解决办法。
+[ALGOL60 ](http://baike.baidu.com/view/1626317.htm)语言需要一种独立的链接，它既要保证动态调用子程序，又要调用[静态全局变量（static global state）](http://baike.baidu.com/view/14039160.htm)。
+费舍尔在他的论文里揭示了如何将这些链接一般化，并用来模拟各式各样的控制环境。
+解决LISP“函数变元问题（funarg problem）”的方法之一是将适当的全局变量链接与表达和功能相结合，之后会对这些表达和功能进行评估，因此，它所引用的[自由变量（free veriables）](http://baike.baidu.com/view/10522936.htm)实际上是由该语言的静态形式呈现的。
+该论文中也提前描述了[“惰性计算（lazy evaluation）”](http://baike.baidu.com/view/2300535.htm)的概念。
 An elegant approach was suggested in a CMU thesis of Dave Fisher [Fisher 70] on the synthesis of control structures. ALGOL60 required a separate link for dynamic subroutine linking and for access to static global state. Fisher showed how a generalization of these links could be used to simulate a wide variety of control environments. One of the ways to solve the "funarg problem" of LISP is to associate the proper global state link with expressions and functions that are to be evaluated later so that the free variables referenced are the ones that were actually implied by the static form of the language. The notion of "lazy evaluation" is anticipated here as well.
 
 Nowadays this approach would be called reflective design. Putting it together with the FLEX models suggested that all that should be required for "doing LISP right" or "doing OOP right" would be to handle the mechanics of invocations between modules without having to worry about the details of the modules themselves. The difference between LISP and OOP (or any other system) would then be what the modules could contain. A universal module (object) reference —ala B5000 and LISP—and a message holding structure—which could be virtual if the senders and receivers were sympatico— that could be used by all would do the job.
