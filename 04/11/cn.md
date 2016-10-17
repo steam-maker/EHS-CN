@@ -3,3 +3,4 @@
 费舍尔在他的论文里揭示了如何将这些链接一般化，并用来模拟各式各样的控制环境。
 解决LISP“函数变元问题（funarg problem）”的方法之一是将适当的全局变量链接与表达和功能相结合，之后会对这些表达和功能进行评估，因此，它所引用的[自由变量（free veriables）](http://baike.baidu.com/view/10522936.htm)实际上是由该语言的静态形式呈现的。
 该论文中也提前描述了[“惰性计算（lazy evaluation）”](http://baike.baidu.com/view/2300535.htm)的概念。
+

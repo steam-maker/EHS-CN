@@ -693,6 +693,7 @@ to :robot 'pickup' :block
          robot hand lift block 50.
          to 'height-of' block do 50'
 ```
+
 This Smalltalk language (today labeled -71) was very influenced by FLEX, PLANNER, LOGO, META II, and my own derivatives from them. It was a kind of parser with object-attachment that executed tokens directly. (I think the awkward quoting conventions come from META). I was less interested in programs as algebraic patterns than I was in a clear scheme that could handle a variety of styles of programming. The patterned front-end allowed simple extension, patterns as "data" to be retrieved, a simple way to attach behaviors to objects, and a rudimentary but clear expression of its eval in terms that I thought children could understand after a few years experience with simpler programming. Program storage was sorted into a discrimination net and evaluation was straightforward pattern-matching
 
 ```
@@ -728,6 +729,7 @@ to :robot 'pickup' :block
 与实际模型相比，LISP最美的地方在于它的超异（Metastructure）。
 我花了很大一部分时间来思考，在不扰乱**核心隐喻（central metaphor）**的情况下，对象如何拥有普通计算机的特性。
 这里，我们所需要的似乎是完全控制消息传递中的要素；具体点说就是，完全控制对表达进行评估的时间和环境。
+
 As I mentioned previously, it was annoying that the surface beauty of LISP was marred by some of its key parts having to be introduced as "special forms" rather than as its supposed universal building block of functions. The actual beauty of LISP came more from the promise of its metastructures than its actual model. I spent a fair amount of time thinking about how objects could be characterized as universal computers without having to have any exceptions in the central metaphor. What seemed to be needed was complete control over what was passed in a message send; in particular when and in what environment did expressions get evaluated?
 
 戴夫·费舍尔（Dave Fisher）在卡耐基梅隆大学发表过一篇关于控制结构集合的论文【Fisher 70】，里面提到了一种简洁明了的解决办法。
@@ -735,6 +737,7 @@ As I mentioned previously, it was annoying that the surface beauty of LISP was m
 费舍尔在他的论文里揭示了如何将这些链接一般化，并用来模拟各式各样的控制环境。
 解决LISP“函数变元问题（funarg problem）”的方法之一是将适当的全局变量链接与表达和功能相结合，之后会对这些表达和功能进行评估，因此，它所引用的[自由变量（free veriables）](http://baike.baidu.com/view/10522936.htm)实际上是由该语言的静态形式呈现的。
 该论文中也提前描述了[“惰性计算（lazy evaluation）”](http://baike.baidu.com/view/2300535.htm)的概念。
+
 An elegant approach was suggested in a CMU thesis of Dave Fisher [Fisher 70] on the synthesis of control structures. ALGOL60 required a separate link for dynamic subroutine linking and for access to static global state. Fisher showed how a generalization of these links could be used to simulate a wide variety of control environments. One of the ways to solve the "funarg problem" of LISP is to associate the proper global state link with expressions and functions that are to be evaluated later so that the free variables referenced are the ones that were actually implied by the static form of the language. The notion of "lazy evaluation" is anticipated here as well.
 
 Nowadays this approach would be called reflective design. Putting it together with the FLEX models suggested that all that should be required for "doing LISP right" or "doing OOP right" would be to handle the mechanics of invocations between modules without having to worry about the details of the modules themselves. The difference between LISP and OOP (or any other system) would then be what the modules could contain. A universal module (object) reference —ala B5000 and LISP—and a message holding structure—which could be virtual if the senders and receivers were sympatico— that could be used by all would do the job.
