@@ -740,6 +740,11 @@ As I mentioned previously, it was annoying that the surface beauty of LISP was m
 
 An elegant approach was suggested in a CMU thesis of Dave Fisher [Fisher 70] on the synthesis of control structures. ALGOL60 required a separate link for dynamic subroutine linking and for access to static global state. Fisher showed how a generalization of these links could be used to simulate a wide variety of control environments. One of the ways to solve the "funarg problem" of LISP is to associate the proper global state link with expressions and functions that are to be evaluated later so that the free variables referenced are the ones that were actually implied by the static form of the language. The notion of "lazy evaluation" is anticipated here as well.
 
+这种方法现在叫做**反思设计**（reflective design）。
+把它跟FLEX结合在一起说明了，所有“正确执行LISP”或者“正确执行OOP”的设计，应当在不考虑模块（module）自身细节的情况下，拥有管理模块间调用方式的能力。
+然后，将LISP和OOP（或其他任何系统）区别开来的应当是它们具备了什么样的模块。
+如果发送人和接收人能够达到一致，普通模块（对象）引用——B5000和LISP——和消息储存结构可以是虚拟的——并且所有做这些事的人都可以使用它们。
+
 Nowadays this approach would be called reflective design. Putting it together with the FLEX models suggested that all that should be required for "doing LISP right" or "doing OOP right" would be to handle the mechanics of invocations between modules without having to worry about the details of the modules themselves. The difference between LISP and OOP (or any other system) would then be what the modules could contain. A universal module (object) reference —ala B5000 and LISP—and a message holding structure—which could be virtual if the senders and receivers were sympatico— that could be used by all would do the job.
 
 If all of the fields of a messenger structure were enumerated according to this view, we would have:
