@@ -1,5 +1,5 @@
 此时一直困扰我的问题是位图显示屏的大小。
-即便是使用了混合模式（(细粒度【fine-grained】)[http://baike.baidu.com/view/3630593.htm]的文字和图形(粗粒度【coarse-grained】)[http://blog.sina.com.cn/s/blog_4eaff65601000bxg.html]的位图显示），把所有的信息都呈现在屏幕上也是困难的。
+即便是使用了混合模式（[细粒度【fine-grained】](http://baike.baidu.com/view/3630593.htm)的文字和图形[粗粒度【coarse-grained】](http://blog.sina.com.cn/s/blog_4eaff65601000bxg.html)的位图显示），把所有的信息都呈现在屏幕上也是困难的。
 后来我突然有了一个想法（这是在我洗澡的时候，我最喜欢在这种时间思考），FLEX的窗口可以像桌上堆放的文件那样显示在位图显示器上。
 如果要更新中间的一份，可以把它取出，放在这一堆的最上面。
 那时，它可能不是最棒的解决方案，但它的确无限放大了显示屏的有用区域，因此我打算这么去做。
