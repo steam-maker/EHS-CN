@@ -747,6 +747,25 @@ An elegant approach was suggested in a CMU thesis of Dave Fisher [Fisher 70] on 
 
 Nowadays this approach would be called reflective design. Putting it together with the FLEX models suggested that all that should be required for "doing LISP right" or "doing OOP right" would be to handle the mechanics of invocations between modules without having to worry about the details of the modules themselves. The difference between LISP and OOP (or any other system) would then be what the modules could contain. A universal module (object) reference —ala B5000 and LISP—and a message holding structure—which could be virtual if the senders and receivers were sympatico— that could be used by all would do the job.
 
+一个消息发送结构的组成部分如下：
+
+名称                | 注释
+-------------------|---------------------------------------- 
+GLOBAL             | **参数值环境**（the environment of the parameter values） 
+SENDER             | 消息发送方
+RECEIVER           | 消息接收方 
+REPLY-STYLE        | 等待、分流......？
+STATUS             | 发送进程
+REPLY              | 最终结果 （如有）
+OPERATION SELECTOR | 针对接收方
+# OF PARAMETERS    | （参数编号）
+P1                 | P1
+...                | ......
+Pn                 | Pn
+
+这是堆栈结构的一般化，也应用于B5000。
+当然，这也和CAL-TSS这样的操作系统所需的模块间的良好互动类似——每一次执行都有许多不同的方法来表达，但思考这些会带来些许帮助。
+
 If all of the fields of a messenger structure were enumerated according to this view, we would have:
 
 Field              | Note
@@ -765,15 +784,39 @@ Pn                 |
 
 This is a generalization of a stack frame, such as used by the B5000, and very similar to what a good intermodule scheme would require in an operating system such as CAL-TSS—a lot of state for every transaction, but useful to think about.
 
+执行之前，许多关于某种表达好坏与否的思考都与我们试着去理解“在面向对象进行设计时，‘美丽’的涵义是什么”有关。
+我们主观上对美丽事物的定义很简单，但却没什么帮助：我们认为一样东西是美丽的，那是因为它会激起我们某种感情。
+这个陈词滥调忽略了旁观者的感受。
+因此，站在他者的角度上去评判某个事物是否美丽是困难的，但如果换成是自己和这个事物之间，自我的倾向性就很重要了。
+
 Much of the pondering during this state of grace (before any workable implementation) had to do with trying to understand what "beautiful" might mean with reference to object-oriented design. A subjective definition of a beautiful thing is fairly easy but is not of much help: we think a thing beautiful because it evokes certain emotions. The cliche has it lie "in the eye of the beholder" so that it is difficult to think of beauty as other than a relation between subject and object in which the predispositions of the subject are all important.
+
+我们认为数学很美，这与它身上具备的简约、有概括性、发人深省和优雅息息相关。
+例如，[勾股定理（Pythagorean Theorem）](http://baike.baidu.com/view/366.htm)只有短短一行公式，却适用于所有的直角三角形，用于理解其它关系时也惊人地有用，并且证明它只需要简短而深刻的几步。
 
 One part of the perceived beauty of mathematics has to do with a wondrous synergy between parsimony, generality, enlightenment, and finesse. For example, the Pythagorean Theorem is expressible in a single line, is true for all of the infinite number of right triangles, is incredibly useful in understanding many other relationships, and can be shown by a few simple but profound steps.
 
+如果世界上有那种放之四海而皆准的标准，那么我们应当在人类共有的基因里寻找。
+但对于像LISP这样的事物来说，我们的判断则明显是建立在后天的学习之上的，并且我们也要考虑到其他美丽的地方，譬如数学。
+
 If there are such a thing as universally appealing forms then we can perhaps look to our shared biological heritage for the predispositions. But, for an object like LISP, it is almost certain that most of the basis of our judgement is learned and has much to do with other related areas that we think are beautiful, such as much of mathematics.
+
+当我们转而去研究那些五花八门的计算机语言时，我们会发现，其实它们大部分都很普通，但也有一些很简洁。
+举例来说就是，我们可以花些口舌来解释那些通用的机器语言，但是它们绝大多数都算不上美丽，这其中有一部分原因是代码的做作与繁复。
+要创造出一个既有趣又简单小巧的系统其实“门槛很高”——这里需要平衡兴趣度（interestingness）的级别和表达的复杂程度。
 
 When we turn to the various languages for specifying computations we find many to be general and a few to be parsimonious. For example, we can define universal machine languages in just a few instructions that can specify anything that can be computed. But most of these we would not call beautiful, in part because the amount and kind of code that has to be written to do anything interesting is so contrived and turgid. A simple and small system that can do interesting things also needs a "high slope"—that is a good match between the degree of interestingness and the level of complexity needed to express it.
 
+一颗受精卵最终可以演变出各种各样的生物，这些复杂的有机体需要具备简约、有概括性、发人深省和优雅的特性——总结起来就是它是美丽的，更加符合我审美的那种美丽。
+我的意思是说，通过这样的方式我们会发现大自然在美和实用方面都有很深的造诣——其实可以用计算机术语来解释[细胞膜（cell membrane）](http://baike.baidu.com/view/32273.htm)，一方面它能够让一些有用且一直在进化的系统各司其职，另一方面，它也是一个零件，能够向世人提供一个统一界面（uniform interface）。
+
 A fertilized egg that can transform itself into the myriad of specializations needed to make a complex organism has parsimony, generality, enlightenment, and finesse—in short, beauty, and a beauty much more in line with my own esthetics. I mean by this that Nature is wonderful both at elegance and practicality—the cell membrane is partly there to allow useful evolutionary kludges to do their necessary work and still be able act as component by presenting a uniform interface to the world.
+
+此时一直困扰我的问题是位图显示屏的大小。
+即便是使用了混合模式（[细粒度【fine-grained】](http://baike.baidu.com/view/3630593.htm)的文字和图形[粗粒度【coarse-grained】](http://blog.sina.com.cn/s/blog_4eaff65601000bxg.html)的位图显示），把所有的信息都呈现在屏幕上也是困难的。
+后来我突然有了一个想法（这是在我洗澡的时候，我最喜欢在这种时间思考），FLEX的窗口可以像桌上堆放的文件那样显示在位图显示器上。
+如果要更新中间的一份，可以把它取出，放在这一堆的最上面。
+那时，它可能不是最棒的解决方案，但它的确无限放大了显示屏的有用区域，因此我打算这么去做。
 
 One of my continual worries at this time was about the size of the bit-map display. Even if a mixed mode was used (between fine-grained generated characters and coarse-grained general bit-map for graphics) it would be hard to get enough information on the screen. It occurred to me (in a shower, my favorite place to think) that FLEXtype windows on a bit-map display could be made to appear as overlapping documents on a desktop. When an overlapped one was refreshed it would appear to come to the top of the stack. At the time, this did not appear as the wonderful solution to the problem but it did have the effect of magnifying the effective area of the display enormously, so I decided to go with it.
 
