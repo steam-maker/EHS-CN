@@ -820,7 +820,18 @@ A fertilized egg that can transform itself into the myriad of specializations ne
 
 One of my continual worries at this time was about the size of the bit-map display. Even if a mixed mode was used (between fine-grained generated characters and coarse-grained general bit-map for graphics) it would be hard to get enough information on the screen. It occurred to me (in a shower, my favorite place to think) that FLEXtype windows on a bit-map display could be made to appear as overlapping documents on a desktop. When an overlapped one was refreshed it would appear to come to the top of the stack. At the time, this did not appear as the wonderful solution to the problem but it did have the effect of magnifying the effective area of the display enormously, so I decided to go with it.
 
+为了对视频作为显示媒体进行研究，比尔·英格里希（Bill English）和[巴特勒·拉姆泼逊（Butler Lampson）](http://baike.baidu.com/view/2009279.htm)为POLOS终端（帕克实验室的线上办公系统）指定了一个实验性的字符发生器（character generator ）（由罗杰·贝茨【Roger Bates】制造）。
+那时，[盖瑞·斯塔克维（Gary Starkweather）](http://office.pconline.com.cn/319/3191447_5.html)刚刚发明了第一台激光打印机，我们有时跑到他的实验室去让他打印一些东西。
+这个“SLOT机器”（激光扫描输出终端 Scanning Laser Output Terminal）简直令人惊艳。
+那时候施乐公司唯一一台复印机以每秒打印一页的速度工作，盖瑞让他的激光打印机也按照这个速度运行，每英寸500像素。
+
 To investigate the use of video as a display medium, Bill English and Butler Lampson specified an experimental character generator (built by Roger Bates) for the POLOS (PARC OnLine Office System) terminals. Gary Starkweather had just gotten the first laser printer to work and we ran a coax over to his lab to feed him some text to print. The "SLOT machine" (Scanning Laser Output Terminal) was incredible. The only Xerox copier Gary could get to work on went at 1 page a second and could not be slowed down. So Gary just made the laser run at that rate with a resolution of 500 pixels to the inch!
+
+这个字符发生器的字型存储器（font memory）大到能够模拟位图显示（如果有人进行某种操作，并将内容写入字型储存器中的话）。
+本·劳斯（Ben Laws）发明了一个很棒的字型编辑器，并且他和我花了好几个月来研究人类视觉系统的特性（显然，它是非线性的）。
+我对显示器怎样呈现出高质量的图文很感兴趣，因为我认为，Dynabook电脑具备了这样的特性就会像[“特洛伊木马（trojan horse）”](http://baike.baidu.com/subview/2611/10982649.htm#viewPageContent)那样轻易地取代学校的书本，这样，为了把它用于学校教学，我们就不用大费周章地向老师和学校董事会解释个人电脑的有用之处。
+
+![OldCharacterGenerator](OldCharacterGenerator.png)
 
 The character generator's font memory turned out to be large enough to simulate a bit-map display if one displayed a fixed "strike" and wrote into the font memory. Ben Laws built a beautiful font editor and he and I spent several months learning about the peculiarities of the human visual system (it is decidedly non-linear). I was very interested in high-quality text and graphical presentations because I thought it would be easier to get the Dynabook into schools as a "trojan horse" by simply replacing school books rather than to try to explain to teachers and school boards what was really great about personal computing.
 

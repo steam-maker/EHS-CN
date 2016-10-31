@@ -2,3 +2,4 @@
 那时，[盖瑞·斯塔克维（Gary Starkweather）](http://office.pconline.com.cn/319/3191447_5.html)刚刚发明了第一台激光打印机，我们有时跑到他的实验室去让他打印一些东西。
 这个“SLOT机器”（激光扫描输出终端 Scanning Laser Output Terminal）简直令人惊艳。
 那时候施乐公司唯一一台复印机以每秒打印一页的速度工作，盖瑞让他的激光打印机也按照这个速度运行，每英寸500像素。
+
