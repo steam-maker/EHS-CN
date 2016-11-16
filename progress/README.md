@@ -837,7 +837,27 @@ The character generator's font memory turned out to be large enough to simulate 
 
 ![oldcharacter](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/oldcharacter.png)
 
-Things were generally going well all over the lab until May of 72 when I tried to get resources to build a few miniCOMs. A relatively new executive ("X") did not want to give them to me. I wrote a memo explaining why the system was a good idea (see Appendix II), and then had a meeting to discuss it. "X" shot it down completely saying among other things that we had used too many green stamps getting Xerox to fund the time-shared MAXC and this use of resources for personal machines would confuse them. I was shocked. I crawled away back to the experimental character generator and made a plan to get 4 more made and hooked to NOVAs for the initial kid experiments.
+实验室一切进展顺利，直到1972年5月，那时我需要更多的资源来制造多台miniCOM。
+但某位刚来不久的主管（我叫他“X”）并不打算如我愿。
+我写了张便条试图向他解释这个主意的好处（见附录II），然后我们开了个会讨论这件事。
+结果“X”完全否决了我们的要求，他的理由之一是施乐已经在我们的MAXC分时操作系统上花费了太多金钱，再转而投资个人机器会让他们感到困惑。
+对此我大感惊讶。
+我只好回去继续研究字符发生器，并打算生产超过四台。后来我又联系上了NOVAs公司，合作展开首次儿童实验。
+
+Things were generally going well all over the lab until May of 1972 when I tried to get resources to build a few miniCOMs. A relatively new executive ("X") did not want to give them to me. I wrote a memo explaining why the system was a good idea (see Appendix II), and then had a meeting to discuss it. "X" shot it down completely saying among other things that we had used too many green stamps getting Xerox to fund the time-shared MAXC and this use of resources for personal machines would confuse them. I was shocked. I crawled away back to the experimental character generator and made a plan to get 4 more made and hooked to NOVAs for the initial kid experiments.
+
+那时我找到了史蒂夫·博塞尔（Steve Purcell），彼时他是斯坦福的暑期生，负责把我的点阵画设想变为现实，这样孩子们就能在电脑上画画了。
+约翰·肖奇（John Shoch）则负责线图（基于莱丁的设想【纽曼和斯普劳尔 72】）。
+POLOS的比尔·杜瓦尔（Bill Duvall）设计了miniNLS，它的速度和功能令人印象深刻。
+我们还制作出了第一个重叠窗口。
+鲍勃·舒尔（Bob Shur）（在史蒂夫·博塞尔的帮助下）建立了2½D 动画系统。
+而有了本·劳斯（Ben Laws）的字符编辑器，我们制作出了极为形象的demo，里面展示了往后几年我们所努力的方向。
+我还记得我们递了一份demo给一位主管，甚至用我们的绘画系统为他画了自画像，然后嚣张地对他说：“它的绝妙之处在于，成功的可能性只有20%。我们正听你的话冒险！”
+他直勾勾地看着我说：“孩子，这很不错，但务必取得成功。”
+这是一名主管对风险的典型解读。
+他要我们做那20%。
+
+![Figure2526](Figure2526.png)
 
 I got Steve Purcell, a summer student from Stanford, to build my design for bit-map painting so the kids could sketch as well as display computer graphics. John Shoch built a line drawing and gesture recognition system (based on Ledeen's [Newman and Sproull 72]) that was integrated with the painting. Bill Duvall of POLOS built a miniNLS that was quite remarkable in its speed and power. The first overlapping windows started to appear. Bob Shur (with Steve Purcell's help) built a 2½D animation system. Along with Ben Laws' font editor, we could give quite a smashing demo of what we intended to build for real over the next few years. I remember giving one of these to a Xerox executive, including doing a portrait of him in the new painting system, and wound it up with a flourish declaring: "And what's really great about this is that it only has a 20% chance of success. We're taking risk just like you asked us to!" He looked me straight in the eye and said, "Boy, that's great, but just make sure it works." This was a typical executive notion about risk. He wanted us to be in the "20%" one hundred percent of the time.
 

@@ -10,3 +10,4 @@ POLOS的比尔·杜瓦尔（Bill Duvall）设计了miniNLS，它的速度和功�
 他要我们做那20%。
 
 ![Figure2526](Figure2526.png)
+
