@@ -863,6 +863,12 @@ I got Steve Purcell, a summer student from Stanford, to build my design for bit-
 
 ![firstpainting](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/firstpainting.png)
 
+那个夏天我一边舔舐伤口，一边继续着demo里的工作。
+巴特勒·拉姆泼逊（Butler Lampson）、彼得·多伊奇（Peter Deutsh）和我想出了一个方案来模拟[HLL机器语言](http://baike.baidu.com/item/hll#3)。
+那时我推崇B5000的方案，但巴特勒不想给字节解码，他还指出既然8比特有256种编号的可能性，那么我们理当做的就是为“指令空间（instruction space）”里不同的部分赋予不同的意义。
+最终，我们会创造出一种“穷人的[哈夫曼编码](http://baike.baidu.com/item/%E5%93%88%E5%A4%AB%E6%9B%BC%E7%BC%96%E7%A0%81)（poor man's Huffman code）”，它的身上兼具了灵活与简洁两种特性。
+后来，这个方案应用在了帕克中心所有的模拟器上。
+
 That summer while licking my wounds and getting the demo simulations built and going, Butler Lampson, Peter Deutsch, and I worked out a general scheme for emulated HLL machine languages. I liked the B5000 scheme, but Butler did not want to have to decode bytes, and pointed out that since an 8-bit byte had 256 total possibilities, what we should do is map different meanings onto different parts of the "instruction space." This would give us a "poor man's Huffman code" that would be both flexible and simple. All subsequent emulators at PARC used this general scheme.
 
 I also took another pass at the language for the kids. Jeff Rulifson was a big fan of Piaget (and semiotics) and we had many discussions about the "stages" and what iconic thinking might be about. After reading Piaget and especially Jerome Bruner, I was worried that the directly symbolic approach taken by FLEX, LOGO (and the current Smalltalk) would be difficult for the kids to process since evidence existed that the symbolic stage (or mentality) was just starting to switch on. In fact, all of the educators that I admired (including Montessori, Holt, and Suzuki) all seemed to call for a more figurative, more iconic approach. Rudolph Arnheim [Arnheim 69] had written a classic book about visual thinking, and so had the eminent art critic Gombrich [Gombrich **]. It really seemed that something better needed to be done here. GRAIL wasn't it, because its use of imagery was to portray and edit flowcharts, which seemed like a great step backwards. But Rovner's AMBIT-G held considerably more promise [Rovner 68]. It was kind of a visual SNOBOL [Farber 63] and the pattern matching ideas looked like they would work for the more PLANNERlike scheme I was using.
