@@ -871,25 +871,91 @@ I got Steve Purcell, a summer student from Stanford, to build my design for bit-
 
 That summer while licking my wounds and getting the demo simulations built and going, Butler Lampson, Peter Deutsch, and I worked out a general scheme for emulated HLL machine languages. I liked the B5000 scheme, but Butler did not want to have to decode bytes, and pointed out that since an 8-bit byte had 256 total possibilities, what we should do is map different meanings onto different parts of the "instruction space." This would give us a "poor man's Huffman code" that would be both flexible and simple. All subsequent emulators at PARC used this general scheme.
 
-I also took another pass at the language for the kids. Jeff Rulifson was a big fan of Piaget (and semiotics) and we had many discussions about the "stages" and what iconic thinking might be about. After reading Piaget and especially Jerome Bruner, I was worried that the directly symbolic approach taken by FLEX, LOGO (and the current Smalltalk) would be difficult for the kids to process since evidence existed that the symbolic stage (or mentality) was just starting to switch on. In fact, all of the educators that I admired (including Montessori, Holt, and Suzuki) all seemed to call for a more figurative, more iconic approach. Rudolph Arnheim [Arnheim 69] had written a classic book about visual thinking, and so had the eminent art critic Gombrich [Gombrich **]. It really seemed that something better needed to be done here. GRAIL wasn't it, because its use of imagery was to portray and edit flowcharts, which seemed like a great step backwards. But Rovner's AMBIT-G held considerably more promise [Rovner 68]. It was kind of a visual SNOBOL [Farber 63] and the pattern matching ideas looked like they would work for the more PLANNERlike scheme I was using.
+我还尝试研究儿童计算机语言。
+杰夫·鲁里夫森（Jeff Rulifson）非常推崇[皮亚杰理论](http://baike.baidu.com/item/%E7%9A%AE%E4%BA%9A%E6%9D%B0%E7%90%86%E8%AE%BA)（和符号学），我们曾多次讨论“儿童认知发展阶段”和符号学思想的涵义。
+在读完皮亚杰（Piaget）和[杰罗姆·布鲁纳（Jerome Bruner）](http://baike.baidu.com/item/%E6%9D%B0%E7%BD%97%E5%A7%86%C2%B7%E5%B8%83%E9%B2%81%E7%BA%B3)后，尤其是杰罗姆·布鲁纳，我开始担心孩子们难以理解FLEX、LOGO（以及现在的Smalltalk）中直接使用的象征法，因为已有证据显示那时孩子们的象征阶段（或者说“认知”）才刚刚开启。
+实际上，所有我推崇的教育家（包括[蒙台梭利<Montessori>](http://baike.baidu.com/item/%E7%8E%9B%E5%88%A9%E4%BA%9A%C2%B7%E8%92%99%E5%8F%B0%E6%A2%AD%E5%88%A9)、[霍尔特<Holt>](http://baike.baidu.com/item/%E7%BA%A6%E7%BF%B0%C2%B7%E9%9C%8D%E5%B0%94%E7%89%B9)和[铃木<Suzuki>](http://baike.baidu.com/item/%E9%93%83%E6%9C%A8%E9%95%87%E4%B8%80)），他们似乎都提倡一种更形象也更符号化的方法。
+鲁道夫·安海姆（Rudolph Arnheim ）【安海姆 69】曾写过一本很经典的著作叫《视觉化思考》，艺术批评家[贡布里希（ Gombrich）](http://baike.baidu.com/item/%E8%B4%A1%E5%B8%83%E9%87%8C%E5%B8%8C)【贡布里希 60】也持相似的观点。
+这一切似乎都佐证着这里该有所突破。
+这个突破不会是GRAIL，因为它所谓的形象化是用来描绘与编辑流程图的，这与初衷相去甚远。
+但罗夫纳（Rovner）的AMBIT-G似乎相当靠谱【罗夫纳 68】。
+它像是可视化的 SNOBOL【法贝尔 63】，其中模式匹配的想法似乎可以用于我当时正采用的类似PLANNER的方案。
+
+I also took another pass at the language for the kids. Jeff Rulifson was a big fan of Piaget (and semiotics) and we had many discussions about the "stages" and what iconic thinking might be about. After reading Piaget and especially Jerome Bruner, I was worried that the directly symbolic approach taken by FLEX, LOGO (and the current Smalltalk) would be difficult for the kids to process since evidence existed that the symbolic stage (or mentality) was just starting to switch on. In fact, all of the educators that I admired (including Montessori, Holt, and Suzuki) all seemed to call for a more figurative, more iconic approach. Rudolph Arnheim [Arnheim 69] had written a classic book about visual thinking, and so had the eminent art critic Gombrich [Gombrich 60]. It really seemed that something better needed to be done here. GRAIL wasn't it, because its use of imagery was to portray and edit flowcharts, which seemed like a great step backwards. But Rovner's AMBIT-G held considerably more promise [Rovner 68]. It was kind of a visual SNOBOL [Farber 63] and the pattern matching ideas looked like they would work for the more PLANNERlike scheme I was using.
+
+比尔·英格利希（Bill English）建议我多做些类似制定预算、写计划和重要进程报告等的表面工作来增加可信度。
+于是我写了个计划，计划中描述了在未来的几年中我们会在字符发生器和 NOVA上建立一个真正的系统，这个系统是面向对象的，它有窗口、音乐、动画，并且可以进行“符号编程（iconic programming）”。
+后面的事情是最困难的，我们也会采取解决难题惯常使用的手段，即把它们丢给研究生们。
+
+“简事当简做，繁事应可成。”
+
+![Figure2728](Figure2728.png)
 
 Bill English was still encouraging me to do more reasonable appearing things to get higher credibility, like making budgets, writing plans and milestone notes, so I wrote a plan that proposed over the next few years that we would build a real system on the character generators cum NOVAs that would involve OOP, windows, painting, music, animation, and "iconic programming." The latter was deemed to be hard and would be handled by the usual method for hard problems, namely, give them to grad students.
 
+“Simple things should be simple, complex things should be possible.”
+
 ![childrenwithdynabooks](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/childrenwithdynabooks.png)
+
+九月份，数周来打下的两项赌约改变了我的大部分计划。
+巴特勒和恰克前来问我：“你有钱吗？”
+我说：“有的，NOVA和CG的投资有大约23万美元。你们问这个做什么？”
+他们又问：“你想让我们把小型机器做成什么样呢？”
+我回答说：“我要它们令人满意。你们到底想说什么？”
+巴特勒回答道：“我想做个价值500美元的PDP-10，恰克想做个速度快10倍的NOVA，而你则倾心于kiddicomp，你到底想把它做成什么样？”
+我告诉他们这个机器大多数的功能来自我们对字体、绘图、分辨率、动画和音乐功能的研究。
+然后我又询问他们怎么突然冒出了这个念头，巴特勒则回答我不管怎样他们就是想做这些，况且那位X主管这几个月正外出忙于某项“特殊任务”，这正是他们“浑水摸鱼”的好时机。
+而恰克还跟比尔·维提科（Bill Vitic）打赌说他能在3个月内做出整个机器。
+“哦，这样。”我恍然大悟。
 
 In Sept, within a few weeks of each other, two bets happened that changed most of my plans. First, Butler and Chuck came over and asked: "Do you have any money?" I said, "Yes, about $230K for NOVAs and CGs. Why?" They said, "How would you like us to build your little machine for you?" I said, "I'd like it fine. What is it?" Butler said: "I want a '$500 PDP-10', Chuck wants a '10 times faster NOVA', and you want a 'kiddicomp'. What do you need on it?" I told them most of the results we had gotten from the fonts, painting, resolution, animation, and music studies. I asked where this had come from all of a sudden and Butler told me that they wanted to do it anyway, that Executive "X" was away for a few months on a "task force" so maybe they could "Sneak it in", and that Chuck had a bet with Bill Vitic that he could do a whole machine in just 3 months. "Oh," I said.
 
+第二个赌约所带来的结果就更令人惊奇了。
+我一直希望新的Smalltalk语言会是一种符号语言，并且至少要花费两年来研发，但命运弄人。
+一天，在帕尔中心走廊上一次日常闲聊中，泰德·凯勒（Ted Kaehler）、丹·英戈尔斯（Dan Ingalls）和我讨论起了编程语言。
+当我们讨论到计算机语言的能力时，他们提出了一个疑问：多大的计算机语言才能拥有巨大的能力？
+我字字珠玑，夸下海口道：“世界上最强大的计算机语言只要一页代码。”
+他们则甩给我一句话：“眼见为实，耳听为虚。”
+
 The second bet had even more surprising results. I had expected that the new Smalltalk would be an iconic language and would take at least two years to invent, but fate intervened. One day, in a typical PARC hallway bullsession, Ted Kaehler, Dan Ingalls, and I were standing around talking about programming languages. The subject of power came up and the two of them wondered how large a language one would have to make to get great power. With as much panache as I could muster, I asserted that you could define the "most powerful language in the world" in "a page of code." They said, "Put up or shut up."
+
+泰德回到了卡内基梅隆大学（CMU），但丹仍旧阴魂不散地怂恿我。
+为了这个问题，后面的两周我每天凌晨4点就到了帕克中心，一直工作到八点，那时亨利·福克斯（Henry Fuchs）、约翰·肖奇（John Shoch）和史蒂文·珀赛尔（Steve Purcell）都加入进了丹晨间滔滔不绝的游说队伍。
 
 Ted went back to CMU but Dan was still around egging me on. For the next two weeks I got to PARC every morning at four o'clock and worked on the problem until eight, when Dan, joined by Henry Fuchs, John Shoch, and Steve Purcell showed up to kibbitz the morning's work.
 
+我之所以最先夸下海口，是因为那时麦卡锡的LISP自描述解释器已经能够自行转译了。
+它的篇幅大概也就是“一页”，并且从头至尾[函数式语言（functional language）](http://baike.baidu.com/item/%E5%87%BD%E6%95%B0%E5%BC%8F%E8%AF%AD%E8%A8%80)除了LISP外，没有其他。
+我很确信，在面向对象的语言中我也能这么做，当然，除此之外，我还能为一些FLEX机器的代码创造出一种合适的句法。
+
 I had originally made the boast because McCarthy's self-describing LISP interpreter was written in itself. It was about "a page", and as far as power goes, LISP was the whole nine-yards for functional languages. I was quite sure I could do the same for object-oriented languages plus be able to do a reasonable syntax for the code a la some of the FLEX machine techniques.
+
+和我最初的想法相比，一切似乎难度更大，这有三个原因。
+其一是我希望这个程序更像麦卡锡（McCarthy）第二种非递归的解释器——这种解释器竭尽所能模仿[史蒂文·罗素（Steve Russell）](http://www.tvdcdl.com/xiaomengla/136.html)最初的709循环运行方式。
+它更加“真实”。
+其二，若要将“解析（parsing）”功能与信息接收相结合——在LISP中这种参数估值是分开作用的——需要我面向对象的解释器比LISP“更快”（实际上要快许多倍）再次进行自我运行。
+最后，我尚不明确接收如何配合运作。
 
 It turned out to be more difficult than I had first thought for three reasons. First, I wanted the program to be more like McCarthy's second non-recursive interpreter—the one implemented as a loop that tried to resemble the original 709 implementation of Steve Russell as much as possible. It was more "real". Second, the intertwining of the "parsing" with message receipt—the evaluation of parameters which was handled separately in LISP—required that my object-oriented interpreter re-enter itself "sooner" (in fact, much sooner) than LISP required. And, finally, I was still not clear how send and receive should work with each other.
 
+第一种版本有些瑕疵，受到了小组成员的诟病。
+但在早上8点多钟的时候，我们做出了一个似乎可用的版本（解释器的设计梗概见附录III）。
+第一个版本与官方Smalltalk-72最大的不同在于这些符号都由[字节码（byte-code）](http://baike.baidu.com/item/%E5%AD%97%E8%8A%82%E7%A0%81)构成，而从发送方接收[返回值（return-value）](http://baike.baidu.com/item/%E8%BF%94%E5%9B%9E%E5%80%BC)这一过程是对称的——例如接收可像[参数绑定（parameter binding）](http://document.thinkphp.cn/manual_3_2.html#param_bind)那样——这对多个值的返回尤其有用。
+为了追求一个更倾向以表达为导向的函数返回形式，我们放弃了它。
+
 The first few versions had flaws that were soundly criticized by the group. But by morning 8 or so, a version appeared that seemed to work (see Appendix III for a sketch of how the interpreter was designed). The major differences from the official Smalltalk-72 of a little bit later were that in the first version symbols were byte-coded and the receiving of return-values from a send was symmetric—i.e. receipt could be like parameter binding—this was particular useful for the return of multiple values. For various reasons, this was abandoned in favor of a more expression-oriented functional return style.
 
+当然，对于这个赌约，我好不容易才勉强让自己“置身事外”，但我觉得它的确印证了我的观点。
+在追求我们官方的“符号编程（iconic programming）”之余，这样浑水摸鱼的确有趣，当时我觉得这就是全部了。
+然而出乎我意料的是，几天后丹·英戈尔斯（Dan Ingalls）在NOVA上向我展示了这个成果。
+一切都由代码写就（他用的是[(BASIC)](http://baike.baidu.com/item/BASIC%E8%AF%AD%E8%A8%80)！），他还添加了许多细节，诸如[记号扫描处理（token scanner）](http://baike.baidu.com/item/%E6%89%AB%E6%8F%8F%E5%A4%84%E7%90%86)、列表工具（list maker）等，并且一切都能顺利运行。
+就如同他喜欢说的那样：“即做即现（You just do it and it's done）。”
+
 Of course, I had gone to considerable pains to avoid doing any "real work" for the bet, but I felt I had proved my point. This had been an interesting holiday from our official "iconic programming" pursuits, and I thought that would be the end of it. Much to my surprise, only a few days later, Dan Ingalls showed me the scheme working on the NOVA. He had coded it up (in BASIC!), added a lot of details, such as a token scanner, a list maker, etc., and there it was—running. As he liked to say: "You just do it and it's done."
+
+在计算3+4时它运行得很慢（按巴特勒的说法就是“跟冻僵了一样（glacial）”），但无论如何最终的答案都是7。
+因此，接下来我们所要做的就是勇往直前。
+丹喜欢在可以“一直运行”的系统上添加[引导程序（bootstrap）](http://baike.baidu.com/item/%E5%BC%95%E5%AF%BC%E7%A8%8B%E5%BA%8F)，接下来的十年里，他至少发表了八十多种不同类型的Smalltalk。
 
 It evaluated 3+4 v e r y  s l o w l y (it was "glacial", as Butler liked to say) but the answer always came out 7. Well, there was nothing to do but keep going. Dan loved to bootstrap on a system that "always ran," and over the next ten years he made at least 80 major releases of various flavors of Smalltalk.
 
