@@ -1,4 +1,4 @@
-11月，我向麻省理工的AI实验室展示了这些想法，并阐释了[scheme](http://baike.baidu.com/item/Scheme/8379129)翻译程序。
+11月，我向麻省理工的AI实验室展示了这些想法，并阐释了翻译程序。
 这最终让卡尔·休伊特（Carl Hewitt）想出了更正式的“Actor”解决方案（休伊特 73）。
 第一篇Actor论文中所用的计算机语言和Smalltalk是最相近的。
 但之后就不一样了，一方面因为跟理论比起来，我们更想做些实际的东西，另一方面则是因为我们有独一无二的法宝：恰克·塞克（Chuck Thacker）的Dynabook个人电脑（后来叫做[ALTO](http://mt.sohu.com/20160803/n462300251.shtml)）。
