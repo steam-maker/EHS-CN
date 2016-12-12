@@ -5,14 +5,14 @@
 5. The class holds the shared behavior for its instances (in the form of objects in a program list)
 6. To eval a program list, control is passed to the first object and the remainder is treated as its message
 
-By this time most of Smalltalk's schemes had been sorted out into six main ideas that were in accord with the initial premises in designing the interpreter. The first three principles are what objects "are about"—how they are seen and used from "the outside." These did not require any modification over the years. The last three—objects from the inside—were tinkered with in every version of Smalltalk (and in subsequent OOP designs). In this scheme (1 & 4) imply that classes are objects and that they must be instances of themself. (6) implies a LISPlike universal syntax, but with the receiving object as the first item followed by the message. Thus ci <- de (with subscripting rendered as "○" and multiplication as "*") means:
+By this time most of Smalltalk's schemes had been sorted out into six main ideas that were in accord with the initial premises in designing the interpreter. The first three principles are what objects "are about"—how they are seen and used from "the outside." These did not require any modification over the years. The last three—objects from the inside—were tinkered with in every version of Smalltalk (and in subsequent OOP designs). In this scheme (1 & 4) imply that classes are objects and that they must be instances of themself. (6) implies a LISPlike universal syntax, but with the receiving object as the first item followed by the message. Thus ci <- de (with subscripting rendered as "°" and multiplication as "*") means:
 
 ```
 receiver | message
-c        | ○ i <- d*e
+c        | ° i <- d*e
 ```
 
-The c is bound to the receiving object, and all of ○ i <- d*e is the message to it. The message is made up of literal token "○", an expression to be evaluated in the sender's context (in this case i), another literal token <-, followed by an expression to be evaluated in the sender's context (d*e). Since "LISP" pairs are made from 2 element objects they can be indexed more simply: c hd, c tl, and c hd <- foo, etc.
+The c is bound to the receiving object, and all of ° i <- d*e is the message to it. The message is made up of literal token "°", an expression to be evaluated in the sender's context (in this case i), another literal token <-, followed by an expression to be evaluated in the sender's context (d*e). Since "LISP" pairs are made from 2 element objects they can be indexed more simply: c hd, c tl, and c hd <- foo, etc.
 
 "Simple" expressions like a+b and 3+4 seemed more troublesome at first. Did it really make sense to think of them as:
 
