@@ -37,12 +37,12 @@ a        | + b
 
 ![example](example.png)
 
-由于在考虑到剩下来的信息之前，已经对类进行了控制——类也可以自行决定不接受控制——整个程序还是被完全保护的。
-Smalltalk-72的对象是“耀眼的”，但不受攻击的影响。
+由于在考虑处理剩下来的信息之前，已经对类进行了控制——类也可以自行决定不接受控制——整个程序完全受保护的。
+Smalltalk-72的对象是“耀眼的”，但不会受攻击的影响。
 环境中有一部分是将“messenger对象”（一个广义上的活动记录）与发送方相关联，这样接收方就能赋予其不同的权利（更多细节见附录II）。
-这一想法可以联系到未来Smalltalk作为网络操作系统的最终用途上（见【Goldstein & Bobrow 1980】），在我印象中Smalltalk-72上并没怎么使用它。
+这一想法可以联系到未来Smalltalk作为网络操作系统的最终用途上（见【Goldstein & Bobrow 1980】），在我印象中，它并没怎么应用在Smalltalk-72上。
 
-Smalltalk-71保留的形式之一就是混合功能与类的概念。在其他操作中，Smalltalk-72的类看上去像功能，并且可以作为功能使用，但使用了ISNEW对象，它可以轻易地创造出实例（程序停止运行的一种情况）。
+Smalltalk-71保留的形式之一就是混合功能与类的概念。在其他操作中，Smalltalk-72的类看上去像功能，并且可以作为功能而使用，但使用了ISNEW对象，它可以轻易地创造出实例（程序停止运行的一种情况）。
 因此阶乘（factional）可以延伸为如下形式：
 ```
 to fact n (^if :n=0 then 1 else n*fact n-1)
@@ -58,4 +58,19 @@ to fact n (^if :n=0 then 1 else n*fact n-1)
 下面是句法的示例，摘取自之后的笔记。
 几年后，我们会在丹为Smalltalk-76设计的程序中看见更多这样的例子。
 我认为LISP身上也出现了相似的情况——我们从未设计出过真正简单又实用的句法。
+```
+建议采用的Smalltalk-72句法
 
+Pair :h :t
+    hd <- :h
+    hd              » h
+    tl <- :t
+    tl              » t
+    isPair          » true
+    print           » '( print. SELF mprint.
+    mprint          » h print. if t isNil then ') print
+                               else if t isPair then t mprint
+                               else '* print. t print. ') print
+    length          » 1 + if t isList then t length else 0
+    ```
+    
