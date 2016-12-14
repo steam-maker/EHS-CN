@@ -41,7 +41,7 @@ to fact n (^if :n=0 then 1 else n*fact n-1)
 or "intensionally," as part of class integer:
 
 ```
-(... ○! » (^:n=1) » (1) (n-1)!)
+(... ¤! » (^:n=1) » (1) (n-1)!)
 ```
 
 Of course, the whole idea of Smalltalk (and OOP in general) is to define everything intensionally. And this was the direction of movement as we learned how to program in the new style. I never liked this syntax (too many parentheses and nestings) and wanted something flatter and more grammar-like as in Smalltalk-71. To the right is an example syntax from the notes of a talk I gave around then. We will see something more like this a few years later in Dan's design for Smalltalk-76. I think something similar happened with LISP—that the "reality" of the straightforward and practical syntax you could program in prevailed against the flights of fancy that never quite got built.
