@@ -10,3 +10,4 @@
 一个任务甚至可以更新MOS动态[随机存取存储器（RAM）](http://baike.baidu.com/item/%E9%9A%8F%E6%9C%BA%E5%AD%98%E5%8F%96%E5%AD%98%E5%82%A8%E5%99%A8?fromtitle=RAM&fromid=144481&type=syn)。
 换句话说就是，这是一种协同程序（coroutine）的架构。
 恰克声称他的灵感来源于我几个月前关于协同程序的演讲，但在我的印象中则是韦斯·克拉克（Wes Clark）最先在TX-2（Sketchpad机器）中运用了这个想法，我可能只是在演讲中提到了它。
+

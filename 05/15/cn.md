@@ -30,3 +30,4 @@ Smalltalk真正应用在机器上开始于平行路径（parallel path）的激�
 
 史蒂夫·韦耶（Steve Weyer）和我设计了Findit，这是一个“通过例子来检索（retrieval by example）”的界面，它将类与其实例进行类比，形成了检索请求。
 为了控制图书馆书本的流通，帕克图书馆使用了它许多年。
+

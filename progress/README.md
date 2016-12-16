@@ -959,20 +959,136 @@ Of course, I had gone to considerable pains to avoid doing any "real work" for t
 
 It evaluated 3+4 v e r y  s l o w l y (it was "glacial", as Butler liked to say) but the answer always came out 7. Well, there was nothing to do but keep going. Dan loved to bootstrap on a system that "always ran," and over the next ten years he made at least 80 major releases of various flavors of Smalltalk.
 
+11月，我向麻省理工的AI实验室展示了这些想法，并阐释了翻译程序。
+这最终让卡尔·休伊特（Carl Hewitt）想出了更正式的“Actor”解决方案（休伊特 73）。
+第一篇Actor论文中所用的计算机语言和Smalltalk是最相近的。
+但之后就不一样了，一方面因为跟理论比起来，我们更想做些实际的东西，另一方面则是因为我们有独一无二的法宝：恰克·塞克（Chuck Thacker）的Dynabook个人电脑（后来叫做[ALTO](http://mt.sohu.com/20160803/n462300251.shtml)）。
+
 In November, I presented these ideas and a demonstration of the interpretation scheme to the MIT AI lab. This eventually led to Carl Hewitt's more formal "Actor" approach [Hewitt 73]. In the first Actor paper the resemblance to Smalltalk is at its closest. The paths later diverged, partly because we were much more interested in making things than theorizing, and partly because we had something no one else had: Chuck Thacker's Interim Dynabook (later known as the "ALTO").
+
+就在恰克（Chuck）着手研究这个机器之前，我向全国英语教师委员会【凯 72c】递交了一份文件。
+文件的内容是关于Dynabook，以及它在提升孩子们学习与思考能力方面的潜能——它其实是《20件可用Dynabook做的事》的影印版。
+当我从明尼苏达州回来时，[斯图尔特·布兰德（Stewart Brand）](http://sanwen8.cn/p/L23Adq.html)在[《滚石》（Rolling Stone）](http://www.rollingstone.com/)上发表了一篇关于帕克中心【布兰德 1972】和周围黑客社区的文章，并大获成功。
+出乎我们意料的是，它在位于[康涅狄格州斯坦福市](http://baike.baidu.com/subview/46775/5111725.htm#viewPageContent)的施乐总部掀起了轩然大波。
+尽管这篇文章很棒，牢牢抓住了整个文化的精髓，但施乐中心还是非常生气，它迫使我们佩戴徽章（经过多年的发展，有些徽章直接印在T恤上），并且严格限制此类文章的发表。
+这对我们学习型研究小组来说是场灾难，因为我们都是群“狂热分子”（其他计算机科学家这样叫我们），那时我们正打算深入各个校园，并与西蒙·派珀特（Seymour Papert）和多恩·诺曼（Don Norman）这样的同事分享这些想法（和计划）。
 
 Just before Chuck started work on the machine I gave a paper to the National Council of Teachers of English [Kay 72c] on the Dynabook and its potential as a learning and thinking amplifier—the paper was an extensive rotogravure of "20 things to do with a Dynabook" [Kay 72c]. By the time I got back from Minnesota, Stewart Brand's Rolling Stone article about PARC [Brand 1972] and the surrounding hacker community had hit the stands. To our enormous surprise it caused a major furor at Xerox headquarters in Stamford, Connecticut. Though it was a wonderful article that really caught the spirit of the whole culture, Xerox went berserk, forced us to wear badges (over the years many were printed on t-shirts), and severely restricted the kinds of publications that could be made. This was particularly disastrous for LRG, since we were the "lunatic fringe" (so-called by the other computer scientists), were planning to go out to the schools, and needed to share our ideas (and programs) with our colleagues such as Seymour Papert and Don Norman.
 
+显然，在斯坦福市，X主管听到了不少关于我们的风言风语。
+当他圣诞节回来，发现了试验版的Dynabook后，他非常愤怒，甚至想毁了这台电脑。
+后来，巴特勒（Butler）撰文进行了强烈反击，X主管最终败兴而归，继续他的“特殊任务”。
+
 Executive "X" apparently heard some harsh words at Stamford about us, because when he returned around Christmas and found out about the interim Dynabook, he got even more angry and tried to kill it. Butler wound up writing a masterful defense of the machine to hold him off, and he went back to his "task force."
 
+1972年11月22日，恰克（Chuck）开始了他“赌约”。
+除了磁盘接口由艾德·麦克特（Ed McCreight）完成外，机器其余的部分都由两名技术人员负责。
+它的位图显示器约有五十万像素（606x808），微码平均运行速度为6[MIPS](http://baike.baidu.com/item/MIPS/20188911#viewPageContent)，大小共计128k，整台机器（除内存外）都依托于两个160MSI芯片。
+这台机器非常美丽【赛克 1972,1986】。
+它突出的特点之一就是“zero-over-head”任务分配模式。
+它有16个[程序计数器（program counter）](http://baike.baidu.com/item/%E7%A8%8B%E5%BA%8F%E8%AE%A1%E6%95%B0%E5%99%A8)，各负责一个任务。
+[状态标志（condition flags）](http://baike.baidu.com/item/%E7%8A%B6%E6%80%81%E6%A0%87%E5%BF%97)与特殊的事件相关联（例如“水平回扫脉冲（horizonal retrace pulse）”和“磁盘扇区脉冲（disk sector pulse）”）。
+在机器运行时，后备逻辑（lookaside logic）会扫描这些标志，并先选取优先级最高的程序计数器，依次类推。
+整台机器在运行时无需等待，而大部分的硬件功能（尤其是涉及[i/o](http://baike.baidu.com/item/i%2Fo/84718)的，例如显示与控制磁盘）都能被微码取代。
+一个任务甚至可以更新MOS动态[随机存取存储器（RAM）](http://baike.baidu.com/item/%E9%9A%8F%E6%9C%BA%E5%AD%98%E5%8F%96%E5%AD%98%E5%82%A8%E5%99%A8?fromtitle=RAM&fromid=144481&type=syn)。
+换句话说就是，这是一种协同程序（coroutine）的架构。
+恰克声称他的灵感来源于我几个月前关于协同程序的演讲，但在我的印象中则是韦斯·克拉克（Wes Clark）最先在TX-2（Sketchpad机器）中运用了这个想法，我可能只是在演讲中提到了它。
+
 Chuck had started his "bet" on November 22, 1972. He and two technicians did all of the machine except for the disk interface which was done by Ed McCreight. It had a ~500,000 pixel (606x808) bitmap display, its microcode instruction rate was about 6 MIPS, it had a grand total of 128k, and the entire machine (exclusive of the memory) was rendered in 160 MSI chips distributed on two cards. It was beautiful [Thacker 1972, 1986]. One of the wonderful features of the machine was "zero-over-head" tasking. It had 16 program counters, one for each task. Condition flags were tied to interesting events (such as "horizontal retrace pulse", and "disk sector pulse", etc.). Lookaside logic scanned the flags while the current instruction was executing and picked the highest priority program counter to fetch from next. The machine never had to wait, and the result was that most hardware functions (particularly those that involved i/o (like feeding the display and handling the disk) could be replaced by microcode. Even the refresh of the MOS dynamic RAM was done by a task. In other words, this was a coroutine architecture. Chuck claimed that he got the idea from a lecture I had given on coroutines a few months before, but I remembered that Wes Clark's TX-2 (the Sketchpad machine) had used the idea first, and I probably mentioned that in the talk.
+
+三个多月后，四月初，第一台试验版的Dynabook问世了，我们叫它“Bilbo”。
+几分钟内它的屏幕上就显示出第一幅画面：我在绘画系统上画出的芝麻街“甜饼怪”。
+
+![Bilbo](Bilbo.png)
 
 In early April, just a little over three months from the start, the first Interim Dynabook, known as 'Bilbo,' greeted the world and we had the first bit-map picture on the screen within minutes: the Muppets' Cookie Monster that I had sketched on our painting system.
 
 ![bilbo](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/bilbo.png)
 
+很快丹（Dan）就写出了不少Smalltalk辅助程序，数个月来，它是这台试验版Dynabook上运行的唯一系统。
+在附录I里我添加了那时写的“回执”，这里面提到了资源的分配，以及各个部分的优先级。
+我23万美元的投资足以完成原定30台计划中的一半（数年来，我们其实生产了近2000台Dynabook）。
+叔本华（Schopenhauer）的言论也当真在此应验：X主管现在认为Dynabook是个绝妙的主意，他想把所有的Dynabook转移到自己的实验室里（除了我实验室里的两台）。
+我费了九牛二虎之力才把它们要回来，幸好成功了。
+
 Soon Dan had bootstrapped Smalltalk across, and for many months it was the sole software system to run on the Interim Dynabook. Appendix I has an "acknowledgements" document I wrote from this time that is interesting it its allocation of credits and the various priorities associated with them. My $230K was enough to get 15 of the original projected 30 machines (over the years some 2000 Interim Dynabooks were actually built). True to Schopenhauer's observation, Executive "X" now decided that the Interim Dynabook was a good idea and he wanted all but two for his lab (I was in the other lab). I had to go to considerable lengths to get our machines back, but finally succeeded.
 
+1. 一切皆对象
+2. 对象间通过发送和接收（与对象相关的）消息交流
+3. 对象有自己的内存（与对象相关）
+4. 每个对象都是一个[类（class）](http://baike.baidu.com/subview/2390/8109879.htm#viewPageContent)（这个类也必须是一个对象）中的[实例（instance）](http://baike.baidu.com/item/Instance/5156585)
+5. 类中包含着各个实例共有的性态（behavior）（在程序列表中以对象的形态呈现）
+6. 为了用[eval函数](http://baike.baidu.com/item/eval%28%29)处理某个程序列表，电脑会控制第一个对象，余下的则被当做消息进行处理
+
+目前为止，我们已经按照设计解释器的初衷，对大部分Smalltalk计划进行了划分，于是他们被分为六个主要想法。
+前三个原理围绕着Smalltalk的功能——“外部对象”如何看待与使用它们。
+数年来我们不需要对它们进行任何修改。
+而后三个——来自内部的对象——则需要根据不同版本的Smalltalk（和之后面向对象的设计）进行微调。
+计划（1）和（4）中暗示类就是对象，并且它们是自身的实例。
+（6）则暗含一个像LISP那样通用的句法，但接收对象需放在首位，随后是消息。
+因此c<sub>i</sub> <- de（用“&deg;”预先渲染，并用“*”进行乘法运算）表示：
+```
+receiver | message
+c        | ° i <- d*e
+```
+`c`与接收对象相关联，而`° i <- d*e`则是消息。
+这则消息由文字标记“°”、i（在发送方的语境下需要被评估的表达）、另一个文字标记“<-”和之后的d*e（在发送方的语境下需要被评估的表达）组成。
+由于“LISP”的搭配由两个元素对象构成，它们可以以更简洁的方式呈现：`c hd`、`c tl`和`c hd <- foo`等。
+
+一开始，要表达像a+b和3+4这样“简单”的概念似乎更加麻烦。用下面的形式来表示它们真的合理吗：
+```
+receiver | message
+a        | + b
+3        | + 4
+```
+只考虑到整数的话它看上去挺蠢的，但“+”还有着其它意义，例如：
+
+![kitty](kitty.png)
+
+这就生成了一种为信息符号（message symbol）寻找通用行为（generic behaviors）风格。
+[“多态性（polymorphism）”](http://baike.baidu.com/item/%E5%A4%9A%E6%80%81%E6%80%A7)是其官方表达（我认为这个词源自克里斯托弗・斯特雷奇（Strachey）），但它与最初的意义有所差异。
+最初它只应用在功能上，而这个功能可以携带不止一种类型的参数（argument）（译者注：parameter和argumentd的区别在于，前者指函数定义中的参数，后者指函数调用时的实际参数）。
+在Smalltalk-72中，诸如cons对象（原文中为cons pairs，是LISP中constructs memory objects的别称，故此翻译）模型这样的object类可以是如下这样：
+
+![example](example.png)
+
+由于在考虑处理余下的信息之前，已经对类进行了控制——类也可以自行决定不接受控制——整个程序是完全受保护的。
+Smalltalk-72的对象是“耀眼的”，但不会受攻击的影响。
+环境中有一部分是将“messenger对象”（一个广义上的活动记录）与发送方相关联，这样接收方就能赋予其不同的权利（更多细节见附录II）。
+这一想法可以联系到未来Smalltalk作为网络操作系统的最终用途上（见【Goldstein & Bobrow 1980】），在我印象中，它并没怎么应用在Smalltalk-72上。
+
+Smalltalk-71保留的形式之一就是混合功能与类的概念。在其他操作中，Smalltalk-72的类看上去像功能，并且可以作为功能而使用，但使用了ISNEW对象，它可以轻易地创造出实例（程序停止运行的一种情况）。
+因此阶乘（factional）可以延伸为如下形式：
+```
+to fact n (^if :n=0 then 1 else n*fact n-1)
+```
+或者作为整数类的一种内化成以下形式：
+```
+(... ¤! » (^:n=1) » (1) (n-1)!)
+```
+
+当然，整个Smalltalk（一般来说是面向对象）的想法是将一切事物向内延伸。
+它过去是我们学习如何用新的形式来编程的方向。
+我一点都不喜欢这种句法（括号和嵌套结构太多），因此我希望在Smalltalk-71中使用更优美更注重语法的语言。
+下面是句法的示例，摘取自之后的笔记。
+几年后，我们会在丹为Smalltalk-76设计的程序中看见更多这样的例子。
+我认为LISP身上也出现了相似的情况——我们从未设计出过真正简单又实用的句法。
+```
+建议采用的Smalltalk-72句法
+
+Pair :h :t
+    hd <- :h
+    hd              » h
+    tl <- :t
+    tl              » t
+    isPair          » true
+    print           » '( print. SELF mprint.
+    mprint          » h print. if t isNil then ') print
+                               else if t isPair then t mprint
+                               else '* print. t print. ') print
+    length          » 1 + if t isList then t length else 0
+```
+    
 1. Everything is an object
 2. Objects communicate by sending and receiving messages (in terms of objects)
 3. Objects have their own memory (in terms of objects)
@@ -980,14 +1096,14 @@ Soon Dan had bootstrapped Smalltalk across, and for many months it was the sole 
 5. The class holds the shared behavior for its instances (in the form of objects in a program list)
 6. To eval a program list, control is passed to the first object and the remainder is treated as its message
 
-By this time most of Smalltalk's schemes had been sorted out into six main ideas that were in accord with the initial premises in designing the interpreter. The first three principles are what objects "are about"—how they are seen and used from "the outside." These did not require any modification over the years. The last three—objects from the inside—were tinkered with in every version of Smalltalk (and in subsequent OOP designs). In this scheme (1 & 4) imply that classes are objects and that they must be instances of themself. (6) implies a LISPlike universal syntax, but with the receiving object as the first item followed by the message. Thus ci <- de (with subscripting rendered as "○" and multiplication as "*") means:
+By this time most of Smalltalk's schemes had been sorted out into six main ideas that were in accord with the initial premises in designing the interpreter. The first three principles are what objects "are about"—how they are seen and used from "the outside." These did not require any modification over the years. The last three—objects from the inside—were tinkered with in every version of Smalltalk (and in subsequent OOP designs). In this scheme (1 & 4) imply that classes are objects and that they must be instances of themself. (6) implies a LISPlike universal syntax, but with the receiving object as the first item followed by the message. Thus c<sub>i</sub> <- de (with subscripting rendered as "°" and multiplication as "*") means:
 
 ```
 receiver | message
-c        | ○ i <- d*e
+c        | ° i <- d*e
 ```
 
-The c is bound to the receiving object, and all of ○ i <- d*e is the message to it. The message is made up of literal token "○", an expression to be evaluated in the sender's context (in this case i), another literal token <-, followed by an expression to be evaluated in the sender's context (d*e). Since "LISP" pairs are made from 2 element objects they can be indexed more simply: c hd, c tl, and c hd <- foo, etc.
+The c is bound to the receiving object, and all of ° i <- d*e is the message to it. The message is made up of literal token "°", an expression to be evaluated in the sender's context (in this case i), another literal token <-, followed by an expression to be evaluated in the sender's context (d*e). Since "LISP" pairs are made from 2 element objects they can be indexed more simply: c hd, c tl, and c hd <- foo, etc.
 
 "Simple" expressions like a+b and 3+4 seemed more troublesome at first. Did it really make sense to think of them as:
 
@@ -1016,7 +1132,7 @@ to fact n (^if :n=0 then 1 else n*fact n-1)
 or "intensionally," as part of class integer:
 
 ```
-(... ○! » (^:n=1) » (1) (n-1)!)
+(... ¤! » (^:n=1) » (1) (n-1)!)
 ```
 
 Of course, the whole idea of Smalltalk (and OOP in general) is to define everything intensionally. And this was the direction of movement as we learned how to program in the new style. I never liked this syntax (too many parentheses and nestings) and wanted something flatter and more grammar-like as in Smalltalk-71. To the right is an example syntax from the notes of a talk I gave around then. We will see something more like this a few years later in Dan's design for Smalltalk-76. I think something similar happened with LISP—that the "reality" of the straightforward and practical syntax you could program in prevailed against the flights of fancy that never quite got built.
@@ -1036,6 +1152,39 @@ Pair :h :t
                                else '* print. t print. ') print
 	length          » 1 + if t isList then t length else 0
 ```
+
+### Smalltalk-72系统的发展与应用
+Smalltalk真正应用在机器上开始于平行路径（parallel path）的激增，他们很难执行过去那些严格的命令。
+让我先大致介绍一下Smalltalk-72向Smalltalk-76转变的过程，在此之后，我花了几年时间让孩子们使用它，这也是这个项目的首要动力。
+在试验版的Dynabook上Smalltalk-72解释器运行的并不那么灵活（按巴特勒的说法就是“并不那么叹为观止（pronouncement）”），但它容易改变，并且，对于即将纳入系统中的实时互动系统来说，它运行得足够快了。
+
+在写好了用于读取键盘输入和创造文本字符串（string of text）代码后，我们（与戴安娜·玛丽（Diana Merry））第一个解决的问题就是重叠窗口。
+为了让屏幕显示不同高度的字体，并且大致做到一边写字一边显示，戴安娜创造了一个早期的位域块转换系统。
+第一个窗口版本是2½D的可拖拽的对象，但它运行起来有点慢，用处不大。
+我们打算再等一等，直到史蒂夫·珀赛尔（Steve Purcell）在他的动画系统中成功地实现了这个功能（它更接近“2¼D”），并且一直沿用至今。
+窗口可能是我们在Smalltalk中返工次数最多的类了，因为我们既没有足够的计算能力来持续观察[“世界坐标（world coordinates）”](http://baike.baidu.com/item/%E4%B8%96%E7%95%8C%E5%9D%90%E6%A0%87%E7%B3%BB)，也无法一直对其进行更新，而我之前在犹他大学的同事正着手在伊万斯（Evans）& 苏泽兰(Sutherland)的飞行模拟器项目中对其进行实验。
+这个模型简洁而有力，但却很难实时实现，甚至是在 2½D中。第一个实用的Smalltalk窗口使用了GRAIL中移动、调整大小、克隆和关闭功能。
+调整窗口时运用了一种简单的“无环（loopless）”控制方式，它把所有的窗口都串联在一起。
+
+（在完成了数字、字符串等基本要素后）下一个要应用在试验版Dynebook上的就是一个面向对象的LOGO [turtle语言](http://biancheng.dnbcw.info/python/443280.html)版本，由泰德（Ted）负责。
+它可以制作出任何turtle语言实例，既可以用在绘画上，也可以作为值用在图形转换（graphic transformation）上。
+丹（Dan）创造了一种“turtle指挥官”类，它可以操控整个turtle军队。
+很快，这些turtle图案便制作好了，这样我们就可以用窗口对其进行剪切。
+
+约翰·肖奇（John Shoch）为Smalltalk代码创造了一种已鼠标为驱动的结构编辑器。
+
+![turtle](turtle.png)
+
+[拉里·特斯勒（Larry Tesler）](http://www.baike.com/wiki/%E6%8B%89%E9%87%8C%C2%B7%E7%89%B9%E6%96%AF%E5%8B%92)（后来为POLOS工作）并不喜欢NSL函数的**模式（modiness）**与一般方法，他希望向之前的NLS使用者们提供一个可替代的方案，并组织进行编辑方面的用户调查（那时几乎闻所未闻）。
+这促使他用Smalltalk编写miniMOUSE程序，这是帕克中心第一个[WYSIWYG](http://baike.baidu.com/item/%E6%89%80%E8%A7%81%E5%8D%B3%E6%89%80%E5%BE%97)编辑器。它（几乎）没什么模式，用起来也很有趣，不仅我们有这种感受，许多测试它的人皆是如此（我用相机运行了一下从前拍的片子，唤起了其中的愉悦与欣喜）。很快，miniMOUSE就成为了Smalltalk代码和一些demo的替代编辑器。
+
+1974年春天，我在成人班打算实验的“小型”项目之一就是单页段落编辑器。它非常复杂，但我展示给大家的例子是完全无模式的（它即将被人们所了解），并且在接下来的这些年里，它成为了许多Smalltalk文本的基础。丹和戴安娜·玛丽（Diana Merry）完成了其大部分改进。
+当然，对象也是多媒体文件，大部分你都可以免费阅览。
+我们在早期就意识到，这些文件中每个部分的对象都需要掌控自身的编辑任务。
+史蒂夫·韦耶（Steve Weyer）建立了一些最早的多媒体文件，在之后的许多年里，鲍勃·弗莱戈（Bob Flegal）、戴安娜·玛丽（Diana Merry）、拉里·特斯勒（Larry Tesler）、蒂姆·莫特（Tim Mott）和[Trygve Reenskaug](http://www.umlchina.com/Chat/TrygveReenskaug.htm)极大地扩展了它们。
+
+史蒂夫·韦耶（Steve Weyer）和我设计了Findit，这是一个“通过例子来检索（retrieval by example）”的界面，它将类与其实例进行类比，形成了检索请求。
+为了控制图书馆书本的流通，帕克图书馆使用了它许多年。
 
 ### Development of the Smalltalk-72 System and Applications
 
