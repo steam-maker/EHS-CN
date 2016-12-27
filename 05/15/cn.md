@@ -43,3 +43,29 @@ Smalltalk真正应用在机器上开始于平行路径（parallel path）的激�
 和现在大部分系统不一样的是，它并不需要有节奏地播放音乐，相反地，它第一遍追求的是节拍的强弱（乐句划分），据此建立一个相似的节奏波动局部模型，然后使用[曲线拟合（curve fitting）](http://baike.baidu.com/item/%E6%9B%B2%E7%BA%BF%E6%8B%9F%E5%90%88)和[外推法（extrapolation）](http://baike.baidu.com/item/%E5%A4%96%E6%8E%A8%E6%B3%95)来判断小节（measure）的位置、[时值（time value）](http://baike.baidu.com/item/%E6%97%B6%E5%80%BC/8998649)、敲击的[音符（note）](http://baike.baidu.com/item/%E9%9F%B3%E7%AC%A6/70459)。
 
 ![figure](figure.png)
+
+NOVA上每秒能够运行2-3[帧（frame）](http://baike.baidu.com/item/%E5%B8%A7#2)动画，其中每帧包含3-5个对象。
+这个速度足以让画面动起来了（如果速率是其两倍的话需要[缓冲（buffering）](http://baike.baidu.com/item/%E7%BC%93%E5%86%B2%E5%99%A8)），但我们并不满足于此。
+我们想达到的是“迪士尼的速率（Disney rates）”，即每秒运行10-15帧，每帧包含十多个大型对象，或者更多小一些的对象。
+这个任务交给了开了“金手指”的史蒂夫·珀赛尔（Steve Purcell）。
+截止到1973年的秋天，他可以每秒运行10帧2½D的画面，其中包含80个乒乓球和10匹飞驰的骏马。
+他的下一项任务是把这个demo做成一个普通的系统设备，这样我们就可以在其中建立动画系统了。
+1974年5月，他的CHAOS系统开始运作，那时正值罗恩·贝克（Ron Baecker）、汤姆·霍斯利（Tom Horseeley）和专业动画大师埃里克·马丁（Eric Martin）夏季访问期间，他们还共同制作了SHAZAM—一个非常有效且简洁的动画系统。
+该系统主要基于罗恩六十年代末关于TX-2的论文设计——GENESYS。
+
+![figure1](translatedfigure1.png)
+
+![figure2](translatedfigure2.png)
+
+![figure3](translatedfigure3.png)
+
+此时最主要的论文设计是戴夫·史密斯（Dave Smith）的PYGMALION【史密斯 75】。
+这篇论文是关于图标编程的（是的，我们还没忘了它）。
+一个人编写程序来告诉系统怎样进行改变，这就像一个人在黑板上画上图示来向另一个程序员阐释一样。
+这个程序起到了良好的带头作用，后来涌现出许多“按例编程（progarmming by example）”的系统。
+
+这里，我想提一下关于这些程序大小的事情。
+PYGMALION是用Smalltalk-72写出的最大的程序，它的代买有20页左右——所有代码都能够在试验版dynabook ALTO上运行——史密斯的论文上可以看见其完整的代码。
+相比较而言，其他的应用就更小了。
+拿SHAZAM动画系统举个例子：1974年夏天，经过几次撰写和设计，我们最终做出了这个系统，它的代码只有5-6页，其中还包含了图标控制的多窗口用户界面。
+
