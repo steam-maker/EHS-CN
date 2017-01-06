@@ -27,7 +27,7 @@ ALTO存储器并不大（128-256K），尤其是还要算上页面大小的显�
 当然，没有任何人因此而感到烦恼，因为找到有问题的地方、并重新启动来保护其不受宇宙射线的影响是相当容易的一件事。
 但是，对于主要基于指针的系统（pointer-based system）来说，它们有着自动内存管理功能，想要实现上述办法更加棘手。
 
-泰德（Ted）和丹（Dan）打算用Resident Object Table来管理内存，**这是唯一一种机器地址，我们在其中可以找到对象（hat was the only place machine addresses for objects would be found）。**
+泰德（Ted）和丹（Dan）打算用Resident Object Table来管理内存，**这是唯一一种机器地址，我们在其中可以找到对象（that was the only place machine addresses for objects would be found）。**
 其他有用的信息也存放于此，用于辅助运行[LRU的老化算法（LRU aging）](http://www.cnblogs.com/wuyuegb2312/p/3418026.html)。
 通过对类进行选择、**按照磁盘配置实例（positioning the disk to its instances）**（所有同一类型的类都储存在一起），然后运行ROT查看内存中是否有需要清除的对象并将其清除，机器能够在后台完成清理。
 它非常高效，且与巴特勒（Butler）的洞见相契合，能够为我们提供一个大小适宜且可被覆盖的干净存储容量。这个设计的关键（也是运行这个处理机制的关键）是他们想出的[检查点（checkpoint）](http://baike.baidu.com/item/%E6%A3%80%E6%9F%A5%E7%82%B9)方案。
