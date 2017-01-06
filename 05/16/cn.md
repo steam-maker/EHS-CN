@@ -4,7 +4,7 @@ Smalltalk-74是Smalltalk-72的改良版（有时我们叫它FastTalk），与Sma
 我们热情地邀请他来“过暑假”，然后就一直把他“扣留着”——他在表达Smalltalk的语义上面功不可没。
 
 其中最瞩目的当属加入了OOZE（面向对象的分区环境）[虚拟储存系统](http://baike.baidu.com/item/%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F)，与在Smalltalk-74上的应用相比，它在Smalltalk-76上的应用更为重要【英格尔斯，1978 凯勒，1981】。
-ALTO内存并不大（128-256K），尤其是还要算上页面大小的显示（64k）和一些小程序，内存很快就不够用了。
+ALTO存储器并不大（128-256K），尤其是还要算上页面大小的显示（64k）和一些小程序，容量很快就不够用了。
 与软盘相比，其中2.4兆字节的30号[磁盘驱动（disk drive）](http://baike.baidu.com/item/%E7%A3%81%E7%9B%98%E9%A9%B1%E5%8A%A8%E5%99%A8)速度更快也更大，而和今天的硬盘驱动（hard drive）相比则更慢也更小。
 它和FLEX机器上的HP直接接触磁盘（direct contact disk）非常相似，关于后者，我曾在B5000的段交换进程（segment swapper）中试着安装了一个细粒（fine-grain）版。
 但除了带来一些关于如何在清除时选择对象的好想法外，它没能达到我的预期。
@@ -26,3 +26,10 @@ ALTO内存并不大（128-256K），尤其是还要算上页面大小的显示�
 我们把它叫做“宇宙射线保护法（cosmic ray protection）”，因为先前ALTOS每天都会原因不明地崩溃那么一两次。
 当然，没有任何人因此而感到烦恼，因为找到有问题的地方、并重新启动来保护其不受宇宙射线的影响是相当容易的一件事。
 但是，对于主要基于指针的系统（pointer-based system）来说，它们有着自动内存管理功能，想要实现上述办法更加棘手。
+
+泰德（Ted）和丹（Dan）打算用Resident Object Table来管理内存，**这是唯一一种机器地址，我们在其中可以找到对象（hat was the only place machine addresses for objects would be found）。**
+其他有用的信息也存放于此，用于辅助运行[LRU的老化算法（LRU aging）](http://www.cnblogs.com/wuyuegb2312/p/3418026.html)。
+通过对类进行选择、**按照磁盘配置实例（positioning the disk to its instances）**（所有同一类型的类都储存在一起），然后运行ROT查看内存中是否有需要清除的对象并将其清除，机器能够在后台完成清理。
+它非常高效，且与巴特勒（Butler）的洞见相契合，能够为我们提供一个大小适宜且可被覆盖的干净存储容量。这个设计的关键（也是运行这个处理机制的关键）是他们想出的[检查点（checkpoint）](http://baike.baidu.com/item/%E6%A3%80%E6%9F%A5%E7%82%B9)方案。
+其保证了无论计算机何时崩溃，几秒钟内都会生成可恢复的图像。
+OOZE在一个只有80kb大小的内存（working storage）里交换对象，并且它能够处理大约65k大小的对象（相当于几兆字节大小，对整个系统、界面和应用来说绰绰有余）。
