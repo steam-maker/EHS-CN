@@ -38,3 +38,4 @@
 关于这一切还有另一种思考方式：尽管自动内存配置延迟绑定（ late-binding of automatic storage allocations ）没有突破任何程序员无法做到的事，但有了它的呈现，代码变得更加简洁有力了。
 在一些情况下，OOP是一种延迟绑定方案，与过去的方法论相比，它们结合在一起能够降低脆弱性，防止代码大小带来的崩溃（size explosion）。
 换句话说就是，人类程序员不是[图灵机（Turing machine）](http://baike.baidu.com/item/%E5%9B%BE%E7%81%B5%E6%9C%BA)，他们的编程系统对图灵机的依赖越小越好。
+

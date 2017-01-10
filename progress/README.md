@@ -1175,7 +1175,7 @@ Smalltalk真正应用在机器上开始于平行路径（parallel path）的激�
 
 ![turtle](turtle.png)
 
-[拉里·特斯勒（Larry Tesler）](http://www.baike.com/wiki/%E6%8B%89%E9%87%8C%C2%B7%E7%89%B9%E6%96%AF%E5%8B%92)（后来为POLOS工作）并不喜欢NSL函数的**模式（modiness）**与一般方法，他希望向之前的NLS使用者们提供一个可替代的方案，并组织进行编辑方面的用户调查（那时几乎闻所未闻）。
+[拉里·特斯勒（Larry Tesler）](http://www.baike.com/wiki/%E6%8B%89%E9%87%8C%C2%B7%E7%89%B9%E6%96%AF%E5%8B%92)（后来为POLOS工作）并不喜欢NSL函数的模式性（modiness）与一般方法，他希望向之前的NLS使用者们提供一个可替代的方案，并组织进行编辑方面的用户调查（那时几乎闻所未闻）。
 这促使他用Smalltalk编写miniMOUSE程序，这是帕克中心第一个[WYSIWYG](http://baike.baidu.com/item/%E6%89%80%E8%A7%81%E5%8D%B3%E6%89%80%E5%BE%97)编辑器。它（几乎）没什么模式，用起来也很有趣，不仅我们有这种感受，许多测试它的人皆是如此（我用相机运行了一下从前拍的片子，唤起了其中的愉悦与欣喜）。很快，miniMOUSE就成为了Smalltalk代码和一些demo的替代编辑器。
 
 1974年春天，我在成人班打算实验的“小型”项目之一就是单页段落编辑器。它非常复杂，但我展示给大家的例子是完全无模式的（它即将被人们所了解），并且在接下来的这些年里，它成为了许多Smalltalk文本的基础。丹和戴安娜·玛丽（Diana Merry）完成了其大部分改进。
@@ -1185,6 +1185,67 @@ Smalltalk真正应用在机器上开始于平行路径（parallel path）的激�
 
 史蒂夫·韦耶（Steve Weyer）和我设计了Findit，这是一个“通过例子来检索（retrieval by example）”的界面，它将类与其实例进行类比，形成了检索请求。
 为了控制图书馆书本的流通，帕克图书馆使用了它许多年。
+
+我在NOVA上开发的抽样合成音乐系统可以生成三种高清实时语音。
+鲍勃·舒尔（Bob Shur）和恰克·塞克（Chuck Thacker）将这个功能转移到了试验版的Dynabook上，并且他们成功地实现了实时生成12种语音。低速设备（用于鼠标和键盘）使用的是256比特大小的一般输入，这使得其能够轻易连接两个风琴键盘和一个踏板，它们的大小超过154比特。
+程序中还囊括了滑音（portamento）效果和衰减（decay）效果。
+泰德·凯勒（Ted Kaehler）写了一个音乐捕捉与编辑系统，名叫TWANG，其中使用了我们为孩子们发明的符号谱（tablature notation）【凯 1977a】。
+抽样中一个比较棘手的问题就是[压控振荡器（VCO）](http://baike.baidu.com/item/VCO)在“[平均律](http://baike.baidu.com/item/%E5%B9%B3%E5%9D%87%E5%BE%8B)合成器（Well Tempered Synthesizer）”中的普遍使用。
+后来，有一个夏天，我们来了一个非常聪明的暑期生，名叫史蒂夫·桑德斯（Steve Saunders），他决心挑战将约翰·乔宁（John Chowning）非实时的调频合成（FM synthesis）音乐转换成ID上的实时音乐。
+这意味着他得另辟蹊径，从“FM”以外的方面入手，而最终他获得了成功，将八条实时语音合并进了TWANG中【桑德斯 1977】。
+
+然而克里斯·杰夫（Chris Jeffers）（他是音乐家和教育家，而非计算机科学家）的OPUS遂将我们排在了沙滩上，这是第一个实时乐谱捕捉系统（score capturing system）。
+和现在大部分系统不一样的是，它并不需要有节奏地播放音乐，相反地，它第一遍追求的是节拍的强弱（乐句划分），据此建立一个相似的节奏波动局部模型，然后使用[曲线拟合（curve fitting）](http://baike.baidu.com/item/%E6%9B%B2%E7%BA%BF%E6%8B%9F%E5%90%88)和[外推法（extrapolation）](http://baike.baidu.com/item/%E5%A4%96%E6%8E%A8%E6%B3%95)来判断小节（measure）的位置、[时值（time value）](http://baike.baidu.com/item/%E6%97%B6%E5%80%BC/8998649)、敲击的[音符（note）](http://baike.baidu.com/item/%E9%9F%B3%E7%AC%A6/70459)。
+
+![figure](figure.png)
+
+NOVA上每秒能够运行2-3[帧（frame）](http://baike.baidu.com/item/%E5%B8%A7#2)动画，其中每帧包含3-5个对象。
+这个速度足以让画面动起来了（如果速率是其两倍的话需要[缓冲（buffering）](http://baike.baidu.com/item/%E7%BC%93%E5%86%B2%E5%99%A8)），但我们并不满足于此。
+我们想达到的是“迪士尼的速率（Disney rates）”，即每秒运行10-15帧，每帧包含十多个大型对象，或者更多小一些的对象。
+这个任务交给了开了“金手指”的史蒂夫·珀赛尔（Steve Purcell）。
+截止到1973年的秋天，他可以每秒运行10帧2½D的画面，其中包含80个乒乓球和10匹飞驰的骏马。
+他的下一项任务是把这个demo做成一个普通的系统设备，这样我们就可以在其中建立动画系统了。
+1974年5月，他的CHAOS系统开始运作，那时正值罗恩·贝克（Ron Baecker）、汤姆·霍斯利（Tom Horseeley）和专业动画大师埃里克·马丁（Eric Martin）夏季访问期间，他们还共同制作了SHAZAM—一个非常有效且简洁的动画系统。
+该系统主要基于罗恩六十年代末关于TX-2的论文设计——GENESYS。
+
+![figure1](translatedfigure1.png)
+
+![figure2](translatedfigure2.png)
+
+![figure3](translatedfigure3.png)
+
+此时最主要的论文设计是戴夫·史密斯（Dave Smith）的PYGMALION【史密斯 75】。
+这篇论文是关于图标编程的（是的，我们还没忘了它）。
+一个人编写程序来告诉系统怎样进行改变，这就像一个人在黑板上画上图示来向另一个程序员阐释一样。
+这个程序起到了良好的带头作用，后来涌现出许多“按例编程（progarmming by example）”的系统。
+
+这里，我想提一下关于这些程序大小的事情。
+PYGMALION是用Smalltalk-72写出的最大的程序，它的代码有20页左右——都能够在试验版dynabook ALTO上运行——史密斯的论文上可以看见其完整的代码。
+相比较而言，其他的应用就更小了。
+拿SHAZAM动画系统举个例子：1974年夏天，经过几次撰写和设计，我们最终做出了这个系统，它的代码只有5-6页，其中还包含了图标控制的多窗口用户界面。
+
+Simpula来自于[仿真语言（simulation language）](http://baike.baidu.com/item/%E4%BB%BF%E7%9C%9F%E8%AF%AD%E8%A8%80)，它是SIMULA排序方法的一个简易版本，它写起来很容易，篇幅也不长。
+这时我们认为，通过将各个单独的方法归类为模拟阶段（simulation phase），可以让协同程序（coroutine）更加简洁明了。
+一个最普通的SIMULA例子就是加工车间，它们可以被划分成许多有用的部分，就像医院有不同的科室来诊断不同的病人（见右侧）一样。
+孩子们对医院没什么兴趣，但他们完全可以模拟像迪士尼乐园一样的游乐场、学校、他们和父母常去的商店，等等。
+后来，这个模型成为了Smalltalk Sim-kit的基石，这是一个高级的终端用户编程环境（此前已介绍过）。
+
+我们可以用Smalltalk-72来完成多种“计算机科学类的（computer sciency）”设计。
+例如我们争论的话题之一就是是否要加入[goto语句](http://baike.baidu.com/item/Goto/12755716)（之前我们并没有），如果不加入的话，我们如何详细说明那些非常有用的控制结构——例如一个[loop中的多个exit](https://zhidao.baidu.com/question/1733646605296283627.html)？
+来自SLAC的恰克·扎恩（Chuck Zahn）提议建立一个以事件为驱动的结构，一系列事件将在其中被定义，这样如果发生了某个事件，该loop就会停止（exit），并且在代码块（case block）中可以选择相对应的表达【扎恩，1974 克努特，1974】。
+假设我们打算写一个很简单的loop，它用来读取键盘上打下的字母，并将其显示出来。我们希望敲击键盘时整个loop可以正常停止，进入exit，而误触键盘时则不会（此时为error）。
+附录IV解释了约翰·肖奇（John Shoch）是如何定义这个控制结构的。
+
+```
+(until Return or Delete do
+    ('character <- display <- keyboard.
+    character = ret » (Return)
+    character = del » (Delete)
+    )
+then case
+    Return: ('deal with this normal exit')
+    Delete: ('handle the abnormal exit'))
+```
 
 ### Development of the Smalltalk-72 System and Applications
 
@@ -1235,6 +1296,42 @@ then case
     Delete: ('handle the abnormal exit'))
 ```
 
+#### Smalltalk-72的演变
+Smalltalk-74是Smalltalk-72的改良版（有时我们叫它FastTalk），与Smalltalk-72的不同之处在于它拥有真正的“消息发送器（messenger）”对象、关于类的消息字典（message dictionaries）（这使得我们离真正的类对象又进了一步）、戴安娜·玛丽的[bitblt](http://baike.baidu.com/item/BitBlt)（它现在是著名的2D位图图像[算子（operator）](http://baike.baidu.com/item/%E7%AE%97%E5%AD%90)）——后来由丹（Dan）重新设计并用微码操作，和一个更强大也更常规的窗口界面。
+戴夫·罗宾森（Dave Robinson）那时还是[加州大学欧文分校](http://baike.baidu.com/item/UCI)的学生，他听说了我们的项目，并在使用面向对象的编程语言（OOPL）方面给予了我们极大的帮助。
+我们热情地邀请他来“过暑假”，然后就一直把他“扣留着”——他在表达Smalltalk的语义上面功不可没。
+
+其中最瞩目的当属加入了OOZE（面向对象的分区环境）[虚拟储存系统](http://baike.baidu.com/item/%E8%99%9A%E6%8B%9F%E5%AD%98%E5%82%A8%E7%B3%BB%E7%BB%9F)，与在Smalltalk-74上的应用相比，它在Smalltalk-76上的应用更为重要【英格尔斯，1978 凯勒，1981】。
+ALTO存储器并不大（128-256K），尤其是还要算上页面大小的显示（64k）和一些小程序，容量很快就不够用了。
+与软盘相比，其中2.4兆字节的30号[磁盘驱动（disk drive）](http://baike.baidu.com/item/%E7%A3%81%E7%9B%98%E9%A9%B1%E5%8A%A8%E5%99%A8)速度更快也更大，而和今天的硬盘驱动（hard drive）相比则更慢也更小。
+它和FLEX机器上的HP直接接触磁盘（direct contact disk）非常相似，关于后者，我曾在B5000的段交换进程（segment swapper）中试着安装了一个细粒（fine-grain）版。
+但除了带来一些关于如何在清除时选择对象的好想法外，它没能达到我的预期。
+于是，当大家提出想要使用它时，我反对道：“我还没能让它真正发光发热。”
+我记得泰德·凯勒（Ted Kaehler）这样回答我：“别担心，我们会搞定的。”
+
+这些系统有一个基本想法，就是它们能够把一系列最可能派上用场的对象聚集在一起。
+实现这个想法最简单的方法就是调动各个单独的对象。
+而现在的问题是如何除去那些无用的对象，以此给真正需要的对象省下空间。
+（在这个方面，有时候分页（paging）更好用，因为你在每个磁盘分区中可以放置不止一个对象（OOZE）。）
+此时有两个想法带来了很大帮助。
+一是巴特勒（Butler）关于GENIE OS洞见，他认为，为了让核心尽可能的干净，花少量时间在清除无用的对象上面是很有必要的【拉姆泼逊 1966】。
+这样电脑每次崩溃所造成的损失就不会那么大了，并且电脑随时都有干净的内存来运行磁盘中的页面或者对象。
+第二个想法来自FLEX系统，我在里面设置了一个[随机决策机制（stochastic decision mechanism）](http://baike.baidu.com/item/%E9%9A%8F%E6%9C%BA%E5%86%B3%E7%AD%96)（基于对象的类），它用于决定是否清除某个对象。
+这有两个好处：保证不错删那些重要的对象、发生了错误能够重新恢复并且再次分配，这样该对象重新被错误清除的概率就很低了。
+
+另一个亟待解决的问题是[对象指针（object-pointer）](http://baike.baidu.com/item/%E5%AF%B9%E8%B1%A1%E6%8C%87%E9%92%88)的完整性（在这个问题上，我没能在FLEX机器上找到满意的解决办法）。
+这里我所需的是一个完整的执行过程、一个全新的解决办法（好像是巴特勒想出的？），这个办法是关于在机器崩溃的情况下如何保证其有效恢复。
+我们把它叫做“宇宙射线保护法（cosmic ray protection）”，因为先前ALTOS每天都会原因不明地崩溃那么一两次。
+当然，没有任何人因此而感到烦恼，因为找到有问题的地方、并重新启动来保护其不受宇宙射线的影响是相当容易的一件事。
+但是，对于主要基于指针的系统（pointer-based system）来说，它们有着自动内存管理功能，想要实现上述办法更加棘手。
+
+泰德（Ted）和丹（Dan）打算用Resident Object Table来管理内存，**这是唯一一种机器地址，我们在其中可以找到对象（that was the only place machine addresses for objects would be found）。**
+其他有用的信息也存放于此，用于辅助运行[LRU的老化算法（LRU aging）](http://www.cnblogs.com/wuyuegb2312/p/3418026.html)。
+通过对类进行选择、**按照磁盘配置实例（positioning the disk to its instances）**（所有同一类型的类都储存在一起），然后运行ROT查看内存中是否有需要清除的对象并将其清除，机器能够在后台完成清理。
+它非常高效，且与巴特勒（Butler）的洞见相契合，能够为我们提供一个大小适宜且可被覆盖的干净存储容量。这个设计的关键（也是运行这个处理机制的关键）是他们想出的[检查点（checkpoint）](http://baike.baidu.com/item/%E6%A3%80%E6%9F%A5%E7%82%B9)方案。
+其保证了无论计算机何时崩溃，几秒钟内都会生成可恢复的图像。
+OOZE在一个只有80kb大小的内存（working storage）里交换对象，并且它能够处理大约65k大小的对象（相当于几兆字节大小，对整个系统、界面和应用来说绰绰有余）。
+
 ### The Evolution of Smalltalk-72
 
 Smalltalk-74 (sometimes known as FastTalk) was a version of Smalltalk-72 incorporating major improvements which included providing a real "messenger" object, message dictionaries for classes (a step towards real class objects), Diana Merry's bitblt (the now famous 2D graphics operator for bitmap graphics) redesigned by Dan and implemented in microcode, and a better, more general window interface. Dave Robson while a student at UC Irvine had heard of our project and made a pretty good stab at implementing an OOPL. We invited him for a summer and never let him go back—he was a great help in formulating an official semantics for Smalltalk.
@@ -1247,9 +1344,50 @@ The other problem that had to be taken care of was object-pointer integrity (and
 
 Ted and Dan decided to control storage using a Resident Object Table that was the only place machine addresses for objects would be found. Other useful information was stashed there as well to help LRU aging. Purging was done in background by picking a class, positioning the disk to its instances (all of a particular class were stored together), then running through the ROT to find the dirty ones in storage and stream them out. This was pretty efficient and, true to Butler's insight, furnished a good sized pool of clean storage that could be overwritten. The key to the design though (and the implementation of the transaction mechanism) was the checkpointing scheme they came up with. This insured that there was a recoverable image no more than a few seconds old, regardless of when a crash might occur. OOZE swapped objects in just 80kb of working storage and could handle about 65K objects (up to several megabytes worth, more than enough for the entire system, its interface, and its applications).
 
+#### “面向对象”的模式
+
+面向对象类型（OOP-type）和目前开始引起学术圈兴趣的[“抽象数据类型（abstract data type）”](http://baike.baidu.com/item/%E6%8A%BD%E8%B1%A1%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B)差别很大，后者从表面上看是一种[封装（encapsulation）](http://baike.baidu.com/subview/154910/12534703.htm#viewPageContent)。
+我觉得我要在这里发表一些关于它们之间差别的观点。
+我们先前对“LISP对（LISP pair）”的定义就是抽象数据类型的一个很好例子，因为它保留着“字段访问（ field access）”和“字段重绑（field rebinding）”两种功能，这两种功能皆是数据结构的特征。
+60年代相当大一部分的工作重点都放在一般化这些结构上。
+“官方”计算机科学界开始将Simula看做定义抽象数据类型的潜在工具（其中甚至有一名它的发明者【Dahl 1970】），后来它甚至成为了ADA基石的一部分。
+它导致了堆栈数据类型（stack data-type）的例子如同幽灵般无处不在，数百份论文里都能看见它们的身影。
+我们的态度，保守点来说就是大家对此感到很惊奇，因为在我们眼里，Simula向我们叙说的不仅仅是如何重新实现一个弱小又短暂的观点，而是一些更掷地有声的东西。
+我从Simula中得出的是你可以用目标（goals）来取代[绑定（bindings）](https://msdn.microsoft.com/zh-cn/library/ms752347(v=vs.110).aspx?from=groupmessage)和[赋值（assignment）](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators?from=groupmessage)。
+你最不想看到程序员们做的就是将对象与内部状态（internal state）纠缠不清，即便是最终形象地呈现出来也不行。
+取而代之，对象应当被视为执行更高级别行为的场所，这些行为更加适合作为动态组件（dynamic components）来使用。
+
+我们甚至将这些关于对象的思考用在孩子们的教育上（与之前的教育方法相比）。
+这种方法对编程的舒适度、所需代码的大小和设计的完整性等都有着一些启发，但并没有太过惊艳。
+不幸的是，今天存在着太多被冠以“面向对象编程”的产品，它们本质上还是维持着老样子，唯一不同的只是换了一身更光鲜亮丽的外衣。
+许多程序都载有“赋值类型（assignment style）”运算，它们现在都由价格更高昂的附加程序完成。
+
+是什么让这些面向对象的设计带来了不同凡响的效率？
+这个问题很值得深思，我们可以把这个根源看成是某种跟过去稍有不同的方法，它将程序应用在数据结构中。
+它的一部分影响来自于其中复杂的系统通过比从前更加清晰的方式呈现。
+这个方法中，约束（constrain）和普遍性（generality）同样有用。
+有四种技术结合在一起消耗了大部分的能量——持续状态（persistent state）、[多态性（polymorphism）](http://baike.baidu.com/item/%E5%A4%9A%E6%80%81%E6%80%A7)、[实例化（instantion）](http://baike.baidu.com/item/%E5%AE%9E%E4%BE%8B%E5%8C%96)、对象的方法即对象的目标（methods-as-goals）。
+其中，没有一种技术有采用“面向对象”语言的需要——ALGOL68可以大致转换成这种模式——这是一种面向对象的编程语言（OOPL）——它仅仅在一个特殊且卓有成效的方向上才关注设计者的思想。
+当然了，包装也不是一无是处，它做出贡献的领域不仅限于状态的抽象，它还消除了编程中[面向状态](http://ishare.iask.sina.com.cn/f/18642642.html)的语句（state-oriented metaphor）。
+
+也许我们要思考的最重要的原则——它也是从操作系统中来的——是当你给某个人一个结构时，你只想给那个人一些有限的权限。
+要做到这个，光有类型匹配（type-matching）远远不够。
+当然，保护一些对象而放任另一些对象也是没用的。
+所有对象应当被一视同仁地重视，并全部受到保护。
+
+我认为，要想做出一个优秀且更小的OOP系统，不能只敦促大家深思熟虑、做出一种设计。
+在我眼中，OOP的**“每一行代码都必须掷地有声（bang per line of code）”**。
+对象身上承载着许多意义和目的；它的[method类](http://www.apihome.cn/api/java/Method.html)告诉我们它可以实现的最大目标；与大多数基于数据的程序结构（procedures-on-data-structures）相比，它的[超类（superclass）](http://baike.baidu.com/item/%E8%B6%85%E7%B1%BB)能够激发更多代码功能（code-functionality）。
+任务描述——甚至是最抽象的任务描述——表达的是低等级的目标，当需要完成某个任务时，我们需要它们中大部分的参与。
+总的来说，我们不希望程序员浪费时间在状态上，不管是模拟出的状态还是其他状态。
+是否具备将对象实例化的能力会对代码的大小产生相当大的影响。
+关于这一切还有另一种思考方式：尽管自动内存配置延迟绑定（ late-binding of automatic storage allocations ）没有突破任何程序员无法做到的事，但有了它的呈现，代码变得更加简洁有力了。
+在一些情况下，OOP是一种延迟绑定方案，与过去的方法论相比，它们结合在一起能够降低脆弱性，防止代码大小带来的崩溃（size explosion）。
+换句话说就是，人类程序员不是[图灵机（Turing machine）](http://baike.baidu.com/item/%E5%9B%BE%E7%81%B5%E6%9C%BA)，他们的编程系统对图灵机的依赖越小越好。
+
 ### "Object-oriented" Style
 
-This is probably a good place to comment on the difference between what we thought of as OOP-style and the superficial encapsulation called "abstract data types" that was just starting to be investigated in academic circles. Our early "LISP-pair" definition is an example of an abstract data type because it preserves the "field access" and "field rebinding" that is the hallmark of a data structure. Considerable work in the 60s was concerned with generalizing such structures [DSP *]. The "official" computer science world started to regard Simula as a possible vehicle for defining abstract data types (even by one of its inventors [Dahl 1970]), and it formed much of the later backbone of ADA. This led to the ubiquitous stack data-type example in hundreds of papers. To put it mildly, we were quite amazed at this, since to us, what Simula had whispered was something much stronger than simply reimplementing a weak and ad hoc idea. What I got from Simula was that you could now replace bindings and assignment with goals. The last thing you wanted any programmer to do is mess with internal state even if presented figuratively. Instead, the objects should be presented as sites of higher level behaviors more appropriate for use as dynamic components.
+This is probably a good place to comment on the difference between what we thought of as OOP-style and the superficial encapsulation called "abstract data types" that was just starting to be investigated in academic circles. Our early "LISP-pair" definition is an example of an abstract data type because it preserves the "field access" and "field rebinding" that is the hallmark of a data structure. Considerable work in the 60s was concerned with generalizing such structures . The "official" computer science world started to regard Simula as a possible vehicle for defining abstract data types (even by one of its inventors [Dahl 1970]), and it formed much of the later backbone of ADA. This led to the ubiquitous stack data-type example in hundreds of papers. To put it mildly, we were quite amazed at this, since to us, what Simula had whispered was something much stronger than simply reimplementing a weak and ad hoc idea. What I got from Simula was that you could now replace bindings and assignment with goals. The last thing you wanted any programmer to do is mess with internal state even if presented figuratively. Instead, the objects should be presented as sites of higher level behaviors more appropriate for use as dynamic components.
 
 Even the way we taught children (cf. ahead) reflected this way of looking at objects. Not too surprisingly this approach has considerable bearing on the ease of programming, the size of the code needed, the integrity of the design, etc. It is unfortunate that much of what is called "object-oriented programming" today is simply old style programming with fancier constructs. Many programs are loaded with "assignment-style" operations now done by more expensive attached procedures.
 
