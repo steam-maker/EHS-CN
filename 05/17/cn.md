@@ -1,6 +1,6 @@
 #### “面向对象”的模式
 
-面向对象类型（OOP-type）和目前开始引起学术圈兴趣的[“抽象数据类型（abstract data type）”](http://baike.baidu.com/item/%E6%8A%BD%E8%B1%A1%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B)差别很大，后者只是有着光鲜亮丽的外表。
+面向对象类型（OOP-type）和目前开始引起学术圈兴趣的[“抽象数据类型（abstract data type）”](http://baike.baidu.com/item/%E6%8A%BD%E8%B1%A1%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B)差别很大，后者从表面上看是一种[封装（encapsulation）](http://baike.baidu.com/subview/154910/12534703.htm#viewPageContent)。
 我觉得我要在这里发表一些关于它们之间差别的观点。
 我们先前对“LISP对（LISP pair）”的定义就是抽象数据类型的一个很好例子，因为它保留着“字段访问（ field access）”和“字段重绑（field rebinding）”两种功能，这两种功能皆是数据结构的特征。
 60年代相当大一部分的工作重点都放在一般化这些结构上。
