@@ -7,14 +7,14 @@
 “官方”计算机科学界开始将Simula看做定义抽象数据类型的潜在工具（其中甚至有一名它的发明者【Dahl 1970】），后来它甚至成为了ADA基石的一部分。
 它导致了堆栈数据类型（stack data-type）的例子如同幽灵般无处不在，数百份论文里都能看见它们的身影。
 我们的态度，保守点来说就是大家对此感到很惊奇，因为在我们眼里，Simula向我们叙说的不仅仅是如何重新实现一个弱小又短暂的观点，而是一些更掷地有声的东西。
-我从Simula中得出的是你可以用目标（goals）来取代绑定（bindings）和任务（assignment）。
+我从Simula中得出的是你可以用目标（goals）来取代[绑定（bindings）](https://msdn.microsoft.com/zh-cn/library/ms752347(v=vs.110).aspx?from=groupmessage)和[赋值（assignment）](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/Assignment_Operators?from=groupmessage)。
 你最不想看到程序员们做的就是将对象与内部状态（internal state）纠缠不清，即便是最终形象地呈现出来也不行。
 取而代之，对象应当被视为执行更高级别行为的场所，这些行为更加适合作为动态组件（dynamic components）来使用。
 
 我们甚至将这些关于对象的思考用在孩子们的教育上（与之前的教育方法相比）。
 这种方法对编程的舒适度、所需代码的大小和设计的完整性等都有着一些启发，但并没有太过惊艳。
 不幸的是，今天存在着太多被冠以“面向对象编程”的产品，它们本质上还是维持着老样子，唯一不同的只是换了一身更光鲜亮丽的外衣。
-许多程序都载有“任务类型（assignment style）”运算，它们现在都由价格更高昂的附加程序完成。
+许多程序都载有“赋值类型（assignment style）”运算，它们现在都由价格更高昂的附加程序完成。
 
 是什么让这些面向对象的设计带来了不同凡响的效率？
 这个问题很值得深思，我们可以把这个根源看成是某种跟过去稍有不同的方法，它将程序应用在数据结构中。
