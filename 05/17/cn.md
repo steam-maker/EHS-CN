@@ -23,3 +23,18 @@
 有四种技术结合在一起消耗了大部分的能量——持续状态（persistent state）、[多态性（polymorphism）](http://baike.baidu.com/item/%E5%A4%9A%E6%80%81%E6%80%A7)、[实例化（instantion）](http://baike.baidu.com/item/%E5%AE%9E%E4%BE%8B%E5%8C%96)、对象的方法即对象的目标（methods-as-goals）。
 其中，没有一种技术有采用“面向对象”语言的需要——ALGOL68可以大致转换成这种模式——这是一种面向对象的编程语言（OOPL）——它仅仅在一个特殊且卓有成效的方向上才关注设计者的思想。
 当然了，包装也不是一无是处，它做出贡献的领域不仅限于状态的抽象，它还消除了编程中[面向状态](http://ishare.iask.sina.com.cn/f/18642642.html)的语句（state-oriented metaphor）。
+
+也许我们要思考的最重要的原则——它也是从操作系统中来的——是当你给某个人一个结构时，你只想给那个人一些有限的权限。
+要做到这个，光有类型匹配（type-matching）远远不够。
+当然，保护一些对象而放任另一些对象也是没用的。
+所有对象应当被一视同仁地重视，并全部受到保护。
+
+我认为，要想做出一个优秀且更小的OOP系统，不能只敦促大家深思熟虑、做出一种设计。
+在我眼中，OOP的**“每一行代码都必须掷地有声（bang per line of code）”**。
+对象身上承载着许多意义和目的；它的[method类](http://www.apihome.cn/api/java/Method.html)告诉我们它可以实现的最大目标；与大多数基于数据的程序结构（procedures-on-data-structures）相比，它的[超类（superclass）](http://baike.baidu.com/item/%E8%B6%85%E7%B1%BB)能够激发更多代码功能（code-functionality）。
+任务描述——甚至是最抽象的任务描述——表达的是低等级的目标，当需要完成某个任务时，我们需要它们中大部分的参与。
+总的来说，我们不希望程序员浪费时间在状态上，不管是模拟出的状态还是其他状态。
+是否具备将对象实例化的能力会对代码的大小产生相当大的影响。
+关于这一切还有另一种思考方式：尽管自动内存配置延迟绑定（ late-binding of automatic storage allocations ）没有突破任何程序员无法做到的事，但有了它的呈现，代码变得更加简洁有力了。
+在一些情况下，OOP是一种延迟绑定方案，与过去的方法论相比，它们结合在一起能够降低脆弱性，防止代码大小带来的崩溃（size explosion）。
+换句话说就是，人类程序员不是[图灵机（Turing machine）](http://baike.baidu.com/item/%E5%9B%BE%E7%81%B5%E6%9C%BA)，他们的编程系统对图灵机的依赖越小越好。
