@@ -1,17 +1,18 @@
 ### Smalltalk和儿童
 
-现在，Smalltalk发展到1976年，我已经总结了“成人”的活动(实际上只是半成人)，让我回到73年，当我们和孩子准备开始实验的那个夏天。我们没有人知道如何与孩子们一起工作，但是我们知道Adele Goldberg和Steve Weyer与Pat Suppes一起在斯坦福已经做了相当多的工作，而且我们能够吸引他们加入我们。
+现在，Smalltalk发展到1976年，我已经总结了“成人”的活动(实际上只是半成人)。但这里，让我回到73年，我们和孩子准备开始实验的那个夏天。我们没人了解如何与孩子们一起工作，但是我们知道Adele Goldberg和Steve Weyer与Pat Suppes在斯坦福已经做了相当多的工作，并且我们能够吸引他们加入。
 
-因为我们不知道如何教孩子们（或其他人）面向对象编程，第一个实验Adele做模仿LOGO语言海龟画图形，她得到了似乎非常相似的结果。
-也就是说，孩子们可以让海龟在屏幕上画画，但似乎很少有超越表面效果的事情发生。
-当时我认为，由于个人电脑的计算机语言是交互式工具，这种新的编程能力的计算机语言，应该是由孩子创造的交互式工具。只是程序龟图形不是。
+由于我们不知道如何教孩子们（或其他人）面向对象编程，在第一个实验中，Adele借鉴了[LOGO turtle机器](https://en.wikipedia.org/wiki/Turtle_(robot))的绘图法，并且与从前相比，她得出了相似的结果。
+也就是说，孩子们可以用这个[龟标(turtle)](https://en.wikipedia.org/wiki/Turtle_graphics)在屏幕上画画，但似乎很少有质的突破。
+当时我认为，既然个人计算的内涵是作为交互工具而存在，这种[新型程序读写能力（authoring literacy）](http://www.cjc-online.ca/index.php/journal/article/view/793/699)的内容应当是：由孩子们来发明创造交互式工具。但龟标不是这样的。
 
 ![turtle](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/turtle.png)
-图示11.42 Adele在约旦中学滔滔不绝的讲
+图示11.42 Adele在约旦中学滔滔不绝地讲课
 
-然后，Adele想出了一个绝妙的把Smalltalk作为一个面向对象语言的教学方法：“Joe Book.”。我相信这部分是受到了Minsky的想法的影响，你全面的教授教编程语言应该基于严谨程序的工作实例。
+然后，Adele想出了一个把Smalltalk作为一个面向对象语言教学的绝妙方法：“Joe Book”。我相信这部分是受到了Minsky的想法的影响：通过可行的例子来反应严谨的程序，全面地教授编程语言应是如此。
 
-创建几个模板(class box)的实例，并向其发送消息，最后形成一个简单的多线程动画。让孩子们猜方框最终可能的样子，他们猜测的结果与实际显示令人惊讶的相近：
+创建几个模板(class box)的实例，并向其发送消息，最后形成一个简单的多线程动画。让孩子们猜方框最终的形态，他们猜测的结果与实际显示令人惊讶的相近：
+
 
 ```
 to box | x y size tilt
