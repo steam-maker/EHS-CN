@@ -9,7 +9,7 @@
 ![turtle](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/turtle.png)
 图示11.42 Adele在约旦中学滔滔不绝地讲课
 
-然后，Adele想出了一个把Smalltalk作为一个面向对象语言教学的绝妙方法：“Joe Book”。我相信这部分是受到了Minsky的想法的影响：通过可行的例子来反应严谨的程序，全面地教授编程语言应是如此。
+然后，Adele想出了一个把Smalltalk作为一个面向对象语言教学的绝妙方法：“Joe Book”。我相信这部分是受到了Minsky的想法的影响：全面地教授编程语言应当通过可行的例子来反应严谨的程序。
 
 创建几个模板(class box)的实例，并向其发送消息，最后形成一个简单的多线程动画。让孩子们猜方框最终的形态，他们猜测的结果与实际显示令人惊讶的相近：
 
