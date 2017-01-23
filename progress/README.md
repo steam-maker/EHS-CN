@@ -1399,18 +1399,24 @@ I believe that the much smaller size of a good OOP system comes not just by bein
 
 ### Smalltalk和儿童
 
-现在，Smalltalk发展到1976年，我已经总结了“成人”的活动(实际上只是半成人)，让我回到73年，当我们和孩子准备开始实验的那个夏天。我们没有人知道如何与孩子们一起工作，但是我们知道Adele Goldberg和Steve Weyer与Pat Suppes一起在斯坦福已经做了相当多的工作，而且我们能够吸引他们加入我们。
+现在，Smalltalk发展到1976年，我已经总结了“成人”的活动(实际上只是半成人)。
+但这里，让我回到73年，我们和孩子准备开始实验的那个夏天。
+那时我们没人了解如何与孩子们一起工作，但据我们所知Adele Goldberg和Steve Weyer与Pat Suppes在斯坦福已经做了相当多的工作，并且我们能够吸引他们加入。
 
-因为我们不知道如何教孩子们（或其他人）面向对象编程，第一个实验Adele做模仿LOGO语言海龟画图形，她得到了似乎非常相似的结果。
-也就是说，孩子们可以让海龟在屏幕上画画，但似乎很少有超越表面效果的事情发生。
-当时我认为，由于个人电脑的计算机语言是交互式工具，这种新的编程能力的计算机语言，应该是由孩子创造的交互式工具。只是程序龟图形不是。
+由于不知道如何教孩子们（或其他人）面向对象编程，在第一个实验中，Adele借鉴了[LOGO turtle机器](https://en.wikipedia.org/wiki/Turtle_(robot))的绘图法，且与从前相比，她得出了相似的结果。
+也就是说，孩子们可以用这个[龟标(turtle)](https://en.wikipedia.org/wiki/Turtle_graphics)在屏幕上画画，但似乎很少有质的突破。
+当时我认为，既然个人计算的内涵是作为交互工具而存在，这种[新型程序读写能力（authoring literacy）](http://www.cjc-online.ca/index.php/journal/article/view/793/699)的内容应当是：由孩子们来发明创造交互式工具。
+然而龟标不是这样的。
 
 ![turtle](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/turtle.png)
-图示11.42 Adele在约旦中学滔滔不绝的讲
+图示11.42 Adele在约旦中学滔滔不绝地讲课
 
-然后，Adele想出了一个绝妙的把Smalltalk作为一个面向对象语言的教学方法：“Joe Book.”。我相信这部分是受到了Minsky的想法的影响，你全面的教授教编程语言应该基于严谨程序的工作实例。
+然后，Adele想出了一个把Smalltalk作为一个面向对象语言教学的绝妙方法：“Joe Book”。
+我相信这部分是受到了Minsky的想法的影响：全面地教授编程语言应当通过可行的例子来反应严谨的程序。
 
-创建几个模板(class box)的实例，并向其发送消息，最后形成一个简单的多线程动画。让孩子们猜方框最终可能的样子，他们猜测的结果与实际显示令人惊讶的相近：
+创建几个模板(class box)的实例，并向其发送消息，最后形成一个简单的多线程动画。
+让孩子们猜方框最终的形态，他们猜测的结果与实际显示令人惊讶的相近：
+
 
 ```
 to box | x y size tilt
@@ -1421,48 +1427,125 @@ to box | x y size tilt
 ISNEW    »    (SELF undraw. 'size <- size + :. SELF draw)
 ```
   
-多么美妙的方法，无数的儿童项目能够从简陋的模板(box)中喷薄而出。而且伴生出最早的一些工具，这时我们真的异常兴奋。例如，Marion Goldeen(12岁)的绘画系统就是一套完整的工具。几年后，Susan Hamet(12岁)的面向对象系统(带有MacDraw一样的设计功能)也一样。还有另外2个，Bruce Horn's (15岁)乐谱捕捉系统和Steve Putz(15岁)的电路设计系统。现在回想起来，这些可以称为“早期成功综合症”(early success syndrome)在计算机科学领域的另一个例子。成功是真实的，但他们并不像我们想象的那样普遍。他们不会像我们所希望的那样强烈地延伸到未来。从 帕洛阿尔托的学校选择的孩子们(几乎平均背景)，我们取得更加兴奋的成功越发的困难。在某种程度上，我们看到的是“黑客现象”，对于任何给定的工作，总有特定的5%的人天生沉浸其中，而80%左右的人，虽然最终会掌握，但是根本找不出一点天赋。  
+多么美妙的方法！
+无数的儿童项目能够从简陋的模板(box)中喷薄而出，并且伴生出一些最早的工具，这时我们真的异常兴奋。
+例如，Marion Goldeen(12岁)的绘画系统就是一套完整的工具。
+几年后出现的Susan Hamet(12岁)的面向对象系统(带有MacDraw一样的设计功能)也一样。
+还有另外2个，Bruce Horn(15岁)的乐谱捕捉系统和Steve Putz(15岁)的电路设计系统。
+现在回想起来，这些可以称为“早期成功综合症”(early success syndrome)在计算机科学领域的另一个例子。
+成功是真实的，但它们并不像我们想象的那样普遍。
+它们不会如我们所愿强烈地延伸进未来。
+这些学生都是从帕洛阿尔托（ Palo Alto）的学校中选出的(他们的背景差不多相当)，而我们取得成功的激动也超越了所面临的困难。
+在某些方面，我们看到的是“黑客现象（hacker phenomenon）”，即对于任何给定的工作，总有特定5%的人天生沉浸其中，而80%左右的人，虽然他们会及时学习，但完全不会像少数人那样自然而然地掌握。  
+  
+对此，我们的感觉很模糊，但我们一直保持相对的成功。
+显然，我们可以看到，学习系统的结构并不是主要问题。
+孩子们拿着Adele的JOE book尽情探索[ALTOS](https://en.wikipedia.org/wiki/Altos_Computer_Systems)就能够自学到大部分内容。
+因此，似乎设计才是关键。  
   
-我们有这样的一种朦胧的感觉，但我们一直保持相对的成功。我们肯定可以看到，学习系统的结构不是一个主要问题。孩子们拿着Adele的JOE book涌向[ALTOS](https://en.wikipedia.org/wiki/Altos_Computer_Systems)就能够自学到大部分内容。似乎更多地是的设计的问题。  
+74年春季，我在教PARC的20位非程序员Smalltalk之后，就开始找到要点了。
+在掌握最初的材料时，他们学得要比孩子们快，但在成功看起来唾手可得时，会有各种问题困扰他们。
+然而在我看来，难倒他们的问题并没有比他们能够成功解决的问题难多少。
+这其中包括一个由成人学员提出的项目——做一个小的，像卡片目录或者名片夹那样的数据库系统。
+从项目进度来看，他们甚至都不能进展到编程这里。
+我很惊讶，因为我“知道”，这样的一个项目跟我们目前正在研究的、为终端用户设计的那神话般的“两页代码”比起来简单太多了。
+那天晚上，我就写出了代码，第二天，我向所有人展示如何做到这一点，但仍没有一个人能够独立完成。
+后来，我坐在自己的房间里琢磨我谈话的要点。
+最后，我数了一下这个小项目里不大明显的想法，有17个。
+而且其中一些很像建筑设计中拱的概念：在完全不了解的情况下你很难发现它们。  
+  
+把这个与读写能力相联系就会让人痛苦地领悟了。
+只学会读和写是不够的，我们还需要表达想法的文学。
+语言是用来阅读和抒写观点的，但在某些时候，组织想法开始主宰单纯的语言能力。
+而且，语言对获得强大的思想具有非常大的帮助，过往的阅历有助于人们更好地获得更强大的思想[Papert 70s]。
+所以，我们决定教授设计。
+Adele想出了堪称神来之笔办法来解决设计教学问题。
+她明确指出，在关于程序的模糊想法与能够运行在Smalltalk上的非常详细的编写和调试的程序之间，需要一个中介。
+她把这个称为“中介形式设计模板”(intermediary forms design templates)。  
   
-74年春季，我教PARC的20位非程序员Smalltalk时，就开始意识到。他们掌握最初的材料要比孩子们快，但是就在看起来成功唾手可得时，他们开始崩溃的问题没有看我比他们刚刚做得很好的( they started to crash on problems that didn't look to me to be much harder than the ones they had just been doing well on.)。其中有一个项目由一个成人学员的提出来，这是做一个小的数据库系统，可以像一个卡片或名片夹。他们甚至不能接近编程。我很惊讶，因为我“知道”，这样的一个项目为最终用户运行的，远低于传说的“两页”。那天晚上，我写出来，第二天，我向所有人展示如何做到这一点。然而，他们没有一个能够自己做到。后来，我坐在自己的房间里琢磨我谈话的要点。最后，我数出在这个小程序中不明显的想法达到17个。而且其中一些很像建筑设计中的拱的概念：如果你不已经知道他们，则很难发现。  
+使用这些，孩子可以看见一个他们想模拟的情况，并将其分解成类和消息，同时不用担心如何运行某个方法。
+然后，可以非正式地用英语来对该方法进行规划，这些记录会成为后来书写实际代码的注释和指南。
+这是个了不起的想法，它卓有成效。 
   
-联系到识字就非常清晰了，只学会读和写是不够的，还需要表达想法的文学。语言是用来阅读和写的，但在某些时候，组织想法开始主宰单纯的语言能力。而且，语言对获得强大的思想具有非常大的帮助，过往的阅历有助于更好获得更强大的思想[Papert 70s]。所以，我们决定我们应该教设计。Adele阿黛尔想出了堪称神来之笔办法来解决设计教学问题。她明确指出，
-在关于程序的模糊想法与能够运行在Smalltalk上的非常详细的编写和调试的程序之间，需要一个中介。她称之为“中介形式设计模板”(intermediary forms design templates)。  
+但上述这一切还不足以令我们满足。
+正如Adele喜欢强调的，如果只有部分孩子成功，我们很难把其称为成功，特别是这样的成功需要孩子们和老师们都尽最大的努力。
+事实上，真正的教育不得不在理想化程度较小的环境中进行，并且非常稳健。
+尽管如此，从本质上来看，部分成功与没有成功是不同的。
+我们想要更多，并着手推动继承（inheritance）思想，它是让新手也能同专家一样建立那些框架的一个方法。
+我们有充分的理由相信这是可行的，因为Lisa van Stone对SHAZAM(这是一个包含5、6页Smalltalk代码的动画工具，由一些成人专家完成)做出重大改进的能力给我们留下了很深的印象。
+不幸的是，让新手(甚至专业人员)去应对继承——尽管它是令人难以置信的强大技艺——还是十分困难的。   
   
-使这些孩子可以看一个他们想模拟的情况，并分解成类和消息，而不必担心一个方法将如何工作。然后，该方法规划可以写成非正式地用英语，这些记录在后来书写实际代码时成为注释和指南。这是一个了不起的想法，它工作得很好。  
-  
-但还不能令我们满足。正如Adele喜欢指出的，如果只有部分孩子成功很难声称为成功，特别是在孩子和老师都被要求付出巨大努力来换取成功时。真正的教育不得不在更少理想化和更加稳健环境中进行。尽管如此，部分成功与没有成功本质上是不同的。我们想要更多，并开始推动继承思想作为一种方式让新手建立那些仅能由专家设计的框架。我们有充分的理由相信这可以工作，因为我们已经被Lisa van Stone对SHAZAM(相对专业的成人做的5、6页Smalltalk的动画工具)做出重大改进的能力印象深刻。不幸的是，继承——尽管令人难以置信的强大的技术——让新手(甚至专业人员)去应对，已经证明是十分困难的。   
-  
-在这一点上，让我从今天的有利位置做一个回顾。我现在非常确信，我们设计的模板方法毕竟是一个很好方法。我们只是没有足够的向纵深应用。我的意思是，来自于众多试图教初学者编程实践，产生了大量的积累[Soloway 1989]。他们都有类似的故事，看起来几乎没有运用各种编程语言提供的功能，新手都具有特殊的思维方式，做的每一项都是好程序认为困难的。甚至比当时(和今天)更好的界面，但很可能实际比我们希望它的更像写作。也就说，对于“80%”，真的必须要经过多年持续不断的学习，才能建立设计所需要的结构和前瞻的解决方案。41     
-  
-问题不是让孩子们做他们喜欢做的事情，即使他们不知道他们在做什么。这与研究早期语言学习有很好的相关性，当做了很多训练不管是否涉及内容。只要做似乎就有帮助。困难的是要确定提出什么想法和如何深入，都应渗透在给定的儿童发育水平。尽管几个世纪的经验，这种混乱仍然存在于阅读写作自然语言和数学。这是教孩子编程的主要障碍。何时，以何种顺序和深度，如何教授充满活力的创意？   
+在这一点上，容我站在今天的有利位置上做个回顾。
+现在我非常确信，在经历了许多后，我们设计的模板方法是一个很好的方法。
+我们只是没有足够向纵深应用。
+我的意思是，有许多人跃跃欲试，打算教新手编程，现在我们也能看见大量积压的结果[Soloway 1989]。
+在这些结果中，人们都会碰到类似的故事，他们似乎并没充分利用所使用的编程语言的各种功能，但在解决困难时，新手的思路和优秀的程序员的思路一样别致。
+甚至是在设计一个比过去(和今天)更好的界面的过程中，与我们的理想相比，这个过程很可能更像是在写作。
+也就说，对于那“80%”，他们真的必须要经过多年持续不断的学习，才能建立起设计和前瞻性的解决方案所需要的结构。   
+  
+现在问题不是让孩子们做他们喜欢做的事情，即使他们不知道他们正在做什么。
+在忽略了是否涉及内容时进行大量练习的情况中，这与研究早期语言学习有着很好的关联。
+只要做下去似乎就有帮助。
+但困难的是要确定提出什么想法，以及在目前儿童发展阶段上应当渗透多深。
+尽管我们有了几个世纪的经验，这个问题始终存在于自然语言的阅读写作和数学的教学中。
+这也是孩子们编程教学的主要障碍：何时、以何种顺序和深度、如何教授那些有影响力的想法？   
 
-我们甚至应该教编程吗？我在过去的30年里见过数以百计的程序员，可以看到编程没有明显的影响提升他们的思考能力，或对人类知识有所启发。如果有的话，正好相反。专家知识往往仍然植根于环境中，第一次学会--和大部分隐喻拓展导致令人误导的类比(Expert knowledge often remains rooted in the environments in which it was first learned—and most metaphorical extensions result in misleading analogies)。艺术家、科学家、哲学家在他们的专业之外表现出异常的迟钝(犯罪嫌疑人也一样)。我们首要警惕的塞壬之歌(siren's song)是承诺有趣的追求和有趣的想法之间的存在联系。音乐不在钢琴里，并没有发现或感觉到它是有可能从朱利亚德音乐学院(Juilliard)毕业的。  
+我们该试着去教编程吗？
+在过去的30年里，我见过数以百计的程序员，从中发现编程没有明显的影响、提升他们的思考能力，或给人类知识带来启发。
+如果有的话，恰恰相反。
+专业知识往往植根于第一次学习的环境中——并且大部分隐喻性的延伸会产生带来误解的类比。
+在专业以外的领域，有很大一部分艺术家、科学家、哲学家的表现十分平庸(犯罪嫌疑人也一样)。
+我们首先要警惕的[塞壬](http://baike.baidu.com/item/%E5%A1%9E%E5%A3%AC/32238)之歌(siren's song)，其内容就是向我们保证有趣的追求和有趣的想法之间存在联系。
+但音乐不在钢琴里，也可能有并没有发现或感受到它的人从[茱莉亚音乐学院（Julliard）](http://baike.baidu.com/item/%E8%8C%B1%E8%8E%89%E4%BA%9A%E5%AD%A6%E9%99%A2)毕业。  
   
-我也遇到一些人，他们通过计算提供重要的关于人类知识新的隐喻以及延伸。但是，为了发生启迪，除了计算之外，还需要一些别的东西。  
+我也遇到过一些人，对他们来说，计算机为思考人类知识和可触及的范围提供了一个举足轻重的全新隐喻。但是，为了达到启蒙的目的，除了计算之外，还需要一些别的东西。  
 
-工具提供了一个路径，一个背景下，几乎是一个发展启迪的借口，但没有任何工具包含它或可以排除它。切萨雷·帕韦斯(Cesare Pavese)说：要了解世界，就必须构建它。换句话说，我们不仅仅是要有，而是要知道。但是能够发生的，大部分并没有获知正在发生。  
+工具为发展启蒙提供了一个路径、一个语境，甚至是一个借口，但没有任何工具包含着启蒙的力量或是能够带给我们启蒙。
+切萨雷·帕韦斯(Cesare Pavese)说：要了解世界，就必须构建它（to know the world we must construct it）。
+换句话说就是，我们创造世界不仅仅是要拥有世界，而是要认识世界。
+但大多数时候，我们可以在认识没开始的情况下就拥有世界。  
 
 ![circuit](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/circuit.png)
 
-换个角度来看，当知识被第一次掌握时，是处于最不有趣状态。陈述--无论是否标记、典故或物理方式控制--妨碍（几乎是接管目标）和必须费力地和痛苦地解释。从这里有几个有用的路径，其中两个是重要的和交织在一起的。   
+换个角度来看，当我们第一次学习某个知识时，它是最无趣的。
+关于知识的表达——无论是记号、典故还是实体控制（physical control）——都会成为阻碍（它们几乎接管了我们的目标），并且人们需要千辛万苦、痛苦万分地去解释它们。
+这里有几个有用的路径，其中有两条重要的路径相互交织。   
 
-首先是流畅性(fluency)，在某种程度上是构建消失申述的解释心理结构的过程(which in part is the process of building mental structures that disappear the interpretation of the representations.)。一个句子的字母和单词是饱含意义，而不是标记，网球拍或键盘变成一个人的身体的延伸，等等。如果进行进一步最终成为一种专家--但没有在其他领域的深层知识，试图
-归纳通常是太脆弱和病态的。       
+首先是流畅性(fluency)，从某种程度上来看，它是建立心理结构的过程，能够消除对表达的解释。
+在一句话中，人们对字母和单词的感受不是从标记开始，而是始于它们的意义；人们的身体能够与网球拍和键盘合一.....
+如果深入下去，一个人最终会变成某种专家——但没有其他领域的深层知识辅助，他对该领域的概括往往不够扎实与规范。       
 
-第二条路径倾向于把知识作为一个隐喻，而不是可以阐述其他领域。但是，如果没有流畅性，这是更可能的先验知识将占主导地位，从这方面的隐喻将是模糊的和误导性的。  
-  
-"诀窍"，我认为这正是人文教育应该做的，当与其他流畅(fluent)深层知识建立联系时所达到的流畅度与深度。我们的社会已经降低了它的目标，到目前为止，乐于“分数的增加”而没有敢于质询是否有重要的入口被错过。能够阅读药瓶上的警告或写一个暑假见闻，不是素养，我们的社会不是这样认为的。例如，素养，就是能够流利地阅读，并且遵循50页潘恩常识，能够(快乐)流利地写出批判或捍卫它的文章。另一种第二十世纪的素养，是能够听到一种新的致命的传染性疾病的绝症，并立即知道，灾难性呈指数发展，并及早采取行动是优先级最高。另一种素养，将公民到其个人电脑前，在那里他们可以流利地和无痛苦建立疾病的系统仿真，作为对进一步信息的参照。  
+第二条路径倾向于把知识当作一个隐喻，而不是把知识看做阐述其他领域的工具。
+但是，如果没有流畅性的帮助，先验知识很可能占主导地位，这样隐喻就会变得模糊和误导了。  
+  
+我认为博雅教育（liberal arts education）应当包含"诀窍（trick）"，当你试图与其他具备流畅性的深层知识建立联系时，它能够带给你流畅与深入。
+迄今为止，我们的社会已经降低了它的目标，它乐于看见“分数上涨”，却不敢查明人们是否进入了某个重要的领域。
+能够阅读药瓶上的警告或抒写一段暑假见闻，这些都不叫有文化，整个社会也不该以此衡量一个人的文化水平。
+真正的有文化，举个例子吧，就是能够流利地阅读和跟进[潘恩](http://baike.baidu.com/item/%E6%89%98%E9%A9%AC%E6%96%AF%C2%B7%E6%BD%98%E6%81%A9)[《常识（Common Sense）》](http://baike.baidu.com/subview/171533/5119634.htm#viewPageContent)中50页的论证，并且能够(并乐于)流利撰写文章对其进行褒贬。
+另一种二十世纪的有文化，是当人们面临传染性强、致病率高的绝症时，能够立即领悟其中灾难性的指数关系，并将尽早采取行动放在首位。
+还有一种有文化，是只要将公民带到个人电脑前，他们就可以流畅且自然地建立疾病系统模拟（systems simulation），并将其与以后的信息相比较。 
 
-在人文科学的层面，我们期望连接每个(fluencies)之间会形成真正强大隐喻，为考虑根据别人的想法。   
+在博雅的层面，我们会期待每种流畅性之间的联结能够形成真正强大的隐喻，它能够站在别人的角度上思考那些想法。   
  
-究其原因，因此，许多人都希望孩子们理解计算深刻而且流畅，正如文学，数学，科学，音乐，美术那样，相对于其他知识和其他辩证的思维方式提升我们理解世界的能力，它承载特殊的思维方式。
+究其原因，大抵是许多人都希望孩子们深刻而流畅地理解计算，就像他们理解文学，数学，科学，音乐，美术那样。
+相对于其他知识和其他批判性的思维方式，在激发我们认识世界的能力方面，它包含着一些特殊的思考方式。
 
-
-我们当时不知道，我很抱歉地说，15年以后，这些关键问题仍然没有真正有用的答案。但也有一些迹象。即使是非常年幼的儿童能够理解和使用交互的转换工具。第一个是他们的手！他们可以轻松的将这些经验扩展到计算机对象，并使他们发生变化。他们可以经常想象一个提议(proposed)的变化会做什么，而不会对结果感到惊讶。两三岁孩子能使用Smalltalk风格的界面和操作面向对象的图形。三年级的学生可以(在几天内)学习超过50个功能，其中大部分是一个新的系统，包括它的用户界面的转换工具。他们可以回答任何问题，只要答案涉及这些工具的应用。但是对于他们来说，回答任何需要2个或多个转换的问题，都是非常困难。然而他们应用序列转换并没有问题，如探索"下一步"。如果构想和实现哪怕是适度的目标少量的改变，他们几乎完全缺乏导航能力。      
-  
-看来，我们需要学习或教授的内容，现在被打包成零零星星的类似于像跳棋一样的战略游戏。模糊的感觉“三人行”(threesome)指向一个人的目标，能够为一些需要实现的精细的工作做准备。这项艺术适合大部分人，但大多数时候，这需要多年逐步掌握。   
+我们当时不并知道这些，我也只能很抱歉地说，15年以后，我们仍没找到真正有用的答案。
+但也有一些迹象显现出来了。
+即便是非常年幼的儿童也能理解和使用交互转换工具。
+第一个就是他们的手！
+他们可以轻松的将这些经验扩展到计算机对象上，并对它们进行改变。
+他们具备想象的能力，即时常想象某个改变会带来什么，且不会对结果感到惊讶。
+两三岁孩子能使用Smalltalk风格的界面，并且能操作面向对象的图形。
+三年级的学生可以(在几天内)学习50多个功能，其中大部分是一个新系统和其用户界面的转换工具。
+他们可以回答任何问题，只要答案仅涉及其中一个工具的应用。
+但如果回答需要结合2个或多个转换工具，对他们来说这是非常困难的。
+他们对应用序列转换、“深入”探索没有任何问题。
+然而，哪怕是构想或者实现那些只需要几种改变的普通目标，他们也几乎完全缺乏导航能力。      
+  
+这样看来，我们需要学习或教授的内容是怎样包装两到三个转换工具，这在某种程度上跟学习像跳棋那样的策略类游戏类似。
+这种“三人行（threesome）”类的模糊感觉指向一个人的目标，而这种感觉可以成为更细化的工作计划（这个细化的工作目的是完成目标）。
+大部分人都能掌握这项艺术，但大多数时候，他们需要花好几年逐步学习。   
 
 ### Smalltalk and Children
 
@@ -1527,7 +1610,27 @@ We did not know then, and I'm sorry to say from 15 years later, that these criti
 
 It seems that what needs to be learned and taught is now to package up transformations in twos and threes in a manner similar to learning a strategic game like checkers. The vague sense of a "threesome" pointing towards one's goal can be a set up for the more detailed work that is needed to accomplish it. This art is possible for a large percentage of the population, but for most, it will need to be learned gradually over several years.
 
+到了1975年末，我开始觉得一切在逐渐失衡——“孩子们的Dynabook”这个想法正逐渐淡去——也许它正开始被更专业的需要取代。
+1976年1月，我把整个小组带到了[帕哈楼沙丘城（Pajaro Dunes）](http://blog.renren.com/share/365926711/9747975627)，在那里，大家可以畅所欲言，提出现存的问题，并重新调整一下我们的方向。
+我们把这个会议叫做“让我们烧毁磁盘部件（Let's Burn Our Disk Packs）”。
+整个会议中没有激烈的争吵，因为我们都太喜欢彼此了（我想进一步定义这种感情：它是爱）。
+但我们面临着许多问题。
+当时我引述了一句过去的格言：“没有任何生物体能够在自己废弃的产物中存活（no biological organism can live in its own waste products）”，来婉转地提出我们要真正重新开始的请求：建立一个和ALTO和Smalltalk完全不同的软硬件系统（hw-sw system）。
+讨论中有一件事是我都同意的，那就是目前Smalltalk的能力无法满足我们各个级别的要求。
+因为我并不觉得OOP本身能够解决终端用户的问题，所以我想我们需要一些不同的东西。
+而其他人，尤其是一些研究生们，他们则主张改进Smalltalk，使其能够运行得更快并且有能力解决更复杂的问题。
+我认为，丹（Dan）觉得一个更好的Smalltalk系统可以成为我所说的新系统的媒介，但他没法很清楚地阐释自己的想法。
+这次会议并没演化成一场灾难，回到PARC中心以后我们依然是朋友和同事，但我们再也体会不到前四年中那种绝对的凝聚力了。
+后面我开始设计一个新的小型机器及叫做NoteTaker的语言，而丹（Dan）则着手设计Smalltalk-76。
+
 By the end of 1975 I felt that we were losing our balance—that the "Dynabook for children" idea was slowly dimming out—or perhaps starting to be overwhelmed by professional needs. In January 1976, I took the whole group to Pajaro Dunes for a three day offsite to bring up the issues and try to reset the compass. It was called "Let's Burn Our Disk Packs." There were no shouting matches, the group liked (I would go so far to say: loved) each other too much for that. But we were troubled. I used the old aphorism that "no biological organism can live in its own waste products" to plead for a really fresh start: a hw-sw system very different from the ALTO and Smalltalk. One thing we all did agree on was that the current Smalltalk's power did not match our various levels of aspiration. I thought we needed something different, as I did not see how OOP by itself was going to solve our end-user problems. Others, particularly some of the grad students, really wanted a better Smalltalk that was faster and could be used for bigger problems. I think Dan felt that a better Smalltalk could be the vehicle for the different system I wanted, but could not describe clearly. The meeting was not a disaster, and we went back to PARC still friends and colleagues, but the absolute cohesiveness of the first four years never rejelled. I started designing a new small machine and language I called the NoteTaker and Dan started to design Smalltalk-76.
+
+我想要“烧毁磁盘部件”的原因是我对环境和媒体有着与[麦克卢汉（McLuhan）](http://baike.baidu.com/item/%E9%A9%AC%E6%AD%87%E5%B0%94%C2%B7%E9%BA%A6%E5%85%8B%E5%8D%A2%E6%B1%89)相似的强烈感觉：一旦我们拥有了成形的工具，按照麦克卢汉的说法，我们会反过来“重新塑造自己”。
+如果这些工具真的非常好，且能够直面核心问题的话这种想法的确棒极了。
+但是这把双刃剑的另一端一样能够造成深深的创口——不管存在什么样的问题，在某种程度上，不适用的工具和环境一样能够重塑我们的想法，这是因为我们希望这些范式能够帮助我们引导目标。
+那些像LISP和Smalltalk那样强有力的范式极具吸引力，它们会吞噬过去的版本：如果你观察一下这两个系统里面的任意一个应用，你会发现它们会自己模仿系统，而不是寻求新的想法。
+1975年当我在思考Smalltalk的时候，我考虑的确实是一些很棒的东西，但我忽略了终端用户语言、我也忽略了一种为孩子们打造的“读写”计算机媒体的解决方案（它针对的是其最初的目标）。
+我希望停下来，摧毁过去的一切，重新开始。
 
 The reason I wanted to "burn the disk packs" is that I had a very McLuhanish feeling about media and environments: that once we've shaped tools, in his words, they turn around and "reshape us." Of course this is a great idea if the tools are really good and aimed squarely at the issues in question. But the other edge of the sword cuts as deep—that inadequate tools and environments still reshape our thinking in spite of their problems, in part, because we want paradigms to guide our goals. Strong paradigms like LISP and Smalltalk are so compelling that they eat their young: when you look at an application in either of these two systems, they resemble the systems themselves, not a new idea. When I looked at Smalltalk in 1975, I was looking at something great, but I did not see an enduser language, I did not see a solution to the original goal of a "reading" and "writing" computer medium for children. I wanted to stop, dynamite everything and start from scratch again.
 
