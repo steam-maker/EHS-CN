@@ -17,3 +17,15 @@ Simula-67把继承性的一般化纳入了ALGOL-60的结构中。
 这种语言是面向对象的，我认为它受到了早期Smalltalk的影响。
 它有一种叫做“透视（perspectives）”的多重继承，这种继承能够让某个对象在清晰明了的方法下扮演多重角色。
 许多年后，有不少这些想法延伸进了[PIE](http://css3pie.com/)中，这也是戈德斯坦（Goldstein）和博布罗齐心协力将Smalltalk向网络和更高级描述的有趣延伸【戈德斯坦&博布罗 1980】。
+
+在Smalltalk-76出现之际，丹·英戈尔斯（Dan Ingalls）想出了一个方案，它在语义上与Simula类似，但在运行中它会一点点朝着我们的目标改变。
+我对此并不是那么激动，因为它的出现意味着我们可能需要一个更好的、完全关于继承性的理论（一直以来都是如此）。
+例如，继承性和[实例化（instancing）](http://baike.baidu.com/item/%E5%AE%9E%E4%BE%8B%E5%8C%96)（这也是继承性的一种）将[语用（pragmatics）](http://baike.baidu.com/item/%E8%AF%AD%E7%94%A8%E5%AD%A6)（例如重构代码来节省空间）和[语义（semantics）](http://baike.baidu.com/item/%E8%AF%AD%E4%B9%89)（在许多任务中都有所使用，如：特殊化、一般化、种类的形成等）杂糅在一起。艾伦·博尔宁（Alan Borning）在Thinglab中使用了一种多重继承性的方案，它随后又在Smalltalk-76中得到了应用。
+但是与丹最初的设计相比，没有一种综合又清晰的多重继承性比它还要引人注目了。
+
+与此同时，我们与施乐之间的持久战还在继续。
+现在有大约500台ALTO通过[以太网（Ethernet）](http://baike.baidu.com/item/%E4%BB%A5%E5%A4%AA%E7%BD%91)连接彼此，它们还与激光打印机和[文件服务器（file server）](http://baike.baidu.com/item/%E6%96%87%E4%BB%B6%E6%9C%8D%E5%8A%A1%E5%99%A8)相连，而ALTO在其中充当控制器。
+我向施乐中心的策划人递交了许多备忘录，努力让他们把个人电脑纳入主要方向。
+这里有一个例子：
+
+**对未来的简单预测**
