@@ -38,7 +38,7 @@ Simula-67把继承性的一般化纳入了ALGOL-60的结构中。
 
 ......
 
-尽管Dynabook拥有相当大的局部存储器（local storage），也能够在局部进行绝大多数计算，它还是会在世界各地、各种规模的信息效用（nformation utility）上大比重地耗费时间。
+尽管Dynabook拥有相当大的局部存储器（local storage），也能够在局部进行绝大多数计算，它还是会在世界各地、各种规模的信息效用（information utility）上大比重地耗费时间。
 这种效用保证了人们能够交流观点、数据、工作模型，也为各个组织运转所需要的日常交流提供了便利。
 这种通信连接由专用线、公用线和[分组无线网（packet radio）](http://baike.baidu.com/item/%E5%88%86%E7%BB%84%E6%97%A0%E7%BA%BF%E7%BD%91)相连接，在信息效用中，Dynabook也将被当成服务器使用。
 也会有足够的电力支持软件全权塑造这些个人电脑。
