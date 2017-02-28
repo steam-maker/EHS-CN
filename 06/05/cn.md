@@ -39,6 +39,6 @@ LRG小组有个特殊的目的就是寻找写作的等价物——就是在一�
 同时，我还让道格·费尔班（Doug Fairbairn）对Notetaker产生了兴趣。
 他设计出了一款极棒的“智能公交车（smart bus）”，它能够有效控制慢速[多处理器（multiple processors）](http://baike.baidu.com/item/%E5%A4%9A%E5%A4%84%E7%90%86%E5%99%A8%E7%B3%BB%E7%BB%9F?sefr=enterbtn)，且前景大好，尽管此时大部分帕克中心的成员认为我是疯了才会放弃ALTO运行迅速的双极硬件设备。
 但我并不觉得这种双极设备能够安置进笔记本或Dynabook中。
-另一方面，我很讨厌最近刚出现的8比特大小的[微指令（micros）](http://baike.baidu.com/item/%E5%BE%AE%E6%8C%87%E4%BB%A4?sefr=enterbtn)，这是因为它的设计又傻又天真——我并不觉得它的设计人员中有参与过软件设计。
+另一方面，我很讨厌最近刚出现的8比特大小的[微指令（micros）](http://baike.baidu.com/item/%E5%BE%AE%E6%8C%87%E4%BB%A4?sefr=enterbtn)，这是因为它的设计又傻又天真——我并不觉得它的设计人员有参与过软件设计的经验。
 
 ![Interface](Interface.png)
