@@ -33,7 +33,7 @@ CFL从施乐中心邀请了十名高层主管来帕克参加为期两天的软�
 尽管那时阿黛尔（Adele）还生了孩子，她仍担任设计总监。
 我仍记得那时她一边照顾蕾切尔（Rachell），一边在SimKit上进行调试的场景，这种记忆弥足珍贵。
 
-[Implementation](Implementation.png)
+![Implementation](Implementation.png)
 
 那时有不少有趣的问题亟待解决。
 该系统本身很直白，但它需要通过Smalltalk的proper函数密封起来，尤其是涉及错误消息的情况。
