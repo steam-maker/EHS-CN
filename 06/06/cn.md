@@ -63,3 +63,11 @@ CFL从施乐中心邀请了十名高层主管来帕克参加为期两天的软�
 我们开始寻找那些真正可靠的芯片，尽管它们的设计不尽如人意。
 1978年，最好的备选就是[因特尔8086（Intel 8086）](http://baike.baidu.com/item/Intel%208086?sefr=enterbtn)这种16比特大小的芯片（它身上有不少8008和8080的缺点），但它（勉强）拥有胜任这些工作的能力——在ALTO身上我们将安装三块这种芯片，一块用于解释器，一块用于位映射图形（bitmapped graphic），还有一块用于i/o（联网等）。
 
+丹一直以来都对NoteTaker很感兴趣，并且他想尝试把NoteTaker系统安装进Smalltalk-76中。
+为了实现这一想法，该系统需要以256K的大小运行，这是我们为机器[RAM](http://baike.baidu.com/item/%E9%9A%8F%E6%9C%BA%E5%AD%98%E5%8F%96%E5%AD%98%E5%82%A8%E5%99%A8?sefr=enterbtn)设计的最大值。
+ALTO中没有任何一个类似NOVA的模拟“[机器码（machine code）](http://baike.baidu.com/item/%E6%9C%BA%E5%99%A8%E7%A0%81?sefr=enterbtn)”能够胜任这些工作，并且系统还与内存相适应——只有磁盘，没有交换内存（swapping memory）。
+在这些挑战驱动下，系统设计得到了显著改善。
+泰德·凯勒（Ted Kaehler）的系统追踪（system tracer）（它可以为旧的版本写出新的虚拟内存）用于将Smalltalk-76克隆至NoteTaker中。
+这里第一次出现了索引对象表（indexed object table）（它也用在Smalltalk-80中），其简化了访问对象的过程。
+在堆栈语境下，他坚持做着一种实验：目的是为了节约空间并提升速度。
+他重写了Smalltalk中大部分旧的机器码，并且整个机器内核的大小都缩减至6千比特的8086代码（并不是很强大）。
