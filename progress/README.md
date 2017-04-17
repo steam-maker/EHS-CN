@@ -1544,7 +1544,7 @@ Adele想出了堪称神来之笔办法来解决设计教学问题。
 然而，哪怕是构想或者实现那些只需要几种改变的普通目标，他们也几乎完全缺乏导航能力。      
   
 这样看来，我们需要学习或教授的内容是怎样包装两到三个转换工具，这在某种程度上跟学习像跳棋那样的策略类游戏类似。
-这种“三人行（threesome）”类的模糊感觉指向一个人的目标，而这种感觉可以成为更细化的工作计划（这个细化的工作目的是完成目标）。
+这种“三步为营（threesome）”类的模糊感觉指向一个人的目标，而这种感觉可以成为更细化的工作计划（这个细化的工作目的是完成目标）。
 大部分人都能掌握这项艺术，但大多数时候，他们需要花好几年逐步学习。   
 
 ### Smalltalk and Children
@@ -1634,12 +1634,101 @@ By the end of 1975 I felt that we were losing our balance—that the "Dynabook f
 
 The reason I wanted to "burn the disk packs" is that I had a very McLuhanish feeling about media and environments: that once we've shaped tools, in his words, they turn around and "reshape us." Of course this is a great idea if the tools are really good and aimed squarely at the issues in question. But the other edge of the sword cuts as deep—that inadequate tools and environments still reshape our thinking in spite of their problems, in part, because we want paradigms to guide our goals. Strong paradigms like LISP and Smalltalk are so compelling that they eat their young: when you look at an application in either of these two systems, they resemble the systems themselves, not a new idea. When I looked at Smalltalk in 1975, I was looking at something great, but I did not see an enduser language, I did not see a solution to the original goal of a "reading" and "writing" computer medium for children. I wanted to stop, dynamite everything and start from scratch again.
 
+NoteTaker将会成为一种“笔记本电脑”，我们会在几年内完成它。
+它（几乎）能运行16K大小的[随机存取存储器（RAM）](http://baike.baidu.com/item/%E9%9A%8F%E6%9C%BA%E5%AD%98%E5%8F%96%E5%AD%98%E5%82%A8%E5%99%A8)（与ALTO里所使用的1K大小的RAM相比进步巨大）。
+笔记本电脑可以不使用鼠标（不管怎样，我挺讨厌用鼠标的），而平板看上去也挺烦人的（它空间不大，如果不抓着手写笔的话它就会滚到很远的地方去），因此我设计了一个内嵌的定点设备叫做“tabmouse”。
+这相当于一个指针，它的上部有一个传感器，因此我们可以像使用鼠标一样移动它。
+当我们不使用它的时候，它还是依然呆在原位。
+但从感觉上来说，它更像一只手写笔，其中我应用了缩放机制（pantograph mechanism），这就消除了x和y方向上的[迟滞现象（hysteresis）](http://baike.baidu.com/item/%E8%BF%9F%E6%BB%9E%E7%8E%B0%E8%B1%A1)，这种现象让我们很难把鼠标当成触控笔来使用。
+我打算在NoteTaker上使用一种原先专门为Dynabook设计的多重处理器，里面的芯片虽然运行缓慢，但高度集成。
+我还想为这个比Smalltalk-72更友好和简洁的系统设计一个新的字节码解释器。
 The NoteTaker was to be a "laptop" that could be built in a few years using the (almost) available 16K RAMS (a vast improvement over the 1K RAMS that the ALTO employed). A laptop couldn't use a mouse (which I hated anyway) and a tablet seemed awkward (not a lot of room and the stylus could flop out of reach when let go), so I came up with an embedded pointing device I called a "tabmouse." It was a relative pointer and had an up sensor so it could be stroked like a mouse and would also stay where you left it, but it felt like a stylus and used a pantograph mechanism that eliminated the annoying hysteresis bias in the x and y directions that made it hard to use a mouse as a pen. I planned to use a multiprocessor architecture of slow but highly integrated chips as originally specified for the Dynabook and wanted a new bytecoded interpreter for a friendlier and simpler system than Smalltalk-72.
 
 ![notetaker](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/notetaker.png)
 
+与此同时，丹（Dan）正致力于修改Smalltalk，他多少参考了一些与过去相似的代码。
+他所要解决的第一个主要问题就是摆脱功能/类二元论，这一学说支持一个完全的内涵定义与每一段代码相配合，形成固有的方法。
+我们从最开始就追求这种方式（并且大部分代码都是这样写的）。
+阿黛尔（Adele）和我、拉里·特斯勒（Larry Tesler）（他那时正致力于发行台式机），以及那些研究生们都强烈地期盼一个真正的继承机制。
+与Simula的编译期（compile-time）构想相比，丹必须想出一个更好的办法。
+现在是时候在“一切皆对象”的想法上取得一些成绩了，其中包含了所有像“[活动记录（activiation record）](http://blog.csdn.net/hbrqlpf/article/details/2202570)”那样的内部系统对象。
+我们一致认为早期Smalltalk的句法太过灵活，因此，它的可扩展性不尽如人意。
+我们喜闻乐见的扩展所使用的是各种各样的关键字，因此丹想出了一种灵活的关键字/算子句法（keyword/operator syntax），不仅人可以清楚明白地阅读语言，机器也可以清晰地读取语言。
+与之前的直接解释器相比，这使得FLEX机器一样的字节码编译器和高效的解释器能够以其180倍的速度运行。
+改良一下OOZE VM系统，它就能操控新的对象，并且它的能力也能与ALTO的RAM和磁盘相当。
 Meanwhile Dan was proceeding with his total revamp of Smalltalk and along somewhat similar lines [In 78]. The first major thing that needed to be done was to get rid of the function/class dualism in favor of a completely intensional definition with every piece of code as an intrinsic method. We had wanted that from the beginning, (and most of the code was already written that way). There were a variety of strong desires for a real inheritance mechanism from Adele and me, from Larry Tesler, who was working on desktop publishing, and from the grad students. Dan had to find a better way than Simula's very rigid compile-time conception. It was time to make good on the idea that "everything was an object," which included all the internal "systems" objects like "activation records," etc. We were all agreed that the flexible syntax of the earlier Smalltalks was too flexible, and this level of extensibility was not desirable. All of the extensions we liked used various keyword schemes, so Dan came up with a combination keyword/operator syntax that was very flexible, but allowed the language to be read unambiguously by both humans and the machine. This allowed a FLEX machine-like byte-code compiler and efficient interpreter to be defined that ran up to 180 times as fast as the previous direct interpreter. The OOZE VM system could be modified to handle the new objects and its capacity was well matched to the ALTO's RAM and disk.
 
+#### 继承性
+
+这里我想说一些关于继承性的事情。
+Simula-I中既没有把类当做对象看待，又没有继承性。
+Simula-67把继承性的一般化纳入了ALGOL-60的结构中。
+这个主意其实挺棒的，但它有些缺点：如少数在多线程的列表中出现的命名冲突（name clash）（现在没人使用这种列表了），还有一些主要问题，如扩展类型结构太过僵化，它们需要我们对类型进行限制，而继承性只有单一的路径，且适应交互发展系统与增量编译（incremental compiling）相结合、满足即时变化的需要都是困难的。
+当然还有一系列的问题独立于Simula的目标之外：我们得解决人工智能领域中关于建模（modeling）与推论（inferencing）的问题。
+例如并不是只要追随静态链就能够找到所有有用问题的答案。
+其中的一些问题需要我们在动态绑定的部分中（如：[实例变量【instance variable】](http://baike.baidu.com/item/%E5%AE%9E%E4%BE%8B%E5%8F%98%E9%87%8F)）进行“继承”或是“推论”。
+[多继承（multiple inheritance）](http://baike.baidu.com/item/%E5%A4%9A%E7%BB%A7%E6%89%BF)看上去也很重要，但在[超类（superclass）](http://baike.baidu.com/item/%E8%B6%85%E7%B1%BB)中，有一些名字相同的方法（method），要解决同它们可能相对应的冲突貌似很困难。
+当然还有其他问题，我就不一一赘述了。
+
+在另一方面，由于动态语言可以解决静态编译语言所不能解决的问题，我并不打算把继承性看成是Smalltalk-72的一大特色，因为我知道我们可以用Smalltalk中与LISP类似的灵活性（flexibility）来模拟它。
+对这些AI想法最大的贡献者非[拉里·特斯勒（Larry Tesler）](http://www.baike.com/wiki/%E6%8B%89%E9%87%8C%C2%B7%E7%89%B9%E6%96%AF%E5%8B%92&prd=button_doc_entry)莫属，他在其早期[桌面出版](http://baike.baidu.com/item/%E6%A1%8C%E9%9D%A2%E5%87%BA%E7%89%88)系统（desktop publishing system）的各个版本中都大范围地使用了现在叫做“Slot inheritance”的概念。
+如今，我们把这个叫做“代表团式（delegation-style）”继承方案【利伯曼 84】。
+在这个时期，丹尼·博布罗（Danny Bobrow）和特里·威诺格拉德（Terry Winograd）正着手设计一种“帧型”AI语言，叫做KRL。
+这种语言是面向对象的，我认为它受到了早期Smalltalk的影响。
+它有一种叫做“透视（perspectives）”的多重继承，这种继承能够让某个对象在清晰明了的方法下扮演多重角色。
+许多年后，有不少这些想法延伸进了[PIE](http://css3pie.com/)中，这也是戈德斯坦（Goldstein）和博布罗齐心协力将Smalltalk向网络和更高级描述的有趣延伸【戈德斯坦&博布罗 1980】。
+
+在Smalltalk-76出现之际，丹·英戈尔斯（Dan Ingalls）想出了一个方案，它在语义上与Simula类似，但在运行中它会一点点朝着我们的目标改变。
+我对此并不是那么激动，因为它的出现意味着我们可能需要一个更好的、完全关于继承性的理论（一直以来都是如此）。
+例如，继承性和[实例化（instancing）](http://baike.baidu.com/item/%E5%AE%9E%E4%BE%8B%E5%8C%96)（这也是继承性的一种）将[语用（pragmatics）](http://baike.baidu.com/item/%E8%AF%AD%E7%94%A8%E5%AD%A6)（例如重构代码来节省空间）和[语义（semantics）](http://baike.baidu.com/item/%E8%AF%AD%E4%B9%89)（在许多任务中都有所使用，如：特殊化、一般化、种类的形成等）杂糅在一起。艾伦·博尔宁（Alan Borning）在Thinglab中使用了一种多重继承性的方案，它随后又在Smalltalk-76中得到了应用。
+但是与丹最初的设计相比，没有一种综合又清晰的多重继承性比它还要引人注目了。
+
+与此同时，我们与施乐之间的持久战还在继续。
+现在有大约500台ALTO通过[以太网（Ethernet）](http://baike.baidu.com/item/%E4%BB%A5%E5%A4%AA%E7%BD%91)连接彼此，它们还与激光打印机和[文件服务器（file server）](http://baike.baidu.com/item/%E6%96%87%E4%BB%B6%E6%9C%8D%E5%8A%A1%E5%99%A8)相连，而ALTO在其中充当控制器。
+我向施乐中心的策划人递交了许多备忘录，努力让他们把个人电脑纳入主要方向。
+这里有一个例子：
+
+**对未来的简单预测**
+
+**我1971年潘德瑞论文的简要更新**
+
+二十世纪九十年代会出现数百万的个人电脑。它们的大小与如今的笔记本相当，拥有高分辨率的屏显、质量小于十磅（4.54公斤），并且它们的计算和存储能力是ALTO的十到二十倍。
+我们称其为Dynabook。
+尽管绝大多数这种电脑会被制造商当成礼物来赠送，他们推销的是其中的功能而非个人电脑本身，但在那个时代，它的价格会与彩色电视机相当。
+
+......
+
+尽管Dynabook拥有相当大的局部存储器（local storage），也能够在局部进行绝大多数计算，它还是会在世界各地、各种规模的信息效用（information utility）上大比重地耗费时间。
+这种效用保证了人们能够交流观点、数据、工作模型，也为各个组织运转所需要的日常交流提供了便利。
+这种通信连接由专用线、公用线和[分组无线网（packet radio）](http://baike.baidu.com/item/%E5%88%86%E7%BB%84%E6%97%A0%E7%BA%BF%E7%BD%91)相连接，在信息效用中，Dynabook也将被当成服务器使用。
+也会有足够的电力支持软件全权塑造这些个人电脑。
+
+**该构想的要点**
+* 只需要一些硬件类型就能够控制系统绝大多数处理活动
+*  个人电脑（Personal Computers）、通信连接（Communication Links）和信息效用（Information Utilities）是施乐中心未来至关重要的组成部分......
+
+换言之就是，计算机系统的材料（material）就是计算机本身，而内容（content）和功能则由软件来塑造。
+
+这里有两条重要的参考：
+* 材料：如果计算机硬件材料的设计与发展能与施乐中心研发特殊光敏合金（light-sensitive alloy）的谨慎性与完整性相媲美，那么我们只需要建立一两种计算机设计......这里，在发展过程中额外的投资将用于简化制造过程及通过增加产量来降低价格。
+* 内容：除了其绝妙的普遍性能够保证使用相同的材料塑造出新内容，软件还有三个重要的特性：
+ * 无复制时间、其内容-功能（content-function）的成本为零
+ * 发展时间长、其内容-功能成本高
+ * 转变时间短、其内容-功能成本低
+ 
+如果施乐中心想要在其信息媒体的新领域中存活下来并茁壮成长，我们需要认真地思考这些要点。
+如果大家认为这些要点是可行的并付诸实践，那么公司会获得非常棒的机会。我
+之所以这么说，有如下几个理由：
+* 施乐有这个财政基础，足以覆盖一小部分高性能计算机类型和一大部分软件功能所需要的庞大研发经费。
+* 施乐有这个市场基础来广泛销售这些功能，以此赚取惊人的利益。
+* 全球最棒的软件设计师中，有相当大的一部分在为施乐卖命。
+
+1976年，恰克·赛克（Chunk Thacker）设计出了ALTO III，其中应用了新的16K大小的芯片，并且它能够安置在桌面上。
+它能够以那些市面上笨重的“文字处理器（word-processors）”的成本售卖，当然，它也可能走得更远。
+然而，1976年八月施乐做出了一个灾难性的决定：不让ALTO III上市。
+这对大家——乃至我（我从未真正把ALTO当成是一个成熟的发明，但它是通往成功之路的基石）都是巨大的打击。
+1992年，个人电脑和[工作站（workstation）](http://baike.baidu.com/item/%E5%B7%A5%E4%BD%9C%E7%AB%99)的市值达到9千万美元——这一数字是大型机和微机市场的两倍，更超过1992年施乐总收入许多倍。
+这个时代，最成功的公司是[微软（Microsoft）](http://baike.baidu.com/item/%E5%BE%AE%E8%BD%AF)——它不是硬件公司，而是软件公司。
 ### Inheritance
 
 A word about inheritance. Simula-I had neither classes as objects nor inheritance. Simula-67 added the latter as a generalization to the ALGOL-60 <block> structure. This was a great idea. But it did have some drawbacks: minor ones like name clashes in multiple threaded lists (no one uses threaded lists anymore), and major ones like rigidity in the extended type structures, need to qualify types, only a single path of inheritance, and difficulty in adapting to an interactive development system with incremental compiling and other needs for instant changes. Then there were a host of problems that were really outside the scope of Simula's goals: having to do with various kinds of modeling and inferencing that were of interest in the world of artificial intelligence. For example, not all useful questions could be answered by following a static chain. Some of them required a kind of "inheritance" or "inferencing" through dynamically bound "parts" (i.e. instance variables). Multiple inheritance also looked important but the corresponding possible clashes between methods of the same name in different superclasses looked difficult to handle, and so forth.
@@ -1687,6 +1776,50 @@ Xerox must take these several points seriously if it is to survive and prosper i
 
 In 1976, Chuck Thacker designed the ALTO III that would use the new 16k chips and be able to fit on a desktop. It could be marketed for about what the large cumbersome special purpose "word-processors" cost, yet could do so much more. Nevertheless, in August of 1976, Xerox made a fateful decision: not to bring the ALTO III to market. This was a huge blow to many of us—even I, who had never really, really thought of the ALTO as anything but a stepping stone to the "real thing." In 1992, the world market for personal computers and workstations was $90 million—twice as much as the mainframe and mini market, and many times Xerox's 1992 gross. The most successful company of this era—Microsoft—is not a hardware company, but a software company.
 
+#### Smalltalk用户界面
+
+由于目前全球有超过两千万人在使用“Smalltalk类型的”重叠窗口用户界面的衍生品，有几个评论家希望我多谈一些这个界面的发展过程。
+它沿袭下去的历史和这个章节一样长，且迄今为止没人在它的身上倾尽笔墨。
+我1989年的论文对其中的一些想法做了总结——这里让我再增加一些要点。
+
+Smalltalk界面中最终应用的部分都能在六十年代的想法里找到——它们带来了存取数据的不同方式，并且激发了交互式系统的功能。
+而这些想法有两个核心发源地——[林肯实验室（Lincoln Lab）](http://baike.baidu.com/item/%E6%9E%97%E8%82%AF%E5%AE%9E%E9%AA%8C%E5%AE%A4)和[兰德公司（Rand）](http://baike.baidu.com/item/%E5%85%B0%E5%BE%B7%E5%85%AC%E5%8F%B8)——它们皆由[美国国防部高级研究计划署（ARPA）](http://baike.baidu.com/item/ARPA)赞助。
+后来由于学习型研究小组（LRG）将眼光放在了孩子们身上，一切发生了巨大的改变，这种改变将这些想法凝聚成强有力的理论，并带来了经久不衰的例证。
+因此，过去我们一直在思考，学习可能是我们所喜闻乐见的主要影响之一。
+早些时候，它使得用户界面的目的产生了九十度的转弯——从“使用功能”到“制造一个环境，用户们可以在操作中学习”。
+这个新的目的可以与[蒙台梭利（Montessori ）](http://baike.baidu.com/item/%E7%8E%9B%E5%88%A9%E4%BA%9A%C2%B7%E8%92%99%E5%8F%B0%E6%A2%AD%E5%88%A9)和[杜威（Dewey）](http://baike.baidu.com/item/%E7%BA%A6%E7%BF%B0%C2%B7%E6%9D%9C%E5%A8%81)的回声共振，尤其是与前者。
+它也让我重新阅读了[杰罗姆·布鲁纳（Jerome Bruner）](http://baike.baidu.com/item/%E6%9D%B0%E7%BD%97%E5%A7%86%C2%B7%E5%B8%83%E9%B2%81%E7%BA%B3)，这样我的思考就能超越孩子们现有的课程，跳转到“用户界面的课程”上面。
+
+LRG小组有个特殊的目的就是寻找写作的等价物——就是在一个媒介中边学习边思考——这是我们新的“掌中宇宙（pocket universe）”。
+出于多重原因，我决定通过“图标化编程（iconic programming）”来达到这个目的，这里我运用了六十年代ARPA所使用的图形表达。
+我的朋友[尼古拉斯·尼葛洛庞帝（Nicholas Negroponte）](http://baike.baidu.com/item/%E5%B0%BC%E5%8F%A4%E6%8B%89%E6%96%AF%C2%B7%E5%B0%BC%E8%91%9B%E6%B4%9B%E5%BA%9E%E5%B8%9D?sefr=enterbtn)是位建筑师，他对环境如何对人的工作与创造性产生影响十分感兴趣。
+他也着眼于将新兴电脑技术植入我们所熟悉的环境中去。
+过去，我曾在剧院中呆过不少时日，也牢牢记住了[柯勒律治（Coleridge）](http://baike.baidu.com/item/%E6%9F%AF%E5%8B%92%E5%BE%8B%E6%B2%BB?sefr=enterbtn)的格言：“人们希望自己的记忆在‘糟糕的剧院’中流失，确竭力记住‘美好的剧院’中发生的一切”。
+换句话说就是，激发观众智慧与体验的能力使得剧院一直运转下去。
+
+![LincolnWand](LincolnWand.png)
+
+把这些结合在一起，我们想营造一个自由的环境，探索于其中，我们能各得其所（蒙台梭利）；
+这个环境能够容我们进行动觉上、图标上和符号上的学习——“用图像来创造符号”（皮亚杰&布鲁纳）；
+用户不会被一种模式所限（GRAIL）；
+它的神奇之处也往往植根于为我们所熟知的地方（内格罗蓬特）；
+对于用户自身智慧，它也是台放大镜（柯勒律治）。
+如果我们对此清楚明了，我们就能够直接过度到今天的设计阶段——这样的故事结尾棒极了。
+实际上，[用户界面设计（UI design）](http://baike.baidu.com/item/%E7%94%A8%E6%88%B7%E7%95%8C%E9%9D%A2%E8%AE%BE%E8%AE%A1?sefr=enterbtn)始于扩充Smalltalk、设计针对儿童的实验、尝试理解图标的建立与不断探索其中的功能等等这样的开始与磨合中。
+除了这些曲折的过程外，这一语境还迫使我们想出好的设计。
+如同此时所有在帕克中心的人对UI设计都持有自己的见解，我们也不例外。
+对于那数以百计的观点与讨论，我们也许能给予它们更具体的信任。
+但将这些观点结合起来的人是丹·英格尔斯（Dan Ingalls），他不仅倾听了所有人的观点，为原创观点献言献策，并且一直坚持不懈进行设计以方便用户测试。
+在确立语境、发明重叠窗口等等工作上我做了不少事情。
+其中，阿黛尔（Adele）和我设计了大部分的实验。
+除此之外，泰德·凯勒（Ted Kaehler）和访问学者罗恩·贝克尔（Ron Baecker）也做出了极大的贡献。
+戴夫·史密斯（Dave Smith）设计出了SmallStar，这是[Xerox Star产品](http://www.baike.com/wiki/XEROX+8010)图形界面的原形【史密斯 83】。
+同时，我还让道格·费尔班（Doug Fairbairn）对Notetaker产生了兴趣。
+他设计出了一款极棒的“智能公交车（smart bus）”，它能够有效控制慢速[多处理器（multiple processors）](http://baike.baidu.com/item/%E5%A4%9A%E5%A4%84%E7%90%86%E5%99%A8%E7%B3%BB%E7%BB%9F?sefr=enterbtn)，且前景大好，尽管此时大部分帕克中心的成员认为我是疯了才会放弃ALTO运行迅速的双极硬件设备。
+但我并不觉得这种双极设备能够安置进笔记本或Dynabook中。
+另一方面，我很讨厌最近刚出现的8比特大小的[微指令（micros）](http://baike.baidu.com/item/%E5%BE%AE%E6%8C%87%E4%BB%A4?sefr=enterbtn)，这是因为它的设计又傻又天真——我并不觉得它的设计人员有参与过软件设计的经验。
+
+![Interface](Interface.png)
 ### The Smalltalk User Interface
 
 I have been asked by several of the reviewers to say more about the development of the "Smalltalk-style" overlapping window user interface since there are now more than 20 million computers in the world that use its descendants. A decent history would be as long as this chapter, and none has been written so far. There is a summary of some of the ideas in [Kay 89]—let me add a few more points.
@@ -1703,6 +1836,106 @@ Meanwhile, I had gotten Doug Fairbairn interested in the Notetaker. He designed 
 ![lastsmalltalk72](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/lastsmalltalk72.png)
 
 
+#### Smalltalk-76
+
+11月丹（Dan）完成了Smalltalk-76的设计，并且在7个月的短短时间内，他、戴夫·罗伯森（Dave Robson）、泰德·凯勒（Ted Kaehler）和戴安娜·玛丽（Diana Merry）这个匆匆忙忙组成的小团队成功地将该系统投入使用（这一工作包含了重写所有现存类的定义）。
+尽管我想要重新开始，他们的成绩还是令我颇为讶异。
+这个系统很敏捷生动，能够解决“大”问题，并且使用起来很有趣。
+它含有50个类，源代码约有180页。
+这个系统包含所有OS功能、文件、打印和以太网服务、窗口界面、编辑器、绘图系统以及拉里·特斯勒（Larry Tesler）的两项贡献——继承等级中[静态方法（static method）](http://baike.baidu.com/item/%E9%9D%99%E6%80%81%E6%96%B9%E6%B3%95?sefr=enterbtn)所使用的浏览器和运行时间环境中调试所用的动态语境。
+这是我们所有想法的集合，也是我们将Smalltalk一体化的愿景。
+自此开始，所有Smalltalk的版本都牢牢围绕着这一概念。
+这里诸多方面，如同[托尼·霍尔（Tony Hoare）](http://baike.baidu.com/item/%E6%89%98%E5%B0%BC%C2%B7%E9%9C%8D%E5%B0%94/65848?sefr=enterbtn)曾经评价ALTO的那样，在丹的Smalltalk-76面前，它的后代无出其右。
+
+![UserInterface](UserInterface.png)
+
+下面是丹所撰写的两种典型的Smalltalk-76的类：
+
+![Class](Class.png)
+
+尤其是在Window类中，为了使其他对象（或是代码本身）达到目标，要注意代码的表达方式。
+Window超类的主要功能是关注各个事件，并将其当做消息分类至各个子类中。
+这个例子说的是一个文件窗口（DocWindow的子类）要处理用户交互的影响。
+Window类会注意到此时键盘的活动，并向其发送消息，该消息会被子类的方法（method）拦截。
+如果这里没有方法，字母就会消失，而窗口也会一闪即逝。
+在这种情况下，该类使用的是DocWindow的方法：键盘——它告诉暂存的文件要先检查一下。
+
+1978年1月，Smalltalk进行了第一次真正意义上的测试。
+CFL从施乐中心邀请了十名高层主管来帕克参加为期两天的软件研讨会。
+该研讨会十分关注复杂性，并围绕着解决这一问题的方法进行讨论。
+他们要求LRG小组让他们亲自体验终端用户编程，这样他们就能在每天1.5小时的会议中“做些实事”。
+我当机立断，决定不教授他们如何使用Smalltalk-76（这显然是我“烧毁磁盘”的想法），取而代之，我们要在2个月内为那些非专业成人用户量身定做一款内容丰富的系统（丹的想法）。
+于是，我们从“Simpula”[车间作业（job shop）](https://wenku.baidu.com/view/1fc939aef524ccbff12184dc.html)模拟模型开始，并打算为一般化的车间作业工具设计一个用户界面，这样这些主管们可以对其进行动态仿真，他们变化着的状态会通过将图标动画化在屏幕上显示出来。
+我们把它称为Smalltalk SimKit。
+在其中，每个人都倾尽了最大努力。
+尽管那时阿黛尔（Adele）还生了孩子，她仍担任设计总监。
+我仍记得那时她一边照顾蕾切尔（Rachell），一边在SimKit上进行调试的场景，这种记忆弥足珍贵。
+
+![Implementation](Implementation.png)
+
+那时有不少有趣的问题亟待解决。
+该系统本身很直白，但它需要通过Smalltalk的proper函数密封起来，尤其是涉及错误消息的情况。
+戴夫·罗宾森（Dave Robson）想出了一个不错的办法（它几乎是个专业系统）来捕捉Smalltalk中的申诉，并将其翻译成有意义的SimKit术语。
+还有许多用户界面的细节——较为一般的如让浏览器只读取四个SimKit类（Station、Worker、Job、Report）；有些令人惊奇的如我们在十名同龄成人身上进行实验（他们是帕克中心的非技术人员），并发现他们并不能很好地阅读屏幕上的内容。
+三十岁年龄段所习惯的小字体并不能被五十岁年龄段的人所接受。
+不过这是介绍该系统的好时机，我们可以借此鼓励那些主管们选择不同的字体和大小，且他们能在不知不觉中学会使用鼠标。
+
+这个“大日子”的早晨，泰德·凯勒（Ted Kaehler）打算对虚拟内存系统OOZE做出一些使其运行更快的改变。
+我们紧张得都要忘了呼吸，但清晰的设计与操作人的自信使得一切进展顺利，主管们的亲身实践也取得了极大的成功。
+第一场会议大概进行了一个小时，一位副总裁（他15年前用[FORTRAN](http://baike.baidu.com/item/FORTRAN?sefr=enterbtn)进行过一些编程）恍然发觉他正在编写程序，他一边若有所思道：“所以最终是这样啊。”
+有十分之九的主管都能解决他们所感兴趣的模拟问题。
+其中最有趣也最复杂的例子之一是施乐的一位高层完成了PC板的生产线模拟，他用真实的数字（他一直记在脑子里）来制作模型，而使用[闭型（closed form）](https://www.zhihu.com/question/51616557?from=profile_question_card)则很难解决这一问题——这就揭示出了在进行人员安排时一个重大的缺陷，这会提升产品制造平均缺陷率。
+
+这时还出现了另一个重要的系统，它是艾伦•博宁（Alan Borning）【博宁 1979】的Thinglab——这是试图超越伊凡•苏泽兰（Ivan Sutherland）Sketchpad第一次真正意义上的尝试。
+艾伦想出了一个非常巧妙的办法来处理约束，这些约束不需要处理人具备丰富的知识（或具有解决[费马大定理](http://baike.baidu.com/item/%E8%B4%B9%E9%A9%AC%E5%A4%A7%E5%AE%9A%E7%90%86/80363?sefr=enterbtn)的能力）。
+
+我们能够看见，Smalltalk的“pushing”模式最终会被“pulling”模式所取代，这是由奠定不同方法的change函数和value函数推动的。
+这个想法挺旧的，但Thinglab向我们展示了面向对象的定义如何自动应用于限制事件驱动的处理过程的语境。
+并且，我们很快就会发现，“原型”比那些类更合适。
+如果针对那些方法的类大体知道我们的打算（灵感来自帕特·温斯顿<Pat Winston>第二种模型），那么就能很好地服务于多重继承。
+
+![Thinglab](Thinglab.png)
+
+同时，NoteTaker变得更加真实、更大也更慢了。
+此时我想运用的西部数据（Western Digital）仿真类芯片显示出要向“扩件（diffusion-ware）”发展的迹象，但我并不觉得最终这会实现。
+我们开始寻找那些真正可靠的芯片，尽管它们的设计不尽如人意。
+1978年，最好的备选就是[因特尔8086（Intel 8086）](http://baike.baidu.com/item/Intel%208086?sefr=enterbtn)这种16比特大小的芯片（它身上有不少8008和8080的缺点），但它（勉强）拥有胜任这些工作的能力——在ALTO身上我们将安装三块这种芯片，一块用于解释器，一块用于位映射图形（bitmapped graphic），还有一块用于i/o（联网等）。
+
+丹一直以来都对NoteTaker很感兴趣，并且他想尝试把NoteTaker系统安装进Smalltalk-76中。
+为了实现这一想法，该系统需要以256K的大小运行，这是我们为机器[RAM](http://baike.baidu.com/item/%E9%9A%8F%E6%9C%BA%E5%AD%98%E5%8F%96%E5%AD%98%E5%82%A8%E5%99%A8?sefr=enterbtn)设计的最大值。
+ALTO中没有任何一个类似NOVA的模拟“[机器码（machine code）](http://baike.baidu.com/item/%E6%9C%BA%E5%99%A8%E7%A0%81?sefr=enterbtn)”能够胜任这些工作，并且系统还与内存相适应——只有磁盘，没有交换内存（swapping memory）。
+在这些挑战驱动下，系统设计得到了显著改善。
+泰德·凯勒（Ted Kaehler）的系统追踪（system tracer）（它可以为旧的版本写出新的虚拟内存）用于将Smalltalk-76克隆至NoteTaker中。
+这里第一次出现了索引对象表（indexed object table）（它也用在Smalltalk-80中），其简化了访问对象的过程。
+在堆栈语境下，他坚持做着一种实验：目的是为了节约空间并提升速度。
+他重写了Smalltalk中大部分旧的机器码，并且整个机器内核的大小都缩减至6千比特的8086代码（并不是很强大）。
+
+这些重建带来了颇为有趣的成效。
+尽管在8086中，[BitBlt](http://baike.baidu.com/item/BitBlt?sefr=enterbtn)不如在ALTO中运行良好（且之前相当一部分用于图形的机器代码现在都用在了Smalltalkl中），但其解释器的整体速度则是ALTO的两倍（这是由于在ALTO上，有些Smalltalk的位码解释器不能适应其4k大小的微码内存）。
+在进行了无数种形式的尝试后，（按丹的话来说）图形显示的缺憾得到了“最大程度上的弥补”。
+这主要是由于ALTO没有足够大的微码内存来容纳所有Smalltalk仿真代码——其中有一部分不得不成为仿真的“NOVA”代码，它有两层解释。
+事实上，NoteTaker运行得非常良好，尽管任何一台这样的笔记本都有崩溃的可能。
+我们也曾重新回归台式机，它看上去与miniCOM如出一辙（若干年后又出现了几台这样的计算机）。
+在电池的驱动下，NoteTaker运行良好，我们都很享受将它带上飞机、在35000英尺的高空运行这个面向对象且有着窗口界面的系统。
+
+最终，我们又生产了大约10台这样的机器。
+尽管在很多方面它都取得了设计上的成功，但我们的任务是通过它们培养出真正的终端用户，这也是我们最初的目标所在。
+如果施乐（和帕克）大体支持这类想法，我们本有更多人力物力来实现这些梦想，且早在70年代它们初现端倪之时，我们就能一举成功。
+因特尔CPU和惠普显示器的错误使用带来了遗憾，因为我们缺乏一种共同意愿——利用内部的技术专长。
+
+![designfornotetaker](designfornotetaker.png)
+
+现在是1979年，我们在正在做其中的一个demo，而这一次的观众们对此非常感兴趣，他们是[史蒂文·乔布斯（Steve Jobs）](http://baike.baidu.com/item/%E5%8F%B2%E8%92%82%E5%A4%AB%C2%B7%E4%B9%94%E5%B8%83%E6%96%AF/85300?sefr=enterbtn)、[杰夫·拉斯金（Jef Raskin）](http://baike.baidu.com/item/%E6%9D%B0%E5%A4%AB%C2%B7%E6%8B%89%E6%96%AF%E9%87%91?sefr=enterbtn)及其他苹果公司的技术人员。
+他们启动了一个叫Lisa的项目，但并不知道去往何方，直到杰夫对史蒂夫说：“你应当参观一下帕克，看看他们在做什么”。
+于是，在重叠窗口发明八年后、ALTO运行六年后，可以真正实现那些想法的人们出现了。
+我们当时使用的机器叫Dorado，这是ALTO的“老大哥”，速度很快。
+上面相当大一部分Smalltalk微码由布鲁斯·霍恩（Bruce Horn）写就，他是最初几个参与Smalltalk教学的孩子之一，那时他还是个青少年。
+拉里·特斯勒（Larry Tesler）在丹（Dan）的从旁协助下向大家展示了demo的主要内容，而阿黛尔（Adele）和我则在后面观看。
+其中最棒的部分就是，当乔布斯提出他不喜欢blt模式的滚动形式，问我们能否换一种更流畅而连续的形式。
+丹花了不到一分钟就想出了办法，他做出了（相当大的）改变，并且滚动形式真的变成了连续形式！
+这让来访者倍感惊讶，尤其是那些程序员们，因为他们从未见过如此强大的增量系统。
+
+史蒂夫曾试图从施乐（当时它是苹果少数几个风险投资人之一）获取/购买我们的技术，但施乐并不打算将技术卖给别人，也不提供资源和资金让我们继续在研究中心里发展NoteTaker和Smalltalk。
 ### Smalltalk-76
 
 Dan finished the Smalltalk-76 design November, and he, Dave Robson, Ted Kaehler, and Diana Merry, successfully implemented the system from scratch (which included rewriting all of the existing class definitions) in just seven months. this was such a wonderful achievement that I was bowled over in spite of my wanting to start over. It was fast, lively, could handle "big" problems, and was great fun. The system consisted of about 50 classes described in about 180 pages of source code. This included all of the OS functions, files, printing and other Ethernet services, the window interface, editors, graphics and painting systems, and two new contributions by Larry Tesler, the famous browsers for static methods in the inheritance hierarchy and dynamic contexts for debugging in the runtime environment. In every way it was the consolidation of all of our ideas and yearning about Smalltalk in one integrated package. All Smalltalks since have resembled this conception very closely. In many ways, as Tony Hoare once remarked about Algol, Dan's Smalltalk-76 was a great improvement on its successors!
@@ -1743,6 +1976,20 @@ w it was already 1979, and we found ourselves doing one of our many demos, but t
 
 Steve tried to get and/or buy the technology from Xerox (which was one of Apple's minority venture capitalists), but Xerox would neither part with it nor would come up with the resources to continue to develop it in house by funding a better NoteTaker cum Smalltalk.
 
+> "艺术中最大的罪孽绝非 <br/>
+> 众人所以为的乏味，而是 <br/>
+> 比例失衡”-- [保罗·亨德密特（Paul Hindemith）](http://baike.baidu.com/item/%E4%BF%9D%E7%BD%97%C2%B7%E4%BA%A8%E5%BE%B7%E5%AF%86%E7%89%B9?sefr=enterbtn)
+
+### 11.6 1980-1983 —— Smalltalk-80问世
+
+如丹所言，“不继续开发NoteTaker的决定为广泛研发Smalltalk增加了动力”。
+但我并不这么认为。
+此时，我很高兴丹和其他人能将Smalltalk的概念实现得如此清晰优雅，但另一方面我又感到忧伤，因为它已经偏离孩子们的教育很远很远了——我很惊讶，从Smalltalk-76问世开始，就没有孩子用Smalltalk编程了。
+现在施乐（和帕克）进入了一种“工作站（workstation）模式——但我仍希望这种模式是“游戏站（playstation）”。
+这一情况很矛盾，当人们开始理解Dynabook的时候，它的传奇色彩就消减下去了，而此时正值我们所需的技术在商业上变得可行之时——不幸的是，美国公司把他们的一些发明丢给了日本，如平板显示器。
+这是“功败垂成（snatching defeat from the jaws of victory）”的典型案例。
+拉里·特斯勒（Larry Tesler）认为施乐永不可能实现这些想法，1980年5月，他接受乔布斯的邀请，成为Lisa的主要设计师。
+在短暂的休息之后，我也接受了乔布斯的邀请。
 > "The greatest sin in Art is not Boredom, <br/>
 > as is commonly supposed, but lack of <br/>
 > Proportion" — Paul Hindemith
