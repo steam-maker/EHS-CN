@@ -1996,12 +1996,40 @@ Steve tried to get and/or buy the technology from Xerox (which was one of Apple'
 
 As Dan said "the decision not to continue the NoteTaker project added motivation to release Smalltalk widely." But not for me. By this time I was both happy about the cleanliness and elegance of the Smalltalk conception as realized by Dan and the others, and sad that it was farther away than ever from the children—it came to me as a shock that no child had programmed in any Smalltalk since Smalltalk-76 made its debut. Xerox (and PARC) were now into "workstations" as things in themselves—but I still wanted "playstations". The romance of the Dynabook seemed less within grasp, paradoxically just when the various needed technologies were starting to be commercially feasible—some of them, unfortunately, like the flat-screen display, abandoned to the Japanese by the US companies who had invented them. This was a major case of "snatching defeat from the jaws of victory." Larry Tesler decided that Xerox was never going to "get it" and was hired by Steve Jobs in May 1980 to be a principal designer of the Lisa. I agreed, had a sabbatical coming, and took it.
 
+阿黛尔（Adele）打算发展新Smalltalk的文档功能并免除其处理过程，这就几乎摆脱了目标硬件的桎梏，起到拓展其应用范围的作用。
+为了制作一个可免除的系统，只需对NoteTaker Smalltalk-78做出一些必要的改变。
+也许图像上最大的改变就是将Smalltalk的自定义字体（这种字体使得Smalltalk的可读性更强，也是帕克文化的象征）改回至乏味的标准ASCII字体。
+诚如彼得·多伊奇（Peter Deutsch）所言：这种改变“遭到了当时团队内部激烈的反对，却是让全球用户接受这种系统的关键因素”。
+另一种改变则是让分程序更接近[Lambda表达式](http://baike.baidu.com/item/Lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F?fr=aladdin)，但如同彼得·多伊奇9年后所观察到的：“回溯后发现，这种不同[实例化（instantiation）](http://baike.baidu.com/item/%E5%AE%9E%E4%BE%8B%E5%8C%96)与[辖域（scoping）](http://baike.baidu.com/item/%E8%BE%96%E5%9F%9F)上的增值也许并不是个好主意”。
+至少对我——作为一个新的局外人——来说，把[元类（metaclass）](http://www.pythontab.com/html/2015/pythonhexinbiancheng_0906/961.html)（它只让实例初始化变得简单了一点——Smalltalk-76已然做到了此点，而它只是在此基础上稍作完善）介绍过来是最莫名其妙的想法。
+彼得1989年做出的评论最为典型中肯：“许多用户都认为元类很令人费解，总的来说，也许它的费解大于它的价值”。
+事实上，在PIE系统中，戈德斯坦（Goldstein）与博布罗（Bobrow）已经在Smalltalk中使用了一种“观察者模式语言（observer language）”，在某种程度上，这种语言遵照着我曾建议使用的面向视图的方法，而另一方面，它又与KRL【戈德斯坦】中的“视角（perspective）”类似。
+一旦某人能够通过多重视角观察实例，他甚至都不需要“半元类（semi-metaclasses）”中的类-类（Class Class）与类-对象（Class Object）了。
+这是由于对象角色与类中的实例角色只是来自不同的视角，而解决包含实例化的[生活史（life history）](http://baike.baidu.com/item/%E7%94%9F%E6%B4%BB%E5%8F%B2)问题也较为容易。
+（同其他好主意一道）这曾是我们需要好好考虑的，但我们最后并没有采纳。
+我猜Smalltalk已经进入了我在这个故事开头所提到的最后一个阶段，即人们最后把这种方法神化为了僵化的信仰结构。
 Adele decided to drive the documentation and release process for a new Smalltalk that could be distributed widely almost regardless of the target hardware. Only a few changes had to be made to the NoteTaker Smalltalk-78 to make a releasable system. Perhaps the change that was most ironic was to turn the custom fonts that made Smalltalk more readable (and were a hallmark of the entire PARC culture) back into standard pedestrian ASCII characters. According to Peter Deutsch this "met with heated opposition within the group at the time, but has turned out to be essential for the acceptance of the system in the world." Another change was to make blocks more like lambda expressions which, as Peter Deutsch was to observe nine yeas later: "In retrospect, this proliferation of different kinds of instantiations and scoping was probably a bad idea." The most puzzling strange idea—at least to me as a new outsider—was the introduction of metaclasses (really just to make instance initialization a little easier—a very minor improvement over what Smalltalk-76 did quite reasonably already). Peter's 1989 comment is typical and true: "metaclasses have proven confusing to many users, and perhaps in the balance more confusing than valuable." In fact, in their PIE system, Goldstein and Bobrow had already implemented in Smalltalk an "observer language", somewhat following the view-oriented approach I had been advocating and in some ways like the "perspectives" proposed in KRL [Goldstein *]. Once one can view an instance via multiple perspectives even "semi-metaclasses" like Class Class and Class Object are not really necessary since the object-role and instance-of-a-class-role are just different views and it is easy to deal with life-history issues including instantiation. This was there for the taking (along with quite a few other good ideas), but it wasn't adopted. My guess is that Smalltalk had moved into the final phase I mentioned at the beginning of this story, in which a way of doing things finally gets canonized into an inflexible belief structure.
 
 ### Coda
 
+这是最后一条评论。
+硬件其实是在早期具体化了的软件。
+它存在的目的是帮助程序尽可能地高效运行。
+但现在情况基本反过来了，硬件固定不变，软件设计师却要围绕其存在的合理性进行设计。
+这就导致了在设计程序时，设计师们选择许多低级方法并过度优化，这实际上拖慢了进程。
+诚如鲍勃·巴顿（Bob Barton）所言：“系统程序员就是主持低端祭祀的高级牧师。”
+### Coda
+
 One final comment. Hardware is really just software crystallized early. It is there to make program schemes run as efficiently as possible. But far too often the hardware has been presented as a given and it is up to software designers to make it appear reasonable. This has caused low-level techniques and excessive optimization to hold back progress in program design. As Bob Barton used to say: "Systems programmers are high priests of a low cult."
 
+有一种方式来思考软件发展：大部分软件设计都是为了想办法进行后期绑定（late-bind），然后说服制造商将这些想法融入硬件中去。
+早期硬件有联网的程序和参数，随机存取内存能够对其进行后期绑定。
+过去，计算机循环（looping）与标引（indexing）都由存储中的地址修改（address modification）完成。
+数年来软件设计师们已经找出了各种各样的方法来对计算位置进行后期绑定——这就衍生出了[变址寄存器（base register）](http://baike.baidu.com/item/%E5%8F%98%E5%9D%80%E5%AF%84%E5%AD%98%E5%99%A8)/界限暂存器（bound register）、段落迁移（segement relocation）、页面[MMU](http://baike.baidu.com/item/MMU)、迁移程序（migratory process）等。
+由于“效率低下”，分时（time-sharing）系统也停滞了多年——然而制造商并不会将MMU置入机器，因此大学需要自食其力！
+递归将参数后期绑定在这些过程中，但在CPU中放入哪怕是最基本的堆栈机制也花费了数年时间。
+大部分机器也还不具备动态配置（dynamic allocation）与[垃圾回收（garbage collection）](http://baike.baidu.com/item/GC/66426)等功能。
+总体说来，目前大多数硬件设计只是在过去粗制滥造的基础上进行了重新优化。
 One way to think about progress in software is that a lot of it has been about finding ways to late-bind, then waging campaigns to convince manufacturers to build the ideas into hardware. Early hardware had wired programs and parameters; random access memory was a scheme to late-bind them. Looping and indexing used to be done by address modification in storage; index registers were a way to late-bind. Over the years software designers have found ways to late-bind the locations of computations—this led to base/bounds registers, segment relocation, page MMUs, migratory processes, and so forth. Time-sharing was held back for years because it was "inefficient"— but the manufacturers wouldn't put MMUs on the machines, universities had to do it themselves! Recursion late-binds parameters to procedures, but it took years to get even rudimentary stack mechanisms into CPUs. Most machines still have no support for dynamic allocation and garbage collection and so forth. In short, most hardware designs today are just re-optimizations of moribund architectures.
 
 From the late-binding perspective, OOP can be viewed as a comprehensive technique for late-binding as many things as possible: the mix of state and process in a set of behaviors, where they are located, what they are called, when and why the are invoked, which HW is used, etc., and more subtle, the strategies used in the OOP scheme itself. The art of the wrap is the art of the trap.
