@@ -2032,14 +2032,33 @@ One final comment. Hardware is really just software crystallized early. It is th
 总体说来，目前大多数硬件设计只是在过去粗制滥造的基础上进行了重新优化。
 One way to think about progress in software is that a lot of it has been about finding ways to late-bind, then waging campaigns to convince manufacturers to build the ideas into hardware. Early hardware had wired programs and parameters; random access memory was a scheme to late-bind them. Looping and indexing used to be done by address modification in storage; index registers were a way to late-bind. Over the years software designers have found ways to late-bind the locations of computations—this led to base/bounds registers, segment relocation, page MMUs, migratory processes, and so forth. Time-sharing was held back for years because it was "inefficient"— but the manufacturers wouldn't put MMUs on the machines, universities had to do it themselves! Recursion late-binds parameters to procedures, but it took years to get even rudimentary stack mechanisms into CPUs. Most machines still have no support for dynamic allocation and garbage collection and so forth. In short, most hardware designs today are just re-optimizations of moribund architectures.
 
+从后期绑定的角度来看，我们可以把OOP看作是一种较为全面的手段，它尽可能对所有事物进行后期绑定：一系列行为状态与过程的融合，它们发生的位置、名称、调用时间与原因、采用何种硬件等，以及更微妙的——OOP中所使用的策略。
+这些包装的艺术也是限制的艺术（The art of the wrap is the art of the trap）。
 From the late-binding perspective, OOP can be viewed as a comprehensive technique for late-binding as many things as possible: the mix of state and process in a set of behaviors, where they are located, what they are called, when and why the are invoked, which HW is used, etc., and more subtle, the strategies used in the OOP scheme itself. The art of the wrap is the art of the trap.
 
+为了完全将对象包装起来，有两种情况必须得到有效控制——一种是需要经常计算a+b，或者a与b受约束，这都是很糟糕的。
+例如，“3”和“4”在一种形式中需要由[算数逻辑单元（ALU）](http://baike.baidu.com/item/%E7%AE%97%E6%9C%AF%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83)控制。
+如果运算对象与ALU不兼容，此时的操作应为：**全速使用后备逻辑（look-aside logic）（in the simplest scheme a single and gate）** 对其进行限制。
+现在，在不降低机器运行速度的情况下，已对所有需要快速进行的最初级操作进行了包装。
 Consider the two cases that must be handled efficiently in order to completely wrap objects. It would be terrible if a + b incurred any overhead if a and b were bound, say, to "3" and "4" in a form that could be handled by the ALU. The operations should occur full speed using look-aside logic (in the simplest scheme a single and gate) to trap if the operands aren't compatible with the ALU. Now all elementary operations that have to happen fast have been wrapped without slowing down the machine.
 
+第二种情形是：在一些问题中，对ALU来说由约束决定的对象过于复杂。
+这种情况下，硬件需要不断发掘可以控制对象的方法。
+这与标引类似——理想中的方法选择器（method-selector）会通过一种较为普遍的方式将某个对象的类编入索引中。
+换句话或就是这种方法的虚拟地址为：<class><selector>。
+如今，由于为了找到真实的地址，大部分硬件都会翻译某种虚拟地址——我们称之为一种“约束（trap）”——于是将OOP不间断的处理过程隐藏在MMU（这已经合理化了）中是非常可能实现的。
 The second case happens if the trap has determined the objects in questions are too complicated for the ALU. Now the HW has to dynamically find a method that can handle the objects. This is very similar to indexing—the class of one of the objects is "indexed" by the desired method-selector in a slightly more general way. In other words the virtual-address of a method is <class><selector>. Since most HW today does a virtual address translation of some kind to find the real address—a trap—it is quite possible to hide the overhead of the OOP dispatch in the MMU overhead that has already been rationalized.
 
+再次强调，整个OOP的关键不需考虑对象中有什么。
+不同的机器使用不同的语言创造对象，但它们应当能相互交流——未来也是如此。
+这里，后期绑定包括用再兼容方法约束不兼容的部分——其中能折射出关于一些问题的优秀论述【Popek 1984】。
 Again, the whole point of OOP is not to have to worry about what is inside an object. Objects made on different machines and with different languages should be able to talk to each other—and will have to in the future. Late-binding here involves trapping incompatibilities into recompatibility methods—a good discussion of some of the issues is found in [Popek 1984].
 
+鉴于后期绑定的隐喻，未来我们期望看到怎样的后期绑定方案呢？
+其中最好的后期绑定方案之一是目前正在施乐帕克进行实验的元类协议【Kiczales 1991】。
+整个概念是这样的：语言设计师对实例、变量等内在表现的选择可能无法满足操作人的需要，因此，在固定语义中，他们允许操作人对系统采取一些策略——例如，在一个实例中对槽（slot）（译者注：“槽”指散列表中的一个位置）进行查找时，用[散列查找（hashed lookup）](http://baike.baidu.com/item/%E6%95%A3%E5%88%97%E6%9F%A5%E6%89%BE)代替直接分度（direct indexing）。
+这些方法会被有效地进行编译，并扩展系统的基本实现。
+这是同过去 Simula、FLEX、 CDL、 Smalltalk与Actors方向相似的直系后嗣。
 Staying with the metaphor of late-binding, what further late-binding schemes might we expect to see? One of the nicest late-binding schemes that is being experimented with is the metaobject protocol work at Xerox PARC [Kiczales 1991]. The notion is that the language designer's choice for the internal representation of instances, variables, etc., may not cover what the implementer needs, so within a fixed semantics they allow the implementer to give the system strategies—for example, using a hashed lookup for slots in an instance instead of direct indexing. These are then efficiently compiled and extend the base implementation of the system. This is a direct descendant of similar directions from the past of Simula, FLEX, CDL, Smalltalk, and Actors.
 
 Another late-binding scheme that is already necessary is to get away from direct protocol matching when a new object shows up in a system of objects. In other words, if someone sends you an object from halfway around the world it will be unusual if it conforms to your local protocols. At some point it will be easier to have it carry even more information about itself—enough so its specifications can be "understood" and its configuration into your mix done by the more subtle matching of inference.
