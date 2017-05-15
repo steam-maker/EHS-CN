@@ -6,3 +6,4 @@
 递归将参数后期绑定在这些过程中，但在CPU中放入哪怕是最基本的堆栈机制也花费了数年时间。
 大部分机器也还不具备动态配置（dynamic allocation）与[垃圾回收（garbage collection）](http://baike.baidu.com/item/GC/66426)等功能。
 总体说来，目前大多数硬件设计只是在过去粗制滥造的基础上进行了重新优化。
+

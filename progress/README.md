@@ -1642,6 +1642,7 @@ NoteTaker将会成为一种“笔记本电脑”，我们会在几年内完成�
 但从感觉上来说，它更像一只手写笔，其中我应用了缩放机制（pantograph mechanism），这就消除了x和y方向上的[迟滞现象（hysteresis）](http://baike.baidu.com/item/%E8%BF%9F%E6%BB%9E%E7%8E%B0%E8%B1%A1)，这种现象让我们很难把鼠标当成触控笔来使用。
 我打算在NoteTaker上使用一种原先专门为Dynabook设计的多重处理器，里面的芯片虽然运行缓慢，但高度集成。
 我还想为这个比Smalltalk-72更友好和简洁的系统设计一个新的字节码解释器。
+
 The NoteTaker was to be a "laptop" that could be built in a few years using the (almost) available 16K RAMS (a vast improvement over the 1K RAMS that the ALTO employed). A laptop couldn't use a mouse (which I hated anyway) and a tablet seemed awkward (not a lot of room and the stylus could flop out of reach when let go), so I came up with an embedded pointing device I called a "tabmouse." It was a relative pointer and had an up sensor so it could be stroked like a mouse and would also stay where you left it, but it felt like a stylus and used a pantograph mechanism that eliminated the annoying hysteresis bias in the x and y directions that made it hard to use a mouse as a pen. I planned to use a multiprocessor architecture of slow but highly integrated chips as originally specified for the Dynabook and wanted a new bytecoded interpreter for a friendlier and simpler system than Smalltalk-72.
 
 ![notetaker](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/notetaker.png)
@@ -1656,6 +1657,7 @@ The NoteTaker was to be a "laptop" that could be built in a few years using the 
 我们喜闻乐见的扩展所使用的是各种各样的关键字，因此丹想出了一种灵活的关键字/算子句法（keyword/operator syntax），不仅人可以清楚明白地阅读语言，机器也可以清晰地读取语言。
 与之前的直接解释器相比，这使得FLEX机器一样的字节码编译器和高效的解释器能够以其180倍的速度运行。
 改良一下OOZE VM系统，它就能操控新的对象，并且它的能力也能与ALTO的RAM和磁盘相当。
+
 Meanwhile Dan was proceeding with his total revamp of Smalltalk and along somewhat similar lines [In 78]. The first major thing that needed to be done was to get rid of the function/class dualism in favor of a completely intensional definition with every piece of code as an intrinsic method. We had wanted that from the beginning, (and most of the code was already written that way). There were a variety of strong desires for a real inheritance mechanism from Adele and me, from Larry Tesler, who was working on desktop publishing, and from the grad students. Dan had to find a better way than Simula's very rigid compile-time conception. It was time to make good on the idea that "everything was an object," which included all the internal "systems" objects like "activation records," etc. We were all agreed that the flexible syntax of the earlier Smalltalks was too flexible, and this level of extensibility was not desirable. All of the extensions we liked used various keyword schemes, so Dan came up with a combination keyword/operator syntax that was very flexible, but allowed the language to be read unambiguously by both humans and the machine. This allowed a FLEX machine-like byte-code compiler and efficient interpreter to be defined that ran up to 180 times as fast as the previous direct interpreter. The OOZE VM system could be modified to handle the new objects and its capacity was well matched to the ALTO's RAM and disk.
 
 #### 继承性
@@ -1729,6 +1731,7 @@ Simula-67把继承性的一般化纳入了ALGOL-60的结构中。
 这对大家——乃至我（我从未真正把ALTO当成是一个成熟的发明，但它是通往成功之路的基石）都是巨大的打击。
 1992年，个人电脑和[工作站（workstation）](http://baike.baidu.com/item/%E5%B7%A5%E4%BD%9C%E7%AB%99)的市值达到9千万美元——这一数字是大型机和微机市场的两倍，更超过1992年施乐总收入许多倍。
 这个时代，最成功的公司是[微软（Microsoft）](http://baike.baidu.com/item/%E5%BE%AE%E8%BD%AF)——它不是硬件公司，而是软件公司。
+
 ### Inheritance
 
 A word about inheritance. Simula-I had neither classes as objects nor inheritance. Simula-67 added the latter as a generalization to the ALGOL-60 <block> structure. This was a great idea. But it did have some drawbacks: minor ones like name clashes in multiple threaded lists (no one uses threaded lists anymore), and major ones like rigidity in the extended type structures, need to qualify types, only a single path of inheritance, and difficulty in adapting to an interactive development system with incremental compiling and other needs for instant changes. Then there were a host of problems that were really outside the scope of Simula's goals: having to do with various kinds of modeling and inferencing that were of interest in the world of artificial intelligence. For example, not all useful questions could be answered by following a static chain. Some of them required a kind of "inheritance" or "inferencing" through dynamically bound "parts" (i.e. instance variables). Multiple inheritance also looked important but the corresponding possible clashes between methods of the same name in different superclasses looked difficult to handle, and so forth.
@@ -1820,6 +1823,7 @@ LRG小组有个特殊的目的就是寻找写作的等价物——就是在一�
 另一方面，我很讨厌最近刚出现的8比特大小的[微指令（micros）](http://baike.baidu.com/item/%E5%BE%AE%E6%8C%87%E4%BB%A4?sefr=enterbtn)，这是因为它的设计又傻又天真——我并不觉得它的设计人员有参与过软件设计的经验。
 
 ![Interface](Interface.png)
+
 ### The Smalltalk User Interface
 
 I have been asked by several of the reviewers to say more about the development of the "Smalltalk-style" overlapping window user interface since there are now more than 20 million computers in the world that use its descendants. A decent history would be as long as this chapter, and none has been written so far. There is a summary of some of the ideas in [Kay 89]—let me add a few more points.
@@ -1936,6 +1940,7 @@ ALTO中没有任何一个类似NOVA的模拟“[机器码（machine code）](htt
 这让来访者倍感惊讶，尤其是那些程序员们，因为他们从未见过如此强大的增量系统。
 
 史蒂夫曾试图从施乐（当时它是苹果少数几个风险投资人之一）获取/购买我们的技术，但施乐并不打算将技术卖给别人，也不提供资源和资金让我们继续在研究中心里发展NoteTaker和Smalltalk。
+
 ### Smalltalk-76
 
 Dan finished the Smalltalk-76 design November, and he, Dave Robson, Ted Kaehler, and Diana Merry, successfully implemented the system from scratch (which included rewriting all of the existing class definitions) in just seven months. this was such a wonderful achievement that I was bowled over in spite of my wanting to start over. It was fast, lively, could handle "big" problems, and was great fun. The system consisted of about 50 classes described in about 180 pages of source code. This included all of the OS functions, files, printing and other Ethernet services, the window interface, editors, graphics and painting systems, and two new contributions by Larry Tesler, the famous browsers for static methods in the inheritance hierarchy and dynamic contexts for debugging in the runtime environment. In every way it was the consolidation of all of our ideas and yearning about Smalltalk in one integrated package. All Smalltalks since have resembled this conception very closely. In many ways, as Tony Hoare once remarked about Algol, Dan's Smalltalk-76 was a great improvement on its successors!
@@ -1990,6 +1995,7 @@ Steve tried to get and/or buy the technology from Xerox (which was one of Apple'
 这是“功败垂成（snatching defeat from the jaws of victory）”的典型案例。
 拉里·特斯勒（Larry Tesler）认为施乐永不可能实现这些想法，1980年5月，他接受乔布斯的邀请，成为Lisa的主要设计师。
 在短暂的休息之后，我也接受了乔布斯的邀请。
+
 > "The greatest sin in Art is not Boredom, <br/>
 > as is commonly supposed, but lack of <br/>
 > Proportion" — Paul Hindemith
@@ -2008,6 +2014,7 @@ As Dan said "the decision not to continue the NoteTaker project added motivation
 这是由于对象角色与类中的实例角色只是来自不同的视角，而解决包含实例化的[生活史（life history）](http://baike.baidu.com/item/%E7%94%9F%E6%B4%BB%E5%8F%B2)问题也较为容易。
 （同其他好主意一道）这曾是我们需要好好考虑的，但我们最后并没有采纳。
 我猜Smalltalk已经进入了我在这个故事开头所提到的最后一个阶段，即人们最后把这种方法神化为了僵化的信仰结构。
+
 Adele decided to drive the documentation and release process for a new Smalltalk that could be distributed widely almost regardless of the target hardware. Only a few changes had to be made to the NoteTaker Smalltalk-78 to make a releasable system. Perhaps the change that was most ironic was to turn the custom fonts that made Smalltalk more readable (and were a hallmark of the entire PARC culture) back into standard pedestrian ASCII characters. According to Peter Deutsch this "met with heated opposition within the group at the time, but has turned out to be essential for the acceptance of the system in the world." Another change was to make blocks more like lambda expressions which, as Peter Deutsch was to observe nine yeas later: "In retrospect, this proliferation of different kinds of instantiations and scoping was probably a bad idea." The most puzzling strange idea—at least to me as a new outsider—was the introduction of metaclasses (really just to make instance initialization a little easier—a very minor improvement over what Smalltalk-76 did quite reasonably already). Peter's 1989 comment is typical and true: "metaclasses have proven confusing to many users, and perhaps in the balance more confusing than valuable." In fact, in their PIE system, Goldstein and Bobrow had already implemented in Smalltalk an "observer language", somewhat following the view-oriented approach I had been advocating and in some ways like the "perspectives" proposed in KRL [Goldstein *]. Once one can view an instance via multiple perspectives even "semi-metaclasses" like Class Class and Class Object are not really necessary since the object-role and instance-of-a-class-role are just different views and it is easy to deal with life-history issues including instantiation. This was there for the taking (along with quite a few other good ideas), but it wasn't adopted. My guess is that Smalltalk had moved into the final phase I mentioned at the beginning of this story, in which a way of doing things finally gets canonized into an inflexible belief structure.
 
 ### Coda
@@ -2018,6 +2025,7 @@ Adele decided to drive the documentation and release process for a new Smalltalk
 但现在情况基本反过来了，硬件固定不变，软件设计师却要围绕其存在的合理性进行设计。
 这就导致了在设计程序时，设计师们选择许多低级方法并过度优化，这实际上拖慢了进程。
 诚如鲍勃·巴顿（Bob Barton）所言：“系统程序员就是主持低端祭祀的高级牧师。”
+
 ### Coda
 
 One final comment. Hardware is really just software crystallized early. It is there to make program schemes run as efficiently as possible. But far too often the hardware has been presented as a given and it is up to software designers to make it appear reasonable. This has caused low-level techniques and excessive optimization to hold back progress in program design. As Bob Barton used to say: "Systems programmers are high priests of a low cult."
@@ -2030,16 +2038,19 @@ One final comment. Hardware is really just software crystallized early. It is th
 递归将参数后期绑定在这些过程中，但在CPU中放入哪怕是最基本的堆栈机制也花费了数年时间。
 大部分机器也还不具备动态配置（dynamic allocation）与[垃圾回收（garbage collection）](http://baike.baidu.com/item/GC/66426)等功能。
 总体说来，目前大多数硬件设计只是在过去粗制滥造的基础上进行了重新优化。
+
 One way to think about progress in software is that a lot of it has been about finding ways to late-bind, then waging campaigns to convince manufacturers to build the ideas into hardware. Early hardware had wired programs and parameters; random access memory was a scheme to late-bind them. Looping and indexing used to be done by address modification in storage; index registers were a way to late-bind. Over the years software designers have found ways to late-bind the locations of computations—this led to base/bounds registers, segment relocation, page MMUs, migratory processes, and so forth. Time-sharing was held back for years because it was "inefficient"— but the manufacturers wouldn't put MMUs on the machines, universities had to do it themselves! Recursion late-binds parameters to procedures, but it took years to get even rudimentary stack mechanisms into CPUs. Most machines still have no support for dynamic allocation and garbage collection and so forth. In short, most hardware designs today are just re-optimizations of moribund architectures.
 
 从后期绑定的角度来看，我们可以把OOP看作是一种较为全面的手段，它尽可能对所有事物进行后期绑定：一系列行为状态与过程的融合，它们发生的位置、名称、调用时间与原因、采用何种硬件等，以及更微妙的——OOP中所使用的策略。
 这些包装的艺术也是限制的艺术（The art of the wrap is the art of the trap）。
+
 From the late-binding perspective, OOP can be viewed as a comprehensive technique for late-binding as many things as possible: the mix of state and process in a set of behaviors, where they are located, what they are called, when and why the are invoked, which HW is used, etc., and more subtle, the strategies used in the OOP scheme itself. The art of the wrap is the art of the trap.
 
 为了完全将对象包装起来，有两种情况必须得到有效控制——一种是需要经常计算a+b，或者a与b受约束，这都是很糟糕的。
 例如，“3”和“4”在一种形式中需要由[算数逻辑单元（ALU）](http://baike.baidu.com/item/%E7%AE%97%E6%9C%AF%E9%80%BB%E8%BE%91%E5%8D%95%E5%85%83)控制。
 如果运算对象与ALU不兼容，此时的操作应为：**全速使用后备逻辑（look-aside logic）（in the simplest scheme a single and gate）** 对其进行限制。
 现在，在不降低机器运行速度的情况下，已对所有需要快速进行的最初级操作进行了包装。
+
 Consider the two cases that must be handled efficiently in order to completely wrap objects. It would be terrible if a + b incurred any overhead if a and b were bound, say, to "3" and "4" in a form that could be handled by the ALU. The operations should occur full speed using look-aside logic (in the simplest scheme a single and gate) to trap if the operands aren't compatible with the ALU. Now all elementary operations that have to happen fast have been wrapped without slowing down the machine.
 
 第二种情形是：在一些问题中，对ALU来说由约束决定的对象过于复杂。
@@ -2047,11 +2058,13 @@ Consider the two cases that must be handled efficiently in order to completely w
 这与标引类似——理想中的方法选择器（method-selector）会通过一种较为普遍的方式将某个对象的类编入索引中。
 换句话或就是这种方法的虚拟地址为：<class><selector>。
 如今，由于为了找到真实的地址，大部分硬件都会翻译某种虚拟地址——我们称之为一种“约束（trap）”——于是将OOP不间断的处理过程隐藏在MMU（这已经合理化了）中是非常可能实现的。
+
 The second case happens if the trap has determined the objects in questions are too complicated for the ALU. Now the HW has to dynamically find a method that can handle the objects. This is very similar to indexing—the class of one of the objects is "indexed" by the desired method-selector in a slightly more general way. In other words the virtual-address of a method is <class><selector>. Since most HW today does a virtual address translation of some kind to find the real address—a trap—it is quite possible to hide the overhead of the OOP dispatch in the MMU overhead that has already been rationalized.
 
 再次强调，整个OOP的关键不需考虑对象中有什么。
 不同的机器使用不同的语言创造对象，但它们应当能相互交流——未来也是如此。
 这里，后期绑定包括用再兼容方法约束不兼容的部分——其中能折射出关于一些问题的优秀论述【Popek 1984】。
+
 Again, the whole point of OOP is not to have to worry about what is inside an object. Objects made on different machines and with different languages should be able to talk to each other—and will have to in the future. Late-binding here involves trapping incompatibilities into recompatibility methods—a good discussion of some of the issues is found in [Popek 1984].
 
 鉴于后期绑定的隐喻，未来我们期望看到怎样的后期绑定方案呢？
@@ -2059,6 +2072,7 @@ Again, the whole point of OOP is not to have to worry about what is inside an ob
 整个概念是这样的：语言设计师对实例、变量等内在表现的选择可能无法满足操作人的需要，因此，在固定语义中，他们允许操作人对系统采取一些策略——例如，在一个实例中对槽（slot）（译者注：“槽”指散列表中的一个位置）进行查找时，用[散列查找（hashed lookup）](http://baike.baidu.com/item/%E6%95%A3%E5%88%97%E6%9F%A5%E6%89%BE)代替直接分度（direct indexing）。
 这些方法会被有效地进行编译，并扩展系统的基本实现。
 这是同过去 Simula、FLEX、 CDL、 Smalltalk与Actors方向相似的直系后嗣。
+
 Staying with the metaphor of late-binding, what further late-binding schemes might we expect to see? One of the nicest late-binding schemes that is being experimented with is the metaobject protocol work at Xerox PARC [Kiczales 1991]. The notion is that the language designer's choice for the internal representation of instances, variables, etc., may not cover what the implementer needs, so within a fixed semantics they allow the implementer to give the system strategies—for example, using a hashed lookup for slots in an instance instead of direct indexing. These are then efficiently compiled and extend the base implementation of the system. This is a direct descendant of similar directions from the past of Simula, FLEX, CDL, Smalltalk, and Actors.
 
 Another late-binding scheme that is already necessary is to get away from direct protocol matching when a new object shows up in a system of objects. In other words, if someone sends you an object from halfway around the world it will be unusual if it conforms to your local protocols. At some point it will be easier to have it carry even more information about itself—enough so its specifications can be "understood" and its configuration into your mix done by the more subtle matching of inference.

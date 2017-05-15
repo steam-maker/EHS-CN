@@ -12,3 +12,4 @@
 这是“功败垂成（snatching defeat from the jaws of victory）”的典型案例。
 拉里·特斯勒（Larry Tesler）认为施乐永不可能实现这些想法，1980年5月，他接受乔布斯的邀请，成为Lisa的主要设计师。
 在短暂的休息之后，我也接受了乔布斯的邀请。
+

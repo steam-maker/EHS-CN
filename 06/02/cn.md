@@ -6,3 +6,4 @@ NoteTaker将会成为一种“笔记本电脑”，我们会在几年内完成�
 但从感觉上来说，它更像一只手写笔，其中我应用了缩放机制（pantograph mechanism），这就消除了x和y方向上的[迟滞现象（hysteresis）](http://baike.baidu.com/item/%E8%BF%9F%E6%BB%9E%E7%8E%B0%E8%B1%A1)，这种现象让我们很难把鼠标当成触控笔来使用。
 我打算在NoteTaker上使用一种原先专门为Dynabook设计的多重处理器，里面的芯片虽然运行缓慢，但高度集成。
 我还想为这个比Smalltalk-72更友好和简洁的系统设计一个新的字节码解释器。
+

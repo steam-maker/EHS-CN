@@ -42,3 +42,4 @@ LRG小组有个特殊的目的就是寻找写作的等价物——就是在一�
 另一方面，我很讨厌最近刚出现的8比特大小的[微指令（micros）](http://baike.baidu.com/item/%E5%BE%AE%E6%8C%87%E4%BB%A4?sefr=enterbtn)，这是因为它的设计又傻又天真——我并不觉得它的设计人员有参与过软件设计的经验。
 
 ![Interface](Interface.png)
+
