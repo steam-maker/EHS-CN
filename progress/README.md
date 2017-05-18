@@ -1,6 +1,6 @@
 ## 摘要
 
-大多数想法都有源可溯。六十年代，尤其是在ARPA社区，由于互动分时计算器、图形屏幕以及点控设备的发明，“人机共存”这一理念开始进入人们的视野。**为了模仿炼油厂和半智能行为之类的复杂系统**（simulate complex systems such as oil refineries and semi-intelligent behavior），人们发明了高级计算机语言。随着人们不再简单地把六十年代的工作看成是**“新瓶装旧酒”**（better old thing），对个人电脑、重叠操作窗口界面（overlapping window interfaces）和面向对象设计（object-oriented design）的看法也会不可避免地发生改变。这带来了方方面面的发展：实行大型机计算、实现终端用户自行调用功能、让数据结构更加抽象。为了取代过去让计算/美元/产量呈指数增长的目的，我们需要把六十年代看成是“一瓶新酒”，同时进一步探索什么可能成为真正“新的东西”。例如，人们可能在不连接公共主机的情况下操作[Dynabook掌上电脑](http://baike.baidu.com/link?url=vEmk8r_cNg1vHEhdY-0B7PXxBX6Qa0brLPg7nPJojGZ6CCqrRLMAu2Kr1_dOM4D95iiZOHzuNyCxUktP51oIAK)；而上百万个潜在用户的存在则意味着用户界面可能会变成如**[蒙台梭利](http://baike.baidu.com/link?url=xye4sDiepagjrQsB50tjIcTv2jOIHaSaNnRqCyoEEuHOaFXkgZc29OTxFd8EZpI_NK8YAeRK1ZxzPZHGfoO3kuobOuD2Ethb_7ihn_-CuVLMh_6KSVER9OrxD3it-bdI0U6LUGOEF9ZPgEAp5ZO5mK)**和**[布鲁纳](http://baike.baidu.com/link?url=ryJJZjvXbPim8VoWFtZrisrqdTwcujOYtbk7YNsQAfFijBE8_xKjFdRoUGFfr-OWadAf8YMCUXx9geKjVKYMCa#2)**所构想的学习环境；针对扩大范围、减小复杂度和提高终端用户使用能力的需要，**我们要找到一个更加安全、且更为人普遍接受的方式来取代过去的数据和控制结构——即仅仅通过消息的交互就能模拟出任何用户想要的行动**（would require that data and control structures be done away with in favor of a more biological scheme of protected universal cells interacting only through messages that could mimic any desired behavior）。
+大多数想法都有源可溯。六十年代，尤其是在ARPA社区，由于互动分时计算器、图形屏幕以及点控设备的发明，“人机共存”这一理念开始进入人们的视野。**为了模仿炼油厂和半智能行为之类的复杂系统**（simulate complex systems such as oil refineries and semi-intelligent behavior），人们发明了高级计算机语言。随着人们不再简单地把六十年代的工作看成是“**新瓶装旧酒**”（better old thing），对个人电脑、重叠操作窗口界面（overlapping window interfaces）和面向对象设计（object-oriented design）的看法也会不可避免地发生改变。这带来了方方面面的发展：实行大型机计算、实现终端用户自行调用功能、让数据结构更加抽象。为了取代过去让计算/美元/产量呈指数增长的目的，我们需要把六十年代看成是“一瓶新酒”，同时进一步探索什么可能成为真正“新的东西”。例如，人们可能在不连接公共主机的情况下操作[Dynabook掌上电脑](http://baike.baidu.com/link?url=vEmk8r_cNg1vHEhdY-0B7PXxBX6Qa0brLPg7nPJojGZ6CCqrRLMAu2Kr1_dOM4D95iiZOHzuNyCxUktP51oIAK)；而上百万个潜在用户的存在则意味着用户界面可能会变成如[蒙台梭利](http://baike.baidu.com/link?url=xye4sDiepagjrQsB50tjIcTv2jOIHaSaNnRqCyoEEuHOaFXkgZc29OTxFd8EZpI_NK8YAeRK1ZxzPZHGfoO3kuobOuD2Ethb_7ihn_-CuVLMh_6KSVER9OrxD3it-bdI0U6LUGOEF9ZPgEAp5ZO5mK)和[布鲁纳](http://baike.baidu.com/link?url=ryJJZjvXbPim8VoWFtZrisrqdTwcujOYtbk7YNsQAfFijBE8_xKjFdRoUGFfr-OWadAf8YMCUXx9geKjVKYMCa#2)所构想的学习环境；针对扩大范围、减小复杂度和提高终端用户使用能力的需要，**我们要找到一个更加安全、且更为人普遍接受的方式来取代过去的数据和控制结构——即仅仅通过消息的交互就能模拟出任何用户想要的行动**（would require that data and control structures be done away with in favor of a more biological scheme of protected universal cells interacting only through messages that could mimic any desired behavior）。
 
 ## Abstract
 
@@ -2075,9 +2075,26 @@ Again, the whole point of OOP is not to have to worry about what is inside an ob
 
 Staying with the metaphor of late-binding, what further late-binding schemes might we expect to see? One of the nicest late-binding schemes that is being experimented with is the metaobject protocol work at Xerox PARC [Kiczales 1991]. The notion is that the language designer's choice for the internal representation of instances, variables, etc., may not cover what the implementer needs, so within a fixed semantics they allow the implementer to give the system strategies—for example, using a hashed lookup for slots in an instance instead of direct indexing. These are then efficiently compiled and extend the base implementation of the system. This is a direct descendant of similar directions from the past of Simula, FLEX, CDL, Smalltalk, and Actors.
 
+另一种十分必要的后期绑定是：一个系统中，在出现新的对象时，避免直接对其进行协议匹配。
+换一种说法就是，如果世界上有任何人在半道上给你发送了新对象，而这个新对象又恰巧适应你当地的协议，这种情况是罕见的。
+在某一时刻让这个对象本身包含更多与其有关的信息更为容易——这些信息很充分，因此对象的情况能够被“理解”，而它在这里的配置又由更细致的推断匹配完成。
+
 Another late-binding scheme that is already necessary is to get away from direct protocol matching when a new object shows up in a system of objects. In other words, if someone sends you an object from halfway around the world it will be unusual if it conforms to your local protocols. At some point it will be easier to have it carry even more information about itself—enough so its specifications can be "understood" and its configuration into your mix done by the more subtle matching of inference.
 
+对后期绑定进行思考，也是超越今天大众所熟知的OOP进行思考。
+[Prolog语言](http://baike.baidu.com/item/Prolog)带来的伟大想法就是：在进行计算时不需与值进行绑定。
+变量是一个对象，而当我们最终发现绑定时，一张由部分结果织成的网就能被填满。
+在尝试解决问题时，这种方法随着Eurisko语言应运而生，同时改变着它的基本策略。
+这些方法自主地去寻找问题，而不是让问题去寻找方法——且Eurisko寻找的是方法的方法。
+这被称为是“机会主义编程”——我把它看做是带来更多启蒙的助推器，解决问题是这过程中的一部分。
+
 A look beyond OOP as we know it today can also be done by thinking about late-binding. Prolog's great idea is that it doesn't need binding to values in order to carry out computations [Col **]. The variable is an object and a web of partial results can be built to be filled in when a binding is finally found. Eurisko [Lenat **] constructs its methods—and modifies its basic strategies—as it tries to solve a problem. Instead of a problem looking for methods, the methods look for problems—and Eurisko looks for the methods of the methods. This has been called "opportunistic programming"—I think of it as a drive for more enlightenment, in which problems get resolved as part of the process.
+
+下一次范式转换——网络的普及——需要这种更高级的计算策略，它在下一个五年内就会发生。
+对象会逐渐变成活跃的情报人员，跑遍整个网络为它们的管理者搜集有用的信息与工具。
+与现在的对象相比，这些对象从半道回归计算环境无法直接通过协议匹配对自身进行配置。
+取而代之，这些对象会携带更多关于自身的信息，而其表现形式也允许与推论进行对接。
+在这一规范中，有些正在行进中的工作可以选用这种方式。
 
 This higher computational finesse will be needed as the next paradigm shift—that of pervasive networking—takes place over the next five years. Objects will gradually become active agents and will travel the networks in search of useful information and tools for their managers. Objects brought back into a computational environment from halfway around the world will not be able to configure themselves by direct protocol matching as do objects today. Instead, the objects will carry much more information about themselves in a form that permits inferential docking. Some of the ongoing work in specification can be turned to this task [Guttag **][Goguen **].
 
