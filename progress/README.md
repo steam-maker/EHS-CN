@@ -2132,6 +2132,7 @@ I will leave the story of early Smalltalk in 1981 when an extensive series of ar
 在为丹（Dan）、阿黛尔（Adele）及那些让Smalltalk成为现实的人们喝彩之时，我们须怀揣这个问题：未来八十年代和九十年代将我们引向新纪元的丹和阿黛尔们又在哪里？
 
 ![byte](byte.jpg)
+
 While justly applauding Dan, Adele and the others that made Smalltalk possible, we must wonder at the same time: where are the Dans and the Adeles of the '80s and '90s that will take us to the next stage?
 
 ![byte](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/byte.png)
