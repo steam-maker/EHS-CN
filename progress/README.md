@@ -2098,14 +2098,40 @@ A look beyond OOP as we know it today can also be done by thinking about late-bi
 
 This higher computational finesse will be needed as the next paradigm shift—that of pervasive networking—takes place over the next five years. Objects will gradually become active agents and will travel the networks in search of useful information and tools for their managers. Objects brought back into a computational environment from halfway around the world will not be able to configure themselves by direct protocol matching as do objects today. Instead, the objects will carry much more information about themselves in a form that permits inferential docking. Some of the ongoing work in specification can be turned to this task [Guttag **][Goguen **].
 
+开个玩笑，我曾把编程语言的发展总结为一种“太阳黑子理论”，每11年就会发生重大变革。
+1950年机器代码进入视野，1956年[FORTRAN](http://baike.baidu.com/item/FORTRAN)以“新瓶装旧酒”的身份问世，但把它当成崭新的事物，它就是1961年ALGOL-60的先导。
+同样地，1966年出现的SIMULA也是“新瓶装旧酒”，但在1972年出现的Smalltalk面前，它也是给其带来灵感的新事物。
+
 Tongue in cheek, I once characterized progress in programming languages as kind of "sunspot" theory, in which major advances took place about every 11 years. We started with machine code in 1950, then in 1956 FORTRAN came along as a "better old thing" which if looked at as "almost a new thing" became the precursor of ALGOL-60 in 1961. In 1966, SIMULA was the "better old thing," which if looked at as "almost a new thing" became the precursor of Smalltalk in 1972.
+
+随后发生的一系列事件似乎都在佐证这一理论：1978年出现了Eurisko，它也既是“新瓶装旧酒”，又能被看做全新的事物。
+但1983年往后的整个十年都没有“新事物”出现。
+当然了，这种理论挺无聊的——并且，我还认为，个人电脑一系列的商业化措施抑制了其本该在大学和实验室中的发展，那些本来天赋异禀的孩子们都把时间完全放在实际应用上面了。
+在制造硬件时公司都选择规避风险，而那些硬件公司都没能真正了解软件，这就导致了在诸多方面我们都后退一大步的恶果。
 
 Everything seemed set up to confirm the "theory" once more: in 1978 Eurisko was in place as the "better old thing" that was "almost a new thing". But 1983—and the whole decade—came and went without the "new thing". Of course, such a theory is silly anyway—and yet, I think the enormous commercialization of personal computing has smothered much of the kind of work that used to go on in universities and research labs, by sucking the talented kids towards practical applications. With companies so risk-adverse towards doing their own HW, and the HW companies betraying no real understanding of SW, the result has been a great step backwards in most respects.
 
+20世纪的问题在于技术过于“简单化”。
+无论好坏，在做任何事情时一旦面临困境，人们会在上面花费足够的时间，因此结果通常是积极的。
+现在，创造事物时，尤其是软件，我们能够细之又细，但大多数设计也有着琐碎的毛病。
+这就反转了蓄意破坏的罪名：因为力所能及，所以人们去创造事物。
+一系列这种事情，甚至是那些花花肠子没那么多的买家和你促成了开发市场的出现，这种市场和为青少年建立的那种如出一辙。
+与之相反的方向则是把整个人类艺术作为设计标准，在此基础上建立目标，产出无数不尽如人意的作品。
+这里用到的诀窍是通过实现自身价值来尽力消除不满——否则结果不是令人沮丧，就是人们在得到了没什么价值的结果后就草草了事。
+
 A twentieth century problem is that technology has become too "easy". When it was hard to do anything whether good or bad, enough time was taken so that the result was usually good. Now we can make things almost trivially, especially in software, but most of the designs are trivial as well. This is inverse vandalism: the making of things because you can. Couple this to even less sophisticated buyers and you have generated an exploitation marketplace similar to that set up for teenagers. A counter to this is to generate enormous dissatisfaction with one's designs using the entire history of human art as a standard and goal. Then the trick is to decouple the dissatisfaction from self worth—otherwise it is either too depressing or one stops too soon with trivial results.
+
+关于早期Smalltalk语言的故事，我的讲述到1981年就要停止了，那时Byte杂志出版了大量与之有关的文章【Byte 1981】，随后阿黛尔（Adele）和戴夫·罗宾森（Dave Robson）又出版了书【Goldberg 1983】，1983年这一系统正式发表。
+如果不重新发明虚拟机，没有程序员能够轻易驾驭它们，且在一些案例中group能够滚动其基本类的图像。
+尽管Smalltalk不得不在糟糕的硬件中运行，其增速却出奇地可观（一部分要归功于对这些机器进行了大量优化）【Deutsch 83】。
+至少我敢说，这似乎是使用最广泛的面向对象系统。
+令我感到难以置信的是，迄今为止，还没人能够想出一个更好的主意让编程更加简洁、优雅、容易，其本身也更实用与全面。（很可惜，后来我们并不知道[PROLOG](http://baike.baidu.com/item/Prolog)，反之亦然，之后将这两种语言结合在一起，结果相当之迷人。）
 
 I will leave the story of early Smalltalk in 1981 when an extensive series of articles on Smalltalk-80 was published in Byte magazine, [Byte 1981] followed by Adele's and Dave Robson's books [Goldberg 1983] and the official release of the system in 1983. Now programmers could easily implement the virtual machine without having to reinvent it, and, in several cases, groups were able to roll their own image of basic classes. In spite of having to run almost everywhere on moribund HW architectures, Smalltalk has proliferated amazingly well (in part because of tremendous optimization efforts on these machines) [Deutsch 83]. As far as I can tell, it still seems to be the most widely used system that claims to be object-oriented. It is incredible to me that no one since has come up with a qualitatively better idea that is as simple, elegant, easy to program, practical, and comprehensive. (It's a pity that we didn't know about PROLOG then or vice versa, the combinations of the two languages done subsequently are quite intriguing.)
 
+在为丹（Dan）、阿黛尔（Adele）及那些让Smalltalk成为现实的人们喝彩之时，我们须怀揣这个问题：未来八十年代和九十年代将我们引向新纪元的丹和阿黛尔们又在哪里？
+
+![byte](byte.jpg)
 While justly applauding Dan, Adele and the others that made Smalltalk possible, we must wonder at the same time: where are the Dans and the Adeles of the '80s and '90s that will take us to the next stage?
 
 ![byte](https://raw.githubusercontent.com/steam-maker/EarlyHistoryOfSmalltalk/master/Images/byte.png)
